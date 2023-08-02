@@ -50,8 +50,9 @@ the user with password and the endpoint is inside this script. you can modify wi
 
 # Web application
 ## frontend
-
+ [coremysqlhttps/frontend](https://github.com/GreenH47/FIT5120TP9/tree/main/coremysqlhttps/frontend)
  the user input form and data visualization will be hold in the same page  
+ ==you need modify this file to apply the ui design and visualization== 
  ![](img/README-20230802-1.png)
 ## where to begin your work
 
