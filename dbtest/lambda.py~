@@ -13,7 +13,7 @@ username = root_username
 password = root_password
 
 # JSON object representing the input data
-json_object = '{"Subarea":"Subarea 4","Electricity":2,"Gas":3,"Carbon":5.36}'
+json_object = '{"Subarea":"Subarea 3","Electricity":2,"Gas":3,"Carbon":5.36}'
 input_data = json.loads(json_object)
 
 try:

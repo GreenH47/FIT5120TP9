@@ -7,6 +7,7 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
+<!-- user input form -->
 <form method="post">
     <div>
         <label for="subarea">Subarea:</label>
@@ -60,6 +61,28 @@
 
             var jsonString = JSON.stringify(jsonObject);
             console.log(jsonString); // Display the JSON in the console
+            sendDataToAPI(jsonString);
+        }
+
+        // Send the JSON to the API
+        function sendDataToAPI(jsonString) {
+            fetch("https://api-test.aws.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: jsonString
+            })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error(error));
         }
     </script>
 </form>
+
+
+
+
+<!-- data visualization part -->
+<h1>Data visualization part</h1>
+<img src="https://github.com/GreenH47/mynote/blob/main/overrides/avatar.png?raw=true" width="300px" height="300px">
