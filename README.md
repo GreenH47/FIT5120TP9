@@ -50,9 +50,11 @@ the user with password and the endpoint is inside this script. you can modify wi
 
 # Web application
 ## frontend
- [coremysqlhttps/carbonvic/Views/Home](https://github.com/GreenH47/FIT5120TP9/tree/main/coremysqlhttps/carbonvic/Views/Home)  
+
  the user input form and data visualization will be hold in the same page  
  ![](img/README-20230802-1.png)
+## where to begin your work
+
 ## how the code work behind  
 when click the submit button. the `generateJSON()` fuction will trigger to format user input to the lambda function with the format like `{"Subarea":"Subarea 3","Electricity":2,"Gas":3,"Carbon":5.36}` to the lambda function in the cloud.  
 

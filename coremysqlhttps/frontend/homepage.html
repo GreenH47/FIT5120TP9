@@ -1,0 +1,80 @@
+
+<!-- user input form -->
+<form method="post">
+    <div>
+        <label for="subarea">Subarea:</label>
+        <select id="subarea" name="Subarea" required>
+            <option value="Subarea 1" selected>Subarea 1</option>
+            <option value="Subarea 2">Subarea 2</option>
+            <option value="Subarea 3">Subarea 3</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="electricity">Electricity:</label>
+        <input type="number" step="any" id="electricity" name="Electricity" required onchange="calculateCarbon()" />
+    </div>
+    <div>
+        <label for="gas">Gas:</label>
+        <input type="number" step="any" id="gas" name="Gas" required onchange="calculateCarbon()" />
+    </div>
+    <div>
+        <label for="carbon">Carbon:</label>
+        <input type="number" step="any" id="carbon" name="Carbon" readonly />
+    </div>
+
+    <button type="button" onclick="calculateCarbon()">Calculate</button>
+
+    <script>
+        function calculateCarbon() {
+            var electricityValue = parseFloat(document.getElementById("electricity").value);
+            var gasValue = parseFloat(document.getElementById("gas").value);
+            var carbonValue = 0.85 * electricityValue + 1.22 * gasValue;
+            document.getElementById("carbon").value = carbonValue.toFixed(2);
+        }
+    </script>
+
+
+    <button type="button" onclick="generateJSON()">Submit</button>
+
+    <script>
+        function generateJSON() {
+            var subarea = document.getElementById("subarea").value;
+            var electricity = parseFloat(document.getElementById("electricity").value);
+            var gas = parseFloat(document.getElementById("gas").value);
+            var carbon = parseFloat(document.getElementById("carbon").value);
+
+            var jsonObject = {
+                "Subarea": subarea,
+                "Electricity": electricity,
+                "Gas": gas,
+                "Carbon": carbon
+            };
+
+            var jsonString = JSON.stringify(jsonObject);
+            console.log(jsonString); // Display the JSON in the console
+            sendDataToAPI(jsonString);
+        }
+
+        // Send the JSON to the API
+        function sendDataToAPI(jsonString) {
+            fetch("https://api-test.aws.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: jsonString
+            })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error(error));
+        }
+    </script>
+</form>
+
+
+
+
+<!-- data visualization part -->
+<h1>Data visualization part</h1>
+<img src="https://github.com/GreenH47/mynote/blob/main/overrides/avatar.png?raw=true" width="300px" height="300px">
