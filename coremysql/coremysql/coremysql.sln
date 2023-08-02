@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "coremysql", "coremysql.csproj", "{D9ACB12A-2CE9-4631-B068-EBF91FD77037}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9ACB12A-2CE9-4631-B068-EBF91FD77037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9ACB12A-2CE9-4631-B068-EBF91FD77037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9ACB12A-2CE9-4631-B068-EBF91FD77037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9ACB12A-2CE9-4631-B068-EBF91FD77037}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5EE90A0-4633-475C-A55A-7575E3B83310}
+	EndGlobalSection
+EndGlobal

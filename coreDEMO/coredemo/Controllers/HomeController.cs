@@ -1,6 +1,7 @@
 ﻿using coredemo.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using coredemo.Data;
 
 namespace coredemo.Controllers
 {
@@ -8,13 +9,18 @@ namespace coredemo.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly AppDbContext _db;
+
+        public HomeController(ILogger<HomeController> logger, AppDbContext db)
         {
             _logger = logger;
+            _db = db;
         }
 
         public IActionResult Index()
         {
+            List<BillEntity> billlist = new List<BillEntity>();
+            billlist = _db.Bills.ToList();
             return View();
         }
 
