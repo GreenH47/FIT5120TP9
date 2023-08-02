@@ -13,7 +13,8 @@ namespace coremysql.Controllers
         {
             _logger = logger;
         }
-
+        // connect to mysql and fetch data
+        //tutorial https://www.youtube.com/watch?v=KRnW3CedU58
         public IActionResult Index()
         {
             List<Bill> bills = new List<Bill>();
