@@ -1,7 +1,7 @@
 import json
 import mysql.connector
 
-def lambda_handler(event):
+def lambda_handler(event, context):
     root_username = 'greenh47'
     root_password = 'RRCgwXAfWw53cej'
 
@@ -16,7 +16,10 @@ def lambda_handler(event):
 
     # JSON object representing the input data
     #json_object = '{"Subarea":"Subarea 4","Electricity":2,"Gas":3,"Carbon":5.36}'
-    json_object = event.get('body', None)
+    #test_object = event
+    #print("event input:",test_object)
+    json_object = json.dumps(event)
+    print(json_object)
     input_data = json.loads(json_object)
 
     try:
@@ -69,4 +72,8 @@ def lambda_handler(event):
         # Close the connection
         if connection:
             connection.close()
-
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps(output_json)
+    }
