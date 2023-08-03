@@ -57,10 +57,51 @@ the user with password and the endpoint is inside this script. you can modify wi
 ## where to begin your work
 
 ## how the code work behind  
-when click the submit button. the `generateJSON()` fuction will trigger to format user input to the lambda function with the format like `{"Subarea":"Subarea 3","Electricity":2,"Gas":3,"Carbon":5.36}` to the lambda function in the cloud.  
+when click the submit button. the `generateJSON()` fuction will trigger to format user input to the lambda function with the format like 
+```json
+{
+   "Subarea":"Subarea 3",
+   "Electricity":2,
+   "Gas":3,
+   "Carbon":5.36
+}
+```
+to the lambda function in the cloud.   
+lambda api use post method to get json request `https://acxyxgzu6e.execute-api.us-east-1.amazonaws.com/deploy`  
+postman api test result  
+![](img/README-20230803.png)
 
-if there is data matched in the database, it will return `{"user_input": {"Subarea": "Subarea 3", "Electricity": 2, "Gas": 3, "Carbon": 5.36}, "average": {"Subarea": "Subarea 3", "Electricity": 35.7, "Gas": 18.9, "Carbon": 7.5}}`  
-otherwise it will return `{"user_input": {"Subarea": "Subarea 4", "Electricity": 2, "Gas": 3, "Carbon": 5.36}, "average": null}` 
+website test result  
+![](img/README-20230803-1.png)
+if there is data matched in the database, it will return  
+```json
+{
+   "user_input":{
+      "Subarea":"Subarea 3",
+      "Electricity":2,
+      "Gas":3,
+      "Carbon":5.36
+   },
+   "average":{
+      "Subarea":"Subarea 3",
+      "Electricity":35.7,
+      "Gas":18.9,
+      "Carbon":7.5
+   }
+}
+```
+otherwise it will return  
+```json
+{
+   "user_input":{
+      "Subarea":"Subarea 4",
+      "Electricity":2,
+      "Gas":3,
+      "Carbon":5.36
+   },
+   "average":null
+}
+```
 
 the `sendDataToAPI(jsonString)` will send the user input to the lambda and process any response from it. 
 
