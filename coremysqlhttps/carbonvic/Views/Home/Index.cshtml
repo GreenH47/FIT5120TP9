@@ -7,6 +7,7 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
+
 <!-- user input form -->
 <form method="post">
     <div>
@@ -66,7 +67,7 @@
 
         // Send the JSON to the API
         function sendDataToAPI(jsonString) {
-            fetch("https://api-test.aws.com", {
+            fetch("https://acxyxgzu6e.execute-api.us-east-1.amazonaws.com/deploy", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -74,14 +75,10 @@
                 body: jsonString
             })
                 .then(response => response.json())
-                .then(data => console.log(data))
                 .then(data => {
-                    // Store the response data in a variable
-                    var jsonResponse = data;
-                    console.log("JSON response:", jsonResponse);
-
+                    console.log(data); // Display the JSON response in the console
                     // Call the function in script 2 and pass the JSON response as an argument
-                    dataVisual(jsonResponse);
+                    dataVisual(data);
                 })
                 .catch(error => console.error(error));
         }
@@ -93,10 +90,20 @@
 
 <!-- data visualization part -->
 <h1>Data visualization part</h1>
-<img src="https://github.com/GreenH47/mynote/blob/main/overrides/avatar.png?raw=true" width="300px" height="300px">
+
+<div id="jsonOutput"></div>
+
 <script>
     //data visualization part
     function dataVisual(jsonResponse) {
         //finish your part
+
+        // Access the HTML element where you want to display the JSON response
+        var outputElement = document.getElementById("jsonOutput");
+
+        // Convert the JSON response to a string and assign it to the innerHTML of the output element
+        outputElement.innerHTML = JSON.stringify(jsonResponse);
     }
 </script>
+
+<img src="https://github.com/GreenH47/mynote/blob/main/overrides/avatar.png?raw=true" width="300px" height="300px">
