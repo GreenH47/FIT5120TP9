@@ -1,5 +1,10 @@
 # FIT5120TP9
 project for FIT5120 onboarding project week 1-3  
+[project link](https://carbonvic.fit5120-tp9-23-s2.online/)  
+```
+username: guest
+password: guest
+```
 # tech stake
 ## BACKEND
 .net core mvc to host the web application   
@@ -11,8 +16,11 @@ aws lambda to process the data and matching with database
 Amazon rds mysql to storage the required open dataset  
 [Hosted MySQL - Amazon RDS for MySQL - AWS](https://aws.amazon.com/rds/mysql/)  
 # Project overview
-## Architecture
-![](img/README-20230802.png)
+## Application Architecture
+![](img/README-20230806.png)
+## cloud architecture 
+[Hardening the security of your AWS Elastic Beanstalk Application the Well-Architected way | AWS Security Blog](https://aws.amazon.com/blogs/security/hardening-the-security-of-your-aws-elastic-beanstalk-application-the-well-architected-way/)  
+![](img/README-20230806-1.png)
 ## Project folder  
 ### the web application  
 `.\FIT5120TP9\coremysqlhttps` [git repo](https://github.com/GreenH47/FIT5120TP9/tree/main/coremysqlhttps/carbonvic)  
