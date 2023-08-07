@@ -65,13 +65,12 @@
                 </div>
 
                 <div class="input-group">
-                    <label for="carbon">Carbon:</label>
-                    <input type="number" step="any" id="carbon" name="Carbon" readonly />
+                    <label for="carbon" style="display:none;">Carbon:</label>
+                    <input type="number" step="any" id="carbon" name="Carbon" style="display:none;" readonly />
                 </div>
                 
                 <div class="button-group">
-                    <button type="button" onclick="calculateCarbon()">Calculate</button>
-                    <button type="button" onclick="generateJSON()">Submit</button>
+                    <button type="button" onclick="combineFunctions()">Submit</button>
                 </div>
                 
             </div>
@@ -91,6 +90,12 @@
     <script>
 
         var globalData;
+
+
+        function combineFunctions() {
+                calculateCarbon();
+                generateJSON();
+        }
 
         function generateJSON() {
             var subarea = document.getElementById("subarea").value;
