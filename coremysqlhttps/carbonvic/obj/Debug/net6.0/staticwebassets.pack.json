@@ -9,8 +9,28 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Git\\FIT5120TP9\\coremysqlhttps\\carbonvic\\wwwroot\\css\\structure.css",
+      "PackagePath": "staticwebassets\\css\\structure.css"
+    },
+    {
       "Id": "C:\\Git\\FIT5120TP9\\coremysqlhttps\\carbonvic\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Git\\FIT5120TP9\\coremysqlhttps\\carbonvic\\wwwroot\\img\\CarbonVic-logos_black.png",
+      "PackagePath": "staticwebassets\\img\\CarbonVic-logos_black.png"
+    },
+    {
+      "Id": "C:\\Git\\FIT5120TP9\\coremysqlhttps\\carbonvic\\wwwroot\\img\\Default_Melbounre_city_in_a_forest_style_0.jpg",
+      "PackagePath": "staticwebassets\\img\\Default_Melbounre_city_in_a_forest_style_0.jpg"
+    },
+    {
+      "Id": "C:\\Git\\FIT5120TP9\\coremysqlhttps\\carbonvic\\wwwroot\\img\\edited_environmental.png",
+      "PackagePath": "staticwebassets\\img\\edited_environmental.png"
+    },
+    {
+      "Id": "C:\\Git\\FIT5120TP9\\coremysqlhttps\\carbonvic\\wwwroot\\img\\environmental.png",
+      "PackagePath": "staticwebassets\\img\\environmental.png"
     },
     {
       "Id": "C:\\Git\\FIT5120TP9\\coremysqlhttps\\carbonvic\\wwwroot\\js\\site.js",

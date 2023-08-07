@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "tech_note.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "tech_note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "tech_note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "tech_note.md"
               }
             }
           }
@@ -172,11 +172,12 @@
   },
   "active": "d881d6fb48d388f5",
   "lastOpenFiles": [
+    "img/tech_note-20230807.png",
+    "README.md",
     "img/README-20230806-1.png",
     "img/README-20230806.png",
     "tech_note.md",
     "img/tech_note-20230806.png",
-    "README.md",
     "img/README-20230803-1.png",
     "img/README-20230803.png",
     "lambda-function/greenh_accessKeys.csv",
@@ -196,7 +197,6 @@
     "img/fit5137-20230731-9.png",
     "img/Pasted image 20230731152707.png",
     "img/fit5137-20230731-8.png",
-    "img/fit5137-20230731-7.png",
     "course_notes/fit5122.md",
     "about/about_me.md",
     "about/about_copyright.md",

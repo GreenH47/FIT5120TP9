@@ -1,3 +1,11 @@
+# how to view the static webpage
+1. download and install [GitHub Desktop | Simple collaboration from your desktop](https://desktop.github.com/) 
+2. download and install [Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)  
+3. clone our git repo in git desktop [Cloning a repository from GitHub to GitHub Desktop - GitHub Docs](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) 
+4. use vscode open the folder `frontend` under `FIT5120TP9\coremysqlhttps` 
+5. install vscode extension [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 
+6. right click the `homepage_average_visual.html` and select open with live server
+![](img/tech_note-20230807.png)
 # Password protection
 1. ssh to ec2 instance running your app ([Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)) 
 2. Use the `cat` command to view the contents of the Nginx configuration file(s) `cat /etc/nginx/nginx.conf` and modify it `sudo nano /etc/nginx/nginx.conf`  

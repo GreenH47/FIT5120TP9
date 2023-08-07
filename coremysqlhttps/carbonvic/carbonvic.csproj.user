@@ -4,4 +4,7 @@
     <ActiveDebugProfile>Docker</ActiveDebugProfile>
     <NameOfLastUsedPublishProfile>C:\Git\FIT5120TP9\coremysqlhttps\carbonvic\Properties\PublishProfiles\carbonvic20230804201330 - Zip Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

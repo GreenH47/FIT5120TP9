@@ -2,51 +2,100 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-
 <!-- user input form -->
-<form method="post">
-    <div>
-        <label for="subarea">Subarea:</label>
-        <select id="subarea" name="Subarea" required>
-            <option value="Subarea 1" selected>Subarea 1</option>
-            <option value="Subarea 2">Subarea 2</option>
-            <option value="Subarea 3">Subarea 3</option>
-        </select>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/structure.css" />
+    </head>
+    <form method="post">
+        <div class="row">
+            <div class="header">
+            <img src="/img/CarbonVic-logos_black.png" width="610px" height="150px">
+            </div>
+            <div class="header2">
+            <img src="/img/Default_Melbounre_city_in_a_forest_style_0.jpg" width="750px" height="150px" class="transparent-image">
+            </div>
+        </div>
 
-    <div>
-        <label for="electricity">Electricity:</label>
-        <input type="number" step="any" id="electricity" name="Electricity" required onchange="calculateCarbon()" />
-    </div>
-    <div>
-        <label for="gas">Gas:</label>
-        <input type="number" step="any" id="gas" name="Gas" required onchange="calculateCarbon()" />
-    </div>
-    <div>
-        <label for="carbon">Carbon:</label>
-        <input type="number" step="any" id="carbon" name="Carbon" readonly />
-    </div>
+        <div class="row">
+            <div class="six_part">
+                <h2>Lets Calculate your Carbon Footprint</h2>
+                <p>Thank you for visiting our website and let us see what
+                    is your climate impact!<br><br> 
+                    
+                    Our calculator can estimate your carbon footprint based
+                    on your electricity, water and gas usage each month.<br><br> 
+                    
+                    This calculator only helps in calculating the carbon 
+                    footprint hence if there are more complex measurements
+                    please find a external Carbon Advisors to ask more 
+                    advice on the carbon emissions. </p>
+            </div>
+            <div class="four_part">
+                <h2>Input information</h2>
+                
+                <div class="input-group">
+                    <label for="subarea">Subarea:</label>
+                    <select id="subarea" name="Subarea" required>
+                        <option value="Lysterfield South" selected>Lysterfield South</option>
+                        <option value="Doveton and Eumemmerring">Doveton and Eumemmerring</option>
+                        <option value="Endeavour Hills">Endeavour Hills</option>
+                        <option value="Hallam">Hallam</option>
+                        <option value="Narre Warren North">Narre Warren North</option>
+                        <option value="Narre Warren and Narre Warren South">Narre Warren and Narre Warren South</option>
+                        <option value="Berwick and Harkaway">Berwick and Harkaway</option>
+                        <option value="Beaconsfield">Beaconsfield</option>
+                        <option value="Pearcedale">Pearcedale</option>
+                        <option value="Lynbrook and Lyndhurst">Lynbrook and Lyndhurst</option>
+                        <option value="Hampton Park">Hampton Park</option>
+                        <option value="Botanic Ridge, Cannons Creek, Cranbourne">Botanic Ridge, Cannons Creek, Cranbourne</option>
+                        <option value="Clyde and Clyde North">Clyde and Clyde North</option>
+                        <option value="Blind Bight, Tooradin and Warneet">Blind Bight, Tooradin and Warneet</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="electricity">Electricity:</label>
+                    <input type="number" step="any" id="electricity" name="Electricity" placeholder="Enter kWh/month" required onchange="calculateCarbon()" />
+                </div>
+                
+                <div class="input-group">
+                    <label for="gas">Gas:</label>
+                    <input type="number" step="any" id="gas" name="Gas" placeholder="Enter MJ/month" required onchange="calculateCarbon()" />
+                </div>
 
-    <button type="button" onclick="calculateCarbon()">Calculate</button>
+                <div class="input-group">
+                    <label for="carbon">Carbon:</label>
+                    <input type="number" step="any" id="carbon" name="Carbon" readonly />
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" onclick="calculateCarbon()">Calculate</button>
+                    <button type="button" onclick="generateJSON()">Submit</button>
+                </div>
+                
+            </div>
+            
+        </div>
+
+
+
 
     <script>
-        function calculateCarbon() {
-            var electricityValue = parseFloat(document.getElementById("electricity").value);
-            var gasValue = parseFloat(document.getElementById("gas").value);
-            var carbonValue = 0.85 * electricityValue + 1.22 * gasValue;
-            document.getElementById("carbon").value = carbonValue.toFixed(2);
-        }
+
+        
     </script>
 
 
-    <button type="button" onclick="generateJSON()">Submit</button>
 
     <script>
+
+        var globalData;
+
         function generateJSON() {
             var subarea = document.getElementById("subarea").value;
             var electricity = parseFloat(document.getElementById("electricity").value);
@@ -76,34 +125,251 @@
             })
                 .then(response => response.json())
                 .then(data => {
+                    document.getElementById("footPrint").style.display = "block";
                     console.log(data); // Display the JSON response in the console
+                    document.getElementById("carbonMessage").style.display = "block";
+                    document.getElementById("yesButton").style.display = "block"; 
+                    document.getElementById("noButton").style.display = "block";
                     // Call the function in script 2 and pass the JSON response as an argument
                     dataVisual(data);
+                    globalData = data;
                 })
                 .catch(error => console.error(error));
         }
+
+
+        function displayAvgData() {
+            var carbonMessage = document.getElementById("carbonMessage");
+            var yesButton = document.getElementById("yesButton");
+            var noButton = document.getElementById("noButton");
+            carbonMessage.style.display = "none";
+            yesButton.style.display = "none";
+            noButton.style.display = "none";
+            document.getElementById("footPrint2").style.display = "block";
+            document.getElementById("environmental").style.display = "block";
+            dataVisualAvg(globalData);
+        }
     </script>
-</form>
+
+    <script>
+        function hideElements() {
+            var carbonMessage = document.getElementById("carbonMessage");
+            var yesButton = document.getElementById("yesButton");
+            var noButton = document.getElementById("noButton");
+            carbonMessage.style.display = "none";
+            yesButton.style.display = "none";
+            noButton.style.display = "none";
+}
+
+    </script>
+
+    </form>
+    <!-- data visualization part -->
+    <div class="row">
+        <div class="four_part2">
+            <h2 id="footPrint" style="display:none;">Your Total Carbon Footprint</h2>
+            <div id="chart-container"></div>
+            <div id="jsonOutput"style="display:none;"></div>
+        </div>
+        <div class="six_part2">
+            <div id="carbonMessage" style="display:none;">
+                This is your total carbon footprint! Do you want 
+                to compare your total carbon footprint with your
+                surrounding suburbs?
+            </div>
+            <div class="button-container">
+                <button type="button" id="yesButton" style="display:none;" onclick="displayAvgData()">Yes</button>
+                <button type="button" id="noButton" style="display:none;" onclick="hideElements()">No</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="four_part3">
+            <h2 id="footPrint2" style="display:none;">Surburb Carbon Footprint</h2>
+            <div id="chart-container2"></div>
+            <div id="jsonOutput2"style="display:none;"></div>
+        </div>
+        <div class="six_part3">
+            <img id="environmental" src="/img/edited_environmental.png" style="display:none;">
+        </div>
+    </div>
 
 
 
+</html>
 
-<!-- data visualization part -->
-<h1>Data visualization part</h1>
 
-<div id="jsonOutput"></div>
+<script src="https://d3js.org/d3.v7.min.js"></script> 
 
 <script>
     //data visualization part
-    function dataVisual(jsonResponse) {
-        //finish your part
+    function dataVisualAvg(jsonResponse) {
 
+
+        d3.select("#chart-container2").html("");
         // Access the HTML element where you want to display the JSON response
-        var outputElement = document.getElementById("jsonOutput");
+        var outputElement = document.getElementById("jsonOutput2");
 
         // Convert the JSON response to a string and assign it to the innerHTML of the output element
         outputElement.innerHTML = JSON.stringify(jsonResponse);
+
+        // Parse the JSON data
+        const parsedData = JSON.parse(jsonResponse.body);
+
+        // Extract the user_input data for the pie chart
+        const average_data = parsedData.average;
+
+        // Extract the keys and values for the pie chart
+        const average_electricityPercentage = (average_data.Electricity * 0.389) / average_data.Carbon;
+        const average_gasPercentage = (average_data.Gas * 0.069) / average_data.Carbon;
+        // Extract the carbon value
+        const average_carbonValue = average_data.Carbon;
+
+        // Create an array of objects to pass to D3 pie function
+        const dataForPie = [
+            { label: "Electricity", value: average_electricityPercentage },
+            { label: "Gas", value: average_gasPercentage }
+        ];
+
+        // Set up the dimensions for the chart
+        const width = 300;
+        const height = 300;
+        const radius = Math.min(width, height) / 2;
+        const colors = ["lightblue", "#69a3b2"];
+
+        // Create an SVG element and append it to the chart container
+        const svg = d3.select("#chart-container2")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+        // Create the pie layout
+        const pie = d3.pie().value(d => d.value);
+
+        // Create the arc for each slice
+        const arc = d3.arc()
+            .innerRadius(radius * 0.5)
+            .outerRadius(radius);
+
+        // Create the pie chart
+        const arcs = svg.selectAll("arc")
+            .data(pie(dataForPie))
+            .enter()
+            .append("g");
+
+        // Add the slices to the chart
+        arcs.append("path")
+            .attr("d", arc)
+            .attr("fill", (d, i) => colors[i]);
+
+        // Add text labels for each slice
+        arcs.append("text")
+            .attr("transform", d => `translate(${arc.centroid(d)})`)
+            .attr("text-anchor", "middle")
+            .style("font-size", "10px")
+            .text(d => d.data.label + ": " + (d.data.value * 100).toFixed(2) + "%");
+        
+            svg.append("text")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("text-anchor", "middle")
+            .style("font-size", "11px")
+            .style("font-weight", "bold")
+            .text(`Carbon: ${average_carbonValue}`);
     }
 </script>
 
-<img src="https://github.com/GreenH47/mynote/blob/main/overrides/avatar.png?raw=true" width="300px" height="300px">
+
+<script>
+
+
+    function calculateCarbon() {
+        var electricityValue = parseFloat(document.getElementById("electricity").value);
+        var gasValue = parseFloat(document.getElementById("gas").value);
+        var carbonValue = 0.389 * electricityValue + 0.069 * gasValue;
+        document.getElementById("carbon").value = carbonValue.toFixed(2);
+        return carbonValue;
+    }
+
+    //data visualization part
+    function dataVisual(jsonResponse) {
+
+        d3.select("#chart-container").html("");
+
+        // Access the HTML element where you want to display the JSON response
+        var outputElement = document.getElementById("jsonOutput");
+        var carbonValue = calculateCarbon();
+
+        // Convert the JSON response to a string and assign it to the innerHTML of the output element
+        outputElement.innerHTML = JSON.stringify(jsonResponse);
+
+        // Parse the JSON data
+        const parsedData = JSON.parse(jsonResponse.body);
+
+        // Extract the user_input data for the pie chart
+        const user_input_data = parsedData.user_input;
+
+        // Extract the keys and values for the pie chart
+        const electricityPercentage = (user_input_data.Electricity * 0.389) / user_input_data.Carbon;
+        const gasPercentage = (user_input_data.Gas * 0.069) / user_input_data.Carbon;
+
+        // Create an array of objects to pass to D3 pie function
+        const dataForPie = [
+            { label: "Electricity", value: electricityPercentage },
+            { label: "Gas", value: gasPercentage }
+        ];
+
+        // Set up the dimensions for the chart
+        const width = 300;
+        const height = 300;
+        const radius = Math.min(width, height) / 2;
+        const colors = ["lightblue", "#69a3b2"];
+
+        // Create an SVG element and append it to the chart container
+        const svg = d3.select("#chart-container")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+        // Create the pie layout
+        const pie = d3.pie().value(d => d.value);
+
+        // Create the arc for each slice
+        const arc = d3.arc()
+            .innerRadius(radius * 0.5)
+            .outerRadius(radius);
+
+        // Create the pie chart
+        const arcs = svg.selectAll("arc")
+            .data(pie(dataForPie))
+            .enter()
+            .append("g");
+
+        // Add the slices to the chart
+        arcs.append("path")
+            .attr("d", arc)
+            .attr("fill", (d, i) => colors[i]);
+
+        // Add text labels for each slice
+        arcs.append("text")
+            .attr("transform", d => `translate(${arc.centroid(d)})`)
+            .style("font-size", "10px")
+            .attr("text-anchor", "middle")
+            .text(d => d.data.label + ": " + (d.data.value * 100).toFixed(2) + "%");
+            svg.append("text")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("text-anchor", "middle")
+            .style("font-size", "11px")
+            .style("font-weight", "bold")
+            .text(`Carbon: ${carbonValue.toFixed(2)}`);
+            
+    }
+</script>
+
