@@ -55,14 +55,21 @@
                 </div>
                 
                 <div class="input-group">
-                    <label for="electricity">Electricity:</label>
+                    <label for="electricity">
+                        Electricity:
+                        <span class="question-mark" onclick="eleInstructions()">?</span>
+                    </label>
                     <input type="number" step="any" id="electricity" name="Electricity" placeholder="Enter kWh/month" required onchange="calculateCarbon()" />
                 </div>
-                
+            
                 <div class="input-group">
-                    <label for="gas">Gas:</label>
+                    <label for="gas">
+                        Gas:
+                        <span class="question-mark" onclick="gasInstructions()">?</span>
+                    </label>
                     <input type="number" step="any" id="gas" name="Gas" placeholder="Enter MJ/month" required onchange="calculateCarbon()" />
                 </div>
+                
 
                 <div class="input-group">
                     <label for="carbon" style="display:none;">Carbon:</label>
@@ -90,6 +97,15 @@
     <script>
 
         var globalData;
+
+        function eleInstructions() {
+            // Replace the following alert with your own pop-up window or tooltip logic
+            alert("Instructions: Please enter the amount of electricity consumed per month in kilowatt-hours (kWh). You can find this information on your electricity bill or utility statement.");
+        }
+        function gasInstructions() {
+            // Replace the following alert with your own pop-up window or tooltip logic
+            alert("Instructions: Please enter the amount of gas consumed per month in megajoules (MJ). You can find this information on your gas bill or utility statement.");
+        }
 
 
         function combineFunctions() {
