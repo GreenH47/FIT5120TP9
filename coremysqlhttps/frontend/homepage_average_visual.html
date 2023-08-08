@@ -18,6 +18,11 @@
         </div>
 
         <div class="row">
+            <!--link to four_part element-->
+            <a href="#calculator">calculator</a>
+        </div>
+
+        <div class="row">
             <div class="six_part">
                 <h2>Lets Calculate your Carbon Footprint</h2>
                 <p>Thank you for visiting our website and let us see what
@@ -31,28 +36,15 @@
                     please find a external Carbon Advisors to ask more 
                     advice on the carbon emissions. </p>
             </div>
-            <div class="four_part">
+            
+            
+        </div>
+
+        <div class="row">
+            <div class="four_part" id="calculator">
                 <h2>Input information</h2>
                 
-                <div class="input-group">
-                    <label for="subarea">Subarea:</label>
-                    <select id="subarea" name="Subarea" required>
-                        <option value="Lysterfield South" selected>Lysterfield South</option>
-                        <option value="Doveton and Eumemmerring">Doveton and Eumemmerring</option>
-                        <option value="Endeavour Hills">Endeavour Hills</option>
-                        <option value="Hallam">Hallam</option>
-                        <option value="Narre Warren North">Narre Warren North</option>
-                        <option value="Narre Warren and Narre Warren South">Narre Warren and Narre Warren South</option>
-                        <option value="Berwick and Harkaway">Berwick and Harkaway</option>
-                        <option value="Beaconsfield">Beaconsfield</option>
-                        <option value="Pearcedale">Pearcedale</option>
-                        <option value="Lynbrook and Lyndhurst">Lynbrook and Lyndhurst</option>
-                        <option value="Hampton Park">Hampton Park</option>
-                        <option value="Botanic Ridge, Cannons Creek, Cranbourne">Botanic Ridge, Cannons Creek, Cranbourne</option>
-                        <option value="Clyde and Clyde North">Clyde and Clyde North</option>
-                        <option value="Blind Bight, Tooradin and Warneet">Blind Bight, Tooradin and Warneet</option>
-                    </select>
-                </div>
+                
                 
                 <div class="input-group">
                     <label for="electricity">
@@ -81,7 +73,6 @@
                 </div>
                 
             </div>
-            
         </div>
 
 
@@ -111,6 +102,11 @@
         function combineFunctions() {
                 calculateCarbon();
                 generateJSON();
+                //delay 1s and jump to footPrint element
+                setTimeout(function() {
+                    document.getElementById("footPrint").scrollIntoView({ behavior: "smooth" });
+                }, 1000);
+                
         }
 
         function generateJSON() {
@@ -159,12 +155,16 @@
             var carbonMessage = document.getElementById("carbonMessage");
             var yesButton = document.getElementById("yesButton");
             var noButton = document.getElementById("noButton");
+            subarea_selection.style.display = "block";
+
             carbonMessage.style.display = "none";
             yesButton.style.display = "none";
             noButton.style.display = "none";
             document.getElementById("footPrint2").style.display = "block";
             document.getElementById("environmental").style.display = "block";
-            dataVisualAvg(globalData);
+
+            
+            //dataVisualAvg(globalData);
         }
     </script>
 
@@ -200,6 +200,58 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="input-group">
+            <div id="subarea_selection" style="display:none;">
+                <label for="subarea">Subarea:</label>
+                <select id="subarea" name="Subarea" required>
+                    <option value="Lysterfield South" selected>Lysterfield South</option>
+                    <option value="Doveton and Eumemmerring">Doveton and Eumemmerring</option>
+                    <option value="Endeavour Hills">Endeavour Hills</option>
+                    <option value="Hallam">Hallam</option>
+                    <option value="Narre Warren North">Narre Warren North</option>
+                    <option value="Narre Warren and Narre Warren South">Narre Warren and Narre Warren South</option>
+                    <option value="Berwick and Harkaway">Berwick and Harkaway</option>
+                    <option value="Beaconsfield">Beaconsfield</option>
+                    <option value="Pearcedale">Pearcedale</option>
+                    <option value="Lynbrook and Lyndhurst">Lynbrook and Lyndhurst</option>
+                    <option value="Hampton Park">Hampton Park</option>
+                    <option value="Botanic Ridge, Cannons Creek, Cranbourne">Botanic Ridge, Cannons Creek, Cranbourne</option>
+                    <option value="Clyde and Clyde North">Clyde and Clyde North</option>
+                    <option value="Blind Bight, Tooradin and Warneet">Blind Bight, Tooradin and Warneet</option>
+                </select>
+                <button type="button" id="subareaButton" onclick="resubmitFunctions()">reSubmit</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        //recall combineFunctions() and recall the displayAvgData()
+        function resubmitFunctions(){
+
+            combineFunctions();
+            displayAvgData();
+            dataVisualAvg(globalData);
+
+            //delay 300ms and jump to chart-container2
+            setTimeout(function(){
+                document.getElementById("chart-container2").scrollIntoView({ behavior: "smooth" });
+            }, 200);
+
+            //delay 1000ms 
+            setTimeout(function(){
+                //jump to 
+                carbonMessage.style.display = "none";
+                yesButton.style.display = "none";
+                noButton.style.display = "none";
+            }, 1000);
+            
+
+        }
+        
+    </script>
 
 
     <div class="row">
@@ -389,4 +441,3 @@
             
     }
 </script>
-
