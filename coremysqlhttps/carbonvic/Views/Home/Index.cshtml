@@ -1,93 +1,94 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿﻿@{
+    ViewData["Title"] = "Carbonvic TP9";
 }
 
 <!-- user input form -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/structure.css" />
-    </head>
-    <form method="post">
-        <div class="row">
-            <div class="header">
+</head>
+<form method="post">
+    <div class="row">
+        <div class="header">
             <img src="/img/CarbonVic-logos_black.png" width="610px" height="150px">
-            </div>
-            <div class="header2">
+        </div>
+        <div class="header2">
             <img src="/img/Default_Melbounre_city_in_a_forest_style_0.jpg" width="750px" height="150px" class="transparent-image">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="six_part">
+            <h2>Lets Calculate your Carbon Footprint</h2>
+            <p>
+                Thank you for visiting our website and let us see what
+                is your climate impact!<br><br>
+
+                Our calculator can estimate your carbon footprint based
+                on your electricity, water and gas usage each month.<br><br>
+
+                This calculator only helps in calculating the carbon
+                footprint hence if there are more complex measurements
+                please find a external Carbon Advisors to ask more
+                advice on the carbon emissions.
+            </p>
+        </div>
+        <div class="four_part">
+            <h2>Input information</h2>
+
+            <div class="input-group">
+                <label for="subarea">Subarea:</label>
+                <select id="subarea" name="Subarea" required>
+                    <option value="Lysterfield South" selected>Lysterfield South</option>
+                    <option value="Doveton and Eumemmerring">Doveton and Eumemmerring</option>
+                    <option value="Endeavour Hills">Endeavour Hills</option>
+                    <option value="Hallam">Hallam</option>
+                    <option value="Narre Warren North">Narre Warren North</option>
+                    <option value="Narre Warren and Narre Warren South">Narre Warren and Narre Warren South</option>
+                    <option value="Berwick and Harkaway">Berwick and Harkaway</option>
+                    <option value="Beaconsfield">Beaconsfield</option>
+                    <option value="Pearcedale">Pearcedale</option>
+                    <option value="Lynbrook and Lyndhurst">Lynbrook and Lyndhurst</option>
+                    <option value="Hampton Park">Hampton Park</option>
+                    <option value="Botanic Ridge, Cannons Creek, Cranbourne">Botanic Ridge, Cannons Creek, Cranbourne</option>
+                    <option value="Clyde and Clyde North">Clyde and Clyde North</option>
+                    <option value="Blind Bight, Tooradin and Warneet">Blind Bight, Tooradin and Warneet</option>
+                </select>
             </div>
+
+            <div class="input-group">
+                <label for="electricity">Electricity:</label>
+                <input type="number" step="any" id="electricity" name="Electricity" placeholder="Enter kWh/month" required onchange="calculateCarbon()" />
+            </div>
+
+            <div class="input-group">
+                <label for="gas">Gas:</label>
+                <input type="number" step="any" id="gas" name="Gas" placeholder="Enter MJ/month" required onchange="calculateCarbon()" />
+            </div>
+
+            <div class="input-group">
+                <label for="carbon" style="display:none;">Carbon:</label>
+                <input type="number" step="any" id="carbon" name="Carbon" style="display:none;" readonly />
+            </div>
+
+            <div class="button-group">
+                <button type="button" onclick="combineFunctions()">Submit</button>
+            </div>
+
         </div>
 
-        <div class="row">
-            <div class="six_part">
-                <h2>Lets Calculate your Carbon Footprint</h2>
-                <p>Thank you for visiting our website and let us see what
-                    is your climate impact!<br><br> 
-                    
-                    Our calculator can estimate your carbon footprint based
-                    on your electricity, water and gas usage each month.<br><br> 
-                    
-                    This calculator only helps in calculating the carbon 
-                    footprint hence if there are more complex measurements
-                    please find a external Carbon Advisors to ask more 
-                    advice on the carbon emissions. </p>
-            </div>
-            <div class="four_part">
-                <h2>Input information</h2>
-                
-                <div class="input-group">
-                    <label for="subarea">Subarea:</label>
-                    <select id="subarea" name="Subarea" required>
-                        <option value="Lysterfield South" selected>Lysterfield South</option>
-                        <option value="Doveton and Eumemmerring">Doveton and Eumemmerring</option>
-                        <option value="Endeavour Hills">Endeavour Hills</option>
-                        <option value="Hallam">Hallam</option>
-                        <option value="Narre Warren North">Narre Warren North</option>
-                        <option value="Narre Warren and Narre Warren South">Narre Warren and Narre Warren South</option>
-                        <option value="Berwick and Harkaway">Berwick and Harkaway</option>
-                        <option value="Beaconsfield">Beaconsfield</option>
-                        <option value="Pearcedale">Pearcedale</option>
-                        <option value="Lynbrook and Lyndhurst">Lynbrook and Lyndhurst</option>
-                        <option value="Hampton Park">Hampton Park</option>
-                        <option value="Botanic Ridge, Cannons Creek, Cranbourne">Botanic Ridge, Cannons Creek, Cranbourne</option>
-                        <option value="Clyde and Clyde North">Clyde and Clyde North</option>
-                        <option value="Blind Bight, Tooradin and Warneet">Blind Bight, Tooradin and Warneet</option>
-                    </select>
-                </div>
-                
-                <div class="input-group">
-                    <label for="electricity">Electricity:</label>
-                    <input type="number" step="any" id="electricity" name="Electricity" placeholder="Enter kWh/month" required onchange="calculateCarbon()" />
-                </div>
-                
-                <div class="input-group">
-                    <label for="gas">Gas:</label>
-                    <input type="number" step="any" id="gas" name="Gas" placeholder="Enter MJ/month" required onchange="calculateCarbon()" />
-                </div>
-
-                <div class="input-group">
-                    <label for="carbon">Carbon:</label>
-                    <input type="number" step="any" id="carbon" name="Carbon" readonly />
-                </div>
-                
-                <div class="button-group">
-                    <button type="button" onclick="calculateCarbon()">Calculate</button>
-                    <button type="button" onclick="generateJSON()">Submit</button>
-                </div>
-                
-            </div>
-            
-        </div>
+    </div>
 
 
 
 
     <script>
 
-        
+
     </script>
 
 
@@ -95,6 +96,12 @@
     <script>
 
         var globalData;
+
+
+        function combineFunctions() {
+            calculateCarbon();
+            generateJSON();
+        }
 
         function generateJSON() {
             var subarea = document.getElementById("subarea").value;
@@ -110,7 +117,7 @@
             };
 
             var jsonString = JSON.stringify(jsonObject);
-            console.log(jsonString); // Display the JSON in the console
+            //console.log(jsonString); // Display the JSON in the console
             sendDataToAPI(jsonString);
         }
 
@@ -126,9 +133,9 @@
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("footPrint").style.display = "block";
-                    console.log(data); // Display the JSON response in the console
+                    //console.log(data); // Display the JSON response in the console
                     document.getElementById("carbonMessage").style.display = "block";
-                    document.getElementById("yesButton").style.display = "block"; 
+                    document.getElementById("yesButton").style.display = "block";
                     document.getElementById("noButton").style.display = "block";
                     // Call the function in script 2 and pass the JSON response as an argument
                     dataVisual(data);
@@ -159,49 +166,49 @@
             carbonMessage.style.display = "none";
             yesButton.style.display = "none";
             noButton.style.display = "none";
-}
+        }
 
     </script>
 
-    </form>
-    <!-- data visualization part -->
-    <div class="row">
-        <div class="four_part2">
-            <h2 id="footPrint" style="display:none;">Your Total Carbon Footprint</h2>
-            <div id="chart-container"></div>
-            <div id="jsonOutput"style="display:none;"></div>
+</form>
+<!-- data visualization part -->
+<div class="row">
+    <div class="four_part2">
+        <h2 id="footPrint" style="display:none;">Your Total Carbon Footprint</h2>
+        <div id="chart-container"></div>
+        <div id="jsonOutput" style="display:none;"></div>
+    </div>
+    <div class="six_part2">
+        <div id="carbonMessage" style="display:none;">
+            This is your total carbon footprint! Do you want
+            to compare your total carbon footprint with your
+            surrounding suburbs?
         </div>
-        <div class="six_part2">
-            <div id="carbonMessage" style="display:none;">
-                This is your total carbon footprint! Do you want 
-                to compare your total carbon footprint with your
-                surrounding suburbs?
-            </div>
-            <div class="button-container">
-                <button type="button" id="yesButton" style="display:none;" onclick="displayAvgData()">Yes</button>
-                <button type="button" id="noButton" style="display:none;" onclick="hideElements()">No</button>
-            </div>
+        <div class="button-container">
+            <button type="button" id="yesButton" style="display:none;" onclick="displayAvgData()">Yes</button>
+            <button type="button" id="noButton" style="display:none;" onclick="hideElements()">No</button>
         </div>
     </div>
+</div>
 
 
-    <div class="row">
-        <div class="four_part3">
-            <h2 id="footPrint2" style="display:none;">Surburb Carbon Footprint</h2>
-            <div id="chart-container2"></div>
-            <div id="jsonOutput2"style="display:none;"></div>
-        </div>
-        <div class="six_part3">
-            <img id="environmental" src="/img/edited_environmental.png" style="display:none;">
-        </div>
+<div class="row">
+    <div class="four_part3">
+        <h2 id="footPrint2" style="display:none;">Surburb Carbon Footprint</h2>
+        <div id="chart-container2"></div>
+        <div id="jsonOutput2" style="display:none;"></div>
     </div>
+    <div class="six_part3">
+        <img id="environmental" src="/img/edited_environmental.png" style="display:none;">
+    </div>
+</div>
 
 
 
 </html>
 
 
-<script src="https://d3js.org/d3.v7.min.js"></script> 
+<script src="https://d3js.org/d3.v7.min.js"></script>
 
 <script>
     //data visualization part
@@ -272,8 +279,8 @@
             .attr("text-anchor", "middle")
             .style("font-size", "10px")
             .text(d => d.data.label + ": " + (d.data.value * 100).toFixed(2) + "%");
-        
-            svg.append("text")
+
+        svg.append("text")
             .attr("x", 0)
             .attr("y", 0)
             .attr("text-anchor", "middle")
@@ -362,14 +369,14 @@
             .style("font-size", "10px")
             .attr("text-anchor", "middle")
             .text(d => d.data.label + ": " + (d.data.value * 100).toFixed(2) + "%");
-            svg.append("text")
+        svg.append("text")
             .attr("x", 0)
             .attr("y", 0)
             .attr("text-anchor", "middle")
             .style("font-size", "11px")
             .style("font-weight", "bold")
             .text(`Carbon: ${carbonValue.toFixed(2)}`);
-            
+
     }
 </script>
 

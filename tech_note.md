@@ -31,7 +31,14 @@ server {
 1. buy a domain and use ACM to get SSL certificate for your domain 
 2. enable https listener in your ALB 
 3. create A name and apply alias record in your hosted zone  
+# package docker image in vs studio
+```bash
+docker build -t carbonvic .
 
+docker tag carbonvic greenh47/carbonvic:xx
+
+docker push greenh47/carbonvic:xx
+```
 # Deploy docker image into aws 
 [Deploying Elastic Beanstalk applications from Docker containers - AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html)
 1. package and test your image local 

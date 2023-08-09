@@ -238,3 +238,14 @@ body {
     width: 100%; 
     object-fit: cover; 
 }
+
+.question-mark {
+    display: inline-block;
+    margin-left: 5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #ccc;
+    text-align: center;
+    cursor: pointer;
+}
