@@ -401,7 +401,7 @@
             .attr("y", d => y(d.totalValue) - 10)  // 10 pixel offset above the bar
             .attr("text-anchor", "middle")
             .attr("font-size", "12px")
-            .text(d => `${Math.round(d.totalValue * 100) / 100} CO2e`);  // Display with 2 decimal places
+            .text(d => `${Math.round(d.totalValue * 100) / 100} kg`);  // Display with 2 decimal places
 
         // Display electricity percentage value within the bar
         svg.selectAll(".electricityPercentageText")
@@ -588,7 +588,7 @@
         } else if (d.data.label === "Gas") {
             value = user_input_data.Gas * 0.069; // Adjusted this to your calculation
         }
-        return `${d.data.label}: ${value.toFixed(2)} CO2e (${(d.data.value * 100).toFixed(2)}%)`;
+        return `${d.data.label}: ${value.toFixed(2)} kg (${(d.data.value * 100).toFixed(2)}%)`;
     });
         
         svg.append("text")
@@ -597,7 +597,7 @@
             .attr("text-anchor", "middle")
             .style("font-size", "11px")
             .style("font-weight", "bold")
-            .text(`Carbon: ${carbonValue.toFixed(2)}CO2e`);
+            .text(`Carbon: ${carbonValue.toFixed(2)}kg`);
             
     }
 </script>
