@@ -180,6 +180,8 @@
             successfulMessage.style.display = "block";
             document.getElementById("successfulMessage").style.display = "none";
             document.getElementById("failMessage").style.display = "block";
+            document.getElementById("rowstr").style.display = "none";
+            document.getElementById("rowstr1").style.display = "none";
 
             setTimeout(function(){
                 document.getElementById("moveTop").scrollIntoView({ behavior: "smooth" });
@@ -251,6 +253,7 @@
             combineFunctions2();
             //displayAvgData();
             document.getElementById("footPrint2").style.display = "block";
+            document.getElementById("rowstr1").style.display = "block";
             //delay 300ms and jump to chart-container2
             setTimeout(function(){
                 document.getElementById("chart-container2").scrollIntoView({ behavior: "smooth" });
@@ -261,7 +264,7 @@
     </script>
 
 
-    <div class="row">
+    <div class="row" id="rowstr1" style="display:none;">
         <div class="four_part3">
             <h2 id="footPrint2" style="display:none;">Surburb Carbon Footprint</h2>
             <div id="chart-container2"></div>
