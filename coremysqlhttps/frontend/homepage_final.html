@@ -9,21 +9,22 @@
     </head>
     <form method="post">
         <div class="row">
-            <div class="header">
-                <img src="CarbonVic-logos_black.png" width="610px" height="150px">
+            <div class="navbar">
+                <div class="header">
+                <img src="CarbonVic-logos_black.png" width="200px" height="50px">
+            </div>
+                <a href="homepage_final.html" class="nav-link">Home</a>
+                <span>|</span>
+                <a href="#moveTop" class="nav-link">Calculator</a>
             </div>
             <div class="header2">
-                <img src="Default_Melbounre_city_in_a_forest_style_0.jpg" width="750px" height="150px" class="transparent-image">
+                <img src="Default_Melbounre_city_in_a_forest_style_0.jpg" class="transparent-image">
             </div>
         </div>
 
-        <div class="row">
-            <!--link to four_part element-->
-            <a href="#calculator">calculator</a>
-        </div>
 
-        <div class="row">
-            <div class="six_part">
+        <div class="row" id="moveTop">
+            <div class="four_part">
                 <h2>Lets Calculate your Carbon Footprint</h2>
                 <p>Thank you for visiting our website and let us see what
                     is your climate impact!<br><br> 
@@ -35,16 +36,8 @@
                     footprint hence if there are more complex measurements
                     please find a external Carbon Advisors to ask more 
                     advice on the carbon emissions. </p>
-            </div>
-            
-            
-        </div>
 
-        <div class="row">
-            <div class="four_part" id="calculator">
                 <h2>Input information</h2>
-                
-                
                 
                 <div class="input-group">
                     <label for="electricity">
@@ -71,18 +64,9 @@
                 <div class="button-group">
                     <button type="button" onclick="combineFunctions()">Submit</button>
                 </div>
-                
             </div>
+            
         </div>
-
-
-
-
-    <script>
-
-        
-    </script>
-
 
 
     <script>
@@ -108,6 +92,13 @@
                 }, 1000);
                 
         }
+
+        function combineFunctions2() {
+                calculateCarbon();
+                generateJSON();
+                
+        }
+
 
         function generateJSON() {
             var subarea = document.getElementById("subarea").value;
@@ -143,6 +134,7 @@
                     document.getElementById("carbonMessage").style.display = "block";
                     document.getElementById("yesButton").style.display = "block"; 
                     document.getElementById("noButton").style.display = "block";
+                    successfulMessage.style.display = "none";
                     // Call the function in script 2 and pass the JSON response as an argument
                     dataVisual(data);
                     globalData = data;
@@ -151,17 +143,25 @@
         }
 
 
+
+
         function displayAvgData() {
             var carbonMessage = document.getElementById("carbonMessage");
             var yesButton = document.getElementById("yesButton");
             var noButton = document.getElementById("noButton");
+            var rowstr = document.getElementById("rowstr");
             subarea_selection.style.display = "block";
 
             carbonMessage.style.display = "none";
             yesButton.style.display = "none";
             noButton.style.display = "none";
-            document.getElementById("footPrint2").style.display = "block";
-            document.getElementById("environmental").style.display = "block";
+
+            document.getElementById("successfulMessage").style.display = "block";
+            rowstr.style.display = "block";
+
+            setTimeout(function(){
+                document.getElementById("chart-container").scrollIntoView({ behavior: "smooth" });
+            }, 200);
 
             
             //dataVisualAvg(globalData);
@@ -171,11 +171,20 @@
     <script>
         function hideElements() {
             var carbonMessage = document.getElementById("carbonMessage");
+            var successfulMessage = document.getElementById("successfulMessage");
             var yesButton = document.getElementById("yesButton");
             var noButton = document.getElementById("noButton");
             carbonMessage.style.display = "none";
             yesButton.style.display = "none";
             noButton.style.display = "none";
+            successfulMessage.style.display = "block";
+            document.getElementById("successfulMessage").style.display = "none";
+            document.getElementById("failMessage").style.display = "block";
+
+            setTimeout(function(){
+                document.getElementById("moveTop").scrollIntoView({ behavior: "smooth" });
+            }, 200);
+
 }
 
     </script>
@@ -194,36 +203,43 @@
                 to compare your total carbon footprint with your
                 surrounding suburbs?
             </div>
+            <div id="successfulMessage" style="display:none;">
+                Successfully ! ! ! <br></br>This is the Total Carbon Footprint generated by the gas and selectivity you use.
+            </div>
+            <div id="failMessage" style="display:none;">
+                Let us calculate again ! ! 
+            </div>
             <div class="button-container">
                 <button type="button" id="yesButton" style="display:none;" onclick="displayAvgData()">Yes</button>
-                <button type="button" id="noButton" style="display:none;" onclick="hideElements()">No</button>
+                <button type="button" id="noButton" style="display:none;" onclick="hideElements()">No, calculate again</button>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="input-group">
-            <div id="subarea_selection" style="display:none;">
-                <label for="subarea">Subarea:</label>
-                <select id="subarea" name="Subarea" required>
-                    <option value="Lysterfield South" selected>Lysterfield South</option>
-                    <option value="Doveton and Eumemmerring">Doveton and Eumemmerring</option>
-                    <option value="Endeavour Hills">Endeavour Hills</option>
-                    <option value="Hallam">Hallam</option>
-                    <option value="Narre Warren North">Narre Warren North</option>
-                    <option value="Narre Warren and Narre Warren South">Narre Warren and Narre Warren South</option>
-                    <option value="Berwick and Harkaway">Berwick and Harkaway</option>
-                    <option value="Beaconsfield">Beaconsfield</option>
-                    <option value="Pearcedale">Pearcedale</option>
-                    <option value="Lynbrook and Lyndhurst">Lynbrook and Lyndhurst</option>
-                    <option value="Hampton Park">Hampton Park</option>
-                    <option value="Botanic Ridge, Cannons Creek, Cranbourne">Botanic Ridge, Cannons Creek, Cranbourne</option>
-                    <option value="Clyde and Clyde North">Clyde and Clyde North</option>
-                    <option value="Blind Bight, Tooradin and Warneet">Blind Bight, Tooradin and Warneet</option>
-                </select>
-                <button type="button" id="subareaButton" onclick="resubmitFunctions()">reSubmit</button>
+    <div class="row2" id="rowstr" style="display:none;">
+        <div class="six_part">
+            <div class="input-group">
+                <div id="subarea_selection" id="subarea_selection" style="display:none;">
+                    <label for="subarea">Subarea:</label>
+                    <select id="subarea" name="Subarea" required>
+                        <option value="Lysterfield South" selected>Lysterfield South</option>
+                        <option value="Doveton and Eumemmerring">Doveton and Eumemmerring</option>
+                        <option value="Endeavour Hills">Endeavour Hills</option>
+                        <option value="Hallam">Hallam</option>
+                        <option value="Narre Warren North">Narre Warren North</option>
+                        <option value="Narre Warren and Narre Warren South">Narre Warren and Narre Warren South</option>
+                        <option value="Berwick and Harkaway">Berwick and Harkaway</option>
+                        <option value="Beaconsfield">Beaconsfield</option>
+                        <option value="Pearcedale">Pearcedale</option>
+                        <option value="Lynbrook and Lyndhurst">Lynbrook and Lyndhurst</option>
+                        <option value="Hampton Park">Hampton Park</option>
+                        <option value="Botanic Ridge, Cannons Creek, Cranbourne">Botanic Ridge, Cannons Creek, Cranbourne</option>
+                        <option value="Clyde and Clyde North">Clyde and Clyde North</option>
+                        <option value="Blind Bight, Tooradin and Warneet">Blind Bight, Tooradin and Warneet</option>
+                    </select>
+                    <button type="button" id="subareaButton" onclick="resubmitFunctions()">Compare with different suburb</button>
+                </div>
             </div>
-            
         </div>
     </div>
 
@@ -231,23 +247,14 @@
         //recall combineFunctions() and recall the displayAvgData()
         function resubmitFunctions(){
 
-            combineFunctions();
-            //displayAvgData();
             dataVisualAvg(globalData);
-
+            combineFunctions2();
+            //displayAvgData();
+            document.getElementById("footPrint2").style.display = "block";
             //delay 300ms and jump to chart-container2
             setTimeout(function(){
                 document.getElementById("chart-container2").scrollIntoView({ behavior: "smooth" });
             }, 200);
-
-            //delay 1000ms 
-            setTimeout(function(){
-                //jump to 
-                carbonMessage.style.display = "none";
-                yesButton.style.display = "none";
-                noButton.style.display = "none";
-            }, 1000);
-            
 
         }
         
@@ -259,9 +266,6 @@
             <h2 id="footPrint2" style="display:none;">Surburb Carbon Footprint</h2>
             <div id="chart-container2"></div>
             <div id="jsonOutput2"style="display:none;"></div>
-        </div>
-        <div class="six_part3">
-            <img id="environmental" src="edited_environmental.png" style="display:none;">
         </div>
     </div>
 
@@ -393,7 +397,7 @@
             .attr("x", d => x(d.category) + x.bandwidth() / 2)
             .attr("y", d => y(d.totalValue) - 10)  // 10 pixel offset above the bar
             .attr("text-anchor", "middle")
-            .attr("font-size", "14px")
+            .attr("font-size", "12px")
             .text(d => `${Math.round(d.totalValue * 100) / 100} kg`);  // Display with 2 decimal places
 
         // Display electricity percentage value within the bar
@@ -464,14 +468,40 @@
 
 <script>
 
+    function validateInput(inputElement) {
+        if (inputElement.value === "") return null;
+
+        var regex = /^[0-9]*\.?[0-9]+$/;
+        if (!regex.test(inputElement.value)) {
+            alert("Invalid input in " + inputElement.id + ". Please enter a positive number without '-' characters.");
+            inputElement.value = "";
+            inputElement.focus();
+            return false;
+        }
+        return true;
+    }
 
     function calculateCarbon() {
-        var electricityValue = parseFloat(document.getElementById("electricity").value);
-        var gasValue = parseFloat(document.getElementById("gas").value);
+        var electricityInput = document.getElementById("electricity");
+        var gasInput = document.getElementById("gas");
+
+        var elecValid = validateInput(electricityInput);
+        var gasValid = validateInput(gasInput);
+
+        
+        if (elecValid === false || gasValid === false || (elecValid === null && gasValid === null)) {
+            return;
+        }
+
+        var electricityValue = parseFloat(electricityInput.value || "0");
+        var gasValue = parseFloat(gasInput.value || "0");
+
         var carbonValue = 0.389 * electricityValue + 0.069 * gasValue;
         document.getElementById("carbon").value = carbonValue.toFixed(2);
         return carbonValue;
     }
+
+
 
     //data visualization part
     function dataVisual(jsonResponse) {

@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #e6ecf0;
+    text-align: center;
 }
 
 .container {
@@ -17,16 +18,90 @@ body {
     flex-wrap: wrap;
 }
 
-.header {
-    margin-right: 155px;
-    left: 0;
-    top: 7px;
+.row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.header2 {
-    left: 850px;
-    top: 0px;
+#subarea_selection label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
 }
+
+#subarea_selection select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#subarea_selection button {
+    padding: 10px;
+    width: 100%;
+    background-color: #24345F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#subarea_selection button:hover {
+    background-color: #0056b3;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed; /* 固定定位 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左侧对齐 */
+    width: 100%; /* 占满整个宽度 */
+    z-index: 1000; /* 高层叠顺序，确保在其他元素之上 */
+}
+
+.header {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 14px 16px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007BFF;
+}
+
+span {
+    padding: 0 10px;
+    color: black;
+}
+
+
+
+.header2 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.header2 img.transparent-image {
+    width: 100%;
+    max-height: 200px;
+    height: auto;
+    object-fit: cover;
+    display: block; 
+}
+
 
 
 .input-group {
@@ -46,9 +121,15 @@ body {
 
 .four_part,
 .six_part {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
     flex: 1;
-    background-color: #F2F4F8;
     padding: 20px;
+    background: white; /* 或其他你喜欢的颜色 */
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1); /* 添加一些阴影效果 */
+    border-radius: 5px; /* 添加一些圆角 */
 }
 
 .four_part h2,
@@ -96,7 +177,8 @@ body {
     cursor: pointer;
     margin-top: 15px;
     transition: background-color 0.3s, transform 0.3s;
-
+    display: block; /* 使按钮成为块级元素 */
+    margin: 15px auto; /* 水平居中 */
 }
 
 .four_part button + button {
@@ -120,6 +202,17 @@ body {
 #chart-container2 {
     width: 100%;
 }
+
+#successfulMessage {
+    font-weight: bold;
+    text-align: center;
+}
+
+#failMessage {
+    font-weight: bold;
+    text-align: center;
+}
+
 
 .four_part2 {
     flex: 1;
@@ -186,12 +279,14 @@ body {
 
 .four_part3 {
     flex: 1;
-    background-color: #e6ecf0;
-    padding: 20px;
-    display: flex;            
-    justify-content: center;  
-    align-items: center;     
-    height: 100%; 
+    background-color: #f8f9fa;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 
@@ -229,15 +324,6 @@ body {
     position: relative;
 }
 
-
-#environmental {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    height: 100%;
-    width: 100%; 
-    object-fit: cover; 
-}
 
 .question-mark {
     display: inline-block;
