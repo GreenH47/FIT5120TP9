@@ -30,7 +30,7 @@
                     is your climate impact!<br><br> 
                     
                     Our calculator can estimate your carbon footprint based
-                    on your electricity, water and gas usage each month.<br><br> 
+                    on your electricity and gas usage each month.<br><br> 
                     
                     This calculator only helps in calculating the carbon 
                     footprint hence if there are more complex measurements
@@ -385,11 +385,20 @@
             .call(d3.axisBottom(x))
             .attr("font-size", "14px");
 
+
         // Y axis
         svg.append("g")
             .attr("transform", `translate(${margin.left},0)`)
             .call(d3.axisLeft(y).ticks(5))
             .attr("font-size", "14px");
+
+        svg.append("text")
+        .attr("transform", `translate(${margin.left - 10}, ${margin.top})`) // Position it slightly to the left of the Y-axis and at the top
+        .attr("text-anchor", "end")
+        .attr("font-size", "14px")
+        .style("font-weight", "bold")
+
+        .text("kg");
 
         // Display total carbon value
         svg.selectAll(".totalCarbonText")
@@ -401,7 +410,7 @@
             .attr("y", d => y(d.totalValue) - 10)  // 10 pixel offset above the bar
             .attr("text-anchor", "middle")
             .attr("font-size", "12px")
-            .text(d => `${Math.round(d.totalValue * 100) / 100} CO2e`);  // Display with 2 decimal places
+            .text(d => `${Math.round(d.totalValue * 100) / 100} `);  // Display with 2 decimal places
 
         // Display electricity percentage value within the bar
         svg.selectAll(".electricityPercentageText")
@@ -436,8 +445,8 @@
 
         // Array for legend data
         const legendData = [
-            { color: "steelblue", label: "Electricity" },
-            { color: "lightcoral", label: "Gas" }
+            { color: "lightcoral", label: "Gas" },
+            { color: "steelblue", label: "Electricity" }
         ];
 
         // Create a group for each legend item
@@ -463,6 +472,10 @@
             .attr("y", 9.5)
             .attr("dy", "0.32em")
             .text(d => d);
+
+        // Y axis
+        
+
         
     }
 </script>
@@ -527,6 +540,7 @@
         // Extract the keys and values for the pie chart
         const electricityPercentage = (user_input_data.Electricity * 0.389) / user_input_data.Carbon;
         const gasPercentage = (user_input_data.Gas * 0.069) / user_input_data.Carbon;
+        const treesRequired = carbonValue / 25.6;
 
         // Create an array of objects to pass to D3 pie function
         const dataForPie = [
@@ -538,7 +552,7 @@
         const width = 300;
         const height = 300;
         const radius = Math.min(width, height) / 2;
-        const colors = ["lightblue", "#69a3b2"];
+        const colors = ["steelblue", "lightcoral"];
 
         // Create an SVG element and append it to the chart container
         const svg = d3.select("#chart-container")
@@ -588,16 +602,32 @@
         } else if (d.data.label === "Gas") {
             value = user_input_data.Gas * 0.069; // Adjusted this to your calculation
         }
-        return `${d.data.label}: ${value.toFixed(2)} CO2e (${(d.data.value * 100).toFixed(2)}%)`;
+        return `${d.data.label}: ${value.toFixed(2)} Kg (${(d.data.value * 100).toFixed(2)}%)`;
     });
-        
         svg.append("text")
-            .attr("x", 0)
-            .attr("y", 0)
-            .attr("text-anchor", "middle")
-            .style("font-size", "11px")
-            .style("font-weight", "bold")
-            .text(`Carbon: ${carbonValue.toFixed(2)}CO2e`);
+        .attr("x", 0)
+        .attr("y", -10)  // adjust this to move the text up a bit
+        .attr("text-anchor", "middle")
+        .style("font-size", "14px")
+        .style("font-weight", "bold")
+        .text("Carbon:");
+
+        // Add the actual carbon value below the label "Carbon"
+        svg.append("text")
+        .attr("x", 0)
+        .attr("y", 10)   // adjust this to move the text down a bit
+        .attr("text-anchor", "middle")
+        .style("font-size", "14px")
+        .style("font-weight", "bold")
+        .text(`${carbonValue.toFixed(2)}kg`);
+
+        svg.append("text")
+        .attr("x", 0)
+        .attr("y", 30) // adjust this value to position the text appropriately
+        .attr("text-anchor", "middle")
+        .style("font-size", "12px")
+        .style("font-weight", "bold")
+        .text(`Equivalent to: ${treesRequired.toFixed(0)} trees`);
             
     }
 </script>
