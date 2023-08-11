@@ -31,7 +31,9 @@ def lambda_handler(event, context):
         cursor = connection.cursor()
 
         # Execute a query to fetch data based on Subarea match
-        cursor.execute(f"SELECT * FROM bill WHERE subarea = '{input_data['Subarea']}'")
+        # Parameterized queries ensure that the input values are properly 
+        # escaped and treated as data, not as part of the SQL syntax.
+        cursor.execute("SELECT * FROM bill WHERE subarea = %s", (input_data['Subarea'],))
 
         # Fetch all rows from the result set
         rows = cursor.fetchall()
