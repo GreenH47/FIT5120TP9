@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz App</title>
+</head>
+<body>
+    <h1>Quiz App</h1>
+    <button id="startQuizButton">Start Quiz</button>
+    
+    <div id="quizContainer" style="display: none;">
+        <h1>Quiz</h1>
+        <div id ="jsonResponse"></div>
+        <div id="questionContainer"></div>
+        <button id="submitQuizButton">Submit</button>
+        <h2>user answer</h2>
+        <div id="answerContainer"></div>
+        <h2>score</h2>
+        <div id="scoreContainer"></div>
+    </div>
+
+    <script>
+        // Add event listener for startQuizButton
+        document.getElementById('startQuizButton').addEventListener('click', startQuiz);
+
+        // Add event listener for submitQuizButton
+        document.getElementById('submitQuizButton').addEventListener('click', submitQuiz);
+
+        // Rest of your code
+
+        function startQuiz() {
+            // fetch questions from API
+            fetch('https://cqfhkbq6ehglmirs5g45d3sbpm0jfhfb.lambda-url.us-east-1.on.aws/')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // display quiz container
+                    document.getElementById('quizContainer').style.display = 'block';
+                    // display json response to the webpage
+                    document.getElementById('jsonResponse').innerHTML= JSON.stringify(data);
+                    
+                })
+                .catch(error => console.error('Fetch error:', error));
+
+        }
+
+        function submitQuiz() {
+            // read answer.json file locally
+            fetch('answer.json')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // display answer container
+                    document.getElementById('answerContainer').innerHTML = JSON.stringify(data);
+
+                    // submit JSON to the API and get response
+                    fetch('https://u8wya4sxje.execute-api.us-east-1.amazonaws.com/deploy', {
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: {
+                            'Content-type': 'application/json; charset=UTF-8',
+                        },
+                    })
+                        .then(response => response.json())
+                        .then(apiResponse => {
+                            console.log(apiResponse);
+                            // Further processing of the API response if needed
+                            document.getElementById('scoreContainer').innerHTML = JSON.stringify(apiResponse);
+                        })
+                        .catch(error => console.error('API request error:', error));
+                })
+                .catch(error => console.error('Fetch error:', error));
+        }
+
+    </script>
+</body>
+</html>
