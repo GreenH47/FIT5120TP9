@@ -58,23 +58,18 @@
                 'top-left'
             );
 
-            var markerData = [
-                { latitude: -37.8136, longitude: 144.9631 }, // Melbourne CBD
-                { latitude: -37.814, longitude: 144.989 }, // Federation Square
-                { latitude: -37.8263, longitude: 145.014 }, // Chadstone Shopping Centre
-                { latitude: -37.90661, longitude: 145.12020 },
-                { latitude: -37.90413, longitude: 145.17885 },
-                { latitude: -37.93580, longitude: 145.09692 }
-            ];
-            //put mark from markerData list with coordinates comments
-            for (var i = 0; i < markerData.length; i++) {
-                new mapboxgl.Marker({
-                    color: "blue",
-                    draggable: true
-                }).setLngLat([markerData[i].longitude, markerData[i].latitude]).addTo(map);
-            }
-            
-
+           // Read the JSON file and add the points with comments to the map
+            fetch('random_locations.json')
+            .then(response => response.json())
+            .then(data => {
+                // Add markers for each point
+                data.forEach(point => {
+                var marker = new mapboxgl.Marker()
+                    .setLngLat([point.longitude, point.latitude])
+                    .setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
+                    .addTo(map);
+                });
+            });
 
         }
 
