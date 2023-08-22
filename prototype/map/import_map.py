@@ -8,7 +8,7 @@ dynamodb = boto3.resource('dynamodb', region_name='us-east-1', aws_access_key_id
 table = dynamodb.Table('Map')
 
 # Load the JSON file
-with open('random_locations1.json') as file:
+with open('random_locations.json') as file:
     data = json.load(file)
 
 # Convert float values to Decimal types
