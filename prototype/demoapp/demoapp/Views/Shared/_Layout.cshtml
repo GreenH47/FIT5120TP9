@@ -31,7 +31,11 @@
 
                     </ul>
                 </div>
-                
+                <form id="searchForm" method="get" action="/SearchResults/Index">
+                    <input type="text" id="searchInput" name="search" placeholder="Enter your search query" />
+                    <button type="submit">Search</button>
+                </form>
+
             </div>
         </nav>
     </header>
@@ -49,6 +53,19 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            var searchQuery = document.getElementById("searchInput").value.trim();   // Get the search query from the input field
+
+            if (searchQuery.length > 0) {
+                // Redirect to the search results page with the search query parameter
+                window.location.href = "/SearchResults/Index?search=" + encodeURIComponent(searchQuery);
+            }
+        });
+    </script>
+
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

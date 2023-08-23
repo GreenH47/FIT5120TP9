@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ISS2MkpBU8viF4xMKnzxnPKGOH/XNSsfIHhR5P/MhEUq9oG5OTYJ2M2YT1jG7iyIrPubdYZMf/CQbCrJPiyEcg==",
+  "dgSpecHash": "cgGAVlq/UzfJMMt/8tbhQOQRTN1GPLzt6Gn5OIdTrBCUlfmyY0MYpE0WYlleImS6MnmCa73lYx3F7BGzX1JZwg==",
   "success": true,
   "projectFilePath": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\demoapp.csproj",
   "expectedPackageFiles": [
@@ -90,7 +90,7 @@
     "C:\\Users\\huang\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\huang\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\huang\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\huang\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\huang\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\huang\\.nuget\\packages\\nuget.common\\6.6.1\\nuget.common.6.6.1.nupkg.sha512",
     "C:\\Users\\huang\\.nuget\\packages\\nuget.configuration\\6.6.1\\nuget.configuration.6.6.1.nupkg.sha512",
     "C:\\Users\\huang\\.nuget\\packages\\nuget.dependencyresolver.core\\6.6.1\\nuget.dependencyresolver.core.6.6.1.nupkg.sha512",

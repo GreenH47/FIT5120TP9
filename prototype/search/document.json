@@ -8,7 +8,7 @@
          "waste management"
       ],
       "context":[
-         "vvvv black waste and green waste",
+         "vvvv black waste and green waste general",
          "ggg waste management"
       ],
       "images":[
@@ -43,6 +43,23 @@
       ],
       "context":[
          "vvvv black waste",
+         "ggg waste management"
+      ],
+      "images":[
+         "xxx.com/yy.png",
+         "xxx.com/rr.png"
+      ]
+   },
+   {
+      "URL":"xxx/general_waste.html",
+      "title":"how to recycle general waste",
+      "topic":[
+         "recycle",
+         "general waste",
+         "waste management"
+      ],
+      "context":[
+         "vvvv general waste",
          "ggg waste management"
       ],
       "images":[
