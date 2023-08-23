@@ -1,13 +1,52 @@
-﻿
+﻿@using Newtonsoft.Json
+
 @{
     ViewData["Title"] = "index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <h1>index</h1>
 
 <h1>Search Results</h1>
 
 
-<p>Search String: @ViewData["SearchWord"]</p>
-<p>Search JSON: @ViewData["SearchJson"].ToString()</p>
+<h3>Search String: </h3>
+<p>@ViewData["SearchWord"]</p>
+<h3>Search JSON:</h3>
+<div id="searchResults"></div>
+
+<script>
+    // Retrieve the HTML decoded JSON string
+    const searchResultJsonString = '@Html.Raw(ViewData["SearchResult"])';
+    //console.log(searchResultJsonString);
+    // Parse the JSON string
+    // Replace the escaped double quotes within the body property
+    const modifiedJsonString = searchResultJsonString.replace(/&#34;/g, '"');
+
+    // Parse the modified JSON string
+    const searchResultJson = JSON.parse(modifiedJsonString);
+
+    console.log(searchResultJson);
+
+    // Get the searchResults div element
+    const searchResultsDiv = document.getElementById('searchResults');
+
+    // Iterate through the results array
+    searchResultJson.body.results.forEach(result => {
+        // Create elements to display the title, topic, and URL
+        const titleHeading = document.createElement('h4');
+        titleHeading.textContent = `Title: ${result.title}`;
+
+        const topicParagraph = document.createElement('p');
+        topicParagraph.textContent = `Topic: ${result.topic.join(', ')}`;
+
+        const urlParagraph = document.createElement('p');
+        urlParagraph.textContent = `URL: ${result.URL}`;
+
+        // Append the elements to the searchResults div
+        searchResultsDiv.appendChild(titleHeading);
+        searchResultsDiv.appendChild(topicParagraph);
+        searchResultsDiv.appendChild(urlParagraph);
+    });
+</script>
