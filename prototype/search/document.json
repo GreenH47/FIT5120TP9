@@ -1,0 +1,53 @@
+[
+   {
+      "URL":"xxx/yellow_waste.html",
+      "title":"how to recycle yellow waste",
+      "topic":[
+         "recycle",
+         "yellow waste",
+         "waste management"
+      ],
+      "context":[
+         "vvvv black waste and green waste",
+         "ggg waste management"
+      ],
+      "images":[
+         "xxx.com/yy.png",
+         "xxx.com/rr.png"
+      ]
+   },
+   {
+      "URL":"xxx/green_waste.html",
+      "title":"how to recycle green waste",
+      "topic":[
+         "recycle",
+         "green waste",
+         "waste management"
+      ],
+      "context":[
+         "vvvv green waste",
+         "ggg waste management"
+      ],
+      "images":[
+         "xxx.com/yy.png",
+         "xxx.com/rr.png"
+      ]
+   },
+   {
+      "URL":"xxx/black_waste.html",
+      "title":"how to recycle black waste",
+      "topic":[
+         "recycle",
+         "black waste",
+         "waste management"
+      ],
+      "context":[
+         "vvvv black waste",
+         "ggg waste management"
+      ],
+      "images":[
+         "xxx.com/yy.png",
+         "xxx.com/rr.png"
+      ]
+   }
+]
