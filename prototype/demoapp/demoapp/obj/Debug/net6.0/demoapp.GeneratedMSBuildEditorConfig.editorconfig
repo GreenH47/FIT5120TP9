@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Git\FIT5120TP9\prototype\demoapp\demoapp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
