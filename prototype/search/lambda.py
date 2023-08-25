@@ -1,16 +1,15 @@
+import boto3
 import json
-import urllib.request
 
-def lambda_handler(event, context):
-    # read the json file from internet
-    # Download the JSON file
+def lambda_handler(event,context):
+    # Initialize the DynamoDB client
+    dynamodb = boto3.resource('dynamodb', region_name='us-east-1', aws_access_key_id='AKIATC3T7V7PPEVK6WM2',
+                              aws_secret_access_key='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')
 
-    url = "https://carbonvic.s3.amazonaws.com/document.json"
-    response = urllib.request.urlopen(url)
-    json_data = response.read().decode()
-    documents = json.loads(json_data)
+    table = dynamodb.Table('search_index')  # Replace with your DynamoDB table name
 
     search_obj = event  # Extract search object from event body
+
     search_keyword = search_obj["searchWord"]
     search_range = search_obj["searchRange"]
 
@@ -22,20 +21,33 @@ def lambda_handler(event, context):
     context_weight_factor = 2
     combine_weight_factor = 10
 
-    for document in documents:
+    response = table.scan()  # Perform a scan operation to retrieve all items in the table
+
+    #print(response)
+
+    for document in response['Items']:
         title = document['title']
         topic = document.get('topic', [])
         context = document.get('context', [])
+
+        if title is None or topic is None or context is None:
+            continue
 
         separate_matches = 0
         separate_weight_fact = 0
 
         if search_range == "topic":
-            combined_matches = sum(topic.count(search_keyword) for topic in topic)
-            combined_weight_fact = combined_matches * topic_weight_factor*combine_weight_factor
+            if isinstance(topic, str):
+                combined_matches = topic.count(search_keyword)
+            else:
+                combined_matches = sum(topic.count(search_keyword) for topic in topic)
+            combined_weight_fact = combined_matches * topic_weight_factor * combine_weight_factor
 
             for word in search_keyword.split():
-                separate_matches += sum(topic.count(word) for topic in topic)
+                if isinstance(topic, str):
+                    separate_matches += topic.count(word)
+                else:
+                    separate_matches += sum(topic.count(word) for topic in topic)
                 separate_weight_fact += separate_matches * topic_weight_factor
 
         elif search_range == "title":
@@ -51,9 +63,9 @@ def lambda_handler(event, context):
             combined_topic_matches = sum(topic.count(search_keyword) for topic in topic)
             combined_context_matches = sum(item.count(search_keyword) for item in context)
             combined_matches = combined_title_matches + combined_topic_matches + combined_context_matches
-            combined_weight_fact = ((combined_title_matches * title_weight_factor)\
-                                   + (combined_topic_matches * topic_weight_factor) + \
-                                   (combined_context_matches * context_weight_factor))*combine_weight_factor
+            combined_weight_fact = ((combined_title_matches * title_weight_factor) +
+                                    (combined_topic_matches * topic_weight_factor) +
+                                    (combined_context_matches * context_weight_factor)) * combine_weight_factor
 
             for word in search_keyword.split():
                 title_matches = title.count(word)
@@ -86,17 +98,11 @@ def lambda_handler(event, context):
         "results": matching_documents
     }
 
-    # json_results = json.dumps(search_results, indent=4)
-    # print(json_results)
-
-    # has more than 0 results in matching_documents
     if len(matching_documents) > 0:
         return {
             'statusCode': 200,
             'body': search_results
         }
-
-    # has no results in matching_documents
     else:
         return {
             'statusCode': 404,

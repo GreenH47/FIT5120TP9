@@ -60,16 +60,11 @@
                 const urlParagraph = document.createElement("p");
                 urlParagraph.textContent = `URL: ${result.URL}`;
 
-                const urlLink = document.createElement("a");
-                urlLink.href = result.URL;
-                urlLink.textContent = "Go to Page"; // Replace with desired link text
-
                 // Append the elements to the searchResults div
                 searchResultsDiv.appendChild(titleHeading);
                 searchResultsDiv.appendChild(topicParagraph);
                 searchResultsDiv.appendChild(timeParagraph);
                 searchResultsDiv.appendChild(urlParagraph);
-                searchResultsDiv.appendChild(urlLink);
             });
         } else {
             // Show "No results found" message

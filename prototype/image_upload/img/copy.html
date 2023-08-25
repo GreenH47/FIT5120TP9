@@ -1,0 +1,63 @@
+<style>
+  img {
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .copy-button-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .copy-button {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+</style>
+
+<div class="copy-button-container">
+  <img src="https://carbonvic.s3.amazonaws.com/img/2.jpg">
+  <button class="copy-button" onclick="copyToClipboard('<img src=&quot;https://carbonvic.s3.amazonaws.com/img/2.jpg&quot;>')">
+    Copy
+  </button>
+</div>
+
+<div class="copy-button-container">
+  <img src="https://carbonvic.s3.amazonaws.com/img/4.jpg">
+  <button class="copy-button" onclick="copyToClipboard('<img src=&quot;https://carbonvic.s3.amazonaws.com/img/4.jpg&quot;>')">
+    Copy
+  </button>
+</div>
+
+<div class="copy-button-container">
+  <img src="https://carbonvic.s3.amazonaws.com/img/49577-min-scaled.jpg">
+  <button class="copy-button" onclick="copyToClipboard('<img src=&quot;https://carbonvic.s3.amazonaws.com/img/49577-min-scaled.jpg&quot;>')">
+    Copy
+  </button>
+</div>
+
+<div class="copy-button-container">
+  <img src="https://carbonvic.s3.amazonaws.com/img/download.jpg">
+  <button class="copy-button" onclick="copyToClipboard('<img src=&quot;https://carbonvic.s3.amazonaws.com/img/download.jpg&quot;>')">
+    Copy
+  </button>
+</div>
+
+<div class="copy-button-container">
+  <img src="https://carbonvic.s3.amazonaws.com/img/Scope-3-Image-2.png">
+  <button class="copy-button" onclick="copyToClipboard('<img src=&quot;https://carbonvic.s3.amazonaws.com/img/Scope-3-Image-2.png&quot;>')">
+    Copy
+  </button>
+</div>
+
+<script>
+  function copyToClipboard(text) {
+    const el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  }
+</script>

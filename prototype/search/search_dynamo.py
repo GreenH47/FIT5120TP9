@@ -3,15 +3,14 @@ import json
 
 def lambda_handler(event):
     # Initialize the DynamoDB client
-    dynamodb = boto3.resource('dynamodb',
-                            region_name='us-east-1',
-                            aws_access_key_id='AKIATC3T7V7PPEVK6WM2',
-                            aws_secret_access_key='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')
+    dynamodb = boto3.resource('dynamodb', region_name='us-east-1', aws_access_key_id='AKIATC3T7V7PPEVK6WM2',
+                              aws_secret_access_key='r7WNIZx59YHHQVlzkxw2zfgdfw83TRlQZK3UPJ8e')
 
     table = dynamodb.Table('search_index')  # Replace with your DynamoDB table name
 
     search_obj = event  # Extract search object from event body
-    search_keyword = search_obj["searchWord"]
+
+    search_keyword = search_obj["searchWord"].lower()
     search_range = search_obj["searchRange"]
 
     matching_documents = []
@@ -24,23 +23,31 @@ def lambda_handler(event):
 
     response = table.scan()  # Perform a scan operation to retrieve all items in the table
 
+    #print(response)
+
     for document in response['Items']:
         title = document['title']
         topic = document.get('topic', [])
         context = document.get('context', [])
 
-        #print(title, topic, context)
-
+        if title is None or topic is None or context is None:
+            continue
 
         separate_matches = 0
         separate_weight_fact = 0
 
         if search_range == "topic":
-            combined_matches = sum(topic.count(search_keyword) for topic in topic)
-            combined_weight_fact = combined_matches * topic_weight_factor*combine_weight_factor
+            if isinstance(topic, str):
+                combined_matches = topic.count(search_keyword)
+            else:
+                combined_matches = sum(topic.count(search_keyword) for topic in topic)
+            combined_weight_fact = combined_matches * topic_weight_factor * combine_weight_factor
 
             for word in search_keyword.split():
-                separate_matches += sum(topic.count(word) for topic in topic)
+                if isinstance(topic, str):
+                    separate_matches += topic.count(word)
+                else:
+                    separate_matches += sum(topic.count(word) for topic in topic)
                 separate_weight_fact += separate_matches * topic_weight_factor
 
         elif search_range == "title":
@@ -56,9 +63,9 @@ def lambda_handler(event):
             combined_topic_matches = sum(topic.count(search_keyword) for topic in topic)
             combined_context_matches = sum(item.count(search_keyword) for item in context)
             combined_matches = combined_title_matches + combined_topic_matches + combined_context_matches
-            combined_weight_fact = ((combined_title_matches * title_weight_factor)\
-                                   + (combined_topic_matches * topic_weight_factor) + \
-                                   (combined_context_matches * context_weight_factor))*combine_weight_factor
+            combined_weight_fact = ((combined_title_matches * title_weight_factor) +
+                                    (combined_topic_matches * topic_weight_factor) +
+                                    (combined_context_matches * context_weight_factor)) * combine_weight_factor
 
             for word in search_keyword.split():
                 title_matches = title.count(word)
@@ -69,18 +76,18 @@ def lambda_handler(event):
                                         + (topic_matches * topic_weight_factor) \
                                         + (context_matches * context_weight_factor)
 
-    if combined_matches > 0 or separate_matches > 0:
-        matching_documents.append({
-            "URL": document['URL'],
-            "title": document['title'],
-            "topic": document['topic'],
-            "time": document['time'],
-            "combine_matches": combined_matches,
-            "combine_weight_fact": combined_weight_fact,
-            "separate_matches": separate_matches,
-            "separate_weight_fact": separate_weight_fact,
-            "total_weight_fact": combined_weight_fact + separate_weight_fact
-        })
+        if combined_matches > 0 or separate_matches > 0:
+            matching_documents.append({
+                "URL": document['URL'],
+                "title": document['title'],
+                "topic": document['topic'],
+                "time": document['time'],
+                "combine_matches": combined_matches,
+                "combine_weight_fact": combined_weight_fact,
+                "separate_matches": separate_matches,
+                "separate_weight_fact": separate_weight_fact,
+                "total_weight_fact": combined_weight_fact + separate_weight_fact
+            })
 
     matching_documents.sort(key=lambda d: d['total_weight_fact'], reverse=True)
 
@@ -103,6 +110,6 @@ def lambda_handler(event):
         }
 
 
-input = {"searchWord":"waste","searchRange":"topic"}
+input = {"searchWord": "Household", "searchRange": "keyword"}
 input_json = json.dumps(input)
 print(lambda_handler(input))
