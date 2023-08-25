@@ -1,6 +1,6 @@
 [
   {
-    "URL": "Household_Waste_Management",
+    "URL": "WasteManagement/Household_Waste_Management",
     "title": "Household Waste Management",
     "time": "2023-08-25",
     "topic": [
@@ -20,7 +20,7 @@
     ]
   },
   {
-    "URL": "waste_diposal",
+    "URL": "WasteManagement/waste_diposal",
     "title": "Waste Disposal Guide",
     "time": "2023-07-25",
     "topic": [

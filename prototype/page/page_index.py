@@ -12,7 +12,7 @@ def convert_html_to_json(html_file):
     soup = BeautifulSoup(html_content, 'html.parser')
 
     # Extract data from HTML content
-    url = html_file.replace('.html', '')
+    url = os.path.join(os.path.dirname(html_file), os.path.basename(html_file).replace('.html', '')).replace('\\', '/')
     title = soup.title.string
     time = soup.find(class_="time").string.split("create at ")[1]
     topics = [topic.string for topic in soup.find(class_="topic").ul.find_all("li")]
@@ -32,8 +32,8 @@ def convert_html_to_json(html_file):
     return data
 
 
-# Search for HTML files in the same folder
-html_files = glob.glob("*.html")
+# Search for HTML files in the current directory and its subdirectories
+html_files = glob.glob("**/*.html", recursive=True)
 
 # Check if the document.json file exists
 json_file_exists = os.path.exists("document.json")
