@@ -9,57 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = demoapp
 build_property.RootNamespace = demoapp
-build_property.ProjectDir = C:\Git\FIT5120TP9\prototype\demoapp\demoapp\
+build_property.ProjectDir = C:\Users\ROG\source\repos\FIT5120TP9\prototype\demoapp\demoapp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Git\FIT5120TP9\prototype\demoapp\demoapp
+build_property.MSBuildProjectDirectory = C:\Users\ROG\source\repos\FIT5120TP9\prototype\demoapp\demoapp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item1.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item2.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item3.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item3.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Home/Index.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Home/Privacy.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Quiz/Index.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Quiz/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/SearchResults/index.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/SearchResults/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoUmVzdWx0c1xpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/Error.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/_ViewImports.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/_ViewStart.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/_Layout.cshtml]
+[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rx96ko2nea

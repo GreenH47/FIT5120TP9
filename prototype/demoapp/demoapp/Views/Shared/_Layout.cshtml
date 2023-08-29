@@ -4,24 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Demo TP9 app</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVB99YSL6F1CqODq8zyl/nwV" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua6Wih6+1ka5w8dh5ByK3vX1qSWSsLv7p1KaXnqfWOgQpHI7B2HP6v0vD" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/demoapp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/StyleSheet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">demoapp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+        <div class="row">
+            <div class="navbar">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <img src="~/lib/bootstrap/dist/css/logo-no-background.png" alt="demoapp" style="width: 200px; height: 100px;">
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
@@ -31,34 +35,34 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Quiz" asp-action="Index">Quiz</a>
                         </li>
-
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <a class="nav-link text-dark dropdown-toggle" href="#" role="button" id="diyDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    DIY
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="diyDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Diy" asp-action="item1">Item 1</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Diy" asp-action="item2">Item 2</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Diy" asp-action="item3">Item 3</a></li>
-                                </ul>
-                            </div>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" role="button" id="diyDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                DIY
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="diyDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Diy" asp-action="item1">Item 1</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Diy" asp-action="item2">Item 2</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Diy" asp-action="item3">Item 3</a></li>
+                            </ul>
                         </li>
-
                     </ul>
                 </div>
-                <form id="searchForm" method="get" action="/SearchResults/Index">
-                    <input type="text" id="searchInput" name="search" placeholder="Enter your search query" />
-                    <select id="searchRange">
-                        <option value="keyword" selected>Keyword</option>
-                        <option value="topic">Topic</option>
-                        <option value="title">Title</option>
-                    </select>
-                    <button type="submit">Search</button>
-                </form>
+                <div class="search-container">
+                    <form id="searchForm" method="get" action="/SearchResults/Index">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" name="search" placeholder="Enter your search query" aria-label="Search query">
+                            <select id="searchRange" aria-label="Search by">
+                                <option value="keyword" selected>Keyword</option>
+                                <option value="topic">Topic</option>
+                                <option value="title">Title</option>
+                            </select>
+                            <button type="submit" class="search-button">Search</button>
+                        </div>
+                    </form>
+                </div>
 
             </div>
-        </nav>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -66,11 +70,6 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - demoapp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
