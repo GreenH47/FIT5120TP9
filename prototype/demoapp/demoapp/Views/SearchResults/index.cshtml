@@ -64,6 +64,10 @@
                 urlLink.href = result.URL;
                 urlLink.textContent = "Go to Page"; // Replace with desired link text
 
+                // Update the target URL
+                const baseUrl = window.location.origin; // Get the current base URL
+                urlLink.href = `${baseUrl}/${result.URL}`; // Append the "URL" value to the base URL
+
                 // Append the elements to the searchResults div
                 searchResultsDiv.appendChild(titleHeading);
                 searchResultsDiv.appendChild(topicParagraph);
