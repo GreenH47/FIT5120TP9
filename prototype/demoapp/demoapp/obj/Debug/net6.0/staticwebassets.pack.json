@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\DIYClass.PNG",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\DIYClass.PNG"
+    },
+    {
       "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\Default_Melbounre_city_in_a_forest_style_0.jpg",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\Default_Melbounre_city_in_a_forest_style_0.jpg"
     },
@@ -157,6 +161,18 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\cardboard.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\cardboard.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\emptybottles.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\emptybottles.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\glassbottle.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\glassbottle.jpg"
+    },
+    {
       "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\kisspng-arrow-symbol-icon-down-arrow-png-pic-5a756e2591b7b9.1532686215176453495969.png",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\kisspng-arrow-symbol-icon-down-arrow-png-pic-5a756e2591b7b9.1532686215176453495969.png"
     },
@@ -169,12 +185,20 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\logo-no-background.png"
     },
     {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\newspaper.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\newspaper.jpg"
+    },
+    {
       "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-emmet-128421.jpg",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\pexels-emmet-128421.jpg"
     },
     {
       "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-evgeny-tchebotarev-4101555.jpg",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\pexels-evgeny-tchebotarev-4101555.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-ingo-joseph-188029.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\pexels-ingo-joseph-188029.jpg"
     },
     {
       "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-josh-sorenson-1054391.jpg",
@@ -187,6 +211,10 @@
     {
       "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-samuel-walker-1980720.jpg",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\pexels-samuel-walker-1980720.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\wood.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\wood.jpg"
     },
     {
       "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",

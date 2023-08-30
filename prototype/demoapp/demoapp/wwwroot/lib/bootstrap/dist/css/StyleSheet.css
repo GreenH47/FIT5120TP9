@@ -21,6 +21,13 @@
     margin-left: auto;
 }
 
+.container2 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    flex-wrap: wrap; /* 允许项目换行 */
+    height: 100vh; /* 使用视口高度使其充满屏幕 */
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -217,10 +224,36 @@
 
     .header2 img.transparent-image {
         width: 100%;
-        max-height: 200px;
+        max-height: 400px;
         object-fit: cover;
         opacity: 0.8;
     }
+
+.header3 {
+    position: relative; /* 添加这一行，使其可以容纳绝对定位的子元素 */
+    width: 100%;
+    overflow: hidden;
+    margin-bottom:60px;
+}
+
+    .header3 img.transparent-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        opacity: 0.8;
+    }
+
+.transparent-image1 {
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    margin-top: 20px; /* 顶部间距，您可以根据需求调整 */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 
 .scroll-top-btn {
     position: absolute; /* 绝对定位按钮 */
@@ -261,12 +294,6 @@
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.65);
 }
 
-.transparent-image {
-    position: relative;
-    z-index: 1;
-    min-height: 300px;
-}
-
 .overlap-image {
     position: relative;
     z-index: 2; 
@@ -300,11 +327,28 @@
         color: #333;
     }
 
-    .four_part p {
-        text-align: justify; /* 两端对齐 */
-        color: #555;
-        line-height: 1.6; /* 行间距 */
+.ten_part {
+    min-height: 300px;
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* 半透明的白色背景 */
+    border: 1px solid #e0e0e0; /* 细边框 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 轻微的阴影 */
+    border-radius: 10px; /* 圆角 */
+    transition: transform 0.3s ease; /* 转换动画 */
+    margin-right: 1%; /* 为four_part添加右边距 */
+    margin-left: 1%;
+    margin-bottom: 30px;
+}
+
+    .ten_part:hover {
+        transform: scale(1.03); /* 悬停时轻微放大 */
     }
+
+
 
 .six_part {
     min-height: 300px;
@@ -409,7 +453,6 @@
     flex: 0.5;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 30px;
     background: rgba(255, 255, 255, 0.9); /* 半透明的白色背景 */
     border: 1px solid #e0e0e0; /* 细边框 */
@@ -442,6 +485,50 @@
     }
 
     .five_part h1 {
+        font-size: 3em; /* 你可以根据需要调整这个值 */
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        width: 100%; /* 确保宽度占满容器 */
+        box-sizing: border-box; /* 这确保了padding和border被包含在元素的总宽度和高度内 */
+        overflow: hidden; /* 如果文本超出容器的大小，它会被隐藏 */
+    }
+
+.five_part1 {
+    min-height: 300px;
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* 半透明的白色背景 */
+    border: 1px solid #e0e0e0; /* 细边框 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 轻微的阴影 */
+    border-radius: 10px; /* 圆角 */
+    transition: transform 0.3s ease; /* 转换动画 */
+    margin-right: 1%; /* 为four_part添加右边距 */
+    margin-left: 1%;
+    margin-bottom: 30px;
+}
+
+    .five_part1 h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-left: 0; /* 添加这一行确保左侧没有外边距 */
+        padding-left: 0; /* 添加这一行确保左侧没有内边距 */
+        color: #333;
+        text-align: left; /* 确保文本靠左对齐 */
+    }
+
+    .five_part1 p {
+        text-align: justify; /* 两端对齐 */
+        color: #555;
+        line-height: 1.6; /* 行间距 */
+        margin-bottom: 2em;
+    }
+
+    .five_part1 h1 {
         font-size: 3em; /* 你可以根据需要调整这个值 */
         margin: 0;
         padding: 0;
@@ -490,4 +577,128 @@
         width: 100%; /* 确保宽度占满容器 */
         box-sizing: border-box; /* 这确保了padding和border被包含在元素的总宽度和高度内 */
         overflow: hidden; /* 如果文本超出容器的大小，它会被隐藏 */
+    }
+
+
+.one_part2 {
+    flex: 0.9;
+    display: flex;
+    height: 100%; /* 让div占满其父容器的高度，或者可以设置为特定的高度 */
+    text-align: center; /* 使文字在其内部水平居中 */
+    margin-right: 1%; /* 为four_part添加右边距 */
+    margin-left: 1%;
+    margin-bottom: 2em;
+    margin-bottom: 30px;
+}
+
+
+    .one_part2 h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-left: 0; /* 添加这一行确保左侧没有外边距 */
+        padding-left: 0; /* 添加这一行确保左侧没有内边距 */
+        color: #333;
+        text-align: left; /* 确保文本靠左对齐 */
+    }
+
+    .one_part2 p {
+        text-align: center; /* 两端对齐 */
+        color: #555;
+        line-height: 1.6; /* 行间距 */
+        margin-bottom: 2em;
+        padding: 80px;
+    }
+
+    .one_part2 h1 {
+        font-size: 3em; /* 你可以根据需要调整这个值 */
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        width: 100%; /* 确保宽度占满容器 */
+        box-sizing: border-box; /* 这确保了padding和border被包含在元素的总宽度和高度内 */
+        overflow: hidden; /* 如果文本超出容器的大小，它会被隐藏 */
+    }
+
+.three_part, .three_part2 {
+    min-height: 300px;
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+    .three_part:hover, .three_part2:hover {
+        transform: scale(1.03);
+    }
+
+    .three_part h2, .three_part2 h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-left: 0;
+        padding-left: 0;
+        color: #333;
+        text-align: left;
+    }
+
+    .three_part p, .three_part2 p {
+        text-align: justify;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 2em;
+    }
+
+    .three_part h1, .three_part2 h1 {
+        font-size: 3em;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+
+.image-title {
+    text-align: center; /* 水平居中文本 */
+    margin: 15px 0; /* 上下边距 */
+    font-size: 20px; /* 根据需要调整 */
+    color: #333; /* 字体颜色，根据需要调整 */
+}
+
+
+.container-diy {
+    width: 80%; /* 根据需要调整宽度 */
+    margin: 50px auto; /* 垂直外边距为50px，水平居中 */
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* 确保容器内所有内容默认靠左侧显示 */
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: none
+}
+
+.list-items {
+    list-style-type: none; /* 移除项目符号 */
+    padding-left: 0;
+}
+
+    .list-items li {
+        padding: 8px 0;
+        font-size: 18px;
     }
