@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "greenh47/carbonvic:layout",
+      "Name": "greenh47/carbonvic:expo",
       "Update": "true"
     },
     "Ports": [

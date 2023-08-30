@@ -1,0 +1,493 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* 更改页面背景颜色 */
+    text-align: center;
+}
+
+.container {
+    max-width: none;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.container-fluid {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row2 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Change from flex-start to space-between */
+    align-items: center;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff; /* 更改导航栏背景颜色 */
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.header {
+    margin-right: 20px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: auto; /* 设置右边距为自动以靠左对齐导航栏内容 */
+    font-size: 1.25em;
+}
+
+.nav-item {
+    margin-right: 50px; /* 添加按钮之间的水平间距 */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    padding: 14px 16px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007BFF;
+ }
+
+
+/* Add custom styles for the dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 0.5rem 0;
+    min-width: 10rem;
+    z-index: 999;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+   background-color: #f8f9fa;
+   color: #007BFF;
+ }
+
+
+/* Container for the search form */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* You can adjust this margin based on your layout needs */
+}
+
+
+/* Style for the search input */
+#searchInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    flex-grow: 2;
+}
+
+/* Style for the select dropdown */
+#searchRange {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+/* Input box styling */
+.search-box input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 0.95em;
+    background-color: #f9f9f9;
+}
+
+    .search-box input[type="text"]:hover {
+        border-color: #b0b0b0;
+    }
+
+    .search-box input[type="text"]:focus {
+        border-color: #86a8d1; /* Slightly brighter blue */
+        box-shadow: 0 0 8px rgba(134, 168, 209, 0.25);
+        outline: none;
+    }
+
+/* Dropdown styling */
+.search-box select {
+    padding: 10px 15px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 0.95em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+    .search-box select:hover {
+        border-color: #b0b0b0;
+    }
+
+    .search-box select:focus {
+        border-color: #86a8d1;
+        box-shadow: 0 0 8px rgba(134, 168, 209, 0.25);
+        outline: none;
+    }
+
+/* Style for the search button */
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(to bottom right, forestgreen, #0056b3);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .search-button:hover {
+        background: linear-gradient(to bottom right, #0056b3, forestgreen);
+        transform: translateY(-2px); /* Button lifts up a bit on hover */
+    }
+
+    .search-button:active {
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.1); /* Reduced shadow on press */
+        transform: translateY(1px); /* Button presses down a bit on click */
+    }
+
+
+.header2 {
+    position: relative; /* 添加这一行，使其可以容纳绝对定位的子元素 */
+    width: 100%;
+    overflow: hidden;
+}
+
+    .header2 img.transparent-image {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        opacity: 0.8;
+    }
+
+.scroll-top-btn {
+    position: absolute; /* 绝对定位按钮 */
+    bottom: 20px; /* 从底部20px处放置按钮 */
+    left: 50%; /* 将按钮的左侧放置在容器的50%位置，然后使用下一行代码进行偏移，使其完全居中 */
+    transform: translateX(-50%); /* 向左移动按钮的宽度的50%，使其完全居中 */
+
+    z-index: 10; /* 确保按钮位于图片之上 */
+    /* 美化按钮 */
+    padding: 10px 20px; /* 内部填充：上下10px，左右20px */
+    border: none; /* 移除默认边框 */
+    border-radius: 30px; /* 弧度，使按钮边缘呈现为圆形 */
+    background-color: grey; /* 背景颜色为灰色 */
+    color: white; /* 文字颜色为白色 */
+    font-weight: bold; /* 字体加粗 */
+    cursor: pointer; /* 鼠标悬停在按钮上时的样式 */
+    transition: background-color 0.3s ease; /* 背景颜色的过渡效果 */
+    padding: 15px 30px; /* 原始值为10px 20px */
+    /* 调整字体大小，使按钮文本更大 */
+    font-size: 18px; /* 增加或减少此值以调整文本大小 */
+}
+
+    .scroll-top-btn:hover {
+        background-color: darkgrey; /* 鼠标悬停时的背景颜色 */
+    }
+
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: white;
+    font-weight: bold;
+    font-family: "Dancing Script", cursive;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.65);
+}
+
+.transparent-image {
+    position: relative;
+    z-index: 1;
+    min-height: 300px;
+}
+
+.overlap-image {
+    position: relative;
+    z-index: 2; 
+    margin-top: -20px;  /* 使第二张图片与第一张图片重叠，您可以根据需要调整这个值 */
+}
+
+.four_part {
+    min-height: 300px;
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* 半透明的白色背景 */
+    border: 1px solid #e0e0e0; /* 细边框 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 轻微的阴影 */
+    border-radius: 10px; /* 圆角 */
+    transition: transform 0.3s ease; /* 转换动画 */
+    margin-right: 1%; /* 为four_part添加右边距 */
+    margin-left: 1%;
+    margin-bottom: 30px;
+}
+
+    .four_part:hover {
+        transform: scale(1.03); /* 悬停时轻微放大 */
+    }
+
+    .four_part h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .four_part p {
+        text-align: justify; /* 两端对齐 */
+        color: #555;
+        line-height: 1.6; /* 行间距 */
+    }
+
+.six_part {
+    min-height: 300px;
+    display: flex;
+    flex: 0.6;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0;
+    border: 1px solid #e0e0e0; /* 细边框 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 轻微的阴影 */
+    border-radius: 10px; /* 圆角 */
+    transition: transform 0.3s ease; /* 转换动画 */
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 30px;
+}
+
+    .six_part:hover {
+        transform: scale(1.03); /* 悬停时轻微放大 */
+    }
+
+    .six_part h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .six_part p {
+        text-align: justify; /* 两端对齐 */
+        color: #555;
+        line-height: 1.6; /* 行间距 */
+    }
+
+/* 为所有图片设置默认值 */
+.six-part-image {
+    width: 33.33%;
+    height: auto;
+    object-fit: cover;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* 第一张图片 */
+.six_part .six-part-image:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* 第三张图片 */
+.six_part .six-part-image:nth-child(3) {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.six_part2 {
+    min-height: 300px;
+    display: flex;
+    flex: 0.6;
+    align-items: stretch;
+    padding: 0;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-right: 1%;
+    position: relative; /* 添加这个 */
+    overflow: hidden; /* 隐藏超出容器的部分，这样图片的圆角效果不会被显示 */
+    margin-left: 1%;
+    margin-bottom: 30px;
+}
+
+    .six_part2:hover {
+        transform: scale(1.03);
+    }
+
+    .six_part2 h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .six_part2 p {
+        text-align: justify;
+        color: #555;
+        line-height: 1.6;
+    }
+
+.six-part2-image2 {
+    width: 100%; /* 修改这个 */
+    height: 100%; /* 修改这个 */
+    object-fit: cover;
+    box-sizing: border-box;
+    position: absolute; /* 添加这个 */
+    top: 0; /* 添加这个 */
+    left: 0; /* 添加这个 */
+}
+
+
+.five_part {
+    min-height: 300px;
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* 半透明的白色背景 */
+    border: 1px solid #e0e0e0; /* 细边框 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 轻微的阴影 */
+    border-radius: 10px; /* 圆角 */
+    transition: transform 0.3s ease; /* 转换动画 */
+    margin-right: 1%; /* 为four_part添加右边距 */
+    margin-left: 1%;
+    margin-bottom: 30px;
+}
+
+    .five_part:hover {
+        transform: scale(1.03); /* 悬停时轻微放大 */
+    }
+
+    .five_part h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-left: 0; /* 添加这一行确保左侧没有外边距 */
+        padding-left: 0; /* 添加这一行确保左侧没有内边距 */
+        color: #333;
+        text-align: left; /* 确保文本靠左对齐 */
+    }
+
+    .five_part p {
+        text-align: justify; /* 两端对齐 */
+        color: #555;
+        line-height: 1.6; /* 行间距 */
+        margin-bottom: 2em;
+    }
+
+    .five_part h1 {
+        font-size: 3em; /* 你可以根据需要调整这个值 */
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        width: 100%; /* 确保宽度占满容器 */
+        box-sizing: border-box; /* 这确保了padding和border被包含在元素的总宽度和高度内 */
+        overflow: hidden; /* 如果文本超出容器的大小，它会被隐藏 */
+    }
+
+.one_part {
+    flex: 0.9;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 100%; /* 让div占满其父容器的高度，或者可以设置为特定的高度 */
+    text-align: center; /* 使文字在其内部水平居中 */
+    margin-right: 1%; /* 为four_part添加右边距 */
+    margin-left: 1%;
+    margin-bottom: 2em;
+    margin-bottom: 30px;
+}
+
+
+    .one_part h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-left: 0; /* 添加这一行确保左侧没有外边距 */
+        padding-left: 0; /* 添加这一行确保左侧没有内边距 */
+        color: #333;
+        text-align: left; /* 确保文本靠左对齐 */
+    }
+
+    .one_part p {
+        text-align: center; /* 两端对齐 */
+        color: #555;
+        line-height: 1.6; /* 行间距 */
+        margin-bottom: 2em;
+        padding: 80px;
+    }
+
+    .one_part h1 {
+        font-size: 3em; /* 你可以根据需要调整这个值 */
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        width: 100%; /* 确保宽度占满容器 */
+        box-sizing: border-box; /* 这确保了padding和border被包含在元素的总宽度和高度内 */
+        overflow: hidden; /* 如果文本超出容器的大小，它会被隐藏 */
+    }

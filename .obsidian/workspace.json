@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -117,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tech_note.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "tech_note.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "tech_note.md"
+                "file": "README.md"
               }
             }
           }
@@ -170,13 +169,16 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d881d6fb48d388f5",
+  "active": "0b3d056a53f9a8ac",
   "lastOpenFiles": [
+    "coremysqlhttps/carbonvic/obj/Debug/net6.0/project.razor.vs.json.temp",
+    "img/README-20230811-1.png",
+    "img/README-20230811.png",
+    "tech_note.md",
     "img/tech_note-20230807.png",
     "README.md",
     "img/README-20230806-1.png",
     "img/README-20230806.png",
-    "tech_note.md",
     "img/tech_note-20230806.png",
     "img/README-20230803-1.png",
     "img/README-20230803.png",
@@ -194,9 +196,6 @@
     "img/README-20230802.png",
     "course_notes/fit5120.md",
     "course_notes/fit5137.md",
-    "img/fit5137-20230731-9.png",
-    "img/Pasted image 20230731152707.png",
-    "img/fit5137-20230731-8.png",
     "course_notes/fit5122.md",
     "about/about_me.md",
     "about/about_copyright.md",

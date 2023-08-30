@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Display navigation directions</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 800px;
+            height: 800px;
+        }
+    </style>
+</head>
+<h1>Mapbox Directions API</h1>
+<a href="https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-directions/">Tutorial</a>
+<body>
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
+        type="text/css">
+
+    <div id="map"></div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZW5oIiwiYSI6ImNsOTZ4cXVqaDAzYTAzbnBkOHZrNGhscTYifQ.5CyI_nX9gcLhuYfYpgWC9w';
+        navigator.geolocation.getCurrentPosition(success, error);
+
+        function success(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v12',
+                center: [longitude, latitude],
+                zoom: 13
+            });
+
+            //put a red mark from current location
+            new mapboxgl.Marker({
+                color: "red",
+                draggable: true
+            }).setLngLat([longitude, latitude]).addTo(map);
+
+            map.addControl(
+                new MapboxDirections({
+                    accessToken: mapboxgl.accessToken
+                }),
+                'top-left'
+            );
+
+            var markerData = [
+                { latitude: -37.8136, longitude: 144.9631 }, // Melbourne CBD
+                { latitude: -37.814, longitude: 144.989 }, // Federation Square
+                { latitude: -37.8263, longitude: 145.014 }, // Chadstone Shopping Centre
+                { latitude: -37.90661, longitude: 145.12020 },
+                { latitude: -37.90413, longitude: 145.17885 },
+                { latitude: -37.93580, longitude: 145.09692 }
+            ];
+            //put mark from markerData list with coordinates comments
+            for (var i = 0; i < markerData.length; i++) {
+                new mapboxgl.Marker({
+                    color: "blue",
+                    draggable: true
+                }).setLngLat([markerData[i].longitude, markerData[i].latitude]).addTo(map);
+            }
+            
+
+
+        }
+
+        function error(error) {
+            console.log(error.message);
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v12',
+                center: [144.9631, -37.8136],
+                zoom: 13
+            });
+
+            map.addControl(
+                new MapboxDirections({
+                    accessToken: mapboxgl.accessToken
+                }),
+                'top-left'
+            );
+
+
+        }
+    </script>
+
+</body>
+
+</html>
