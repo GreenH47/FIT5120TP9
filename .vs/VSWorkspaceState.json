@@ -1,13 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\prototype",
-    "\\prototype\\page_index",
-    "\\prototype\\page_index\\Shared",
-    "\\prototype\\quiz",
-    "\\prototype\\search",
-    "\\prototype\\tableau"
+    ""
   ],
-  "SelectedNode": "\\prototype\\page_index\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -65,5 +65,29 @@
             <li>23. Cover the part G with any desired wrapping paper color.</li>
             <li>24. Glue part G on the top of the product of the assembly parts.</li>
         </ol>
+
+        <h2 class="subtitle">Link:</h2>
+        <a href="https://www.youtube.com/watch?v=CrngKvTJagk">https://www.youtube.com/watch?v=CrngKvTJagk</a>
     </div>
 </div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var topicLinks = document.getElementsByClassName("topic-link");
+
+        function handleTopicLinkClick(event) {
+            event.preventDefault();
+
+            var topic = this.textContent.trim();
+
+            // Redirect to the search results page with the topic as the search query and "topic" as the search range
+            var redirectUrl = "/SearchResults/Index?search=" + encodeURIComponent(topic) + "&range=topic";
+            window.location.href = redirectUrl;
+        }
+
+        for (var i = 0; i < topicLinks.length; i++) {
+            topicLinks[i].addEventListener("click", handleTopicLinkClick);
+        }
+    });
+</script>

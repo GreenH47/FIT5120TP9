@@ -20,9 +20,55 @@ namespace demoapp.Controllers
             return View();
         }
 
-        public IActionResult Bottle_lamp()
+        public IActionResult item4()
         {
             return View();
         }
+
+        public IActionResult item5()
+        {
+            return View();
+        }
+
+        public IActionResult item6()
+        {
+            return View();
+        }
+
+        public IActionResult item7()
+        {
+            return View();
+        }
+
+        public IActionResult item8()
+        {
+            return View();
+        }
+
+        public IActionResult item9()
+        {
+            return View();
+        }
+
+        public IActionResult item10()
+        {
+            return View();
+        }
+
+        public IActionResult item11()
+        {
+            return View();
+        }
+
+        public IActionResult item12()
+        {
+            return View();
+        }
+
+        public IActionResult item13()
+        {
+            return View();
+        }
+
     }
 }

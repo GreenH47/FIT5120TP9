@@ -61,5 +61,28 @@
             <li>13. Cutting the paper into 2 round shapes and stick the plastic eyes on it to make it a cow's eyes and finally stick the eye's to the bottle.</li>
 
         </ol>
+        <h2 class="subtitle">Link:</h2>
+        <a href="https://www.youtube.com/watch?v=N4aT-mN8Bb8">https://www.youtube.com/watch?v=N4aT-mN8Bb8</a>
     </div>
 </div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var topicLinks = document.getElementsByClassName("topic-link");
+
+        function handleTopicLinkClick(event) {
+            event.preventDefault();
+
+            var topic = this.textContent.trim();
+
+            // Redirect to the search results page with the topic as the search query and "topic" as the search range
+            var redirectUrl = "/SearchResults/Index?search=" + encodeURIComponent(topic) + "&range=topic";
+            window.location.href = redirectUrl;
+        }
+
+        for (var i = 0; i < topicLinks.length; i++) {
+            topicLinks[i].addEventListener("click", handleTopicLinkClick);
+        }
+    });
+</script>
