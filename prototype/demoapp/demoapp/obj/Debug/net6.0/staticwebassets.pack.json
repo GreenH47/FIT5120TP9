@@ -341,6 +341,38 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\img\\9b.JPG"
     },
     {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\img\\bottle_lamp.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\img\\bottle_lamp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\img\\c.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\img\\c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\img\\coin_storage.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\img\\coin_storage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\img\\desk.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\img\\desk.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\img\\latern.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\img\\latern.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\img\\mosaic_bottle.jpeg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\img\\mosaic_bottle.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\img\\shoe.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\img\\shoe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\img\\wood_furniture.jpg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\img\\wood_furniture.jpg"
+    },
+    {
       "Id": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },

@@ -818,3 +818,8 @@ button {
     justify-content: space-between; /* 这将在两个.five_part3 divs 之间提供等量的空间 */
 }
 
+
+.video-wrapper {
+    width: 560px; /* or whatever you want */
+    height: 315px; /* maintain aspect ratio */
+}
