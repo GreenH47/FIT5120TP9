@@ -70,5 +70,10 @@ namespace demoapp.Controllers
             return View();
         }
 
+        public IActionResult item14()
+        {
+            return View();
+        }
+
     }
 }
