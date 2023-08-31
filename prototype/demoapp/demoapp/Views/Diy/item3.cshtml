@@ -49,8 +49,31 @@
             <li>8. Attach each wire to the screws on either side of the switch and tighten the screws with a screwdriver to ensure they are secure.</li>
             <li>9. Attach your lamp shade and light bulb and finish up your new growler lamp!</li>
         </ol>
+        <h2 class="subtitle">Link:</h2>
+        <a href="https://www.youtube.com/watch?v=f5JiJy-dELs">https://www.youtube.com/watch?v=f5JiJy-dELs</a>
     </div>
+
+
 </div>
 
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var topicLinks = document.getElementsByClassName("topic-link");
+
+        function handleTopicLinkClick(event) {
+            event.preventDefault();
+
+            var topic = this.textContent.trim();
+
+            // Redirect to the search results page with the topic as the search query and "topic" as the search range
+            var redirectUrl = "/SearchResults/Index?search=" + encodeURIComponent(topic) + "&range=topic";
+            window.location.href = redirectUrl;
+        }
+
+        for (var i = 0; i < topicLinks.length; i++) {
+            topicLinks[i].addEventListener("click", handleTopicLinkClick);
+        }
+    });
+</script>
