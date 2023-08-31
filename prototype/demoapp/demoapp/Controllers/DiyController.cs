@@ -19,5 +19,10 @@ namespace demoapp.Controllers
         {
             return View();
         }
+
+        public IActionResult Bottle_lamp()
+        {
+            return View();
+        }
     }
 }

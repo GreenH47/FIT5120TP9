@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Git\FIT5120TP9\prototype\demoapp\demoapp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Bottle_lamp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XEJvdHRsZV9sYW1wLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Coin_storage_(cow).cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XENvaW5fc3RvcmFnZV8oY293KS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Desk_Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XERlc2tfQ2FsZW5kYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,6 +38,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item3.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Lantern_or_Tealight_Holder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XExhbnRlcm5fb3JfVGVhbGlnaHRfSG9sZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Mosaic_Bottle_Art.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XE1vc2FpY19Cb3R0bGVfQXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Paper_Plate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XFBhcGVyX1BsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Shoe_Rack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XFNob2VfUmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Wood_Furniture.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XFdvb2RfRnVybml0dXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Home/Index.cshtml]
