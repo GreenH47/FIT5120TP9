@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "Hash": "L5+4hXw3pBs5yA8EaFpUSVneVqTDdkcDE12WufkjqE0=",
-=======
-  "Hash": "YIPbWPMG0gPI8xJiiMtdjIUUA2+FyI1Gb1Xs8yV+3ZM=",
->>>>>>> bdf47afd3a5772445cd369d6dbf776352bae7717
   "Source": "demoapp",
   "BasePath": "_content/demoapp",
   "Mode": "Default",
@@ -14,17 +10,17 @@
     {
       "Name": "demoapp\\wwwroot",
       "Source": "demoapp",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\demoapp.styles.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\demoapp.styles.css",
       "SourceId": "demoapp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "demoapp.styles.css",
       "AssetKind": "All",
@@ -35,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\demoapp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\demoapp.styles.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\demoapp.bundle.scp.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\demoapp.bundle.scp.css",
       "SourceId": "demoapp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "demoapp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\demoapp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\demoapp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\css\\site.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -72,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\favicon.ico",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -89,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\js\\site.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -106,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -123,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -140,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -157,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -174,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -191,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -208,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -225,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -242,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -259,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -276,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -293,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -310,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -327,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -344,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -361,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -378,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -395,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -412,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -429,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -446,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -463,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -480,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -497,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -514,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -531,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -548,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -565,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -582,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -599,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -616,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -633,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -650,7 +646,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\cardboard.jpg",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
@@ -669,12 +664,9 @@
     },
     {
       "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\Default_Melbounre_city_in_a_forest_style_0.jpg",
-=======
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\Default_Melbounre_city_in_a_forest_style_0.jpg",
->>>>>>> bdf47afd3a5772445cd369d6dbf776352bae7717
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/Default_Melbounre_city_in_a_forest_style_0.jpg",
       "AssetKind": "All",
@@ -688,7 +680,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\Default_Melbounre_city_in_a_forest_style_0.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\DIYClass.PNG",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
@@ -741,12 +732,9 @@
     },
     {
       "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\kisspng-arrow-symbol-icon-down-arrow-png-pic-5a756e2591b7b9.1532686215176453495969.png",
-=======
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\kisspng-arrow-symbol-icon-down-arrow-png-pic-5a756e2591b7b9.1532686215176453495969.png",
->>>>>>> bdf47afd3a5772445cd369d6dbf776352bae7717
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/kisspng-arrow-symbol-icon-down-arrow-png-pic-5a756e2591b7b9.1532686215176453495969.png",
       "AssetKind": "All",
@@ -760,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\kisspng-arrow-symbol-icon-down-arrow-png-pic-5a756e2591b7b9.1532686215176453495969.png"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\logo-black.png",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\logo-black.png",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/logo-black.png",
       "AssetKind": "All",
@@ -777,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\logo-black.png"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\logo-no-background.png",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\logo-no-background.png",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/logo-no-background.png",
       "AssetKind": "All",
@@ -794,7 +782,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\logo-no-background.png"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\newspaper.jpg",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
@@ -813,12 +800,9 @@
     },
     {
       "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-emmet-128421.jpg",
-=======
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-emmet-128421.jpg",
->>>>>>> bdf47afd3a5772445cd369d6dbf776352bae7717
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/pexels-emmet-128421.jpg",
       "AssetKind": "All",
@@ -832,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\pexels-emmet-128421.jpg"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-evgeny-tchebotarev-4101555.jpg",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-evgeny-tchebotarev-4101555.jpg",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/pexels-evgeny-tchebotarev-4101555.jpg",
       "AssetKind": "All",
@@ -849,7 +833,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\pexels-evgeny-tchebotarev-4101555.jpg"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-ingo-joseph-188029.jpg",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
@@ -868,12 +851,9 @@
     },
     {
       "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-josh-sorenson-1054391.jpg",
-=======
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-josh-sorenson-1054391.jpg",
->>>>>>> bdf47afd3a5772445cd369d6dbf776352bae7717
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/pexels-josh-sorenson-1054391.jpg",
       "AssetKind": "All",
@@ -887,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\pexels-josh-sorenson-1054391.jpg"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-matthew-montrone-1179229.jpg",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-matthew-montrone-1179229.jpg",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/pexels-matthew-montrone-1179229.jpg",
       "AssetKind": "All",
@@ -904,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\pexels-matthew-montrone-1179229.jpg"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-samuel-walker-1980720.jpg",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\pexels-samuel-walker-1980720.jpg",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/pexels-samuel-walker-1980720.jpg",
       "AssetKind": "All",
@@ -921,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\pexels-samuel-walker-1980720.jpg"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\StyleSheet.css",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\StyleSheet.css",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/css/StyleSheet.css",
       "AssetKind": "All",
@@ -938,7 +918,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\StyleSheet.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\css\\wood.jpg",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
@@ -957,12 +936,9 @@
     },
     {
       "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-=======
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
->>>>>>> bdf47afd3a5772445cd369d6dbf776352bae7717
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -976,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -993,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1010,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1027,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1044,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1061,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1078,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1095,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1112,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1129,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1146,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1163,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1180,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1197,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1214,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1231,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1248,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1265,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1282,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1299,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1316,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1333,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1350,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1367,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "demoapp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ROG\\source\\repos\\FIT5120TP9\\prototype\\demoapp\\demoapp\\wwwroot\\",
       "BasePath": "_content/demoapp",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
