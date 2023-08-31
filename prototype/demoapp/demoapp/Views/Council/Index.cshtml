@@ -2,7 +2,6 @@
     ViewData["Title"] = "Council";
 }
 
-<<<<<<< HEAD
 <div class="body">
     <div class="container-fluid">
         <div class="header3">
@@ -18,32 +17,11 @@
     <div class="h1-container">
         <h2>Search Council</h2>
     </div>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Search Council</title>
-    <style>
-        .container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .column {
-            flex-basis: 45%;
-        }
-    </style>
-</head>
-<body>
-    <h1>Search Council</h1>
->>>>>>> e353e485b63d08f9571a396bf24f067a07fa02d9
 
     <div>
         <label for="council">Council:</label>
         <select id="council">
             <option value="Monash City Council">Monash City Council</option>
-<<<<<<< HEAD
             <option value="Alpine Shire Council">Alpine Shire Council</option>
             <option value="Great Dandenong Council">Great Dandenong Council</option>
             <option value="Melbourne city Council">Melbourne city Council</option>
@@ -140,84 +118,3 @@
     }
 
 </script>
-=======
-            <!-- Add more options for different councils -->
-        </select>
-        <button onclick="searchCouncil()">Search</button>
-    </div>
-
-    <div class="container">
-        <div class="column" id="column1"></div>
-        <div class="column" id="column2"></div>
-    </div>
-
-    <script>
-        function searchCouncil() {
-            var council = document.getElementById("council").value;
-            var url = "https://vutzri15tc.execute-api.us-east-1.amazonaws.com/deploy";
-
-            // Create JSON request
-            var requestData = { "council": council };
-
-            // Fetch API response
-            fetch(url, {
-                method: "POST",
-                body: JSON.stringify(requestData)
-            })
-                .then(response => response.json())
-                .then(data => {
-                    var result = data.body[0];
-                    var imgData = result.img;
-
-                    for (var i = 0; i < imgData.length; i++) {
-                        var column1 = document.getElementById("column1");
-                        var column2 = document.getElementById("column2");
-
-                        //var script = document.createElement("div");
-                        //script.innerHTML = imgData[i].url; // Use innerHTML to include HTML content
-                        //script.textContent = imgData[i].url; // Use textContent instead of innerHTML
-                        //column1.appendChild(script);
-                        //console.log(imgData[i].url);
-
-                        var parser = new DOMParser();
-                        var docFragment = parser.parseFromString(imgData[i].url, 'text/html');
-                        var script = docFragment.querySelector('.tableauPlaceholder');
-
-                        // Dynamically load Tableau JavaScript API
-                        function loadScript(url) {
-                            return new Promise(function (resolve, reject) {
-                                var script = document.createElement('script');
-                                script.src = url;
-                                script.onload = resolve;
-                                script.onerror = reject;
-                                document.head.appendChild(script);
-                            });
-                        }
-
-                        // Append parsed HTML content and initialize Tableau viz
-                        column1.appendChild(script);
-                        loadScript('https://public.tableau.com/javascripts/api/viz_v1.js')
-                            .then(function () {
-                                var divElement = document.getElementById(script.id);
-                                var vizElement = divElement.getElementsByTagName('object')[0];
-                                vizElement.style.width = '100%';
-                                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                            })
-                            .catch(function (error) {
-                                console.error(error);
-                            });
-
-
-
-                        var desc = document.createElement("p");
-                        desc.textContent = imgData[i].desc;
-                        column2.appendChild(desc);
-
-                    }
-                })
-                .catch(error => console.error(error));
-        }
-    </script>
-</body>
-</html>
->>>>>>> e353e485b63d08f9571a396bf24f067a07fa02d9
