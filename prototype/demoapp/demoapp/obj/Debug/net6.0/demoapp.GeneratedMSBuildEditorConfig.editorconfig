@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Git\FIT5120TP9\prototype\demoapp\demoapp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Council/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bmNpbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Bottle_lamp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XEJvdHRsZV9sYW1wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,12 +36,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item10.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xMC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item11.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item12.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item13.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xMy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item3.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW00LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item5.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW01LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item6.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW02LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item7.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW03LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item8.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW04LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item9.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW05LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Lantern_or_Tealight_Holder.cshtml]
