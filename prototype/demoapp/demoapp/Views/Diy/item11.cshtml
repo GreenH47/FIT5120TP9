@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "DIY";
+}
+
+
+<div class="body">
+    <div class="container-fluid">
+        <div class="header3">
+            <img src="~/lib/bootstrap/dist/css/DIYClass.png" class="transparent-image">
+            <div class="overlay-text">DIY class</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="one_part2">
+   <h2>
+        Cardboard Crafts
+   </h2>
+</div>
+
+<div class="container2">
+    <div class="three_part" data-url="/Diy/Item12" style="position: relative;">
+        <h3 class="image-title">Desk Calendar</h3>
+        <img src="~/lib/bootstrap/dist/img/desk.jpg" class="transparent-image1">
+    </div>
+    <div class="three_part" data-url="/Diy/Item13" style="position: relative;">
+        <h3 class="image-title">Shoe Rack</h3>
+        <img src="~/lib/bootstrap/dist/img/shoe.jpg" class="transparent-image1">
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有 .three_part 和 .three_part2 元素
+        let clickableDivs = document.querySelectorAll('.three_part, .three_part2');
+
+        // 为每个元素添加点击事件侦听器
+        clickableDivs.forEach(function (div) {
+            div.addEventListener('click', function () {
+                // 获取 data-url 属性的值
+                let targetURL = div.getAttribute('data-url');
+
+                // 导航到该 URL
+                if (targetURL) {
+                    window.location.href = targetURL;
+                }
+            });
+        });
+    });
+
+</script>
+

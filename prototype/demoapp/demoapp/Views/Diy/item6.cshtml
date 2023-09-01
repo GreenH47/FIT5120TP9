@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "DIY";
+}
+
+
+<div class="body">
+    <div class="container-fluid">
+        <div class="header3">
+            <img src="~/lib/bootstrap/dist/css/DIYClass.png" class="transparent-image">
+            <div class="overlay-text">DIY class</div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-diy">
+    
+    <div class="section-materials" style="display: flex; justify-content: space-between;">
+        <div style="flex: 1;">
+            <h2 class="section-title">Materials</h2>
+            <ul class="list-items">
+                <li>Plastic bottle</li>
+                <li>Recycled plastic</li>
+                <li>Foam sheet (white, pink, black)</li>
+                <li>Yarn (40cm) x3</li>
+                <li>Black flannel</li>
+                <li>White paper</li>
+                <li>Plastic eyes</li>
+            </ul>
+        </div>
+        <div style="flex: 1; text-align: left;">
+            <h2 class="section-title">Video Tutorials</h2>
+            <iframe style="width: 60%;height: 200px;" src="https://www.youtube.com/embed/N4aT-mN8Bb8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+    </div>
+
+    <!-- 工具部分 -->
+    <div class="section-tools">
+        <h2 class="section-title">Tools</h2>
+        <ul class="list-items">
+            <li>Cutter</li>
+            <li>Glue gun</li>
+            <li>Scissor</li>
+            <li>Curve shape scissor</li>
+            <li>Marker</li>
+        </ul>
+    </div>
+
+    <!-- 流程部分 -->
+    <div class="section-process">
+        <h2 class="section-title">Steps</h2>
+        <ol class="list-items">
+            <li>1. Prepare a plastic bottle and remove the sticker.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/1b.jpg">
+            <li>2. If the bottle is too long, use scissors to cut the bottom to cut the middle of the bottle out.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/2b.jpg">
+            <li>3. Cut the bottle cap part using cutter.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/3b.jpg">
+            <li>4. Combine the top and bottom parts of the bottle.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/4b.jpg">
+            <li>5. Use a marker to mark the coin-shaped rectangle in the centre of the bottle and cut it out. </li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/5b.jpg">
+            <li>6. Use types to connect the top and bottom parts of the bottle.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/6b.jpg">
+            <li>7. Cut a proper size of pink and white form sheet and use a glue gun to attach it to the bottle cap. Make it the nose of the cow.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/7b.jpg">
+            <li>8. Cut a coin-shaped hole on a white form sheet and use glue to attach it to the bottle as a cow's body.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/8b.jpg">
+            <li>9. Use a pink and white form sheet to make a pair of ears, and use a black form sheet to make a pair of horns and attach it to the bottle.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/9b.jpg">
+            <li>10. Round the yarn with two fingers 10 times and tie with short yarn,  make 3 of it and attach to the bottle as cow hair.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/10b.jpg">
+            <li>11. Cutting the black form sheet into random shapes and stick it to the cow's body as patterns.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/11b.jpg">
+            <li>12. Rowling 4 white form sheets as legs and use curve shape scissors to cut the black form sheet into patterns of legs, and attach the legs to the body.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/12b.jpg">
+            <li>13. Cutting the paper into 2 round shapes and stick the plastic eyes on it to make it a cow's eyes and finally stick the eye's to the bottle.</li>
+            <img class="materials-image2" src="~/lib/bootstrap/dist/img/13b.jpg">
+        </ol>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var topicLinks = document.getElementsByClassName("topic-link");
+
+        function handleTopicLinkClick(event) {
+            event.preventDefault();
+
+            var topic = this.textContent.trim();
+
+            // Redirect to the search results page with the topic as the search query and "topic" as the search range
+            var redirectUrl = "/SearchResults/Index?search=" + encodeURIComponent(topic) + "&range=topic";
+            window.location.href = redirectUrl;
+        }
+
+        for (var i = 0; i < topicLinks.length; i++) {
+            topicLinks[i].addEventListener("click", handleTopicLinkClick);
+        }
+    });
+</script>

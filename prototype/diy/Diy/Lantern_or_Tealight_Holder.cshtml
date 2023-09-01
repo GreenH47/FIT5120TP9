@@ -1,9 +1,36 @@
 <head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .topic {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .subtitle {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+    </style>
+
 </head>
 <body>
-  <h1 class="title">How to create Lantern or Tealight Holder with your waste</h1>
+    <h1 class="title">How to create Lantern or Tealight Holder with your waste</h1>
 
-  <div class="time">create at create at 2023-08-25</div>
+    <div class="time">create at create at 2023-08-25</div>
 
     <div class="topic">
         <h2>Topics:</h2>
@@ -28,3 +55,23 @@
 
     
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var topicLinks = document.getElementsByClassName("topic-link");
+
+        function handleTopicLinkClick(event) {
+            event.preventDefault();
+
+            var topic = this.textContent.trim();
+
+            // Redirect to the search results page with the topic as the search query and "topic" as the search range
+            var redirectUrl = "/SearchResults/Index?search=" + encodeURIComponent(topic) + "&range=topic";
+            window.location.href = redirectUrl;
+        }
+
+        for (var i = 0; i < topicLinks.length; i++) {
+            topicLinks[i].addEventListener("click", handleTopicLinkClick);
+        }
+    });
+</script>
