@@ -9,137 +9,137 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = demoapp
 build_property.RootNamespace = demoapp
-build_property.ProjectDir = C:\Users\ROG\source\repos\FIT5120TP9\prototype\demoapp\demoapp\
+build_property.ProjectDir = C:\Git\FIT5120TP9\prototype\demoapp\demoapp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ROG\source\repos\FIT5120TP9\prototype\demoapp\demoapp
+build_property.MSBuildProjectDirectory = C:\Git\FIT5120TP9\prototype\demoapp\demoapp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Council/Index.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Council/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bmNpbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Bottle_lamp.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Bottle_lamp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XEJvdHRsZV9sYW1wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Coin_storage_(cow).cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Coin_storage_(cow).cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XENvaW5fc3RvcmFnZV8oY293KS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Desk_Calendar.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Desk_Calendar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XERlc2tfQ2FsZW5kYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item1.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item10.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item10.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xMC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item11.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item11.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item12.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item12.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item13.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item13.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xMy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item14.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item14.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0xNC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item2.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item3.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item3.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW0zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item4.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item4.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW00LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item5.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item5.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW01LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item6.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item6.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW02LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item7.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item7.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW03LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item8.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item8.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW04LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item9.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/item9.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XGl0ZW05LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Lantern_or_Tealight_Holder.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Lantern_or_Tealight_Holder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XExhbnRlcm5fb3JfVGVhbGlnaHRfSG9sZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Mosaic_Bottle_Art.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Mosaic_Bottle_Art.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XE1vc2FpY19Cb3R0bGVfQXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Paper_Plate.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Paper_Plate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XFBhcGVyX1BsYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Shoe_Rack.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Shoe_Rack.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XFNob2VfUmFjay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Wood_Furniture.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Diy/Wood_Furniture.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGl5XFdvb2RfRnVybml0dXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Home/Index.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Home/Privacy.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Quiz/Index.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Quiz/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/SearchResults/index.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/SearchResults/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoUmVzdWx0c1xpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/Error.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/_ViewImports.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/_ViewStart.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/source/repos/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/_Layout.cshtml]
+[C:/Git/FIT5120TP9/prototype/demoapp/demoapp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rx96ko2nea
