@@ -448,3 +448,4 @@ C:\Users\ROG\source\repos\FIT5120TP9\prototype\demoapp\demoapp\obj\Debug\net6.0\
 C:\Users\ROG\source\repos\FIT5120TP9\prototype\demoapp\demoapp\obj\Debug\net6.0\demoapp.pdb
 C:\Users\ROG\source\repos\FIT5120TP9\prototype\demoapp\demoapp\obj\Debug\net6.0\demoapp.genruntimeconfig.cache
 C:\Users\ROG\source\repos\FIT5120TP9\prototype\demoapp\demoapp\obj\Debug\net6.0\ref\demoapp.dll
+C:\Git\FIT5120TP9\prototype\demoapp\demoapp\bin\Debug\net6.0\Dockerrun.aws.json
