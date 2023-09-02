@@ -57,8 +57,9 @@
         })
             .then(response => response.json())
             .then(data => {
-                var result = data.body[0];
-                var imgData = result.img;
+                var result = data.body[0].data;
+                var imgData = result.urls;
+                var descData = result.desc;
 
                 var newElementsColumn1 = [];
                 var newElementsColumn2 = [];
@@ -68,9 +69,12 @@
                     var docFragment = parser.parseFromString(imgData[i].url, 'text/html');
                     var script = docFragment.querySelector('.tableauPlaceholder');
                     newElementsColumn1.push(script);
+                }
 
+                for (var i = 0; i < descData.length; i++) {
                     var desc = document.createElement("p");
-                    desc.textContent = imgData[i].desc;
+                    desc.textContent = descData[i].description;
+                    //console.log(desc);
                     newElementsColumn2.push(desc);
                 }
 

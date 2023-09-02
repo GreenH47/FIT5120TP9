@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "greenh47/wasteisland:it1",
+      "Name": "greenh47/wasteisland:it1.2",
       "Update": "true"
     },
     "Ports": [
