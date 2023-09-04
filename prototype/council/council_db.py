@@ -8,7 +8,7 @@ dynamodb = boto3.resource('dynamodb', region_name='us-east-1', aws_access_key_id
 table = dynamodb.Table('council')  # Replace 'YourTableName' with the actual table name in DynamoDB
 
 # Read the JSON file
-with open('updated_knowyourarea.json', 'r') as file:
+with open('knowyourarea_backupplan.json', 'r') as file:
     json_data = json.load(file)
 
 # Store each item from the JSON data into DynamoDB

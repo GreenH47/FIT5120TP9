@@ -105,8 +105,9 @@
                         newElementsColumn1.forEach(element => {
                             var divElement = document.getElementById(element.id);
                             var vizElement = divElement.getElementsByTagName('object')[0];
-                            vizElement.style.width = '100%';
-                            vizElement.style.height = (divElement.offsetWidth * 1.5) + 'px';
+                            vizElement.style.width = '30%';
+                            //vizElement.style.height = (divElement.offsetWidth * 1.5) + 'px';
+                            vizElement.style.height = '30%';
                         });
                     })
                     .catch(function (error) {
