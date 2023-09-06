@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "DIY";
+}
+
+
+<div class="body">
+    <div class="container-fluid">
+        <div class="header3">
+            <img src="~/lib/bootstrap/dist/css/DIYClass.jpg" class="transparent-image">
+            <div class="overlay-text">DIY class</div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-diy">
+    <div class="section-materials">
+        <h2 class="section-title">Materials</h2>
+        <ul class="list-items">
+            <li>Used newspaper</li>
+            <li>Plastic film</li>
+            <li>Plate</li>
+            <li>Water</li>
+        </ul>
+    </div>
+
+    <!-- 工具部分 -->
+    <div class="section-tools">
+        <h2 class="section-title">Tools</h2>
+        <ul class="list-items">
+            <li>Scissors</li>
+            <li>Glue</li>
+            <li>Pigment</li>
+            <li>Brush</li>
+        </ul>
+    </div>
+
+    <!-- 流程部分 -->
+    <div class="section-process">
+        <h2 class="section-title">Steps</h2>
+        <ol class="list-items">
+            <li>1. Cut or tear the used paper into small pieces. Typically, pieces that are 2-3 inches in size should suffice.</li>
+            <li>2. Submerge the paper pieces in a large bowl of water. Allow the paper to soak until it becomes very soft. This could take a few hours, but soaking overnight is best.</li>
+            <li>3. Remove the paper from the water, squeezing out the excess water gently.</li>
+            <li>4. Spread a thin layer of food-safe glue on one side of each paper piece.</li>
+            <li>5. Cover the surface of a large bowl or plate with plastic wrap or cling film, ensuring it's entirely covered. </li>
+            <li>6. Place another slightly smaller bowl or some weight on top of the paper layers to ensure they are compressed.</li>
+            <li>7. Allow the paper plate to dry in a well-ventilated area. This might take a day or even longer, depending on the climate and the thickness of the paper.</li>
+            <li>8. Once the paper plate is completely dry, remove it from the bowl or plate and trim the edges with scissors.</li>
+            <li>9. Add personal touches using acrylic paints or other decorative materials if desired.</li>
+            <li>10. To make the paper plate more durable, consider sealing it with a non-toxic clear sealant.</li>
+            <h2 class="subtitle">Link:</h2>
+            <a href="https://feltmagnet.com/crafts/Best-out-of-waste-creative-craft-idea-for-all">https://feltmagnet.com/crafts/Best-out-of-waste-creative-craft-idea-for-all</a>
+        </ol>
+       
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var topicLinks = document.getElementsByClassName("topic-link");
+
+        function handleTopicLinkClick(event) {
+            event.preventDefault();
+
+            var topic = this.textContent.trim();
+
+            // Redirect to the search results page with the topic as the search query and "topic" as the search range
+            var redirectUrl = "/SearchResults/Index?search=" + encodeURIComponent(topic) + "&range=topic";
+            window.location.href = redirectUrl;
+        }
+
+        for (var i = 0; i < topicLinks.length; i++) {
+            topicLinks[i].addEventListener("click", handleTopicLinkClick);
+        }
+    });
+</script>

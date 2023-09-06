@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "DIY";
+}
+
+
+<div class="body">
+    <div class="container-fluid">
+        <div class="header3">
+            <img src="~/lib/bootstrap/dist/css/DIYClass.jpg" class="transparent-image">
+            <div class="overlay-text">DIY class</div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-diy">
+    <div class="section-materials">
+        <h2 class="section-title">Materials</h2>
+        <ul class="list-items">
+            <li>Wood</li>
+            <li>Paint</li>
+            <li>Screw</li>
+        </ul>
+    </div>
+
+    <!-- 工具部分 -->
+    <div class="section-tools">
+        <h2 class="section-title">Tools</h2>
+        <ul class="list-items">
+            <li>Wood glue</li>
+            <li>Saw</li>
+            <li>Electric drill</li>
+            <li>Sandpaper</li>
+            <li>Hammer</li>
+            <li>Screwdriver</li>
+            <li>Ruler</li>
+            <li>Chisel</li>
+            <li>Wood clamps</li>
+        </ul>
+    </div>
+
+    <!-- 流程部分 -->
+    <div class="section-process">
+        <h2 class="section-title">Steps</h2>
+        <ol class="list-items">
+            <li>1. Decide on the type and design of the furniture you wish to create. Draft a sketch and mark the dimensions.</li>
+            <li>2. Based on your design, measure and mark the necessary sections on the wood.</li>
+            <li>3. Use the saw to cut the wood based on your markings.</li>
+            <li>4. Use sandpaper to smooth all cut edges of the wood, ensuring there are no splinters.</li>
+            <li>5. Join the pieces together using nails, screws, and wood glue as per your design. </li>
+            <li>6. After assembly, sand the entire piece to ensure a smooth finish.</li>
+            <li>7. Apply varnish or paint to beautify and protect the furniture.</li>
+            <h2 class="subtitle">Link:</h2>
+            <a href="https://www.architecturaldigest.com/story/repurposed-furniture-ideas">https://www.architecturaldigest.com/story/repurposed-furniture-ideas</a>
+        </ol>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var topicLinks = document.getElementsByClassName("topic-link");
+
+        function handleTopicLinkClick(event) {
+            event.preventDefault();
+
+            var topic = this.textContent.trim();
+
+            // Redirect to the search results page with the topic as the search query and "topic" as the search range
+            var redirectUrl = "/SearchResults/Index?search=" + encodeURIComponent(topic) + "&range=topic";
+            window.location.href = redirectUrl;
+        }
+
+        for (var i = 0; i < topicLinks.length; i++) {
+            topicLinks[i].addEventListener("click", handleTopicLinkClick);
+        }
+    });
+</script>

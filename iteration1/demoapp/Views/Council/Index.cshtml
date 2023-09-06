@@ -1,0 +1,125 @@
+﻿@{
+    ViewData["Title"] = "Council";
+}
+
+<div class="body">
+    <div class="container-fluid">
+        <div class="header3">
+            <img src="~/lib/bootstrap/dist/css/Default_Melbounre_city_in_a_forest_style_0.jpg" class="transparent-image">
+            <div class="overlay-text">Know your area</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="header-container">
+
+    <div class="h1-container">
+        <h2>Choose your council</h2>
+    </div>
+
+    <div>
+        <label for="council">Council:</label>
+        <select id="council">
+            <option value="Monash City Council">Monash City Council</option>
+            <option value="Alpine Shire Council">Alpine Shire Council</option>
+            <option value="Great Dandenong Council">Great Dandenong Council</option>
+            <option value="Melbourne city Council">Melbourne city Council</option>
+            <option value="Whitehorse City Council">Whitehorse City Council</option>
+            <!-- Add more options for different councils -->
+        </select>
+        <button class="search-button" onclick="searchCouncil()">Search</button>
+    </div>
+
+</div>
+
+<div class="flex-container">
+    <div class="five_part3">
+        <div class="column" id="column1"></div>
+    </div>
+
+    <div class="five_part3">
+        <div class="column" id="column2"></div>
+    </div>
+</div>
+
+
+<script>
+    function searchCouncil() {
+        var council = document.getElementById("council").value;
+        var url = "https://vutzri15tc.execute-api.us-east-1.amazonaws.com/deploy";
+
+        var requestData = { "council": council };
+
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify(requestData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                var result = data.body[0].data;
+                var imgData = result.urls;
+                var descData = result.desc;
+
+                var newElementsColumn1 = [];
+                var newElementsColumn2 = [];
+
+                for (var i = 0; i < imgData.length; i++) {
+                    var parser = new DOMParser();
+                    var docFragment = parser.parseFromString(imgData[i].url, 'text/html');
+                    var script = docFragment.querySelector('.tableauPlaceholder');
+                    newElementsColumn1.push(script);
+                }
+
+                for (var i = 0; i < descData.length; i++) {
+                    var desc = document.createElement("p");
+                    desc.textContent = descData[i].description;
+                    //console.log(desc);
+                    newElementsColumn2.push(desc);
+                }
+
+                // Dynamically load Tableau JavaScript API
+                function loadScript(url) {
+                    return new Promise(function (resolve, reject) {
+                        var script = document.createElement('script');
+                        script.src = url;
+                        script.onload = resolve;
+                        script.onerror = reject;
+                        document.head.appendChild(script);
+                    });
+                }
+
+                // Clear existing content
+                var column1 = document.getElementById("column1");
+                var column2 = document.getElementById("column2");
+                column1.innerHTML = '';
+                column2.innerHTML = '';
+
+                // Append new content
+                newElementsColumn1.forEach(element => {
+                    column1.appendChild(element);
+                });
+
+                loadScript('https://public.tableau.com/javascripts/api/viz_v1.js')
+                    .then(function () {
+                        newElementsColumn1.forEach(element => {
+                            var divElement = document.getElementById(element.id);
+                            var vizElement = divElement.getElementsByTagName('object')[0];
+                            vizElement.style.width = '30%';
+                            //vizElement.style.height = (divElement.offsetWidth * 1.5) + 'px';
+                            vizElement.style.height = '30%';
+                        });
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+
+                newElementsColumn2.forEach(element => {
+                    column2.appendChild(element);
+                });
+
+            })
+            .catch(error => console.error(error));
+    }
+
+</script>

@@ -7,6 +7,8 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/geolib"></script>
+
     <style>
         body {
             margin: 0;
@@ -59,18 +61,29 @@
             );
 
            // Read the JSON file and add the points with comments to the map
-            fetch('random_locations.json')
+           fetch('random_locations.json')
             .then(response => response.json())
             .then(data => {
-                // Add markers for each point
+                // Add markers for each point within 20 km of the user's location
                 data.forEach(point => {
-                var marker = new mapboxgl.Marker()
-                    .setLngLat([point.longitude, point.latitude])
-                    .setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
-                    .addTo(map);
+                    const distance = geolib.getDistance(
+                        { latitude: latitude, longitude: longitude },
+                        { latitude: point.latitude, longitude: point.longitude }
+                    );
+                    const isWithinRange = distance <= 10000; // km in meters
+
+                    if (isWithinRange) {
+                        var marker = new mapboxgl.Marker()
+                            .setLngLat([point.longitude, point.latitude])
+                            .setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
+                            .addTo(map);
+                    }
                 });
             });
 
+
+
+            
         }
 
         function error(error) {
