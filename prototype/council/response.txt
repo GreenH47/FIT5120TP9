@@ -1,0 +1,749 @@
+{
+    "statusCode": 200,
+    "body": [
+        {
+            "council_name": "Knox City Council",
+            "year": 2002,
+            "waste_pp": 0.292696,
+            "diversion_rate": 0.480597,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 22500
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 11894
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 8100
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 92
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 367
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 8225
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 642
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 2568
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2003,
+            "waste_pp": 0.346289,
+            "diversion_rate": 0.42923,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 29450
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 12922
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 8400
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 206
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 412
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 8193
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 949
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 3162
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2004,
+            "waste_pp": 0.346577,
+            "diversion_rate": 0.423257,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 29080
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 12962
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 9200
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 120
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 531
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 7896
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 676
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 3739
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2005,
+            "waste_pp": 0.3627,
+            "diversion_rate": 0.426834,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 30677
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 12937
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 10130
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 145
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 452
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 8850
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 715
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 2776
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2006,
+            "waste_pp": 0.36906,
+            "diversion_rate": 0.439371,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 30516
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 13581
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 10580
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 152
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 474
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 9290
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 751
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 2914
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2007,
+            "waste_pp": 0.393408,
+            "diversion_rate": 0.494372,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 28416
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 16165
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 13250
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 16
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 356
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 9699
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 2215
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 3879
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2008,
+            "waste_pp": 0.364098,
+            "diversion_rate": 0.511426,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 26381
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 18052
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 11270
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 174
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 872
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 15440
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 1044
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 522
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2009,
+            "waste_pp": 0.370745,
+            "diversion_rate": 0.527167,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 25989
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 17213
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 12690
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 166
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 832
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 14721
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 996
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 498
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2010,
+            "waste_pp": 0.379018,
+            "diversion_rate": 0.536573,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 26454
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 16420
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 15306
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 316
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 632
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 11682
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 1263
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 2527
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2011,
+            "waste_pp": 0.397674,
+            "diversion_rate": 0.537925,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 27099
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 16817
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 17970
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 1177
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 672
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 10931
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 1514
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 2523
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2012,
+            "waste_pp": 0.397503,
+            "diversion_rate": 0.525223,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 27909
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 16984
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 16361
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 1188
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 680
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 11040
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 1529
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 2547
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2013,
+            "waste_pp": 0.384447,
+            "diversion_rate": 0.513449,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 28661
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 15954
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 14797
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 71
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 353
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 10223
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 716
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 4591
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2014,
+            "waste_pp": 0.397859,
+            "diversion_rate": 0.525733,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 28728
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 16580
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 15822
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 73
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 367
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 10626
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 741
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 4773
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2015,
+            "waste_pp": 0.389814,
+            "diversion_rate": 0.523359,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 28308
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 15744
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 15982
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 65
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 353
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 10010
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 722
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 4594
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2016,
+            "waste_pp": 0.375935,
+            "diversion_rate": 0.477833,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 28671
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 12724
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 14824
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 7400
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 1203
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 4121
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2017,
+            "waste_pp": 0.384179,
+            "diversion_rate": 0.534091,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 28782
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 12838
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 16866
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 7774
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 1177
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 3887
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2018,
+            "waste_pp": 0.364184,
+            "diversion_rate": 0.467639,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 28508
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 11755
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 15386
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 6187
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 1237
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 4331
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2019,
+            "waste_pp": 0.355319,
+            "diversion_rate": 0.499485,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 28032
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 14923
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2020,
+            "waste_pp": 0.366666,
+            "diversion_rate": 0.476973,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 28516
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 9972
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 18339
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 4965
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 1040
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 3967
+                }
+            ]
+        },
+        {
+            "council_name": "Knox City Council",
+            "year": 2021,
+            "waste_pp": 0.381396,
+            "diversion_rate": 0.501544,
+            "details": [
+                {
+                    "collect_type": "total_garbage_collect",
+                    "amount": 29468
+                },
+                {
+                    "collect_type": "total_recycle_actual",
+                    "amount": 12901
+                },
+                {
+                    "collect_type": "organic_collect",
+                    "amount": 18689
+                },
+                {
+                    "collect_type": "aluminium_collect",
+                    "amount": 148
+                },
+                {
+                    "collect_type": "steel_collect",
+                    "amount": 297
+                },
+                {
+                    "collect_type": "paper_collect",
+                    "amount": 6673
+                },
+                {
+                    "collect_type": "plastic_collect",
+                    "amount": 1186
+                },
+                {
+                    "collect_type": "total_glass_collect",
+                    "amount": 4597
+                }
+            ]
+        }
+    ]
+}

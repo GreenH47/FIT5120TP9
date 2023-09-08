@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            pointer-events: none;
+            padding: 4px;
+            font-size: 13px;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <svg id="stackedBarChart" width="800" height="500">
+        <!-- Title -->
+
+        <!-- X-Axis Label -->
+        <text x="400" y="490" text-anchor="middle">Year</text>
+    </svg>
+
+    <script>
+        const wasteTypes = ["total_garbage_collect", "total_recycle_actual", "organic_collect"];
+        d3.json('data.js').then(data => {
+            const processedData = data.body;
+
+            const width = 800;
+            const height = 500;
+            const margin = { top: 50, right: 50, bottom: 30, left: 50 };
+
+            const x = d3.scaleBand()
+                .domain(processedData.map(d => d.year))
+                .range([margin.left, width - margin.right])
+                .padding(0.1);
+
+            const yMax = d3.max(processedData, d => {
+                const totalAmount = d.details.reduce((sum, item) => sum + item.amount, 0);
+                return totalAmount;
+            });
+
+            const y = d3.scaleLinear()
+                .domain([0, yMax])
+                .range([height - margin.bottom, margin.top]);
+
+            // Define the new colors for waste types
+            const colorScale = d3.scaleOrdinal()
+                .domain(wasteTypes)
+                .range(["#80B1E4", "#6496C8", "steelblue"]);
+
+            const svg = d3.select("#stackedBarChart")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", `translate(${margin.left},${margin.top})`);
+
+            const stackedData = d3.stack()
+                .keys(wasteTypes)
+                .value((d, key) => {
+                    return d.details.reduce((total, item) => {
+                        if (item.collect_type === key) {
+                            return total + item.amount;
+                        }
+                        return total;
+                    }, 0);
+                })(processedData);
+
+            // Tooltip definition (moved to the end)
+            const tooltip = d3.select("body").append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
+
+            svg.selectAll(".bar")
+                .data(stackedData)
+                .enter().append("g")
+                .attr("class", "bar")
+                .attr("fill", d => colorScale(d.key))
+                .selectAll("rect")
+                .data(d => d)
+                .enter().append("rect")
+                .attr("x", d => x(d.data.year))
+                .attr("y", d => y(d[1]))
+                .attr("height", d => y(d[0]) - y(d[1]))
+                .attr("width", x.bandwidth())
+                .on("mouseover", function (event, d) {
+                    const new_data = d.data.details.slice(0,3)
+                    const line1 = new_data[0].amount;
+                    const line2 = new_data[1].amount + line1;
+                    const line3 = new_data[2].amount + line2;
+
+                    let wasteType = "";
+
+                    if (d[0] === line1 && d[1] === line2){
+                        wasteType = wasteTypes[0];
+                    } else if (d[0] === line2 && d[1] === line3){
+                        wasteType = wasteTypes[1];
+                    } else {
+                        wasteType = wasteTypes[2];
+                    }
+    
+                    const year = d.data.year;
+
+                    // Find the relevant year's and council's data based on d.data.year and d.data.council_name
+                    const yearData = processedData.find(item => item.year === year && item.council_name === d.data.council_name);
+                    const wasteTypeData = yearData ? yearData.details.find(item => item.collect_type === wasteType) : null;
+                    const wasteTypeAmount = wasteTypeData ? wasteTypeData.amount : 0;
+
+                    // Calculate total amount for that year and council
+                    const totalAmount = yearData ? yearData.details.reduce((total, item) => total + item.amount, 0) : 0;
+
+                    // Calculate the percentage
+                    const percentage = totalAmount !== 0 ? ((wasteTypeAmount / totalAmount) * 100).toFixed(2) : 0;
+
+                    tooltip.transition()
+                        .duration(200)
+                        .style("opacity", 0.9);
+                    tooltip.html(`Council: ${d.data.council_name}<br>Type: ${wasteType}<br>Percentage: ${percentage}%`)
+                        .style("left", (event.pageX) + "px")
+                        .style("top", (event.pageY - 28) + "px");
+                })
+
+                .on("mouseout", function () {
+                    tooltip.transition()
+                        .duration(500)
+                        .style("opacity", 0);
+                });
+
+            svg.append("g")
+                .attr("class", "x-axis")
+                .attr("transform", `translate(0,${height - margin.bottom})`)
+                .call(d3.axisBottom(x).tickSize(0));
+
+            svg.append("g")
+                .attr("class", "y-axis")
+                .attr("transform", `translate(${margin.left},0)`) // Adjusted transform for Y-axis
+                .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(".2s")));
+
+
+            // Title
+            svg.append("text")
+                .attr("x", width / 2)
+                .attr("y", 30) // Adjust the y-coordinate to move the title down
+                .style("text-anchor", "middle")
+                .style("font-size", "24px") // Set the font size for the title
+                .text("The percentage of waste types");
+
+
+        });
+    </script>
+</body>
+
+</html>
