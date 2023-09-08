@@ -91,7 +91,7 @@
           </svg>
         </div>
         <div id="w-node-_2539eb1f-1f4a-6737-6e6c-580227fa8a59-2efedd53" class="w-layout-blockcontainer w-container" >
-          <h>This visualization displays per-capita waste production measured in tonnes within your council. You can explore the historical trends from 2002 to 2021 and compare them with the average waste production levels in Victoria.</h>
+          <h>This visualization displays per-capita waste production measured in tonnes within your council. You can explore the historical trends from 2002 to 2021.</h>
         </div>
         <div id="w-node-a1950823-b723-cf5f-1f15-deb214dd9f3d-2efedd53" class="w-layout-blockcontainer w-container">
           <svg id="stackedBarChart" width="800" height="500">
@@ -215,6 +215,8 @@
           .domain(wasteTypes)
           .range(["#80B1E4", "#6496C8", "steelblue"]);
 
+      // clear previous chart
+      d3.select("#stackedBarChart").selectAll("*").remove();
       const svg = d3.select("#stackedBarChart")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
@@ -451,6 +453,8 @@ function drawChart3(apiResponseData){
       drawChart(councils[0]);
 
       // Redraw chart when dropdown changes
+
+      
       d3.select("#councils").on("change", function() {
           drawChart(this.value);
       });
