@@ -65,24 +65,41 @@
             );
 
            // Read the JSON file and add the points with comments to the map
-           fetch('random_locations.json')
+        //    fetch('random_locations.json')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         // Add markers for each point within 20 km of the user's location
+        //         data.forEach(point => {
+        //             const distance = geolib.getDistance(
+        //                 { latitude: latitude, longitude: longitude },
+        //                 { latitude: point.latitude, longitude: point.longitude }
+        //             );
+        //             const isWithinRange = distance <= 10000; // km in meters
+
+        //             if (isWithinRange) {
+        //                 var marker = new mapboxgl.Marker()
+        //                     .setLngLat([point.longitude, point.latitude])
+        //                     .setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
+        //                     .addTo(map);
+        //             }
+        //         });
+        //     });
+
+        // Read the points from the JSON file
+        fetch('map_function.json')
             .then(response => response.json())
             .then(data => {
-                // Add markers for each point within 20 km of the user's location
+                // Add blue markers for each point
                 data.forEach(point => {
-                    const distance = geolib.getDistance(
-                        { latitude: latitude, longitude: longitude },
-                        { latitude: point.latitude, longitude: point.longitude }
-                    );
-                    const isWithinRange = distance <= 10000; // km in meters
-
-                    if (isWithinRange) {
-                        var marker = new mapboxgl.Marker()
-                            .setLngLat([point.longitude, point.latitude])
-                            .setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
-                            .addTo(map);
-                    }
+                    new mapboxgl.Marker({
+                        color: "blue"
+                    })
+                    .setLngLat([point.longtitude, point.latitude])
+                    .addTo(map);
                 });
+            })
+            .catch(error => {
+                console.log(error);
             });
 
 

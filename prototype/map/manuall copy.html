@@ -46,7 +46,7 @@
 
         // fetch data from json file
         function fetchData() {
-            return fetch('random_locations.json')
+            return fetch('map_function.json')
                 .then(response => response.json())
                 .then(data => data);
         }
@@ -97,7 +97,7 @@
                     if (isWithinRange) {
                         var marker = new mapboxgl.Marker()
                             .setLngLat([point.longitude, point.latitude])
-                            .setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
+                            //.setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
                             .addTo(map);
 
                         
@@ -105,7 +105,7 @@
                         const markerInfo = document.createElement('li');
                         const markerLink = document.createElement('a');
                         markerLink.href = '#';
-                        markerLink.textContent = `${point.suburb} - ${point.type}`;
+                        markerLink.textContent = `${point.recycle_centre} - ${point.waste_type}`;
 
                         markerLink.addEventListener('click', () => {
                             // Change marker color to purple
@@ -167,12 +167,12 @@
                         { latitude: latitude, longitude: longitude },
                         { latitude: point.latitude, longitude: point.longitude }
                     );
-                    const isWithinRange = distance <= 10000; // km in meters
+                    const isWithinRange = distance <= 1000000; // km in meters
 
                     if (isWithinRange) {
                         var marker = new mapboxgl.Marker()
                             .setLngLat([point.longitude, point.latitude])
-                            .setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
+                            //.setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
                             .addTo(map);
                     }
                 });
