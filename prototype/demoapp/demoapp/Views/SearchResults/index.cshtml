@@ -1,0 +1,91 @@
+﻿<h1>index</h1>
+
+<h1>Search Results</h1>
+
+<h3>Search Query: </h3>
+<p>keyword: @ViewData["SearchWord"] range: @ViewData["SearchRange"]</p>
+<h3>Search JSON:</h3>
+<h3>Sort by:</h3>
+<select id="sortSelect">
+    <option value="relevance" selected>Most Relevant</option>
+    <option value="recent">Most Recent</option>
+</select>
+<div id="searchResults"></div>
+
+
+
+<script>
+    function displaySearchResults() {
+        // Retrieve the HTML decoded JSON string
+        const searchResultJsonString = '@Html.Raw(ViewData["SearchResult"])';
+        const searchResultJson = JSON.parse(searchResultJsonString);
+        console.log(searchResultJson);
+        // Check if the status code is 200
+        if (searchResultJson.statusCode === 200) {
+            // Get the searchResults div element
+            const searchResultsDiv = document.getElementById("searchResults");
+
+            // Clear the searchResultsDiv first
+            searchResultsDiv.innerHTML = "";
+
+            // Sort the results based on the selected option
+            const sortSelect = document.getElementById("sortSelect");
+            const sortValue = sortSelect.value;
+
+            let sortedResults;
+            if (sortValue === "relevance") {
+                // Sort by total_weight_fact in descending order
+                sortedResults = searchResultJson.body.results.sort(
+                    (a, b) => b.total_weight_fact - a.total_weight_fact
+                );
+            } else if (sortValue === "recent") {
+                // Sort by time in descending order
+                sortedResults = searchResultJson.body.results.sort(
+                    (a, b) => new Date(b.time) - new Date(a.time)
+                );
+            }
+
+            // Iterate through the sorted results array
+            sortedResults.forEach((result) => {
+                // Create elements to display the title, topic, and URL
+                const titleHeading = document.createElement("h4");
+                titleHeading.textContent = `Title: ${result.title}`;
+
+                const timeParagraph = document.createElement("p");
+                timeParagraph.textContent = `Time: ${result.time}`;
+
+                const topicParagraph = document.createElement("p");
+                topicParagraph.textContent = `Topic: ${result.topic.join(", ")}`;
+
+                const urlParagraph = document.createElement("p");
+                urlParagraph.textContent = `URL: ${result.URL}`;
+
+                const urlLink = document.createElement("a");
+                urlLink.href = result.URL;
+                urlLink.textContent = "Go to Page"; // Replace with desired link text
+
+                // Update the target URL
+                const baseUrl = window.location.origin; // Get the current base URL
+                urlLink.href = `${baseUrl}/${result.URL}`; // Append the "URL" value to the base URL
+
+                // Append the elements to the searchResults div
+                searchResultsDiv.appendChild(titleHeading);
+                searchResultsDiv.appendChild(topicParagraph);
+                searchResultsDiv.appendChild(timeParagraph);
+                searchResultsDiv.appendChild(urlParagraph);
+                searchResultsDiv.appendChild(urlLink);
+            });
+        } else {
+            // Show "No results found" message
+            const searchResultsDiv = document.getElementById("searchResults");
+            searchResultsDiv.textContent = "No results found";
+        }
+    }
+
+    // Call the displaySearchResults function
+    displaySearchResults();
+
+    // Add event listener to sortSelect element
+    const sortSelect = document.getElementById("sortSelect");
+    sortSelect.addEventListener("change", displaySearchResults);
+</script>

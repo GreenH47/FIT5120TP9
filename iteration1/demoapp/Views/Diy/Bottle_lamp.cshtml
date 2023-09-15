@@ -1,0 +1,77 @@
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .topic {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .subtitle {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="title">How to create Bottle lamp with your waste</h1>
+
+    <div class="time">create at create at 2023-08-25</div>
+
+    <div class="topic">
+        <h2>Topics:</h2>
+        <ul>
+            <li><a href="#" class="topic-link">waste recycle</a></li><li><a href="#" class="topic-link">DIY</a></li>
+        </ul>
+    </div>
+
+    <h3 class="subtitle">Tools:</h3>
+    <p>Electric Drill, Glass Drill Bit, Duct Tape</p>
+
+    <h3 class="subtitle">Materials:</h3>
+    <p>Empty glass Bottle, Bottle Lamp Kit, Lamp Shade, Light Bulb</p>
+
+    <h3 class="subtitle">Steps:</h3>
+    <ol>
+        <li>1. Prepare an empty wine bottle</li><li>2. Drill a hole by using the electronic drill</li><li>3. Prepare your bottle lamp kit</li><li>4. Attach the nipple piece to cork (you need to hollow a hole out)</li><li>5. Thread the wire for the cord through the lamp nipple with the cork and leave just a few inches of wire coming out. Secure the fitting into the top of the bottle.</li><li>6. Split the cord in half after you put everything through</li><li>7. Tie a loose knot with the wires. This will help prevent them from becoming unattached later after they are fully wired up in the socket.</li><li>8. Attach each wire to the screws on either side of the switch and tighten the screws with a screwdriver to ensure they are secure.</li><li>9. Attach your lamp shade and light bulb and finish your lamp!</li>
+    </ol>
+
+    <h3 class="subtitle">Link:</h3>
+    <a href="https://www.youtube.com/watch?v=f5JiJy-dELs">https://www.youtube.com/watch?v=f5JiJy-dELs</a>
+
+    
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var topicLinks = document.getElementsByClassName("topic-link");
+
+        function handleTopicLinkClick(event) {
+            event.preventDefault();
+
+            var topic = this.textContent.trim();
+
+            // Redirect to the search results page with the topic as the search query and "topic" as the search range
+            var redirectUrl = "/SearchResults/Index?search=" + encodeURIComponent(topic) + "&range=topic";
+            window.location.href = redirectUrl;
+        }
+
+        for (var i = 0; i < topicLinks.length; i++) {
+            topicLinks[i].addEventListener("click", handleTopicLinkClick);
+        }
+    });
+</script>

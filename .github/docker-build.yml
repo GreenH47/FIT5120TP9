@@ -1,0 +1,22 @@
+name: Docker Build and Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Login to Docker Hub
+        run: echo "dckr_pat_9AyoYPfPO4MhW2cJpUXemz5tss4" | docker login -u greenh47 --password-stdin
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t greenh47/wasteisland -f iteration1/demoapp/Dockerfile2 .
+          docker push greenh47/wasteisland

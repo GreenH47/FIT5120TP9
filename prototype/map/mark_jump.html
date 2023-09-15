@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Display navigation directions</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/geolib"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 600px;
+            height: 600px;
+        }
+        
+    </style>
+</head>
+<h1>Mapbox Directions API</h1>
+<a href="https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-directions/">Tutorial</a>
+
+<input type="text" id="addressInput" placeholder="Enter your address">
+<button onclick="searchAddress()">Submit</button>
+
+<body>
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
+        type="text/css">
+
+    <div id="map"></div>
+    <div id="markerList"></div>
+
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZW5oIiwiYSI6ImNsOTZ4cXVqaDAzYTAzbnBkOHZrNGhscTYifQ.5CyI_nX9gcLhuYfYpgWC9w';
+        navigator.geolocation.getCurrentPosition(success, error);
+        const markers = [];
+
+        // fetch data from json file
+        function fetchData() {
+            return fetch('random_locations.json')
+                .then(response => response.json())
+                .then(data => data);
+        }
+      
+
+        // user input address and geneate map markers
+        function man_success(latitude, longitude) {
+
+            
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v12',
+                center: [longitude, latitude],
+                zoom: 10
+            });
+
+            new mapboxgl.Marker({
+                            color: "red",
+                            draggable: true
+                        }).setLngLat([longitude, latitude]).addTo(map);
+
+            map.addControl(
+                new MapboxDirections({
+                    accessToken: mapboxgl.accessToken
+                }),
+                'top-left'
+            );
+
+            fetchData()
+            .then(data => {
+
+                const markerList = document.getElementById('markerList');
+                    // Clear the existing marker list
+                markerList.innerHTML = '';
+
+
+                // Add markers for each point within 20 km of the user's location
+                data.forEach(point => {
+                    const distance = geolib.getDistance(
+                        { latitude: latitude, longitude: longitude },
+                        { latitude: point.latitude, longitude: point.longitude }
+                    );
+                    const isWithinRange = distance <= 10000; // km in meters
+
+                    
+
+
+                    if (isWithinRange) {
+                        var marker = new mapboxgl.Marker()
+                            .setLngLat([point.longitude, point.latitude])
+                            //.setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
+                            .addTo(map);
+
+                        
+                        // Add the marker info to the list as a hyperlink
+                        const markerInfo = document.createElement('li');
+                        const markerLink = document.createElement('a');
+                        markerLink.href = '#';
+                        markerLink.textContent = `${point.suburb} - ${point.type}`;
+
+                        markerLink.addEventListener('click', () => {
+                            // Change marker color to purple
+                            markers.forEach(m => m.getElement().style.color = 'purple');
+
+                            // Fly to the clicked marker
+                            map.flyTo({ center: [point.longitude, point.latitude], zoom: 15 });
+                        });
+
+                        markerInfo.appendChild(markerLink);
+                        markerList.appendChild(markerInfo);
+
+                            
+                    }
+                });
+                
+            });
+
+            
+        }
+
+        // mark list
+        function markList() {
+            
+        }
+
+
+
+        // get user current location
+        function success(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v12',
+                center: [longitude, latitude],
+                zoom: 13
+            });
+
+            //put a red mark from current location
+            new mapboxgl.Marker({
+                color: "red",
+                draggable: true
+            }).setLngLat([longitude, latitude]).addTo(map);
+
+            map.addControl(
+                new MapboxDirections({
+                    accessToken: mapboxgl.accessToken
+                }),
+                'top-left'
+            );
+
+            fetchData()
+            .then(data => {
+                // Add markers for each point within 20 km of the user's location
+                data.forEach(point => {
+                    const distance = geolib.getDistance(
+                        { latitude: latitude, longitude: longitude },
+                        { latitude: point.latitude, longitude: point.longitude }
+                    );
+                    const isWithinRange = distance <= 10000; // km in meters
+
+                    if (isWithinRange) {
+                        var marker = new mapboxgl.Marker()
+                            .setLngLat([point.longitude, point.latitude])
+                            .setPopup(new mapboxgl.Popup().setHTML(`<strong>Type:</strong> ${point.type}<br><strong>Collected Date:</strong> ${point.collected_date}`))
+                            .addTo(map);
+                    }
+                });
+            });
+
+
+
+        }
+
+
+        // failed to get user current location
+        function error(error) {
+            console.log(error.message);
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v12',
+                center: [144.9631, -37.8136],
+                zoom: 13
+            });
+
+            map.addControl(
+                new MapboxDirections({
+                    accessToken: mapboxgl.accessToken
+                }),
+                'top-left'
+            );
+
+            addAllMarkers(map);
+
+
+        }
+
+
+        // user input address box and search
+        function searchAddress() {
+            const address = document.getElementById('addressInput').value;
+            const geocodingUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+                address
+            )}.json?access_token=${mapboxgl.accessToken}`;
+
+            fetch(geocodingUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.features.length > 0) {
+                        // Get the coordinates of the first result
+                        const [longitude, latitude] = data.features[0].center;
+
+                        const map = new mapboxgl.Map({
+                            container: 'map',
+                            style: 'mapbox://styles/mapbox/streets-v12',
+                            center: [longitude, latitude],
+                            zoom: 13
+                        });
+
+                        
+
+                        man_success(latitude, longitude)
+
+                    } else {
+                        console.log('No results found for the entered address.');
+                    }
+                })
+                .catch(error => {
+                    console.log('An error occurred while processing the address:', error);
+                });
+        }
+
+
+
+        // clear all markers
+        function clearMarkers() {
+            // Clear any existing markers on the map
+            for (const marker of markers) {
+                marker.remove();
+            }
+            markers = [];
+        }
+
+    </script>
+
+</body>
+
+</html>
