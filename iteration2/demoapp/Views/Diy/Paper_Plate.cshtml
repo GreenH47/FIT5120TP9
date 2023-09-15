@@ -1,0 +1,77 @@
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .topic {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .subtitle {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="title">How to create Paper Plate with your waste</h1>
+
+    <div class="time">create at create at 2023-08-25</div>
+
+    <div class="topic">
+        <h2>Topics:</h2>
+        <ul>
+            <li><a href="#" class="topic-link">waste recycle</a></li><li><a href="#" class="topic-link">DIY</a></li>
+        </ul>
+    </div>
+
+    <h3 class="subtitle">Tools:</h3>
+    <p>scissors, glue, pigment, brush, water</p>
+
+    <h3 class="subtitle">Materials:</h3>
+    <p>used paper, glue, plastic film, plate</p>
+
+    <h3 class="subtitle">Steps:</h3>
+    <ol>
+        <li>1. Cut or tear the used paper into small pieces. Typically, pieces that are 2-3 inches in size should suffice.</li><li>2. Submerge the paper pieces in a large bowl of water. Allow the paper to soak until it becomes very soft. This could take a few hours, but soaking overnight is best.</li><li>3. Remove the paper from the water, squeezing out the excess water gently.</li><li>4. Spread a thin layer of food-safe glue on one side of each paper piece.</li><li>5. Cover the surface of a large bowl or plate with plastic wrap or cling film, ensuring it's entirely covered.</li><li>6. Place another slightly smaller bowl or some weight on top of the paper layers to ensure they are compressed.</li><li>7. Allow the paper plate to dry in a well-ventilated area. This might take a day or even longer, depending on the climate and the thickness of the paper.</li><li>8. Once the paper plate is completely dry, remove it from the bowl or plate and trim the edges with scissors.</li><li>9. Add personal touches using acrylic paints or other decorative materials if desired.</li><li>10. To make the paper plate more durable, consider sealing it with a non-toxic clear sealant.</li>
+    </ol>
+
+    <h3 class="subtitle">Link:</h3>
+    <a href="https://feltmagnet.com/crafts/Best-out-of-waste-creative-craft-idea-for-all">https://feltmagnet.com/crafts/Best-out-of-waste-creative-craft-idea-for-all</a>
+
+    
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var topicLinks = document.getElementsByClassName("topic-link");
+
+        function handleTopicLinkClick(event) {
+            event.preventDefault();
+
+            var topic = this.textContent.trim();
+
+            // Redirect to the search results page with the topic as the search query and "topic" as the search range
+            var redirectUrl = "/SearchResults/Index?search=" + encodeURIComponent(topic) + "&range=topic";
+            window.location.href = redirectUrl;
+        }
+
+        for (var i = 0; i < topicLinks.length; i++) {
+            topicLinks[i].addEventListener("click", handleTopicLinkClick);
+        }
+    });
+</script>
