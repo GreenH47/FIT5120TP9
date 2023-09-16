@@ -4465,3 +4465,65 @@ figcaption {
   justify-content: space-between; 
   align-items: center;
 }
+
+
+.styled-input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.styled-input:focus {
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.styled-button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  transition: background-image 0.3s;
+}
+
+.styled-button:hover {
+  background-image: linear-gradient(to bottom, #2980b9, #3498db);
+}
+
+#filterSelect {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none; /* 移除默认的外观 */
+  -webkit-appearance: none; /* 移除Chrome和Safari的默认外观 */
+  -moz-appearance: none; /* 移除Firefox的默认外观 */
+  background-color: #fff;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%232C3E50" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>'); /* 下拉箭头 */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* 箭头位置 */
+  background-size: 10px; /* 箭头大小 */
+  transition: border-color 0.3s ease; /* 平滑过渡效果 */
+  width: 250px; /* 宽度可以根据您的页面布局进行调整 */
+}
+
+#filterSelect:focus {
+  outline: none; /* 移除默认的焦点轮廓 */
+}
+
+#filterSelect option {
+  padding: 10px;
+}
+
+#markerList {
+  list-style-type: none;  /* Removes the bullets */
+  padding: 0;             /* Removes the padding */
+}
