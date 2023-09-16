@@ -32,16 +32,29 @@
         display: flex;
         align-items: flex-start;
         margin-left: 100px;
+        align-items: flex-start;
+        margin: 2em auto; /* Centers the map container on the page */
+        max-width: 1500px; /* You can adjust this as needed */
     }
 
     #map {
-        width: 1000px;
+        width: 1500px;
         height: 1400px;
+        flex: 3; /* Adjust this for a bigger map relative to the marker list */
+        border-radius: 8px; /* Gives the map slightly rounded corners */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
     }
 
     #markerList {
-        margin-left: 200px;
+        margin-left: 50px;
         /* Adjust the margin as per your requirement */
+        height: 1400px; /* Adjust based on your needs */
+        width: 500px;
+        overflow-y: auto; /* Allows scrolling if the list gets too long */
+        border-radius: 8px; /* Consistency in design */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Same shadow as the map for depth */
+        padding: 1em; /* Some padding so text isn't right up against the edge */
+        background-color: #f7f7f7; 
     }
   </style>
 </head>
@@ -96,7 +109,7 @@
 
     <div role="list" class="w-dyn-items">
 
-      <div style="height: 100px;"></div>
+      <div style="height: 50px;"></div>
       <script
         src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
       <link rel="stylesheet"
