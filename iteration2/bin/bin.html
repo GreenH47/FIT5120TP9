@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Request Demo</title>
+    <style>
+        .filter-container {
+            margin-bottom: 10px;
+        }
+        .waste-type {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Request Demo</h1>
+
+    <label for="postcodeInput">Postcode:</label>
+    <input type="text" id="postcodeInput" name="postcode" placeholder="Enter postcode">
+
+    <button id="submitBtn">Submit</button>
+
+    <div id="responseContainer" >
+        <div id="council_info"></div>
+        <div id="policyContainer"></div>
+        <div class="filter-container">
+            <label for="filterInput">Filter Waste Types (A-Z):</label>
+            <input type="text" id="filterInput" name="filterInput" placeholder="Enter search term">
+        </div>
+        <div id="wasteTypeContainer"></div>
+    </div>
+
+    
+
+    <div class="popup" id="popupContainer"></div>
+
+    <script>
+        function sendRequest() {
+            var postcode = document.getElementById("postcodeInput").value;
+
+            var jsonRequest = {
+                "postcode": postcode
+            };
+
+            fetch("https://p7fldwksi8.execute-api.us-east-1.amazonaws.com/deploy", {
+                method: "POST",
+                body: JSON.stringify(jsonRequest),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                // clear response container
+                var responseContainer = document.getElementById("responseContainer");
+                
+                if (data.statusCode == 200) {
+                    processResponse(data);
+                } else {
+                    responseContainer.innerHTML = "<p>" + data.body + "</p>";
+                }
+            })
+            .catch(function(error) {
+                console.error("Error:", error);
+            });
+        }
+
+        function processResponse(data) {
+            var councilInfoContainer = document.getElementById("council_info");
+            councilInfoContainer.innerHTML = "<h2>" + data.body.council_name + " (Postcode: " + data.body.postcode + ")</h2>";
+
+            var policyContainer = document.getElementById("policyContainer");
+            var policyTable = "<table><tr><th>Policy</th><th>Description</th></tr>";
+            var policies = data.body.policy;
+
+            for (var key in policies) {
+                policyTable += "<tr><td>" + key.replace(/_/g, ' ') + "</td><td>" + policies[key] + "</td></tr>";
+            }
+
+            policyTable += "</table>";
+            policyContainer.innerHTML = "<h3>Policies</h3>" + policyTable;
+
+            var wasteTypesContainer = document.getElementById("wasteTypeContainer");
+            var wasteTypes = data.body.waste;
+            var wasteTypeList = "<h3>Waste Types</h3>";
+
+            for (var i = 0; i < wasteTypes.length; i++) {
+                wasteTypeList += "<p class='waste-type' onclick='showPopup(\"" + wasteTypes[i].waste_type + "\", \"" + wasteTypes[i].waste_policy + "\")'>" + wasteTypes[i].waste_type + "</p>";
+            }
+
+            wasteTypesContainer.innerHTML = wasteTypeList;
+        }
+
+        function showPopup(wasteType, wastePolicy) {
+            var popupContainer = document.getElementById("popupContainer");
+            popupContainer.style.display = "block";
+            popupContainer.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
+        }
+
+        function filterWasteTypes() {
+            var filterInput = document.getElementById("filterInput").value.toUpperCase();
+            var wasteTypes = document.getElementsByClassName("waste-type");
+
+            for (var i = 0; i < wasteTypes.length; i++) {
+                var wasteType = wasteTypes[i].innerHTML.toUpperCase();
+
+                if (wasteType.includes(filterInput)) {
+                    wasteTypes[i].style.display = "block";
+                } else {
+                    wasteTypes[i].style.display = "none";
+                }
+            }
+        }
+
+        var submitBtn = document.getElementById("submitBtn");
+        submitBtn.addEventListener("click", sendRequest);
+
+        var filterInput = document.getElementById("filterInput");
+        filterInput.addEventListener("keyup", filterWasteTypes);
+    </script>
+</body>
+</html>

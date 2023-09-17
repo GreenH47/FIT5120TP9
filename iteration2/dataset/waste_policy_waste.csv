@@ -1,101 +1,101 @@
-waste_type,Ballarat City Council_1,Boroondara City Council_2,Casey City Council_1,Casey City Council_2
-Aerosol Ccans (empty),Recycle Bin,,Recycle,
-Alcohol bottles glass(no lids),Garbage,,Recycle,
-Aluminium cans,Recycle,,Recycle,
-Animal dry food bags,Garbage,,Garbage,
-Animal waste(bagged),Garbage,,Garbage,
-Appliances (e-waste),Recycing Centres,,Hard Waste Collection,Recycing Centres
-Baby wipes,Garbage,,Garbage,
-Baking paper,Garbage,,Garbage,
-Band aids,Garbage,,Garbage,
-Batteries (e-waste),"Woolworth, Aldi, Bunnings, Officework, BatteryWorld",Recycing Centres,"Woolworth, Aldi, Bunnings, Officework, BatteryWorld",Recycing Centres
-Bicycles,Recycing Centres,donate ,Recycing Centres,dontate
-Biscuit packaging,Garbage,,Garbage,
-Branches (trees),Green,,Food & Garden Bin,
-Bread bag clips,Garbage,,Garbage,
-Bread bags (plastic),Garbage,,Garbage,
-Bubble wrap,Garbage,,Garbage,
-"Cans (empty and clean aluminium, tin)",Recycle,,Recycle,
-Car parts(metal or electronic),Recycing Centres,,Recycing Centres,
-Cardboard,Recycle Bin,,Recycle,Recycing Centres
-Carpet,Recycing Centres,,Hard Waste Collection,
-Coffee grounds,Garbage,,Food & Garden Bin,
-Coffee cups,Garbage,,Garbage,
-Ceramics (broken),Garbage,,Garbage,
-Cereal box liners (plastic),Garbage,,Garbage,
-Chip packets (soft plastics),Garbage,,Garbage,
-Cigarette butts,Garbage,,Garbage,
-Cling wrap/plastic film,Garbage,,Garbage,
-"Clothing, coat hangers",Garbage,,Garbage,
-Cordial bottles(with handles),Garbage,,Garbage,
-Dog and cat food pouches,Garbage,,Garbage,
-"Dog, cat food tins (clean) ",Recycle Bin,,Recycle,
-Egg cartons,Recycle Bin,,Recycle,
-Envelopes (paper & cardboard),Recycle Bin,,Recycle,
-E-waste,Hard Waste Collection,,Hard Waste Collection,Recycing Centres
-Face wipes,Garbage,,Garbage,
-Flowers,Green,,Food & Garden Bin,
-Foam boxes,Garbage,,Garbage Bin,
-Fresh produce bags(soft plastic),Garbage,,Garbage Bin,
-Frozen food or veggie bags,Garbage,,Garbage Bin,
-Food waste,Garbage,,Food & Garden Bin,
-Furniture (good condition),Recycing Centres,,Hard Waste Collection,
-Gas bottles (all types),Recycing Centres,,Recycing Centres,
-Glass bottles and jars,Garbage,,Recycle,
-Grass clippings,Green  Bin,,Food & Garden Bin,
-Greeting cards,Recycle Bin,,Recycle Bin,
-"Hair (human, animal) ",Garbage Bin,compost ,Garbage Bin,
-Ice cream containers(clean),Recycle Bin,,Recycle Bin,
-Ice cream wrappers,Garbage,,Garbage,
-Jars (glass) no lids,Garbage,,Recycle,
-Juice bottles (with no handle),Recycle Bin,,Recycle Bin,
-Kitty litter,Garbage,,Garbage,
-Laminated paper,Garbage,,Garbage,
-Lawn mowers,Recycing Centres,,Recycing Centres,
-Leaves ,Green  Bin,,Food & Garden Bin,
-Light bulbs,Recycing Centres,,Recycing Centres,
-Lolly bags/wrappers,Garbage,,Garbage,
-Long life cartons,Garbage,,Garbage,
-Magazine wrappers (soft plastic),Garbage,,Garbage,
-Magazines,Recycle Bin,,Recycle Bin,
-Margarine containers (clean),Recycle Bin,,Recycle Bin,
-Mattresses,Recycing Centres,,Hard Waste Collection,Recycing Centres
-Meat and fish bones,Garbage,,Food & Garden Bin,
-Meat trays (polystyrene plastic #6),Garbage,,Garbage,
-Medicine bottles (glass),Garbage,,Recycle Bin,
-Newspaper,Recycle Bin,,Recycle Bin,
-Nail Polish,Garbage,,Garbage,
-Napkins,Garbage,,Garbage,
-Nappies,Garbage,,Garbage,
-Needles(sewing),Garbage,,Garbage,
-Office paper,Recycle Bin,,Recycle Bin,
-Oil (cooking),Recycing Centres,,Food & Garden Bin,
-Oil (engine),Recycing Centres,,Detox Your Home Program,
-Paint ,Recycing Centres,,Recycing Centres,
-Paint tins,Recycing Centres,,Recycing Centres,
-Paper cups,Garbage,,Garbage,
-Paper towel packaging (soft plastic),Garbage,,Garbage,
-Paper towel/tissues,Garbage,compost ,Food & Garden Bin,
-Pasta bags,Garbage,,Garbage,
-Plant pots (empty),Garbage,ballarat,Garbage,
-Plaster board,Recycing Centres,,Recycing Centres,
-Plastic containers (rigid plastic),Recycle,,Garbage,
-Plastic shopping bags,Garbage,,Garbage,
-Rubber products,Garbage Bin,,Garbage,
-Sauce bottles(empty),Recycle,,Recycle,
-"Straw(plastic, paper or compostable)",Garbage Bin,,Garbage,
-Shampoo and conditioner bottles,Recycle,,Recycle,
-Takeaway container(plastic),Garbage Bin,,Garbage,
-Tea bags,Garbage Bin,,Garbage,
-Telephone books,Recycle,,Recycle,
-"Toys(plush, plastic)",Garbage,,Garbage,
-Toothpaste tubes & brushes,Garbage,,Garbage,
-Tyres,Recycing Centres,,Recycing Centres,
-Tissue box with plastic removed,Recycle,,Recycle,
-Yoghurt containers (clean),Recycle,,Recycle,
-Yoghurt/baby food squeeze pouches with lid,Garbage,,Garbage,
-Window glass(broken-wrapped),Garbage,,Garbage,
-Sanitary items (including compostable),Garbage,,Garbage,
-Mask Disposable,Garbage,,Garbage,
-Pizza boxes (oily),Garbage,,Garbage,
-Pizza boxes (clean),Recycle Bin,,Recycle Bin,
+waste_type,Ballarat City Council,Casey City Council,Alpine Council,Dandenong Council,Boroondara,Whittlesea ,Campaspe  Council
+Aerosol Ccans (empty),Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Alcohol bottles glass(no lids),Put in your Garbage Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Aluminium cans,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Animal poo,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin or Compost Farm,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Green Bin
+Appliances (e-waste),Take to your nearst Recycing Centres. Fees may apply.,Hard Waste Collection or Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Hard Waste Collection or Recycing centres,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Baby wipes,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Baking paper,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Band aids,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Batteries (e-waste),"Take to your nearst Woolworth, Aldi, Bunnings, Officework, BatteryWorld or Recycing Centres.","Take to your nearst Woolworth, Aldi, Bunnings, Officework, BatteryWorld or Recycing Centres.","Take to your nearst Woolworth, Aldi, Bunnings, Officework, BatteryWorld or Recycing Centres.","Take to your nearst Woolworth, Aldi, Bunnings, Officework, BatteryWorld or Recycing Centres.","Take to your nearst Woolworth, Aldi, Bunnings, Officework, BatteryWorld or Recycing Centres.","Take to your nearst Woolworth, Aldi, Bunnings, Officework, BatteryWorld or Recycing Centres.","Take to your nearst Woolworth, Aldi, Bunnings, Officework, BatteryWorld or Recycing Centres."
+Bicycles,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop
+Biscuit packaging,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Branches (trees),Put in your Garbage Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.
+Bread bag clips,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Bread bags (plastic),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Bubble wrap,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+"Cans (empty and clean aluminium, tin)",Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Car parts(metal or electronic),Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Cardboard,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Carpet,Take to your nearst Recycing Centres. Fees may apply.,Hard Waste Collection or Take to your nearst Recycing Centres. Fees may apply.,Put in your Recycle Bin.,Hard Waste Collection or Recycing centres,Hard Waste Collection or Recycing centres,Take to your nearst Recycing Centres. Fees may apply.,Put in your Garbage Bin.
+Ceramics (broken),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin or Recycing Centres,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Cereal box liners (plastic),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Chip packets (soft plastics),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Cigarette butts,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Cling wrap/plastic film,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Clothes( old and torn),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Clothes(good condition),Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop,Take to your nearst Recycing Centres or donate to OP shop
+Coathangers,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin or Recycling centres,Put in your Garbage Bin or Recycling centres,Put in your Garbage Bin or Recycling centres,Put in your Garbage Bin or Recycling centres
+Coffee cups,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Coffee grounds,Put in your Garbage Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.
+Dog and cat food pouches,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+"Dog, cat food tins (clean) ",Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Egg cartons,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Envelopes (paper & cardboard),Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Face wipes,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Flowers,Put in your Garbage Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.
+Foam boxes,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Food waste,Put in your Garbage Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.
+Fresh produce bags(soft plastic),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Frozen food or veggie bags,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Furniture (good condition),Take to your nearst Recycing Centres. Fees may apply.,Hard Waste Collection or Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Hard Waste Collection or Recycing centres,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Gas bottles (all types),Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Glass bottles and jars,Put in your Garbage Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Grass clippings,Put in your Garbage Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.
+Greeting cards,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+"Hair (human, animal) ",Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Ice cream containers(clean),Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Ice cream wrappers,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Jars (glass) no lids,Put in your Garbage Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Juice bottles (with no handle),Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Kitty litter,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Laminated paper,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Lawn mowers,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Leaves ,Put in your Garbage Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.
+Light bulbs,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Lolly bags/wrappers,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Long life cartons,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Magazine wrappers (soft plastic),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Magazines,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Margarine containers (clean),Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Mask Disposable,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Mattresses,Take to your nearst Recycing Centres. Fees may apply.,Hard Waste Collection or Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Hard Waste Collection or Recycing centres,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Meat and fish bones,Put in your Garbage Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.
+Meat trays (polystyrene plastic #6),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Medicine bottles (glass),Put in your Garbage Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Nail Polish,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Napkins,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Nappies,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Needles(sewing),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Newspaper,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Office paper,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Oil (cooking),Take to your nearst Recycing Centres. Fees may apply.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.
+Oil (engine),Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Paint ,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Paint tins,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Paper cups,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Paper towel packaging (soft plastic),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Paper towel/tissues,Put in your Garbage Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.,Put in your Food & Garden Bin.
+Pasta bags,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Pizza boxes (clean),Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Pizza boxes (oily),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Plant pots (empty),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Plaster board,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Plastic containers (rigid plastic),Put in your Recycle Bin.,Put in your Garbage Bin.,Put in yoru Recycle Bin.,Put in yoru Recycle Bin.,Put in yoru Recycle Bin.,Put in yoru Recycle Bin.,Put in yoru Recycle Bin.
+Plastic shopping bags,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Rubber products,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Sanitary items (including compostable),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Sauce bottles(empty),Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Shampoo and conditioner bottles,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Shoes(old and torn),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+"Straw(plastic, paper or compostable)",Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Takeaway container(plastic),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Tea bags,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Telephone books,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Tissue box with plastic removed,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Toothpaste tubes & brushes,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+"Toys(plush, plastic)",Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Tyres,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.,Take to your nearst Recycing Centres. Fees may apply.
+Window glass(broken-wrapped),Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
+Yoghurt containers (clean),Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.,Put in your Recycle Bin.
+Yoghurt/baby food squeeze pouches with lid,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.,Put in your Garbage Bin.
