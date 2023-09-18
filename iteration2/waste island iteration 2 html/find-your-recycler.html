@@ -233,6 +233,7 @@
                         });
 
                         markerInfo.appendChild(markerLink);
+
                         markerList.appendChild(markerInfo);
                         // Add marker and markerList item to their respective arrays
                         markers.push(marker);
@@ -470,21 +471,27 @@
 
     // Filter the markerList and markers based on the selected waste_type
     function filterMarkerList(selectedValue) {
-        console.log(markerItems);
+        console.log("markerlog", markerItems);
         console.log(markerItems.length);
+        const markerList = document.getElementById('markerList');
+                // Clear the existing marker list
+                markerList.innerHTML = '';
         //markers.remove();
         for (var i = 0; i < markerItems.length; i++) {
             var markerLink = markerItems[i].getElementsByTagName("a")[0];
             var wasteType = markerLink.textContent.split("-")[1].trim();
             
             if (selectedValue === "" || wasteType === selectedValue) {
+                console.log("selectvalue", markerItems[i]);
                 markerItems[i].style.display = "block";
                 //markers[i].addTo(map);
             } else {
                 markerItems[i].style.display = "none";
                 //markers[i].remove();
             }
+            markerList.appendChild(markerItems[i]);
         }
+            
     }
 
   </script>

@@ -4915,4 +4915,38 @@ h3 {
   grid-template-columns: repeat(4, 1fr);
   gap: 40px; /* 增加字母之间的间隔 */
   margin-bottom: 20px;
+
+}
+
+.text-block-31 h3, .text-block-31 p {
+  font-size: 24px;
+}
+
+.w-input {
+  width: 100%; /* 使输入框的宽度适应其父容器 */
+  padding: 10px 15px; /* 为输入框增加一些内部填充 */
+  border: 2px solid grey; /* 设置输入框的边框颜色 */
+  border-radius: 5px; /* 将输入框的角圆化 */
+  font-size: 16px; /* 设置字体大小 */
+  outline: none; /* 移除输入框被选中时的轮廓 */
+  transition: border-color 0.3s; /* 添加边框颜色的过渡效果 */
+}
+
+/* 当输入框获得焦点时，改变边框颜色 */
+.w-input:focus {
+  border-color: #006688;
+}
+
+/* 为输入框添加一些hover效果 */
+.w-input:hover {
+  border-color: #0077aa;
+}
+
+#wasteTypeContainer {
+  color: #000;
+}
+
+.waste-type {
+  cursor: pointer;
+  color: black;
 }

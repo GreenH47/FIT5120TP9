@@ -23,8 +23,7 @@
     }
     .waste-type {
         cursor: pointer;
-        color: blue;
-        text-decoration: underline;
+        color: black;
     }
     .popup {
         position: fixed;
@@ -89,7 +88,7 @@
       </div>
     </div>
     <div class="w-col w-col-4">
-      <button id="submitBtn" class="button-7 w-button">Search</a>
+      <button id="submitBtn" class="search-button">Search</a>
     </div>
   </div>
   <div class="div-block-30"></div>
@@ -144,7 +143,7 @@
       <div class="div-block-28"></div>
     </div>
     <div>
-      <div class="columns-13 w-row">
+      <div class="columns-13 w-row hiddenContent">
         <div class="column-30 w-col w-col-6"><img src="images/IMG_0176.JPG" loading="lazy" width="200" sizes="200px" alt="" srcset="images/IMG_0176.JPG 500w, images/IMG_0176.JPG 800w, images/IMG_0176.JPG 1080w, images/IMG_0176.JPG 1151w"></div>
         <div class="column-31 w-col w-col-6">
           <div class="text-block-31">This is some text inside of a div block.</div>
@@ -197,9 +196,13 @@
           .then(function(data) {
               // clear response container
               var responseContainer = document.getElementById("responseContainer");
+              console.log("response data",data);
               
               if (data.statusCode == 200) {
+                  
                   processResponse(data);
+              } else if (data.statusCode == 404) {
+                  processResponseFail(data);
               } else {
                   responseContainer.innerHTML = "<p>" + data.body + "</p>";
               }
@@ -208,6 +211,11 @@
               console.error("Error:", error);
           });
       }
+
+      function processResponseFail(data) {
+        var councilInfoContainer = document.getElementById("council_info");
+        councilInfoContainer.innerHTML = "<h2>" + "Postcode not found!" + "</h2>";
+      } 
 
       function processResponse(data) {
         var councilInfoContainer = document.getElementById("council_info");
@@ -275,6 +283,7 @@
         wasteTypesContainer.innerHTML = wasteTypeList;
 
       }
+      
 
       function toggleVisibility(key) {
           var groupElement = document.getElementById("group-" + key);
@@ -287,13 +296,24 @@
     
 
       function showPopup(wasteType, wastePolicy) {
+
+          var hiddenDiv = document.querySelector(".hiddenContent");
           var popupContainer = document.getElementById("popupContainer");
           popupContainer.style.display = "block";
           popupContainer.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
+          hiddenDiv.style.display = "block";
+
+
+          var targetDiv = document.querySelector(".text-block-31");
+
+
+          targetDiv.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
+
           setTimeout(function() {
-              popupContainer.style.display = "none";
+            popupContainer.style.display = "none";
           }, 2000);
       }
+
 
       function filterWasteTypes() {
           var filterInput = document.getElementById("filterInput").value.toUpperCase();

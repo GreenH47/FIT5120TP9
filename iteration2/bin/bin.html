@@ -74,7 +74,6 @@
         var filterInput = document.getElementById("filterInput");
         filterInput.addEventListener("keyup", filterWasteTypes);
 
-
         function sendRequest() {
             var postcode = document.getElementById("postcodeInput").value;
 
@@ -126,7 +125,7 @@
                     signImage = noSign;
                 } else {
                     signImage = yesSign;
-                }
+                } 
 
                 if (key.includes("green")) {
                     binImage = greenBin;
@@ -165,29 +164,7 @@
         function showPopup(wasteType, wastePolicy) {
             var popupContainer = document.getElementById("popupContainer");
             popupContainer.style.display = "block";
-
-            var binImage;
-            if (wastePolicy.toLowerCase().includes("recycle bin")) {
-                binImage = recycleBin;
-            } 
-            else if (wastePolicy.toLowerCase().includes("garbage bin")) {
-                binImage = garbageBin;
-            }
-
-            if (binImage != null) {
-                popupContainer.innerHTML = "<h3>" + wasteType + "</h3><img src='" + binImage + "' style='width: 200px; height: 200px;' /><p>" + wastePolicy + "</p>";
-            }
-            else {
-                popupContainer.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
-            }
-            
-
-            var closeButton = document.createElement("button");
-            closeButton.innerText = "Close";
-            closeButton.addEventListener("click", function () {
-                popupContainer.style.display = "none";
-            });
-            popupContainer.appendChild(closeButton);
+            popupContainer.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
         }
 
         function filterWasteTypes() {
