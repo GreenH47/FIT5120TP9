@@ -49,16 +49,8 @@
         <div id="markerList"></div>
     </div>
 
-    <div id="pagination">
-        <button id="prevPage" onclick="changePage(-1)">Previous</button>
-        <span id="currentPage">1</span>
-        <button id="nextPage" onclick="changePage(1)">Next</button>
-    </div>
 
     <script>
-
-        const ITEMS_PER_PAGE = 24;
-        let currentPage = 1;
         mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZW5oIiwiYSI6ImNsOTZ4cXVqaDAzYTAzbnBkOHZrNGhscTYifQ.5CyI_nX9gcLhuYfYpgWC9w';
         navigator.geolocation.getCurrentPosition(success, error);
         //import * as geolib from 'geolib';
@@ -226,7 +218,6 @@
 
                             markerInfo.appendChild(markerLink);
                             markerList.appendChild(markerInfo);
-                            
                         }
                     });
 
@@ -241,7 +232,6 @@
 
         // user input address box and search
         function searchAddress() {
-
             const address = document.getElementById('addressInput').value;
             const geocodingUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
                 address
@@ -405,7 +395,6 @@
         }
 
     </script>
-
 
 </body>
 
