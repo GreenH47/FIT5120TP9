@@ -9642,11 +9642,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\demoapp.csproj",
+      "projectUniqueName": "C:\\Git\\FIT5120TP9\\iteration2\\demoapp\\demoapp.csproj",
       "projectName": "demoapp",
-      "projectPath": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\demoapp.csproj",
+      "projectPath": "C:\\Git\\FIT5120TP9\\iteration2\\demoapp\\demoapp.csproj",
       "packagesPath": "C:\\Users\\huang\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\obj\\",
+      "outputPath": "C:\\Git\\FIT5120TP9\\iteration2\\demoapp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\huang\\AppData\\Roaming\\NuGet\\NuGet.Config",

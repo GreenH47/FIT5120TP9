@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>API Request Demo</title>
     <style>
         .filter-container {
             margin-bottom: 10px;
         }
+
         .waste-type {
             cursor: pointer;
             color: blue;
             text-decoration: underline;
         }
+
         .popup {
             position: fixed;
             top: 50%;
@@ -24,6 +27,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>API Request Demo</h1>
 
@@ -32,21 +36,44 @@
 
     <button id="submitBtn">Submit</button>
 
-    <div id="responseContainer" >
-        <div id="council_info"></div>
-        <div id="policyContainer"></div>
-        <div class="filter-container">
-            <label for="filterInput">Filter Waste Types (A-Z):</label>
-            <input type="text" id="filterInput" name="filterInput" placeholder="Enter search term">
+    <div id="responseContainer">
+        <div id="error" style="display: none;">
+            <p>There was an error processing your request. Please try again.</p>
         </div>
-        <div id="wasteTypeContainer"></div>
+        <div id="response" style="display: none;">
+            <div id="council_info"></div>
+            <div id="policyContainer"></div>
+            <div class="filter-container">
+                <h3>Waste type filter</h3>
+                <label for="filterInput">Filter Waste Types (A-Z):</label>
+                <input type="text" id="filterInput" name="filterInput" placeholder="Enter search term">
+            </div>
+            <div id="wasteTypeContainer"></div>
+        </div>
+
     </div>
 
-    
+
 
     <div class="popup" id="popupContainer"></div>
 
+
     <script>
+        // storage fixed bin image
+        var greenBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/green.jpg";
+        var garbageBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/garbage.jpg";
+        var houseBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/house.jpg";
+        var recycleBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/recycle.jpg";
+        var yesSign = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/yes.jpg";
+        var noSign = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/no.jpg";
+
+        //
+        var submitBtn = document.getElementById("submitBtn");
+        submitBtn.addEventListener("click", sendRequest);
+
+        var filterInput = document.getElementById("filterInput");
+        filterInput.addEventListener("keyup", filterWasteTypes);
+
         function sendRequest() {
             var postcode = document.getElementById("postcodeInput").value;
 
@@ -61,22 +88,26 @@
                     "Content-Type": "application/json"
                 }
             })
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                // clear response container
-                var responseContainer = document.getElementById("responseContainer");
-                
-                if (data.statusCode == 200) {
-                    processResponse(data);
-                } else {
-                    responseContainer.innerHTML = "<p>" + data.body + "</p>";
-                }
-            })
-            .catch(function(error) {
-                console.error("Error:", error);
-            });
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    // clear response container
+                    var responseContainer = document.getElementById("response");
+                    var errorContainer = document.getElementById("error");
+
+                    if (data.statusCode == 200) {
+                        responseContainer.style.display = "block";
+                        errorContainer.style.display = "none";
+                        processResponse(data);
+                    } else {
+                        responseContainer.style.display = "none";
+                        errorContainer.style.display = "block";
+                    }
+                })
+                .catch(function (error) {
+                    console.error("Error:", error);
+                });
         }
 
         function processResponse(data) {
@@ -84,11 +115,35 @@
             councilInfoContainer.innerHTML = "<h2>" + data.body.council_name + " (Postcode: " + data.body.postcode + ")</h2>";
 
             var policyContainer = document.getElementById("policyContainer");
-            var policyTable = "<table><tr><th>Policy</th><th>Description</th></tr>";
+            var policyTable = "<table><tr><th>Bin</th><th>Policy</th><th>Description</th></tr>";
             var policies = data.body.policy;
 
             for (var key in policies) {
-                policyTable += "<tr><td>" + key.replace(/_/g, ' ') + "</td><td>" + policies[key] + "</td></tr>";
+                var binImage, signImage;
+
+                if (key.includes("_no")) {
+                    signImage = noSign;
+                } else {
+                    signImage = yesSign;
+                } 
+
+                if (key.includes("green")) {
+                    binImage = greenBin;
+                } else if (key.includes("landfill")) {
+                    binImage = garbageBin;
+                } else if (key.includes("recycle")) {
+                    binImage = recycleBin;
+                }
+
+                // Replace policy text with sign image
+                var policyColumn;
+                if (key.includes("_no") || key.includes("_yes")) {
+                    policyColumn = "<img src='" + signImage + "' style='width: 50px; height: 50px;' />";
+                } else {
+                    policyColumn = key.replace(/_/g, ' ');
+                }
+
+                policyTable += "<tr><td><img src='" + binImage + "' style='width: 50px; height: 100px;' /></td><td>" + policyColumn + "</td><td>" + policies[key] + "</td></tr>";
             }
 
             policyTable += "</table>";
@@ -104,6 +159,7 @@
 
             wasteTypesContainer.innerHTML = wasteTypeList;
         }
+
 
         function showPopup(wasteType, wastePolicy) {
             var popupContainer = document.getElementById("popupContainer");
@@ -126,11 +182,8 @@
             }
         }
 
-        var submitBtn = document.getElementById("submitBtn");
-        submitBtn.addEventListener("click", sendRequest);
 
-        var filterInput = document.getElementById("filterInput");
-        filterInput.addEventListener("keyup", filterWasteTypes);
     </script>
 </body>
+
 </html>
