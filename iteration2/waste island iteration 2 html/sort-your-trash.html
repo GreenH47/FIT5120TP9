@@ -199,10 +199,11 @@
               console.log("response data",data);
               
               if (data.statusCode == 200) {
-                  
                   processResponse(data);
               } else if (data.statusCode == 404) {
                   processResponseFail(data);
+              } else if (data.statusCode == 304) {
+                  processResponseNoValid(data);
               } else {
                   responseContainer.innerHTML = "<p>" + data.body + "</p>";
               }
@@ -215,6 +216,11 @@
       function processResponseFail(data) {
         var councilInfoContainer = document.getElementById("council_info");
         councilInfoContainer.innerHTML = "<h2>" + "Postcode not found!" + "</h2>";
+      } 
+
+      function processResponseNoValid(data) {
+        var councilInfoContainer = document.getElementById("council_info");
+        councilInfoContainer.innerHTML = "<h2>" + "Input is not valid!" + "</h2>";
       } 
 
       function processResponse(data) {
