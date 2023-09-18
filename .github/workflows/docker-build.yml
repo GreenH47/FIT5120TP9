@@ -30,16 +30,17 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # Retrieve the current container ID by name
-            CURRENT_CONTAINER=$(docker ps --format "{{.Names}}" --filter "name=naughty_burnell")
+            CURRENT_CONTAINER=$(sudo docker ps --format "{{.Names}}" --filter "name=naughty_burnell")
 
             # Stop and remove the current container if it exists
             if [ -n "$CURRENT_CONTAINER" ]; then
-              docker stop "$CURRENT_CONTAINER"
-              docker rm "$CURRENT_CONTAINER"
+              sudo docker stop "$CURRENT_CONTAINER"
+              sudo docker rm "$CURRENT_CONTAINER"
             fi
 
             # Pull the updated Docker image
-            docker pull greenh47/wasteisland
+            sudo docker pull greenh47/wasteisland
 
             # Run a new container with the updated image
-            docker run --name naughty_burnell -d -p 80:80 greenh47/wasteisland
+            sudo docker run --name naughty_burnell -d -p 8080:80 greenh47/wasteisland
+
