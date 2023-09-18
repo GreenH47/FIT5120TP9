@@ -4950,3 +4950,19 @@ h3 {
   cursor: pointer;
   color: black;
 }
+
+.image-container {
+  position: relative;
+  width: 200px;
+  height: auto; /* or whatever height your images have */
+}
+
+.overlap-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hidden-image {
+  display: none;
+}

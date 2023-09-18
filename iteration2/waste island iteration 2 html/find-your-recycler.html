@@ -156,7 +156,7 @@
 
     // Store the markers and markerList items in separate arrays
     var markerItems = [];
-
+    let currentRedMarkerSvg = null;
 
     function fetchData() {
         return fetch('map_function.json')
@@ -206,6 +206,8 @@
                     );
                     const isWithinRange = distance <= 10000; // 10 km in meters
 
+
+
                     if (isWithinRange) {
                         var marker = new mapboxgl.Marker()
                             .setLngLat([point.longtitude, point.latitude])
@@ -225,12 +227,15 @@
                         }
 
                         markerLink.addEventListener('click', () => {
-                            // Change marker color to purple
-                            markers.forEach(m => m.getElement().querySelector('.marker-color').style.backgroundColor = 'purple');
+                            // Reset all marker colors
+                            markers.forEach(m => {
+                                if (m._element) m._element.style.backgroundColor = 'initial'; 
+                            });
 
                             // Fly to the clicked marker
                             map.flyTo({ center: [point.longtitude, point.latitude], zoom: 15 });
                         });
+
 
                         markerInfo.appendChild(markerLink);
 
@@ -248,6 +253,7 @@
                 console.log(error);
             });
     }
+    
 
 
     function error(error) {
@@ -305,8 +311,10 @@
                         markerLink.textContent = `${point.recycle_centre}`;
 
                         markerLink.addEventListener('click', () => {
-                            // Change marker color to purple
-                            markers.forEach(m => m.getElement().querySelector('.marker-color').style.backgroundColor = 'purple');
+                            // Reset all marker colors
+                            markers.forEach(m => {
+                                if (m._element) m._element.style.backgroundColor = 'initial'; 
+                            });
 
                             // Fly to the clicked marker
                             map.flyTo({ center: [point.longtitude, point.latitude], zoom: 15 });
@@ -414,8 +422,10 @@
                         markerLink.textContent = `${point.recycle_centre}`;
 
                         markerLink.addEventListener('click', () => {
-                            // Change marker color to purple
-                            markers.forEach(m => m.getElement().querySelector('.marker-color').style.backgroundColor = 'purple');
+                            // Reset all marker colors
+                            markers.forEach(m => {
+                                if (m._element) m._element.style.backgroundColor = 'initial'; 
+                            });
 
                             // Fly to the clicked marker
                             map.flyTo({ center: [point.longtitude, point.latitude], zoom: 15 });

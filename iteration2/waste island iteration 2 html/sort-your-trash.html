@@ -144,7 +144,14 @@
     </div>
     <div>
       <div class="columns-13 w-row hiddenContent">
-        <div class="column-30 w-col w-col-6"><img src="images/IMG_0176.JPG" loading="lazy" width="200" sizes="200px" alt="" srcset="images/IMG_0176.JPG 500w, images/IMG_0176.JPG 800w, images/IMG_0176.JPG 1080w, images/IMG_0176.JPG 1151w"></div>
+        <div class="column-30 w-col w-col-6">
+          <div class="image-container">
+            <img src="images/IMG_0176.JPG" loading="lazy" width="200" sizes="200px" alt="" srcset="images/IMG_0176.JPG 500w, images/IMG_0176.JPG 800w, images/IMG_0176.JPG 1080w, images/IMG_0176.JPG 1151w">
+            <img src="images/IMG_0158.JPG" loading="lazy" width="200" sizes="200px" class="hidden-image overlap-image" alt="" srcset="images/IMG_0158.JPG 500w, images/IMG_0158.JPG 800w, images/IMG_0158.JPG 1080w, images/IMG_0158.JPG 1227w">
+            <img src="images/IMG_0180.JPG" loading="lazy" width="200" sizes="200px" class="hidden-image overlap-image" alt="" srcset="images/IMG_0180.JPG 500w, images/IMG_0180.JPG 800w, images/IMG_0180.JPG 1080w, images/IMG_0180.JPG 1145w">
+            <img src="images/IMG_0179.JPG" loading="lazy" width="200" sizes="200px" class="hidden-image overlap-image" alt="" srcset="images/IMG_0179.JPG 500w, images/IMG_0179.JPG 800w, images/IMG_0179.JPG 1080w, images/IMG_0179.JPG 1138w">
+          </div>
+        </div>
         <div class="column-31 w-col w-col-6">
           <div class="text-block-31">This is some text inside of a div block.</div>
         </div>
@@ -199,6 +206,7 @@
               console.log("response data",data);
               
               if (data.statusCode == 200) {
+
                   processResponse(data);
               } else if (data.statusCode == 404) {
                   processResponseFail(data);
@@ -314,6 +322,7 @@
 
 
           targetDiv.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
+          
 
           setTimeout(function() {
             popupContainer.style.display = "none";
