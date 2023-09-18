@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cgGAVlq/UzfJMMt/8tbhQOQRTN1GPLzt6Gn5OIdTrBCUlfmyY0MYpE0WYlleImS6MnmCa73lYx3F7BGzX1JZwg==",
+  "dgSpecHash": "Mny2yhbGaLpPl+846ICpZd4mCPFfklLKkEA494U74wfy4ySTzw9cCJiJ0OU9ZnAmrxNoylZYWr0/s+quOG1Ngw==",
   "success": true,
-  "projectFilePath": "C:\\Git\\FIT5120TP9\\prototype\\demoapp\\demoapp\\demoapp.csproj",
+  "projectFilePath": "C:\\Git\\FIT5120TP9\\iteration2\\demoapp\\demoapp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\huang\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\huang\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
