@@ -90,11 +90,10 @@
                 </div>
                 <div class="nav-menu">
                     <a href="index.html" class="nav-link w-nav-link">Home</a>
-                    <a href="know-your-area.html" class="nav-link w-nav-link">Know Your Area</a>
-                    <a href="find-your-recycler.html" aria-current="page" class="nav-link w-nav-link w--current">Find
-                        Your Recycler</a>
+                    <a href="know-your-area.html" aria-current="page" class="nav-link w-nav-link w--current">Know Your Area</a>
+                    <a href="sort-your-trash.html" class="nav-link w-nav-link">Sort your Trash</a>
+                    <a href="find-your-recycler.html" class="nav-link w-nav-link">Find Your Recycler</a>
                     <a href="resources.html" class="nav-link w-nav-link">DIY Class</a>
-                    <a href="sort-your-trash.html" class="nav-link w-nav-link">Sort your trash</a>
                 </div>
                 <div class="nav-cta-button-container"></div>
             </nav>
@@ -165,10 +164,9 @@
                     <h5 class="footer-header">Website</h5>
                     <a href="index.html" class="footer-link">Home</a>
                     <a href="know-your-area.html" class="footer-link">Know Your Area</a>
-                    <a href="find-your-recycler.html" aria-current="page" class="footer-link w--current">Find Your
-                        Recycler</a>
+                    <a href="sort-your-trash.html" aria-current="page" class="footer-link w--current">Sort Your Trash</a>
+                    <a href="find-your-recycler.html" class="footer-link">Find Your Recycler</a>
                     <a href="resources.html" class="footer-link">DIY Class</a>
-                    <a href="waste-classification.html" class="footer-link">Waste Classification</a>
                 </div>
             </div>
         </div>
@@ -258,8 +256,9 @@
                             }
 
                             markerLink.addEventListener('click', () => {
-                                // Change marker color to purple
-                                markers.forEach(m => m.getElement().querySelector('.marker-color').style.backgroundColor = 'purple');
+                                markers.forEach(m => {
+                                    if (m._element) m._element.style.backgroundColor = 'initial'; 
+                                });
 
                                 // Fly to the clicked marker
                                 map.flyTo({ center: [point.longtitude, point.latitude], zoom: 15 });
@@ -337,8 +336,9 @@
                             markerLink.textContent = `${point.recycle_centre}`;
 
                             markerLink.addEventListener('click', () => {
-                                // Change marker color to purple
-                                markers.forEach(m => m.getElement().querySelector('.marker-color').style.backgroundColor = 'purple');
+                                markers.forEach(m => {
+                                    if (m._element) m._element.style.backgroundColor = 'initial'; 
+                                });
 
                                 // Fly to the clicked marker
                                 map.flyTo({ center: [point.longtitude, point.latitude], zoom: 15 });
@@ -451,8 +451,9 @@
                             }
 
                             markerLink.addEventListener('click', () => {
-                                // Change marker color to purple
-                                markers.forEach(m => m.getElement().querySelector('.marker-color').style.backgroundColor = 'purple');
+                                markers.forEach(m => {
+                                    if (m._element) m._element.style.backgroundColor = 'initial'; 
+                                });
 
                                 // Fly to the clicked marker
                                 map.flyTo({ center: [point.longtitude, point.latitude], zoom: 15 });
