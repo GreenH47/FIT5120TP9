@@ -23,8 +23,7 @@
     }
     .waste-type {
         cursor: pointer;
-        color: blue;
-        text-decoration: underline;
+        color: black;
     }
     .popup {
         position: fixed;
@@ -89,7 +88,7 @@
       </div>
     </div>
     <div class="w-col w-col-4">
-      <button id="submitBtn" class="button-7 w-button">Search</a>
+      <button id="submitBtn" class="search-button">Search</a>
     </div>
   </div>
   <div class="div-block-30"></div>
@@ -132,100 +131,27 @@
         </div>
       </div>
       <div class="w-col w-col-4">
-        <a href="#" class="button-7 w-button">Search</a>
       </div>
+    </div>
+    <div class="columns-10 w-row">
+      <div id="wasteTypeContainer" class="grid-container"></div>
     </div>
   </section>
-  <div class="div-block-24">
-    <div class="div-block-25">
-      <h1 class="heading-25">Index</h1>
-      <div class="div-block-26">
-        <div class="div-block-27">
-          <div data-hover="false" data-delay="0" class="dropdown-2 w-dropdown">
-            <div class="dropdown-toggle w-dropdown-toggle">
-              <div class="icon-2 w-icon-dropdown-toggle"></div>
-              <div class="text-block-27">A-G</div>
-            </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="columns-12 w-row">
-                <div class="w-col w-col-4">
-                  <div>Aerosol Cans (empty)<br>Alcohol bottles glass(no lids)<br>Aluminium cans<br>Animal dry food bags<br>Animal waste(bagged)<br>Appliances (e-waste)<br>Baby wipes<br>Baking paper<br>Band aids<br>Batteries (e-waste)<br>Bicycles<br>Biscuit packaging<br>Branches (trees)<br>Bread bag clips<br>Bread bags (plastic)</div>
-                </div>
-                <div class="column-26 w-col w-col-4">
-                  <div class="text-block-26">Bubble wrap<br>Cans (empty and clean aluminium, tin)<br>Car parts(metal or electronic)<br>Cardboard<br>Carpet<br>Coffee grounds<br>Coffee cups<br>Ceramics (broken)<br>Cereal box liners (plastic)<br>Chip packets (soft plastics)<br>Cigarette butts<br>Cling wrap/plastic film<br>Clothing, coat hangers<br>Cordial bottles(with handles)<br>Dog and cat food pouches</div>
-                </div>
-                <div class="w-col w-col-4">
-                  <div>Dog, cat food tins (clean) <br>Egg cartons<br>Envelopes (paper &amp; cardboard)<br>E-waste<br>Face wipes<br>Flowers<br>Foam boxes<br>Fresh produce bags(soft plastic)<br>Frozen food or veggie bags<br>Food waste<br>Furniture (good condition)<br>Gas bottles (all types)<br>Glass bottles and jars<br>Grass clippings<br>Greeting cards</div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
-        <div>
-          <div>
-            <div data-hover="false" data-delay="0" class="dropdown-2 w-dropdown">
-              <div class="dropdown-toggle w-dropdown-toggle">
-                <div class="icon-2 w-icon-dropdown-toggle"></div>
-                <div class="text-block-28">H-N</div>
-              </div>
-              <nav class="dropdown-list w-dropdown-list">
-                <div class="columns-12 w-row">
-                  <div class="w-col w-col-4">
-                    <div>Hair (human, animal) <br>Ice cream containers(clean)<br>Ice cream wrappers<br>Jars (glass) no lids<br>Juice bottles (with no handle)<br>Kitty litter<br>Laminated paper<br>Lawn mowers<br>Leaves<br>Light bulbs</div>
-                  </div>
-                  <div class="w-col w-col-4">
-                    <div>Lolly bags/wrappers<br>Long life cartons<br>Magazine wrappers (soft plastic)<br>Magazines<br>Margarine containers (clean)<br>Mattresses<br>Meat and fish bones<br>Meat trays (polystyrene plastic #6)<br>Medicine bottles (glass)<br>Newspaper</div>
-                  </div>
-                  <div class="w-col w-col-4">
-                    <div>Nail Polish<br>Napkins<br>Nappies<br>Needles(sewing)</div>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-          <div>
-            <div data-hover="false" data-delay="0" class="dropdown-2 w-dropdown">
-              <div class="dropdown-toggle w-dropdown-toggle">
-                <div class="icon-2 w-icon-dropdown-toggle"></div>
-                <div class="text-block-29">O-Z</div>
-              </div>
-              <nav class="dropdown-list w-dropdown-list">
-                <div class="columns-12 w-row">
-                  <div class="w-col w-col-4">
-                    <div>Office paper<br>Oil (cooking)<br>Oil (engine)<br>Paint<br>Paint tins<br>Paper cups<br>Paper towel packaging (soft plastic)<br>Paper towel/tissues<br>Pasta bags<br>Plant pots (empty)</div>
-                  </div>
-                  <div class="w-col w-col-4">
-                    <div class="text-block-25">Plaster board<br>Plastic containers (rigid plastic)<br>Plastic shopping bags<br>Rubber products<br>Sauce bottles(empty)<br>Straw(plastic, paper or compostable)<br>Shampoo and conditioner bottles<br>Takeaway container(plastic)<br>Tea bags<br>Telephone books</div>
-                  </div>
-                  <div class="column-25 w-col w-col-4">
-                    <div>Nail Polish<br>Napkins<br>Nappies<br>Needles(sewing)</div>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-          <div>
-            <div data-hover="false" data-delay="0" class="dropdown-2 w-dropdown">
-              <div class="dropdown-toggle w-dropdown-toggle">
-                <div class="icon-2 w-icon-dropdown-toggle"></div>
-                <div class="text-block-30">Sanitary items (including compostable)</div>
-              </div>
-              <nav class="dropdown-list w-dropdown-list">
-                <div>Mask Disposable<br>Pizza boxes (oily)<br>Pizza boxes (clean)</div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="popup" id="popupContainer"></div>
   <section>
     <div>
       <div class="div-block-28"></div>
     </div>
     <div>
-      <div class="columns-13 w-row">
-        <div class="column-30 w-col w-col-6"><img src="images/IMG_0176.JPG" loading="lazy" width="200" sizes="200px" alt="" srcset="images/IMG_0176.JPG 500w, images/IMG_0176.JPG 800w, images/IMG_0176.JPG 1080w, images/IMG_0176.JPG 1151w"></div>
+      <div class="columns-13 w-row hiddenContent">
+        <div class="column-30 w-col w-col-6">
+          <div class="image-container">
+            <img src="images/IMG_0176.JPG" loading="lazy" width="200" sizes="200px" alt="" srcset="images/IMG_0176.JPG 500w, images/IMG_0176.JPG 800w, images/IMG_0176.JPG 1080w, images/IMG_0176.JPG 1151w">
+            <img src="images/IMG_0158.JPG" loading="lazy" width="200" sizes="200px" class="hidden-image overlap-image" alt="" srcset="images/IMG_0158.JPG 500w, images/IMG_0158.JPG 800w, images/IMG_0158.JPG 1080w, images/IMG_0158.JPG 1227w">
+            <img src="images/IMG_0180.JPG" loading="lazy" width="200" sizes="200px" class="hidden-image overlap-image" alt="" srcset="images/IMG_0180.JPG 500w, images/IMG_0180.JPG 800w, images/IMG_0180.JPG 1080w, images/IMG_0180.JPG 1145w">
+            <img src="images/IMG_0179.JPG" loading="lazy" width="200" sizes="200px" class="hidden-image overlap-image" alt="" srcset="images/IMG_0179.JPG 500w, images/IMG_0179.JPG 800w, images/IMG_0179.JPG 1080w, images/IMG_0179.JPG 1138w">
+          </div>
+        </div>
         <div class="column-31 w-col w-col-6">
           <div class="text-block-31">This is some text inside of a div block.</div>
         </div>
@@ -277,9 +203,15 @@
           .then(function(data) {
               // clear response container
               var responseContainer = document.getElementById("responseContainer");
+              console.log("response data",data);
               
               if (data.statusCode == 200) {
+
                   processResponse(data);
+              } else if (data.statusCode == 404) {
+                  processResponseFail(data);
+              } else if (data.statusCode == 304) {
+                  processResponseNoValid(data);
               } else {
                   responseContainer.innerHTML = "<p>" + data.body + "</p>";
               }
@@ -288,6 +220,16 @@
               console.error("Error:", error);
           });
       }
+
+      function processResponseFail(data) {
+        var councilInfoContainer = document.getElementById("council_info");
+        councilInfoContainer.innerHTML = "<h2>" + "Postcode not found!" + "</h2>";
+      } 
+
+      function processResponseNoValid(data) {
+        var councilInfoContainer = document.getElementById("council_info");
+        councilInfoContainer.innerHTML = "<h2>" + "Input is not valid!" + "</h2>";
+      } 
 
       function processResponse(data) {
         var councilInfoContainer = document.getElementById("council_info");
@@ -330,20 +272,63 @@
         // Populate waste types (no change from your original code)
         var wasteTypesContainer = document.getElementById("wasteTypeContainer");
         var wasteTypes = data.body.waste;
-        var wasteTypeList = "<h3>Waste Types</h3>";
+        var categorizedWasteTypes = {};
 
         for (var i = 0; i < wasteTypes.length; i++) {
-            wasteTypeList += "<p class='waste-type' onclick='showPopup(\"" + wasteTypes[i].waste_type + "\", \"" + wasteTypes[i].waste_policy + "\")'>" + wasteTypes[i].waste_type + "</p>";
+            var firstChar = wasteTypes[i].waste_type.charAt(0).toUpperCase();
+            if (!categorizedWasteTypes[firstChar]) {
+                categorizedWasteTypes[firstChar] = [];
+            }
+            categorizedWasteTypes[firstChar].push(wasteTypes[i]);
+        }
+
+        var wasteTypeList = "";
+
+        for (var key in categorizedWasteTypes) {
+            wasteTypeList += `<div class='waste-type-group'>
+                                <div class="directory">${key}</div>
+                                <div id="group-${key}">`;
+            for (var i = 0; i < categorizedWasteTypes[key].length; i++) {
+                wasteTypeList += "<p class='waste-type' onclick='showPopup(\"" + categorizedWasteTypes[key][i].waste_type + "\", \"" + categorizedWasteTypes[key][i].waste_policy + "\")'>" + categorizedWasteTypes[key][i].waste_type + "</p>";
+            }
+            wasteTypeList += "</div></div>";
         }
 
         wasteTypesContainer.innerHTML = wasteTypeList;
-    }
+
+      }
+      
+
+      function toggleVisibility(key) {
+          var groupElement = document.getElementById("group-" + key);
+          if (groupElement.style.display === "none") {
+              groupElement.style.display = "block";
+          } else {
+              groupElement.style.display = "none";
+          }
+      }
+    
 
       function showPopup(wasteType, wastePolicy) {
+
+          var hiddenDiv = document.querySelector(".hiddenContent");
           var popupContainer = document.getElementById("popupContainer");
           popupContainer.style.display = "block";
           popupContainer.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
+          hiddenDiv.style.display = "block";
+
+
+          var targetDiv = document.querySelector(".text-block-31");
+
+
+          targetDiv.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
+          
+
+          setTimeout(function() {
+            popupContainer.style.display = "none";
+          }, 2000);
       }
+
 
       function filterWasteTypes() {
           var filterInput = document.getElementById("filterInput").value.toUpperCase();
@@ -365,6 +350,7 @@
 
       var filterInput = document.getElementById("filterInput");
       filterInput.addEventListener("keyup", filterWasteTypes);
+
   </script>
 </body>
 </html>
