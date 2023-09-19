@@ -18,7 +18,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t greenh47/wasteisland -f iteration2/demoapp/Dockerfile2 .
+          docker build -t greenh47/wasteisland -f iteration2/dockerfile .
           docker push greenh47/wasteisland
 
       - name: Update EC2 Instance

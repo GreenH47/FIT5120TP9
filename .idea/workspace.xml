@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="28ff7123-c0a8-4e7a-ba7a-25d8e10e1ec7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/iteration2/dataset/waste_policy_waste.csv" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/dataset/waste_policy_waste.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/ProjectEvaluation/demoapp.metadata.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/demoapp/.vs/ProjectEvaluation/demoapp.metadata.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/ProjectEvaluation/demoapp.projects.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/demoapp/.vs/ProjectEvaluation/demoapp.projects.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/FileContentIndex/818b55de-39eb-4301-9b3c-a0c09bd08b9e.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/FileContentIndex/ccbf7d37-affb-4f58-88f5-9fa5a4c978b1.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iteration2/waste island iteration 2 html/find-your-recycler.html" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/waste island iteration 2 html/find-your-recycler.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="2505" />
+    <option name="totalTimeSeconds" value="4593" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,11 +46,37 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Git/FIT5120TP9",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.bin_search">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FIT5120TP9" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/iteration2/flask" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iteration2/flask/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="bin_search" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FIT5120TP9" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,6 +145,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.bin_search" />
         <item itemvalue="Python.postcode_search" />
         <item itemvalue="Python.policy_import" />
@@ -124,6 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1694925482216</updated>
       <workItem from="1694925483385" duration="4148000" />
+      <workItem from="1695099800899" duration="2347000" />
     </task>
     <servers />
   </component>
@@ -133,5 +171,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FIT5120TP9$bin_search.coverage" NAME="bin_search Coverage Results" MODIFIED="1694930577088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/iteration2/bin" />
     <SUITE FILE_PATH="coverage/FIT5120TP9$policy_import.coverage" NAME="policy_import Coverage Results" MODIFIED="1694926336144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/iteration2/dataset" />
+    <SUITE FILE_PATH="coverage/FIT5120TP9$app.coverage" NAME="app Coverage Results" MODIFIED="1695101581233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/iteration2/flask" />
   </component>
 </project>

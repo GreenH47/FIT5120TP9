@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "DIY";
+}
+
+
+<div class="body">
+    <div class="container-fluid">
+        <div class="header3">
+            <img src="https://carbonvic.s3.amazonaws.com/wwwroot/lib/bootstrap/dist/css/DIYClass.JPG" class="transparent-image">
+            <div class="overlay-text">DIY class</div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-diy">
+
+    <div class="section-materials" style="display: flex; justify-content: space-between;">
+        <div style="flex: 1;">
+            <h2 class="section-title">Materials</h2>
+            <ul class="list-items">
+                <li>Empty plastic bottle</li>
+                <li>Wire or string</li>
+                <li>Tea light candle or LED tea light</li>
+                <li>Colour paper</li>
+            </ul>
+        </div>
+        <div style="flex: 1; text-align: left;">
+            <h2 class="section-title">Video Tutorials</h2>
+            <iframe style="width: 60%;height: 200px;" src="https://www.youtube.com/embed/taKDRO-DlB8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- 工具部分 -->
+    <div class="section-tools">
+        <h2 class="section-title">Tools</h2>
+        <ul class="list-items">
+            <li>Craft knife or scissors</li>
+            <li>Sandpaper (optional)</li>
+        </ul>
+    </div>
+
+    <!-- 流程部分 -->
+    <div class="section-process">
+        <h2 class="section-title">Steps</h2>
+        <ol class="list-items">
+            <li>1. Remove any labels and clean the plastic bottle thoroughly to remove any residue.</li>
+            <img src="https://carbonvic.s3.amazonaws.com/wwwroot/lib/bootstrap/dist/css/1.PNG">
+            <li>2. Remove the bottle cap and cut off the bottom of the bottle using a craft knife or scissors.</li>
+            <li>3. Decide on a design for your lantern. You can sketch it lightly on the bottle with a marker if you'd like to have a guide. </li>
+            <img class="materials-image3" src="https://carbonvic.s3.amazonaws.com/wwwroot/lib/bootstrap/dist/css/2.PNG">
+            <li>4. Use the craft knife or scissors to carefully cut out the design from the plastic bottle. Common designs include stars, hearts, or simple geometric patterns. Be cautious while cutting and take your time to ensure smooth edges.</li>
+            <li>5. After cutting, you might notice some rough or sharp edges. You can use sandpaper to smooth these edges and make sure your lantern is safe to handle. </li>
+            <img src="https://carbonvic.s3.amazonaws.com/wwwroot/lib/bootstrap/dist/css/3.PNG">
+            <li>6. If you want to add colour to your lantern, you can stick some colour lace on the outside of the bottle. Let your creativity shine here! You can paint patterns, and images, or even just add a base colour.</li>
+            <li>7. Near the top of the lantern (the part where you removed the bottle cap), punch two holes directly across from each other. You can use a hole punch or carefully heat a metal skewer over a flame and pierce the plastic.</li>
+            <img src="https://carbonvic.s3.amazonaws.com/wwwroot/lib/bootstrap/dist/css/4.PNG">
+            <li>8. Cut a piece of wire or string to your desired length for the handle. Thread it through the holes you created in the previous step and secure it with knots on the inside of the lantern.</li>
+            <img src="https://carbonvic.s3.amazonaws.com/wwwroot/lib/bootstrap/dist/css/5.PNG">
+            <li>9. Place a tea light candle or an LED tea light inside the lantern through the open bottom. If you're using a real candle, make sure it's secure and stable.</li>
+            <img src="https://carbonvic.s3.amazonaws.com/wwwroot/lib/bootstrap/dist/css/6.PNG">
+            <li>10. Light the candle or turn on the LED light to ensure your lantern creates a beautiful glow. Find a safe place to display your lantern, either hanging or on a flat surface.</li>
+            <img class="materials-image4" src="https://carbonvic.s3.amazonaws.com/wwwroot/lib/bootstrap/dist/css/7.PNG">
+        </ol>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var topicLinks = document.getElementsByClassName("topic-link");
+
+        function handleTopicLinkClick(event) {
+            event.preventDefault();
+
+            var topic = this.textContent.trim();
+
+            // Redirect to the search results page with the topic as the search query and "topic" as the search range
+            var redirectUrl = "/SearchResults/Index?search=" + encodeURIComponent(topic) + "&range=topic";
+            window.location.href = redirectUrl;
+        }
+
+        for (var i = 0; i < topicLinks.length; i++) {
+            topicLinks[i].addEventListener("click", handleTopicLinkClick);
+        }
+    });
+</script>
