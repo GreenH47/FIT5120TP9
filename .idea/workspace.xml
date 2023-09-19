@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28ff7123-c0a8-4e7a-ba7a-25d8e10e1ec7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/ProjectEvaluation/demoapp.metadata.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/demoapp/.vs/ProjectEvaluation/demoapp.metadata.v7.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/ProjectEvaluation/demoapp.projects.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/demoapp/.vs/ProjectEvaluation/demoapp.projects.v7.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/FileContentIndex/818b55de-39eb-4301-9b3c-a0c09bd08b9e.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/FileContentIndex/ccbf7d37-affb-4f58-88f5-9fa5a4c978b1.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/demoapp/.vs/demoapp/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iteration2/waste island iteration 2 html/find-your-recycler.html" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/waste island iteration 2 html/find-your-recycler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iteration2/test/demoapp/.vs/demoapp/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/iteration2/test/demoapp/.vs/demoapp/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="4593" />
+    <option name="totalTimeSeconds" value="4718" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -161,7 +154,7 @@
       <option name="presentableId" value="Default" />
       <updated>1694925482216</updated>
       <workItem from="1694925483385" duration="4148000" />
-      <workItem from="1695099800899" duration="2347000" />
+      <workItem from="1695099800899" duration="2626000" />
     </task>
     <servers />
   </component>
