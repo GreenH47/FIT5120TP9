@@ -125,7 +125,7 @@
                     signImage = noSign;
                 } else {
                     signImage = yesSign;
-                } 
+                }
 
                 if (key.includes("green")) {
                     binImage = greenBin;
@@ -165,7 +165,31 @@
             var popupContainer = document.getElementById("popupContainer");
             popupContainer.style.display = "block";
             popupContainer.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
+
+            var binImage;
+            if (wastePolicy.toLowerCase().includes("recycle bin")) {
+                binImage = recycleBin;
+            } 
+            else if (wastePolicy.toLowerCase().includes("garbage bin")) {
+                binImage = garbageBin;
+            }
+
+            if (binImage != null) {
+                popupContainer.innerHTML = "<h3>" + wasteType + "</h3><img src='" + binImage + "' style='width: 200px; height: 200px;' /><p>" + wastePolicy + "</p>";
+            }
+            else {
+                popupContainer.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
+            }
+
+
+            var closeButton = document.createElement("button");
+            closeButton.innerText = "Close";
+            closeButton.addEventListener("click", function () {
+                popupContainer.style.display = "none";
+            });
+            popupContainer.appendChild(closeButton);
         }
+
 
         function filterWasteTypes() {
             var filterInput = document.getElementById("filterInput").value.toUpperCase();
