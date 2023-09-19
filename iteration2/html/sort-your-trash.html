@@ -290,15 +290,9 @@
 
       function showPopup(wasteType, wastePolicy) {
 
-          var hiddenDiv = document.querySelector(".hiddenContent");
           var popupContainer = document.getElementById("popupContainer");
           popupContainer.style.display = "block";
           popupContainer.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
-          hiddenDiv.style.display = "block";
-
-
-
-          
 
           setTimeout(function() {
             popupContainer.style.display = "none";
