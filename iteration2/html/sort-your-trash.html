@@ -42,6 +42,8 @@
       border-radius: 4px;
       display: none;
     }
+
+
   </style>
 </head>
 
@@ -116,7 +118,8 @@
     <div class="div-block-30"></div>
     <div>
       <div class="w-row">
-        <div class="council_layout" id="council_info"></div>
+        <div class="council_layout" id="council_info">
+        </div>
         <div class="column-27 w-col w-col-6"><img src="images/IMG_0179.JPG" loading="lazy" width="200" sizes="200px"
             alt=""
             srcset="images/IMG_0179.JPG 500w, images/IMG_0179.JPG 800w, images/IMG_0179.JPG 1080w, images/IMG_0179.JPG 1138w">
@@ -171,7 +174,9 @@
     </section>
     <div class="popup" id="popupContainer"></div>
   </div>
-  
+  <div id="error" class="tooltip" style="display: none;" >
+    <p>There was an error processing your request. Please try again.</p>
+  </div>
   
   <div class="footer">
     <div class="footer-container w-container">
@@ -283,14 +288,9 @@
             recycleContainer.style.display = "block";
             greenContainer.style.display = "block";
             processResponse(data);
-          } else if (data.statusCode == 404) {
-            responseContainer.style.display = "none";
-            processResponseFail(data);
-          } else if (data.statusCode == 304) {
-            responseContainer.style.display = "none";
-            processResponseNoValid(data);
           } else {
-            responseContainer.innerHTML = "<p>" + data.body + "</p>";
+            responseContainer.style.display = "none";
+            errorContainer.style.display = "block";
           }
         })
         .catch(function (error) {
@@ -298,17 +298,6 @@
         });
     }
 
-    function processResponseFail(data) {
-      var councilInfoContainer = document.getElementById("council_info");
-      councilInfo.style.display = "block";
-      councilInfoContainer.innerHTML = "<h2>" + "Postcode not found!" + "</h2>";
-    }
-
-    function processResponseNoValid(data) {
-      var councilInfoContainer = document.getElementById("council_info");
-      councilInfo.style.display = "block";
-      councilInfoContainer.innerHTML = "<h2>" + "Input is not valid!" + "</h2>";
-    }
 
     function processResponse(data) {
       var councilInfoContainer = document.getElementById("council_info");
