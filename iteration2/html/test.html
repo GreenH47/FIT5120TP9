@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECharts Example</title>
+
+    <!-- Load ECharts library from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width: 600px; height: 400px;"></div>
+    <script>
+        const wasteTypes = ["total_garbage_collect", "total_recycle_actual", "organic_collect"];
+
+        const demoApiResponseData = {
+            body: [
+                {
+                    year: '2021',
+                    details: [
+                        { collect_type: 'total_garbage_collect', amount: 500 },
+                        { collect_type: 'total_recycle_actual', amount: 300 },
+                        { collect_type: 'organic_collect', amount: 100 },
+                    ],
+                },
+                {
+                    year: '2022',
+                    details: [
+                        { collect_type: 'total_garbage_collect', amount: 520 },
+                        { collect_type: 'total_recycle_actual', amount: 310 },
+                        { collect_type: 'organic_collect', amount: 105 },
+                    ],
+                },
+            ],
+        };
+
+        function drawChart1(apiResponseData) {
+            const processedData = apiResponseData.body;
+            const years = processedData.map(d => d.year);
+
+            const seriesData = wasteTypes.map(type => {
+                return {
+                    name: type,
+                    type: 'line',
+                    data: processedData.map(d => {
+                        const wasteDetail = d.details.find(detail => detail.collect_type === type);
+                        return wasteDetail ? wasteDetail.amount : 0;
+                    })
+                };
+            });
+
+            const option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        label: {
+                            backgroundColor: '#6a7985'
+                        }
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    data: years
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: seriesData
+            };
+
+            const chartDom = document.getElementById('main');
+            const myChart = echarts.init(chartDom);
+            myChart.setOption(option);
+        }
+
+        drawChart1(demoApiResponseData);
+    </script>
+</body>
+</html>
