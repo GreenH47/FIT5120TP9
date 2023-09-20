@@ -112,70 +112,67 @@
       <button id="submitBtn" class="search-button">Search</button>
     </div>
   </div>
-
-
-  <div class="div-block-30"></div>
-  <div>
-    <div class="w-row">
-      <div class="council_layout" id="council_info"></div>
-      <div class="column-27 w-col w-col-6"><img src="images/IMG_0179.JPG" loading="lazy" width="200" sizes="200px"
-          alt=""
-          srcset="images/IMG_0179.JPG 500w, images/IMG_0179.JPG 800w, images/IMG_0179.JPG 1080w, images/IMG_0179.JPG 1138w">
+  <div id="response" style="display: none;">
+    <div class="div-block-30"></div>
+    <div>
+      <div class="w-row">
+        <div class="council_layout" id="council_info"></div>
+        <div class="column-27 w-col w-col-6"><img src="images/IMG_0179.JPG" loading="lazy" width="200" sizes="200px"
+            alt=""
+            srcset="images/IMG_0179.JPG 500w, images/IMG_0179.JPG 800w, images/IMG_0179.JPG 1080w, images/IMG_0179.JPG 1138w">
+        </div>
+        <div class="w-col w-col-6">
+          <div class="text-block-32 small-font">
+            <div class="bin_layout" id="landfillContainer"></div>
+          </div>
+        </div>
       </div>
-      <div class="w-col w-col-6">
-        <div class="text-block-32 small-font" id="landfillContainer">
-          <div class="bin_layout">Landfill bin is used to collect and dispose of waste that is not recyclable or
-            compostable. Once full, the contents of the bin are taken to a landfill site, where they are buried and left
-            to decompose over time. Using landfill bins helps in segregating waste, ensuring that only non-recyclable
-            materials end up in landfills, while recyclable and organic materials can be processed separately.</div>
+      <div class="w-row">
+        <div class="column-27 w-col w-col-6"><img src="images/IMG_0180.JPG" loading="lazy" width="200" sizes="200px"
+            alt=""
+            srcset="images/IMG_0180.JPG 500w, images/IMG_0180.JPG 800w, images/IMG_0180.JPG 1080w, images/IMG_0180.JPG 1145w">
+        </div>
+        <div class="w-col w-col-6">
+          <div class="text-block-32 small-font">
+            <div class="bin_layout" id="recycleContainer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-row">
+        <div class="column-27 w-col w-col-6"><img src="images/IMG_0158.JPG" loading="lazy" width="200" sizes="200px"
+            alt=""
+            srcset="images/IMG_0158.JPG 500w, images/IMG_0158.JPG 800w, images/IMG_0158.JPG 1080w, images/IMG_0158.JPG 1227w">
+        </div>
+        <div class="w-col w-col-6">
+          <div class="text-block-32 small-font">
+            <div class="bin_layout" id="greenContainer"></div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="w-row">
-      <div class="column-27 w-col w-col-6"><img src="images/IMG_0180.JPG" loading="lazy" width="200" sizes="200px"
-          alt=""
-          srcset="images/IMG_0180.JPG 500w, images/IMG_0180.JPG 800w, images/IMG_0180.JPG 1080w, images/IMG_0180.JPG 1145w">
-      </div>
-      <div class="w-col w-col-6">
-        <div class="text-block-32 small-font" id="recycleContainer">
-          <div class="bin_layout">Recycle bin is designed to collect materials that can be processed and reused,
-            reducing the need for raw materials and conserving resources.</div>
+    <div class="div-block-29"></div>
+    <section>
+      <div class="columns-10 w-row">
+        <div class="column-21 w-col w-col-4">
+          <label for="filterInput" class="text-block-21">Waste type:</label>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="w-form">
+            <input type="text" id="filterInput" name="filterInput" placeholder="Enter search term" class="w-input"
+              maxlength="256">
+          </div>
+        </div>
+        <div class="w-col w-col-4">
         </div>
       </div>
-    </div>
-    <div class="w-row">
-      <div class="column-27 w-col w-col-6"><img src="images/IMG_0158.JPG" loading="lazy" width="200" sizes="200px"
-          alt=""
-          srcset="images/IMG_0158.JPG 500w, images/IMG_0158.JPG 800w, images/IMG_0158.JPG 1080w, images/IMG_0158.JPG 1227w">
+      <div class="columns-10 w-row">
+        <div id="wasteTypeContainer" class="grid-container"></div>
       </div>
-      <div class="w-col w-col-6">
-        <div class="text-block-32 small-font" id="greenContainer">
-          <div class="bin_layout">Green bin is used to collect organic waste, such as food scraps and yard trimmings.
-            These materials are then composted, turning them into nutrient-rich soil additives.</div>
-        </div>
-      </div>
-    </div>
+    </section>
+    <div class="popup" id="popupContainer"></div>
   </div>
-  <div class="div-block-29"></div>
-  <section>
-    <div class="columns-10 w-row">
-      <div class="column-21 w-col w-col-4">
-        <label for="filterInput" class="text-block-21">Waste type:</label>
-      </div>
-      <div class="w-col w-col-4">
-        <div class="w-form">
-          <input type="text" id="filterInput" name="filterInput" placeholder="Enter search term" class="w-input"
-            maxlength="256">
-        </div>
-      </div>
-      <div class="w-col w-col-4">
-      </div>
-    </div>
-    <div class="columns-10 w-row">
-      <div id="wasteTypeContainer" class="grid-container"></div>
-    </div>
-  </section>
-  <div class="popup" id="popupContainer"></div>
+  
+  
   <div class="footer">
     <div class="footer-container w-container">
       <div class="w-layout-grid footer-grid">
@@ -272,15 +269,25 @@
         })
         .then(function (data) {
           // clear response container
-          var responseContainer = document.getElementById("responseContainer");
-          console.log("response data", data);
+          var responseContainer = document.getElementById("response");
+          var errorContainer = document.getElementById("error");
+          var landfillContainer = document.getElementById("landfillContainer");
+          var recycleContainer = document.getElementById("recycleContainer");
+          var greenContainer = document.getElementById("greenContainer");
+          var councilInfo = document.getElementById("council_info");
+
 
           if (data.statusCode == 200) {
-
+            responseContainer.style.display = "block";
+            landfillContainer.style.display = "block";
+            recycleContainer.style.display = "block";
+            greenContainer.style.display = "block";
             processResponse(data);
           } else if (data.statusCode == 404) {
+            responseContainer.style.display = "none";
             processResponseFail(data);
           } else if (data.statusCode == 304) {
+            responseContainer.style.display = "none";
             processResponseNoValid(data);
           } else {
             responseContainer.innerHTML = "<p>" + data.body + "</p>";
@@ -293,11 +300,13 @@
 
     function processResponseFail(data) {
       var councilInfoContainer = document.getElementById("council_info");
+      councilInfo.style.display = "block";
       councilInfoContainer.innerHTML = "<h2>" + "Postcode not found!" + "</h2>";
     }
 
     function processResponseNoValid(data) {
       var councilInfoContainer = document.getElementById("council_info");
+      councilInfo.style.display = "block";
       councilInfoContainer.innerHTML = "<h2>" + "Input is not valid!" + "</h2>";
     }
 
