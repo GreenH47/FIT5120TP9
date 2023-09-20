@@ -4958,3 +4958,7 @@ h3 {
 .directory::first-letter {
   color: white;
 }
+
+.no-options, .postcode-option {
+  color:white;
+}
