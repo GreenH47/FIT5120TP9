@@ -4948,5 +4948,13 @@ h3 {
 
 .waste-type {
   cursor: pointer;
-  color: black;
+  color: white;
+}
+
+.waste-type.highlighted::first-letter {
+  color: white;
+}
+
+.directory::first-letter {
+  color: white;
 }
