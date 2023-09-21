@@ -31,5 +31,11 @@ ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 # Restart Nginx to apply the new configuration
 service nginx restart
 
+apt update
+apt install apache2-utils
+
+
+
+
 # Pull and run the Docker image
 docker run --name naughty_burnell -d -p 8080:80 greenh47/wasteisland:it2

@@ -1,0 +1,26 @@
+[
+    {
+        "geo_point_2d": "3806",
+        "geo_shape": "Monday_Week_1",
+        "postcode": "Collected weekly",
+        "collection": "16/10/2023 Monday",
+        "frequency_landfill": "Collected fortnightly",
+        "next_collection_landfill_bin": "16/10/2023 Monday",
+        "frequency_recycle": "Collected fortnightly",
+        "next_collection_recycle_bin": "23/10/2023 Monday",
+        "frequency_garden": "",
+        "next_collection_garden_bin": ""
+    },
+    {
+        "geo_point_2d": " [1\"",
+        "geo_shape": "3980",
+        "postcode": "Friday_Week_2",
+        "collection": "Collected weekly",
+        "frequency_landfill": "20/10/2023 Friday",
+        "next_collection_landfill_bin": "Collected fortnightly",
+        "frequency_recycle": "27/10/2023 Friday",
+        "next_collection_recycle_bin": "Collected fortnightly",
+        "frequency_garden": "20/10/2023 Friday",
+        "next_collection_garden_bin": ""
+    }
+]
