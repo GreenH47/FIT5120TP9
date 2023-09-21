@@ -119,35 +119,24 @@
       <div class="w-row">
         <div class="council_layout" id="council_info">
         </div>
-        <div class="column-27 w-col w-col-6"><img src="images/IMG_0179.JPG" loading="lazy" width="200" sizes="200px"
-            alt=""
-            srcset="images/IMG_0179.JPG 500w, images/IMG_0179.JPG 800w, images/IMG_0179.JPG 1080w, images/IMG_0179.JPG 1138w">
-        </div>
-        <div class="w-col w-col-6">
-          <div class="text-block-32 small-font">
-            <div class="bin_layout" id="landfillContainer"></div>
+        <div>
+          <div class="columns-14 w-row">
+            <div class="column-27 w-col w-col-6"><img src="images/IMG_0158.png" loading="lazy" width="200" sizes="(max-width: 479px) 119.5px, (max-width: 767px) 26vw, 200px" alt="" srcset="images/IMG_0158.png 500w, images/IMG_0158.png 800w, images/IMG_0158.png 1080w, images/IMG_0158.png 1227w"></div>
+            <div class="column-32 w-col w-col-6">
+              <div class="text-block-32" id="landfillContainer"></div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="w-row">
-        <div class="column-27 w-col w-col-6"><img src="images/IMG_0180.JPG" loading="lazy" width="200" sizes="200px"
-            alt=""
-            srcset="images/IMG_0180.JPG 500w, images/IMG_0180.JPG 800w, images/IMG_0180.JPG 1080w, images/IMG_0180.JPG 1145w">
-        </div>
-        <div class="w-col w-col-6">
-          <div class="text-block-32 small-font">
-            <div class="bin_layout" id="recycleContainer"></div>
+          <div class="columns-15 w-row">
+            <div class="column-27 w-col w-col-6"><img src="images/IMG_0180.png" loading="lazy" width="191" sizes="(max-width: 479px) 119.5px, (max-width: 767px) 25vw, 191px" alt="" srcset="images/IMG_0180.png 500w, images/IMG_0180.png 800w, images/IMG_0180.png 1080w, images/IMG_0180.png 1145w"></div>
+            <div class="w-col w-col-6">
+              <div class="text-block-32" id="recycleContainer"></div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="w-row">
-        <div class="column-27 w-col w-col-6"><img src="images/IMG_0158.JPG" loading="lazy" width="200" sizes="200px"
-            alt=""
-            srcset="images/IMG_0158.JPG 500w, images/IMG_0158.JPG 800w, images/IMG_0158.JPG 1080w, images/IMG_0158.JPG 1227w">
-        </div>
-        <div class="w-col w-col-6">
-          <div class="text-block-32 small-font">
-            <div class="bin_layout" id="greenContainer"></div>
+          <div class="columns-16 w-row">
+            <div class="column-27 w-col w-col-6"><img src="images/IMG_0179.png" loading="lazy" width="188" sizes="(max-width: 479px) 119.5px, (max-width: 767px) 25vw, 188px" alt="" srcset="images/IMG_0179.png 500w, images/IMG_0179.png 800w, images/IMG_0179.png 1080w, images/IMG_0179.png 1138w"></div>
+            <div class="w-col w-col-6">
+              <div class="text-block-32" id="greenContainer"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -208,6 +197,12 @@
   <script>
     // Load the postcode options from postcode.json
     var postcodeOptions;
+    var greenBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/green.jpg";
+    var garbageBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/garbage.jpg";
+    var houseBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/house.jpg";
+    var recycleBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/recycle.jpg";
+    var yesSign = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/yes.jpg";
+    var noSign = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/no.jpg";
 
     // Fetch the postcode.json file and store the data in postcodeOptions variable
     fetch('resource/postcode.json')
@@ -310,30 +305,43 @@
 
       // Generate table for landfill policies
       landfillContainer.innerHTML = generatePolicyTable({
-        "Landfill No: ": data.body.policy.landfill_no,
-        "Landfill Yes: ": data.body.policy.landfill_yes
+        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.landfill_no,
+        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.landfill_yes
       });
 
       // Generate table for recycle policies
       recycleContainer.innerHTML = generatePolicyTable({
-        "Recycle No: ": data.body.policy.recycle_no,
-        "Recycle Yes: ": data.body.policy.recycle_yes
+        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.recycle_no,
+        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.recycle_yes
       });
 
       // Generate table for green policies
       greenContainer.innerHTML = generatePolicyTable({
-        "Green No: ": data.body.policy.green_no,
-        "Green Yes: ": data.body.policy.green_yes
+        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.green_no,
+        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.green_yes
       });
 
-      // Utility function to generate a policy table from a given policies object
-      function generatePolicyTable(policies) {
-        var policyTable = "<table class='policy-table'>";
-        for (var key in policies) {
-          policyTable += "<tr><td>" + key + "</td><td>" + policies[key] + "</td></tr>";
-        }
-        policyTable += "</table>";
-        return policyTable;
+      function generatePolicyTable(policyData) {
+          let table = "<table>";
+
+          let isFirstRow = true;
+          for (let key in policyData) {
+              if (policyData[key]) {  
+                  if (!isFirstRow) {
+                      table += "<tr><td colspan='2' style='padding-bottom: 10px;'></td></tr>";
+                  }
+                  
+                  table += "<tr>";
+                  table += "<td>" + key + "</td>";
+                  table += "<td>" + policyData[key] + "</td>";
+                  table += "</tr>";
+                  
+                  isFirstRow = false;
+              }
+          }
+
+          table += "</table>";
+          return table;
       }
 
 
