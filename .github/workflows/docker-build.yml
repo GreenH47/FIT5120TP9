@@ -17,10 +17,14 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.x # Specify your desired Python version
+
+      - name: Install dependencies
         run: pip install -r iteration2/lambda/requirements.txt # If you have any requirements, specify them here
 
       - name: Run tests
         run: python -m unittest discover iteration2/lambda/ -p 'test_*.py'
+
+
 
       - name: Login to Docker Hub
         run: echo "dckr_pat_9AyoYPfPO4MhW2cJpUXemz5tss4" | docker login -u greenh47 --password-stdin
