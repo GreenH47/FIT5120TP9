@@ -308,20 +308,20 @@
 
       // Generate table for landfill policies
       landfillContainer.innerHTML = generatePolicyTable({
-        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.landfill_no,
-        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.landfill_yes
+        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.landfill_yes,
+        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.landfill_no
       });
 
       // Generate table for recycle policies
       recycleContainer.innerHTML = generatePolicyTable({
-        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.recycle_no,
-        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.recycle_yes
+        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.recycle_yes,
+        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.recycle_no
       });
 
       // Generate table for green policies
       greenContainer.innerHTML = generatePolicyTable({
-        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.green_no,
-        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.green_yes
+        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.green_yes,
+        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.green_no
       });
 
       function generatePolicyTable(policyData) {
