@@ -1,0 +1,45 @@
+[
+  {
+    "quiz_id": "1",
+    "question": "Which of the following is considered Household Junk?",
+    "topic": "Household Junk",
+    "choice_type": "multiple",
+    "correct_answer": [
+      "Old furniture",
+      "Broken appliances"
+    ],
+    "options": [
+      "Compostable food waste",
+      "Recyclable paper",
+      "Plastic bottles"
+    ]
+  },
+  {
+    "quiz_id": "2",
+    "question": "Which of the following is an example of Garden Waste?",
+    "topic": "Garden Waste",
+    "choice_type": "single",
+    "correct_answer": [
+      "Grass clippings"
+    ],
+    "options": [
+     "Plastic bags",
+     "Glass bottles",
+     "Aluminum cans"
+    ]
+  },
+  {
+    "quiz_id": "3",
+    "question": "Which item is considered Recycled Waste?",
+    "topic": "Recycled Waste",
+    "choice_type": "single",
+    "correct_answer": [
+      "Cardboard boxes"
+    ],
+    "options": [
+      "Food waste",
+      "Used batteries",
+      "Plastic cutlery"
+    ]
+  }
+]

@@ -1,6 +1,7 @@
 #!/bin/bash
 apt-get update
-apt-get install -y docker.io nginx
+apt-get install -y docker.io nginx apache2-utils
+
 usermod -aG docker ubuntu
 
 # Start Nginx service
