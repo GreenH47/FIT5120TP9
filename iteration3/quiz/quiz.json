@@ -41,5 +41,19 @@
       "Used batteries",
       "Plastic cutlery"
     ]
+  },
+  {
+    "quiz_id": "test",
+    "question": "test",
+    "topic": "Recycled Waste",
+    "choice_type": "single",
+    "correct_answer": [
+      "Cardboard boxes"
+    ],
+    "options": [
+      "Food waste",
+      "Used batteries",
+      "Plastic cutlery"
+    ]
   }
 ]

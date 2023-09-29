@@ -24,9 +24,10 @@ def store_quiz_data_in_redis():
 
     # if not connected to redis then exit
     try:
-        redis_client = redis.Redis(host='34.198.149.11', port=6379)
+        redis_client = redis.Redis(host='34.198.149.11', port=6379, password='8479f1eb312d')
         redis_client.ping()
         print("redis Connected")
+
 
     except redis.ConnectionError:
         print("redis Not Connected")
@@ -81,12 +82,13 @@ def store_quiz_data_in_redis():
 
 
 def redis_test():
-    redis_client = redis.Redis(host='34.198.149.11', port=6379)
+    redis_client = redis.Redis(host='34.198.149.11', port=6379, password='8479f1eb312d')
 
     # if not connected to redis then exit
     try:
         redis_client.ping()
         print("redis Connected")
+        # return
     except redis.ConnectionError:
         print("redis Not Connected")
         return
@@ -94,14 +96,28 @@ def redis_test():
     print("Data for quiz_id:1:")
     print(redis_client.hgetall('quiz_id:1'))
 
-    print("Data for topic:waste:")
-    keys = redis_client.scan_iter(match='topic:*Waste*')
-    # print(key)
-    for key in keys:
-        topic_key = redis_client.hgetall(key)
-        search_key = "quiz_id:" + topic_key[b'quiz_id'].decode('utf-8')
-        result = redis_client.hgetall(search_key)
-        print(result)
+
+    # wildcard patterns for searching.
+    # print("Data for topic:waste using key:")
+    # keys = redis_client.scan_iter(match='topic:*waste*')
+    # # print(key)
+    # for key in keys:
+    #     # Check if the key represents a set
+    #     if redis_client.type(key).decode('utf-8') == 'set':
+    #         quiz_ids = redis_client.smembers(key)
+    #         for quiz_id in quiz_ids:
+    #             quiz_key = f"quiz_id:{quiz_id.decode('utf-8')}"
+    #             result = redis_client.hgetall(quiz_key)
+    #             print(result)
+    #     # Handle hash keys separately if needed
+    #     else:
+    #         topic_key = redis_client.hgetall(key)
+    #         print(topic_key)
+
+    print("Data for topic:waste using quiz id:")
+    topic_quiz_ids = redis_client.smembers('topic:Recycled Waste')
+    for quiz_id in topic_quiz_ids:
+        print(redis_client.hgetall(f"quiz_id:{quiz_id.decode('utf-8')}"))
 
     # Close the Redis connection
     redis_client.close()
