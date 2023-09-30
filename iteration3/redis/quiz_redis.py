@@ -24,7 +24,7 @@ def store_quiz_data_in_redis():
 
     # if not connected to redis then exit
     try:
-        redis_client = redis.Redis(host='34.198.149.11', port=6379, password='8479f1eb312d')
+        redis_client = redis.Redis(host='3.80.196.116', port=6379, password='8479f1eb312d')
         redis_client.ping()
         print("redis Connected")
 
@@ -82,37 +82,23 @@ def store_quiz_data_in_redis():
 
 
 def redis_test():
-    redis_client = redis.Redis(host='34.198.149.11', port=6379, password='8479f1eb312d')
+
 
     # if not connected to redis then exit
     try:
+        redis_client = redis.Redis(host='3.80.196.116', port=6379, password='8479f1eb312d')
         redis_client.ping()
         print("redis Connected")
-        # return
-    except redis.ConnectionError:
+        return
+    except Exception as e:
         print("redis Not Connected")
+        print(e)
         return
 
     print("Data for quiz_id:1:")
     print(redis_client.hgetall('quiz_id:1'))
 
 
-    # wildcard patterns for searching.
-    # print("Data for topic:waste using key:")
-    # keys = redis_client.scan_iter(match='topic:*waste*')
-    # # print(key)
-    # for key in keys:
-    #     # Check if the key represents a set
-    #     if redis_client.type(key).decode('utf-8') == 'set':
-    #         quiz_ids = redis_client.smembers(key)
-    #         for quiz_id in quiz_ids:
-    #             quiz_key = f"quiz_id:{quiz_id.decode('utf-8')}"
-    #             result = redis_client.hgetall(quiz_key)
-    #             print(result)
-    #     # Handle hash keys separately if needed
-    #     else:
-    #         topic_key = redis_client.hgetall(key)
-    #         print(topic_key)
 
     print("Data for topic:waste using quiz id:")
     topic_quiz_ids = redis_client.smembers('topic:Recycled Waste')
