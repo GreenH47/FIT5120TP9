@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout code repo
         uses: actions/checkout@v2
 
       - name: Set up Python and Install dependencies
@@ -25,7 +25,7 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-            
+
       - name: Install dependencies
         run: pip install -r iteration3/lambda/requirements.txt # If you have any requirements, specify them here
 
