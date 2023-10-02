@@ -19,8 +19,8 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t greenh47/wasteisland:it2 -f iteration2/dockerfile .
-          docker push greenh47/wasteisland:it2
+          docker build -t greenh47/wasteisland:it3 -f iteration3/flask/dockerfile2 .
+          docker push greenh47/wasteisland:it3
 
       - name: Update EC2 Instance
         id: update-ec2
@@ -40,7 +40,7 @@ jobs:
             fi
 
             # Pull the updated Docker image
-            sudo docker pull greenh47/wasteisland:it2
+            sudo docker pull greenh47/wasteisland:it3
 
             # Run a new container with the updated image
-            sudo docker run --name naughty_burnell -d -p 8080:80 greenh47/wasteisland:it2
+            sudo docker run --name naughty_burnell -d -p 8080:80 greenh47/wasteisland:it3

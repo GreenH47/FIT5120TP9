@@ -1,0 +1,37 @@
+name: Unit test and Docker Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python and Install dependencies
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x # Specify your desired Python version
+
+      - name: Install dependencies
+        run: pip install -r iteration3/lambda/requirements.txt # If you have any requirements, specify them here
+
+      - name: Run tests
+        run: python -m unittest discover iteration3/flask/lambda_py/ -p 'test_*.py'
+
+
+
+      - name: Login to Docker Hub
+        run: echo "dckr_pat_9AyoYPfPO4MhW2cJpUXemz5tss4" | docker login -u greenh47 --password-stdin
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t greenh47/wasteisland:it3 -f iteration3/flask/dockerfile2 .
+          docker push greenh47/wasteisland:it3
+
+      
