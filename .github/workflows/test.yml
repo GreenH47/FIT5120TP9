@@ -1,0 +1,33 @@
+name: Unit test and Docker Build
+
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python and Install dependencies
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x # Specify your desired Python version
+
+      - name: Install dependencies
+        run: pip install -r iteration2/lambda/requirements.txt # If you have any requirements, specify them here
+
+      - name: Run tests
+        run: python -m unittest discover iteration2/lambda/ -p 'test_*.py'
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_author: GreenH47 greenhuang47@gmail.com
+          commit_message: "Auto-commit passing changes to it3 branch"
+          branch: it3
+          base_branch: ${{ github.ref }}
