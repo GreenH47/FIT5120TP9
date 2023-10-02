@@ -89,7 +89,7 @@
           <div class="w-layout-blockcontainer container-9 w-container"><img
                   src="/static/images/pexels-lara-jameson-9324356.jpg" loading="lazy"
                   sizes="(max-width: 479px) 300px, (max-width: 767px) 500px, (max-width: 991px) 364px, 100vw"
-                  srcset="/static/images/pexels-lara-jameson-9324356-p-500.jpg 500w, images/pexels-lara-jameson-9324356-p-800.jpg 800w, images/pexels-lara-jameson-9324356-p-1080.jpg 1080w, images/pexels-lara-jameson-9324356-p-1600.jpg 1600w, images/pexels-lara-jameson-9324356-p-2000.jpg 2000w, images/pexels-lara-jameson-9324356-p-2600.jpg 2600w, images/pexels-lara-jameson-9324356-p-3200.jpg 3200w, images/pexels-lara-jameson-9324356.jpg 3963w"
+                  srcset="/static/images/pexels-lara-jameson-9324356-p-500.jpg 500w, /static/images/pexels-lara-jameson-9324356-p-800.jpg 800w, /static/images/pexels-lara-jameson-9324356-p-1080.jpg 1080w, /static/images/pexels-lara-jameson-9324356-p-1600.jpg 1600w, /static/images/pexels-lara-jameson-9324356-p-2000.jpg 2000w, /static/images/pexels-lara-jameson-9324356-p-2600.jpg 2600w, /static/images/pexels-lara-jameson-9324356-p-3200.jpg 3200w, /static/images/pexels-lara-jameson-9324356.jpg 3963w"
                   alt="" class="image-19"></div>
         </div>
     </div>
@@ -208,7 +208,7 @@
     var noSign = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/no.jpg";
 
     // Fetch the postcode.json file and store the data in postcodeOptions variable
-    fetch('resource/postcode.json')
+    fetch('/static/resource/postcode.json')
       .then(response => response.json())
       .then(data => postcodeOptions = data)
       .catch(error => console.log('Error fetching postcode options:', error));
@@ -308,20 +308,20 @@
 
       // Generate table for landfill policies
       landfillContainer.innerHTML = generatePolicyTable({
-        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.landfill_yes,
-        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.landfill_no
+        "<img src='/static/images/yes.jpg' width='100' height='100'>": data.body.policy.landfill_yes,
+        "<img src='/static/images/no.jpg' width='100' height='100'>": data.body.policy.landfill_no
       });
 
       // Generate table for recycle policies
       recycleContainer.innerHTML = generatePolicyTable({
-        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.recycle_yes,
-        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.recycle_no
+        "<img src='/static/images/yes.jpg' width='100' height='100'>": data.body.policy.recycle_yes,
+        "<img src='/static/images/no.jpg' width='100' height='100'>": data.body.policy.recycle_no
       });
 
       // Generate table for green policies
       greenContainer.innerHTML = generatePolicyTable({
-        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.green_yes,
-        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.green_no
+        "<img src='/static/images/yes.jpg' width='100' height='100'>": data.body.policy.green_yes,
+        "<img src='/static/images/no.jpg' width='100' height='100'>": data.body.policy.green_no
       });
 
       function generatePolicyTable(policyData) {

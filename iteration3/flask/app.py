@@ -15,6 +15,9 @@ def index():
 def index2():
     return render_template('index.html')
 
+@app.route('/glass-bottle.html')
+def glass_bottle():
+    return render_template('glass-bottle.html')
 @app.route('/find-your-recycler.html')
 def find_your_recycler():
     return render_template('find-your-recycler.html')
@@ -23,8 +26,31 @@ def find_your_recycler():
 def know_your_area():
     return render_template('know-your-area.html')
 
+@app.route('/lamp.html')
+def lamp():
+    return render_template('lamp.html')
+
+@app.route('/lantern.html')
+def lantern():
+    return render_template('lantern.html')
+
+@app.route('/plastic-bottle.html')
+def plastic_bottle():
+    return render_template('plastic-bottle.html')
+
+@app.route('/plastic-bottle-coin-storage.html')
+def plastic_bottle_coin_storage():
+    return render_template('plastic-bottle-coin-storage.html')
 
 
+@app.route('/sort-your-trash.html')
+def sort_your_trash():
+    return render_template('sort-your-trash.html')
+
+
+@app.route('/resources.html')
+def resources():
+    return render_template('resources.html')
 
 
 
