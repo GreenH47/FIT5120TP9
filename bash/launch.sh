@@ -13,19 +13,30 @@ server {
     listen 80;
     listen [::]:80 default_server;
 
-    # root /var/www/html;
-    # index index.html index.htm index.nginx-debian.html;
-
-    server_name _;
+    server_name wasteisland.me;
 
     location / {
-        auth_basic "Restricted Area";
-        auth_basic_user_file /etc/nginx/.htpasswd;
+        # auth_basic "Restricted Area";
+        # auth_basic_user_file /etc/nginx/.htpasswd;
         proxy_pass http://localhost:8080;
         proxy_set_header Host \$host;
         proxy_set_header X-Real-IP \$remote_addr;
     }
 }
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name iteration2.wasteisland.me;
+
+    location / {
+        proxy_pass http://localhost:5000;
+        proxy_set_header Host \$host;
+        proxy_set_header X-Real-IP \$remote_addr;
+    }
+}
+
 EOF
 
 # Enable the Nginx configuration
@@ -38,4 +49,6 @@ apt-get update
 apt-get install apache2-utils
 
 # Pull and run the Docker image
-docker run --name naughty_burnell -d -p 8080:80 greenh47/wasteisland:it2
+docker run --name naughty_burnell -d -p 8080:5000 greenh47/wasteisland:it3
+
+docker run --name it2 -d -p 5000:80 greenh47/wasteisland:it2

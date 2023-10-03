@@ -45,7 +45,10 @@ def lambda_handler(event, context):
     cursor = connection.cursor()
 
     # Fetch the council_id for the given council_name
-    cursor.execute("SELECT council_id FROM Council WHERE council_name = %s", (council_name,))
+    query = "SELECT council_id FROM Council WHERE council_name = %s"
+    cursor.execute(query, (council_name,))  # Pass council_name as a parameter
+    council_id = cursor.fetchone()
+
     council_id = cursor.fetchone()
     if council_id is None:
         return {
