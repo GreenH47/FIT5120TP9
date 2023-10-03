@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, Response
 
-from lambda_py.council_lambda import lambda_handler as know_your_area_lambda_handler
-
+from lambda_py.know_your_area import lambda_handler as know_your_area_lambda_handler
+from lambda_py.know_your_area import lambda_handler as council_lambda_handler
+from lambda_py.sort_your_trash import lambda_handler as sort_your_trash_lambda_handler
 app = Flask(__name__)
 
 '''
@@ -93,6 +94,19 @@ def know_your_area_api():
     response = know_your_area_lambda_handler(data, None)  # Call the lambda function
     # print(response)
     return response  # Return the response as JSON
+
+
+@app.route('/api/rest/sort-your-trash', methods=['POST'])
+def sort_your_trash_api():
+    data = request.get_json()
+    response = sort_your_trash_lambda_handler(data, None)
+    return response
+
+
+
+@app.route('/api/rest/find-your-recycler', methods=['POST'])
+def council_api():
+    pass
 
 
 if __name__ == '__main__':

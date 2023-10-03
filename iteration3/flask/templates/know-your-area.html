@@ -278,15 +278,17 @@
 
     function searchCouncil() {
         var council = document.getElementById("council").value;
-        var url = "https://z2canhi6e4.execute-api.us-east-1.amazonaws.com/deploy";
+        //var url = "https://z2canhi6e4.execute-api.us-east-1.amazonaws.com/deploy";
+
+        var url = "/api/rest/know-your-area"
 
         var requestData = {"council": council};
 
         var requestJson = JSON.stringify(requestData);
 
-        console.log(requestJson)
-        console.log(typeof requestJson)
-
+        // console.log(requestJson)
+        // console.log(typeof requestJson)
+        var startTime = performance.now();
         fetch(url, {
             method: "POST",
             headers: {
@@ -296,9 +298,12 @@
         })
                 .then(response => response.json())
                 .then(data => {
+                    var endTime = performance.now();
+                    var responseTime = endTime - startTime;
+                    console.log("Response Time:", responseTime, "ms");
                     //console.log(data);
                     apiResponseData = data;
-                    console.log(apiResponseData);
+                   // console.log(apiResponseData);
 
                     // Call the functions to draw the charts
                     drawChart1(apiResponseData);
