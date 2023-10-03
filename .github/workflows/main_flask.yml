@@ -30,12 +30,15 @@ jobs:
         run: pip install -r iteration3/lambda/requirements.txt # If you have any requirements, specify them here
 
       - name: Run tests
-        run: python -m unittest discover iteration3/flask/lambda_py/ -p 'test_*.py'
+        run: python -m unittest discover iteration3/flask/test/ -p 'test_*.py'
 
 
 
       - name: Login to Docker Hub
-        run: echo "dckr_pat_9AyoYPfPO4MhW2cJpUXemz5tss4" | docker login -u greenh47 --password-stdin
+        env:
+          DOCKERHUB_USERNAME: greenh47
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+        run: echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
 
       - name: Build and Push Docker Image
         run: |
