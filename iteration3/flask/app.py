@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, Response
 
-# from lambda_py.council_lambda import lambda_handler as know_your_area_lambda_handler
+from lambda_py.council_lambda import lambda_handler as know_your_area_lambda_handler
 
 app = Flask(__name__)
 
@@ -87,12 +87,12 @@ api routes
 # too slow then I gave up on run it on flask
 @app.route('/api/rest/know-your-area', methods=['POST'])
 def know_your_area_api():
-    pass
-    # data = request.get_json()  # Get the request data from the client
+    # pass
+    data = request.get_json()  # Get the request data from the client
     # print(data)
-    # response = know_your_area_lambda_handler(data, None)  # Call the lambda function
+    response = know_your_area_lambda_handler(data, None)  # Call the lambda function
     # print(response)
-    # return response  # Return the response as JSON
+    return response  # Return the response as JSON
 
 
 if __name__ == '__main__':
