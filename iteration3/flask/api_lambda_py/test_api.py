@@ -1,6 +1,6 @@
 from unittest import TestCase
-from ..api_lambda_py.know_your_area import lambda_handler as know_your_area_lambda_handler
-from ..api_lambda_py.sort_your_trash import lambda_handler as sort_your_trash_lambda_handler
+from know_your_area import lambda_handler as know_your_area_lambda_handler
+from sort_your_trash import lambda_handler as sort_your_trash_lambda_handler
 
 
 class Test(TestCase):
