@@ -1,7 +1,8 @@
 from unittest import TestCase
+import json
 from know_your_area import lambda_handler as know_your_area_lambda_handler
 from sort_your_trash import lambda_handler as sort_your_trash_lambda_handler
-
+from calendar_test import check_schedule as collect_date_lambda_handler
 
 class Test(TestCase):
 
@@ -34,4 +35,40 @@ class Test(TestCase):
     def test_sort_your_trash_lambda_handler_404(self):
         event = {'postcode': '1000'}
         result = sort_your_trash_lambda_handler(event, None)
+        self.assertEqual(result['statusCode'], 404)
+
+    def test_collect_date_lambda_handler_200(self):
+        json_input = {
+            "longitude": 144.962974,
+            "latitude": -37.810294,
+            "current_date": "2023-10-20",
+            "suburb": "Burwood",
+            "region": "Victoria",
+            "street": "Ardenne Close"
+        }
+        result = collect_date_lambda_handler(json.dumps(json_input))
+        self.assertEqual(result['statusCode'], 200)
+
+    def test_collect_date_lambda_handler_400(self):
+        json_input = {
+            "longitude": 144.962974,
+            "latitude": -37.810294,
+            "current_date": "2023-10-20",
+            "suburb": "Burwood",
+            "region": "NSW",
+            "street": "Ardenne Close"
+        }
+        result = collect_date_lambda_handler(json.dumps(json_input))
+        self.assertEqual(result['statusCode'], 400)
+
+    def test_collect_date_lambda_handler_404(self):
+        json_input = {
+            "longitude": 144.962974,
+            "latitude": -37.810294,
+            "current_date": "2023-10-20",
+            "suburb": "gGsgwegs",
+            "region": "Victoria",
+            "street": "Ardenne Close"
+        }
+        result = collect_date_lambda_handler(json.dumps(json_input))
         self.assertEqual(result['statusCode'], 404)

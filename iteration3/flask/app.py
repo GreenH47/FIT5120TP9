@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, Response
 
 from api_lambda_py.know_your_area import lambda_handler as know_your_area_lambda_handler
-
 from api_lambda_py.sort_your_trash import lambda_handler as sort_your_trash_lambda_handler
+from api_lambda_py.calendar_test import check_schedule as collect_date_lambda_handler
+
+
 app = Flask(__name__)
 
 '''
@@ -28,6 +30,10 @@ def require_basic_auth():
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/collect-date.html')
+def collect_date():
+    return render_template('collect-date.html')
 
 
 @app.route('/index.html')
@@ -83,7 +89,11 @@ def resources():
 '''
 api routes
 '''
-
+@app.route('/api/rest/collect-date', methods=['POST'])
+def collect_date_api():
+    data = request.get_json()
+    response = collect_date_lambda_handler(data)
+    return response
 
 # too slow then I gave up on run it on flask
 @app.route('/api/rest/know-your-area', methods=['POST'])
