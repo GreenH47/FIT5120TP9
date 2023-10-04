@@ -27,7 +27,7 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Install dependencies
-        run: pip install -r iteration3/lambda/requirements.txt # If you have any requirements, specify them here
+        run: pip install -r iteration3/flask/requirements.txt # If you have any requirements, specify them here
 
 
       - name: Run tests
