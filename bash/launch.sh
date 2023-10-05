@@ -49,6 +49,9 @@ apt-get update
 apt-get install apache2-utils
 
 # Pull and run the Docker image
+# for default server (you can replace it with your own image)
 docker run --name naughty_burnell -d -p 8080:5000 greenh47/wasteisland:it3
 
+# backup server for iteration2 (for iteration2 instance only)
+# (you can replace it with your own image)
 docker run --name it2 -d -p 5000:80 greenh47/wasteisland:it2

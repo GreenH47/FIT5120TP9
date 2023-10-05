@@ -1,4 +1,3 @@
-import json
 import mysql.connector
 import re
 
@@ -118,3 +117,12 @@ def lambda_handler(event, context):
         }
 
 
+def lambda_test():
+    event = {'postcode': '3352'}
+    result = lambda_handler(event, None)
+    print(result)
+    assert result['statusCode'] == 200
+
+
+if __name__ == '__main__':
+    lambda_test()

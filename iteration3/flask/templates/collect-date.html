@@ -103,7 +103,7 @@
                         const region = data.features[0].context.find(item => item.id.startsWith("region")).text;
                         const street = data.features[0].text;
                         const currentDate = new Date().toISOString().split('T')[0];
-
+                        //const currentDate = "2023-10-30";
                         const formattedResult = {
                             longitude,
                             latitude,
@@ -130,6 +130,7 @@
 
     // check next collection day
     function check_collect_Day(result) {
+        var startTime = performance.now();
         fetch('/api/rest/collect-date', {
             method: 'POST',
             headers: {
@@ -139,6 +140,11 @@
         })
                 .then(response => response.json())
                 .then(data => {
+
+                    var endTime = performance.now();
+                    var responseTime = endTime - startTime;
+                    console.log("collect Response Time:", responseTime, "ms")
+
                     console.log(data);
                     const collectDateElement = document.getElementById('collect_date');
                     collectDateElement.textContent = JSON.stringify(data);

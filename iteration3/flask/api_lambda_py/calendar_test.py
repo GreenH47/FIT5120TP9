@@ -3,6 +3,10 @@ import json
 import os
 from datetime import date
 
+'''
+
+
+'''
 
 def check_schedule(json_input):
     try:
@@ -31,7 +35,6 @@ def check_schedule(json_input):
     script_dir = os.path.dirname(__file__)
     csv_path = os.path.join(script_dir, 'calendar_test.csv')
     data = pd.read_csv(csv_path)
-
 
     matching_suburb = data[data['suburb'].str.lower() == json_input['suburb'].lower()]
     if matching_suburb.empty:
@@ -115,7 +118,7 @@ def user_input():
         "street": "Ardenne Close"
     }
 
-    result = check_schedule(json_input)
+    result = check_schedule(json.dumps(json_input))
     if result:
         print(json_input)
         print(result)
