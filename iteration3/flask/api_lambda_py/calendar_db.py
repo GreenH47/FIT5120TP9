@@ -1,12 +1,14 @@
+
 import pandas as pd
 import json
-import os
-from datetime import date
+from datetime import date,datetime
+import mysql.connector
 
 '''
 
 
 '''
+
 
 def check_schedule(json_input):
     try:
@@ -14,53 +16,81 @@ def check_schedule(json_input):
     except ValueError:
         return {
             'statusCode': 400,
-            'body': 'Invalid JSON data!'
+            'body': 'Invalid request format please use json!'
         }
+
     required_keys = ['current_date', 'suburb', 'region', 'street']
 
     if not all(key in json_input for key in required_keys):
         return {
             'statusCode': 400,
-            'body': 'Invalid input data!'
+            'body': 'Invalid input data please contains current_date suburb region and street keys !'
         }
 
     if json_input['region'].lower() != 'victoria':
         return {
             'statusCode': 400,
-            'body': 'Invalid region!'
+            'body': 'Invalid region only include victoria!'
         }
 
-    # data = pd.read_csv('calendar_test.csv')
+    # Connect to the database
+    try:
+        # Root database credentials
+        root_username = 'greenh47'
+        root_password = 'RRCgwXAfWw53cej'
 
-    script_dir = os.path.dirname(__file__)
-    csv_path = os.path.join(script_dir, 'calendar_test.csv')
-    data = pd.read_csv(csv_path)
+        # Database credentials
+        host = 'carbonvic.clx2a8hznypy.us-east-1.rds.amazonaws.com'
+        port = 3306
+        database = 'council'
 
-    matching_suburb = data[data['suburb'].str.lower() == json_input['suburb'].lower()]
-    if matching_suburb.empty:
+        username = root_username
+        password = root_password
+        connection = mysql.connector.connect(host=host, port=port, database=database,
+                                             user=username, password=password)
+
+    except mysql.connector.Error as err:
+        return {
+            'statusCode': 500,
+            'body': json.dumps('Failed to connect to database!')
+        }
+
+    cursor = connection.cursor()
+    # print("database connected")
+
+    request_street = json_input['street']
+    request_council = json_input['suburb']
+
+    # Construct the SQL query with the parameters
+    sql_query = """
+    SELECT landfill_frequency, landfill_next, recycle_frequency, recycle_next, green_frequency, green_next
+    FROM calendar
+    WHERE council_name = %s AND street_name = %s
+    LIMIT 1;
+    """
+
+    # Execute the query with the provided values
+    cursor.execute(sql_query, (request_council, request_street))
+
+    result = cursor.fetchone()
+
+    # Check if the result is None
+    if result is None:
         return {
             'statusCode': 404,
-            'body': 'Suburb not included!'
+            'body': json.dumps('No matching schedule found!')
         }
 
-    matching_street = matching_suburb[matching_suburb['street'].str.lower() == json_input['street'].lower()]
+    # convert the date format
+    current_date = datetime.strptime(json_input['current_date'], '%Y-%m-%d').date().strftime('%Y-%m-%d')
+    landfill_frequency = result[0]
+    landfill_next = datetime.strptime(result[1], "%d/%m/%Y").date().strftime('%Y-%m-%d')
+    recycle_frequency = result[2]
+    recycle_next = datetime.strptime(result[3], "%d/%m/%Y").date().strftime('%Y-%m-%d')
+    green_frequency = result[4]
+    green_next = datetime.strptime(result[5], "%d/%m/%Y").date().strftime('%Y-%m-%d')
 
-    if matching_street.empty:
-        return {
-            'statusCode': 404,
-            'body': 'Street not included!'
-        }
-
-    current_date = json_input['current_date']
-
-    landfill_frequency = matching_street['landfill_frequency'].values[0]
-    landfill_next = str(matching_street['landfill_next'].values[0])
-
-    recycle_frequency = matching_street['recycle_frequency'].values[0]
-    recycle_next = str(matching_street['recycle_next'].values[0])
-
-    green_frequency = matching_street['green_frequency'].values[0]
-    green_next = str(matching_street['green_next'].values[0])
+    #print("database query done")
 
     if current_date < landfill_next:
         next_landfill_date = landfill_next
@@ -91,7 +121,7 @@ def check_schedule(json_input):
                 date.fromisoformat(green_next) + pd.DateOffset(
             weeks=int(weeks) + 1) * green_frequency_multiplier).strftime('%Y-%m-%d')
 
-    result = {
+    response = {
         'current_date': current_date,
         'landfill_frequency': landfill_frequency,
         'next_landfill_date': next_landfill_date,
@@ -103,7 +133,7 @@ def check_schedule(json_input):
 
     return {
         'statusCode': 200,
-        'body': result
+        'body': response
     }
 
 

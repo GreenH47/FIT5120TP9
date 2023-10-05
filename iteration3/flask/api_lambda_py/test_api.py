@@ -2,7 +2,7 @@ from unittest import TestCase
 import json
 from know_your_area import lambda_handler as know_your_area_lambda_handler
 from sort_your_trash import lambda_handler as sort_your_trash_lambda_handler
-from calendar_test import check_schedule as collect_date_lambda_handler
+from calendar_db import check_schedule as collect_date_lambda_handler
 
 class Test(TestCase):
 

@@ -43,3 +43,12 @@ CREATE TABLE council.calendar (
   council_name_fk VARCHAR(255) NOT NULL,
   FOREIGN KEY (council_name_fk) REFERENCES council.Postcode (council_name)
 );
+
+create table council.Policy
+(
+    waste_type   varchar(255) null,
+    council_name varchar(255) null,
+    waste_policy varchar(255) null,
+    council_name_fk VARCHAR(255) NOT NULL,
+    FOREIGN KEY (council_name_fk) REFERENCES council.Postcode (council_name)
+);
