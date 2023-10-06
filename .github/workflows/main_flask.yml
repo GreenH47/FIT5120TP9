@@ -18,16 +18,15 @@ jobs:
         with:
           python-version: 3.x # Specify your desired Python version
 
-      - name: Cache pip packages
+      - name: Install dependencies
         uses: actions/cache@v2
         with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Install dependencies
-        run: pip install -r iteration3/flask/requirements.txt # If you have any requirements, specify them here
+          path: iteration3/flask/venv  # Specify the path to the virtual environment (change to your preferred location)
+          key: ${{ runner.os }}-pip-${{ hashFiles('iteration3/flask/requirements.txt') }}  # Use hashing to generate a unique cache key
+        run: |
+          python -m venv iteration3/flask/venv
+          source iteration3/flask/venv/bin/activate
+          pip install -r iteration3/flask/requirements.txt
 
 
       - name: Run tests
