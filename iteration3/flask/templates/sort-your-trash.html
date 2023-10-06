@@ -110,9 +110,10 @@
     </div>
     <div class="w-col w-col-4">
         <div class="w-form">
-            <input type="text" id="postcodeInput" name="postcode" placeholder="Enter postcode" class="w-input"
-                   maxlength="256">
+            <input type="number" id="postcodeInput" name="postcode" placeholder="Enter postcode" class="w-input"
+                   maxlength="4" pattern="[0-9]{1,4}">
         </div>
+
         <div id="postcodeList" class="postcode-list"></div> <!-- Display the postcode options here -->
     </div>
     <div class="w-col w-col-4">
