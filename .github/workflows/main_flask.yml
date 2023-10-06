@@ -31,7 +31,8 @@ jobs:
 
 
       - name: Run tests
-        run: python -m unittest discover iteration3/flask/api_lambda_py/ -p 'test_*.py'
+        working-directory: iteration3/flask/
+        run: python -m unittest discover test/ -p 'test_*.py'
 
 
 
