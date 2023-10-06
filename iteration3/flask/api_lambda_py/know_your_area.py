@@ -1,7 +1,6 @@
 import json
 import mysql.connector
 import re
-from mysql.connector import pooling
 def lambda_handler(event, context):
     # Root database credentials
     root_username = 'greenh47'
