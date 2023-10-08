@@ -54,7 +54,7 @@
             resDirOrders.push("HD");
         }
         else if (platform == cc.TARGET_PLATFORM.PC_BROWSER) {
-            if (screenSize.height >= 100) {
+            if (screenSize.height >= 200) {
                 resDirOrders.push("HD");
             }
             else {

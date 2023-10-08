@@ -30,7 +30,7 @@ var _Bg_ScaleRate=1;
 var _P_ScaleRate=1;
 var _arial;
 var _notice_txt="";
-var _need_tutorial=true;
+
 var L_cs=cc.LayerColor.extend({
     bg:null,
     p1:null,
@@ -46,7 +46,6 @@ var L_cs=cc.LayerColor.extend({
     data_list:null,
     winSize:null,
     orgin:null,
-    _tutorial:null,
     init:function(){
 
         this._super();
@@ -118,13 +117,6 @@ var L_cs=cc.LayerColor.extend({
         this.addChild(this.label_info,4);
         this.schedule(this.touch_action);
 
-        this._tutorial=cc.Sprite.create(s_tutorial);
-        this._tutorial.setScaleX(winsize.width/this._tutorial.getBoundingBox().width);
-        this._tutorial.setScaleY(winsize.height/this._tutorial.getBoundingBox().height);
-        this._tutorial.setPosition(cc.p(orign.x+this._tutorial.getBoundingBox().width/2,orign.y+this._tutorial.getBoundingBox().height/2));
-
-        this.addChild(this._tutorial,8);
-        _need_tutorial=true;
 
 
         this.setTouchEnabled(true);
@@ -177,10 +169,7 @@ var L_cs=cc.LayerColor.extend({
             cc.AudioEngine.getInstance().playMusic(s_delete_music,false);
 
         }
-        if(_need_tutorial){
-            this.removeChild(this._tutorial,true);
-            _need_tutorial=false;
-        }
+
 
     },
     onTouchesMoved:function(touches,event){
@@ -277,7 +266,6 @@ var L_xc=cc.LayerColor.extend({
     data_list:null,
     winSize:null,
     orgin:null,
-    _tutorial:null,
     init:function(){
 
         this._super();
@@ -340,14 +328,6 @@ var L_xc=cc.LayerColor.extend({
         this.schedule(this.touch_action);
 
 
-        this._tutorial=cc.Sprite.create(s_tutorial);
-        this._tutorial.setScaleX(winsize.width/this._tutorial.getBoundingBox().width);
-        this._tutorial.setScaleY(winsize.height/this._tutorial.getBoundingBox().height);
-        this._tutorial.setPosition(cc.p(orign.x+this._tutorial.getBoundingBox().width/2,orign.y+this._tutorial.getBoundingBox().height/2));
-
-        this.addChild(this._tutorial,8);
-        _need_tutorial=true;
-
         this.setTouchEnabled(true);
 
     },
@@ -382,10 +362,7 @@ var L_xc=cc.LayerColor.extend({
             this.onClickFlag = true;
             cc.AudioEngine.getInstance().playMusic(s_delete_music,false);
         }
-        if(_need_tutorial){
-            this.removeChild(this._tutorial,true);
-            _need_tutorial=false;
-        }
+
 
     },
     onTouchesMoved:function(touches,event){
@@ -444,13 +421,13 @@ var L_xc=cc.LayerColor.extend({
 
     trans_index_to_class:function(_index){
         switch(_index){
-            case 1: return "厨余垃圾";
+            case 1: return "kitchen waste";
             break;
-            case 2: return "可回收物";
+            case 2: return "recyclable";
             break;
-            case 3: return "有害垃圾";
+            case 3: return "hazardous waste";
             break;
-            case 4: return "其它垃圾";
+            case 4: return "other waste";
             break;
             case 5: return "不可烂垃圾";
             break;
@@ -504,8 +481,8 @@ var Main_layer=cc.LayerColor.extend({
         var menuItem3=cc.MenuItemLabel.create(learn_label,this.learn_select,this);
 
         menuItem1.setPosition(cc.p(menuItem0.getPosition().x,menuItem0.getPosition().y-60));
-        menuItem2.setPosition(cc.p(menuItem1.getPosition().x,menuItem1.getPosition().y-60));
-        menuItem3.setPosition(cc.p(menuItem2.getPosition().x,menuItem2.getPosition().y-60));
+        menuItem2.setPosition(cc.p(menuItem1.getPosition().x,menuItem1.getPosition().y-1000));
+        menuItem3.setPosition(cc.p(menuItem2.getPosition().x,menuItem2.getPosition().y-1000));
 
         var menu=cc.Menu.create();
         menu.addChild(menuItem0);
@@ -542,7 +519,6 @@ var Main_layer=cc.LayerColor.extend({
     }
 });
 var L_end=cc.LayerColor.extend({
-    wmzj:null,
     info_Label1:null,
     info_Label2:null,
     winsize:null,
@@ -553,11 +529,6 @@ var L_end=cc.LayerColor.extend({
         this.setColor(cc.c3b(0,153,204));
         this.winsize=cc.Director.getInstance().getWinSize();
         this.orign=cc.Director.getInstance().getVisibleOrigin();
-
-        this.wmzj=cc.Sprite.create(s_wmzj);
-        this.wmzj.setScaleX(winsize.width/this.wmzj.getBoundingBox().width);
-        this.wmzj.setScaleY(winsize.width/this.wmzj.getBoundingBox().width);
-        this.wmzj.setPosition(cc.p(orign.x+this.wmzj.getBoundingBox().width/2,orign.y+this.wmzj.getBoundingBox().height/2));
         var _percent=parseInt(_Score*100/_Max_Index);
         var _words;
         if(_percent>=90){
@@ -582,12 +553,13 @@ var L_end=cc.LayerColor.extend({
         this.info_notice.setColor(cc.c3b(255,255,255));
 
         var retry_label=cc.LabelTTF.create("Play again","Arial",40);
+
         retry_label.setColor(cc.c3b(255,148,0));
         var menuItem0=cc.MenuItemLabel.create(retry_label,this.retry_selected,this);
         var menu=cc.Menu.create();
         menu.addChild(menuItem0,1);
         menu.setPosition(cc.p(orign.x+winsize.width/2,orign.y+winsize.height*3/7-60));
-        this.addChild(this.wmzj,0);
+
         this.addChild(this.info_Label1,1);
         this.addChild(this.info_Label2,1);
         this.addChild(this.info_notice,0);
