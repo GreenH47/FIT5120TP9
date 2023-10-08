@@ -24,7 +24,7 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  ****************************************************************************/
-var cocos2dApp = cc.Application.extend({
+ var cocos2dApp = cc.Application.extend({
     config:document['ccConfig'],
     ctor:function (scene) {
         this._super();
@@ -40,8 +40,8 @@ var cocos2dApp = cc.Application.extend({
 
         cc.EGLView.getInstance()._adjustSizeToBrowser();
         var screenSize = cc.EGLView.getInstance().getFrameSize();
-        var resourceSize = cc.size(480, 800);
-        var designSize = cc.size(480, 800);
+        var resourceSize = cc.size(1000, 800);
+        var designSize = cc.size(1000, 800);
 
         var searchPaths = [];
         var resDirOrders = [];
@@ -54,12 +54,12 @@ var cocos2dApp = cc.Application.extend({
             resDirOrders.push("HD");
         }
         else if (platform == cc.TARGET_PLATFORM.PC_BROWSER) {
-            if (screenSize.height >= 800) {
+            if (screenSize.height >= 100) {
                 resDirOrders.push("HD");
             }
             else {
-                resourceSize = cc.size(320, 480);
-                designSize = cc.size(320, 480);
+                resourceSize = cc.size(1000, 480);
+                designSize = cc.size(1000, 480);
                 resDirOrders.push("Normal");
             }
         }
