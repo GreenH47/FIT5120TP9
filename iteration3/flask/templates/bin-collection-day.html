@@ -209,9 +209,6 @@
                         console.log(jsonFormattedResult);
                         // forwards geocoding to check next collection day
                         check_collect_Day(jsonFormattedResult);
-                        document.querySelector(".div-block-35").classList.remove("hidden");
-                        document.querySelector(".div-block-36").classList.remove("hidden");
-                        document.querySelector(".div-block-37").classList.remove("hidden");
 
                     } else {
                         console.log('No results found for the entered address.');
@@ -260,6 +257,9 @@
                     console.log(data);
                     const collectDateElement = document.getElementById('collect_date');
                     collectDateElement.textContent = JSON.stringify(data);
+                    document.querySelector(".div-block-35").classList.remove("hidden");
+                    document.querySelector(".div-block-36").classList.remove("hidden");
+                    document.querySelector(".div-block-37").classList.remove("hidden");
                 })
                 .catch(error => console.error('Error:', error));
     }
