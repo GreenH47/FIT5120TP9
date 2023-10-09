@@ -137,24 +137,24 @@ def check_schedule(json_input):
     }
 
 
-def user_input():
-    # Example JSON input for testing
-    json_input = {
-        "longitude": 144.962974,
-        "latitude": -37.810294,
-        "current_date": "2023-10-20",
-        "suburb": "Burwood",
-        "region": "Victoria",
-        "street": "Ardenne Close"
-    }
-
-    result = check_schedule(json.dumps(json_input))
-    if result:
-        print(json_input)
-        print(result)
-    else:
-        print("No matching schedule found.")
-
-
-if __name__ == '__main__':
-    user_input()
+# def user_input():
+#     # Example JSON input for testing
+#     json_input = {
+#         "longitude": 144.962974,
+#         "latitude": -37.810294,
+#         "current_date": "2023-10-20",
+#         "suburb": "Burwood",
+#         "region": "Victoria",
+#         "street": "Ardenne Close"
+#     }
+#
+#     result = check_schedule(json.dumps(json_input))
+#     if result:
+#         print(json_input)
+#         print(result)
+#     else:
+#         print("No matching schedule found.")
+#
+#
+# if __name__ == '__main__':
+#     user_input()

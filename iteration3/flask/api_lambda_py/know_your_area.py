@@ -96,12 +96,12 @@ def lambda_handler(event, context):
     }
 
 
-def lambda_test():
-    event = {"council": "Knox City Council"}
-    result = lambda_handler(event, None)
-    print(result)
-    assert result['statusCode'] == 200
-
-if __name__ == '__main__':
-    lambda_test()
+# def lambda_test():
+#     event = {"council": "Knox City Council"}
+#     result = lambda_handler(event, None)
+#     print(result)
+#     assert result['statusCode'] == 200
+#
+# if __name__ == '__main__':
+#     lambda_test()
 

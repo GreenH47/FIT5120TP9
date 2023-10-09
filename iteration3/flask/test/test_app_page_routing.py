@@ -2,7 +2,7 @@ import unittest
 from flask import Flask, url_for
 from app import app
 
-class FlaskAppTests(unittest.TestCase):
+class FlaskAPageRoute(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()  # Create a test client for the app
         self.app.testing = True  # Enable testing mode

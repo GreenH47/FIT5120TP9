@@ -3,17 +3,7 @@ import re
 
 
 def lambda_handler(event, context):
-    # Root database credentials
-    root_username = 'greenh47'
-    root_password = 'RRCgwXAfWw53cej'
 
-    # Database credentials
-    host = 'carbonvic.clx2a8hznypy.us-east-1.rds.amazonaws.com'
-    port = 3306
-    database = 'council'
-
-    username = root_username
-    password = root_password
 
     # Parse the JSON request
     json_request = event
@@ -30,6 +20,18 @@ def lambda_handler(event, context):
 
     try:
         # Connect to the database
+        # Root database credentials
+        root_username = 'greenh47'
+        root_password = 'RRCgwXAfWw53cej'
+
+        # Database credentials
+        host = 'carbonvic.clx2a8hznypy.us-east-1.rds.amazonaws.com'
+        port = 3306
+        database = 'council'
+
+        username = root_username
+        password = root_password
+
         connection = mysql.connector.connect(host=host, port=port, database=database,
                                              user=username, password=password)
         # Create a cursor to execute SQL queries
@@ -117,12 +119,12 @@ def lambda_handler(event, context):
         }
 
 
-def lambda_test():
-    event = {'postcode': '3352'}
-    result = lambda_handler(event, None)
-    print(result)
-    assert result['statusCode'] == 200
-
-
-if __name__ == '__main__':
-    lambda_test()
+# def lambda_test():
+#     event = {'postcode': '3352'}
+#     result = lambda_handler(event, None)
+#     print(result)
+#     assert result['statusCode'] == 200
+#
+#
+# if __name__ == '__main__':
+#     lambda_test()

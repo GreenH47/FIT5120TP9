@@ -4,10 +4,9 @@ from api_lambda_py.know_your_area import lambda_handler as know_your_area_lambda
 from api_lambda_py.sort_your_trash import lambda_handler as sort_your_trash_lambda_handler
 from api_lambda_py.calendar_db import check_schedule as collect_date_lambda_handler
 
-class Test(TestCase):
+class TestApiCode(TestCase):
 
     def test_know_your_area_lambda_handler_200(self):
-        # event = {'council': 'Knox City Council'}
         event = {"council": "Knox City Council"}
         result = know_your_area_lambda_handler(event, None)
         self.assertEqual(result['statusCode'], 200)
@@ -72,3 +71,5 @@ class Test(TestCase):
         }
         result = collect_date_lambda_handler(json.dumps(json_input))
         self.assertEqual(result['statusCode'], 404)
+
+
