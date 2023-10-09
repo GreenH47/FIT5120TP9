@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'iteration3/flask/**'
 
 jobs:
   unit-tests:
