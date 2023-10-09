@@ -131,7 +131,8 @@
     // check next collection day
     function check_collect_Day(result) {
         var startTime = performance.now();
-        fetch('/api/rest/collect-date', {
+        //fetch('/api/rest/collect-date', {
+        fetch('http://127.0.0.1:5000/api/rest/collect-date', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
