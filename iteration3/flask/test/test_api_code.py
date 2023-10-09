@@ -45,8 +45,11 @@ class TestApiCode(TestCase):
             "region": "Victoria",
             "street": "Ardenne Close"
         }
-        result = collect_date_lambda_handler(json.dumps(json_input))
+        # result = collect_date_lambda_handler(json.dumps(json_input))
+        result = collect_date_lambda_handler(json_input)
         self.assertEqual(result['statusCode'], 200)
+
+
 
     def test_collect_date_lambda_handler_400(self):
         json_input = {

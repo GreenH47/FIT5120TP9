@@ -11,13 +11,14 @@ import mysql.connector
 
 
 def check_schedule(json_input):
-    try:
-        json_input = json.loads(json_input)
-    except ValueError:
-        return {
-            'statusCode': 400,
-            'body': 'Invalid request format please use json!'
-        }
+    if isinstance(json_input, str):
+        try:
+            json_input = json.loads(json_input)
+        except ValueError:
+            return {
+                'statusCode': 400,
+                'body': 'Invalid input data! Please provide valid JSON input.'
+            }
 
     required_keys = ['current_date', 'suburb', 'region', 'street']
 

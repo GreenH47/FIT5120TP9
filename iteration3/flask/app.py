@@ -111,7 +111,10 @@ Api routing
 
 @app.route('/api/rest/collect-date', methods=['POST'])
 def collect_date_api():
+    # data = request.get_json()
+    # format request into json
     data = request.get_json()
+    print(data)
     response = collect_date_lambda_handler(data)
     return response
 
