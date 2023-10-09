@@ -1,0 +1,15 @@
+Folder PATH listing for volume Windows-SSD
+Volume serial number is BE15-8457
+C:\GIT\FIT5120TP9\ITERATION3\FLASK
++---.idea
+|   \---inspectionProfiles
++---api_lambda_py
+|   +---.idea
+|   |   \---inspectionProfiles
+|   \---__pycache__
++---static
+|   +---css
+|   +---images
+|   +---js
+|   \---resource
+\---templates

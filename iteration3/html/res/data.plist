@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">  
+<plist version="1.0">  
+<dict>
+    <key>cs</key>
+    <dict>
+        <key>1</key>
+            <dict>
+                <key>name</key>
+                 <string>Leftover food</string>
+                 <key>class</key>
+                 <integer>1</integer>
+                 <key>img</key>
+                 <string>sf.png</string>
+             </dict>
+        <key>2</key>
+        <dict>
+            <key>name</key>
+            <string>Fast food boxes</string>
+            <key>class</key>
+            <integer>4</integer>
+            <key>img</key>
+            <string>ch.png</string>
+        </dict>
+        <key>3</key>
+        <dict>
+            <key>name</key>
+            <string>Plastic bottle</string>
+            <key>class</key>
+            <integer>2</integer>
+            <key>img</key>
+            <string>ylp.png</string>
+        </dict>
+        <key>4</key>
+        <dict>
+            <key>name</key>
+            <string>Waste batteries</string>
+            <key>class</key>
+            <integer>3</integer>
+            <key>img</key>
+            <string>fdc.png</string>
+        </dict>
+        <key>5</key>
+        <dict>
+            <key>name</key>
+            <string>Cigarette end</string>
+            <key>class</key>
+            <integer>4</integer>
+            <key>img</key>
+            <string>yt.png</string>
+        </dict>
+        <key>6</key>
+        <dict>
+            <key>name</key>
+            <string>Newspaper</string>
+            <key>class</key>
+            <integer>2</integer>
+            <key>img</key>
+            <string>fbz.png</string>
+        </dict>
+        <key>7</key>
+        <dict>
+            <key>name</key>
+            <string>Lamp tube</string>
+            <key>class</key>
+            <integer>3</integer>
+            <key>img</key>
+            <string>fdg.png</string>
+        </dict>
+        <key>8</key>
+        <dict>
+            <key>name</key>
+            <string>Tissue</string>
+            <key>class</key>
+            <integer>4</integer>
+            <key>img</key>
+            <string>fzj.png</string>
+        </dict>
+        <key>9</key>
+        <dict>
+            <key>name</key>
+            <string>Plastic bag</string>
+            <key>class</key>
+            <integer>4</integer>
+            <key>img</key>
+            <string>sld.png</string>
+        </dict>
+        <key>10</key>
+        <dict>
+            <key>name</key>
+            <string>Tree leaf</string>
+            <key>class</key>
+            <integer>1</integer>
+            <key>img</key>
+            <string>ksy.png</string>
+        </dict>
+        <key>11</key>
+        <dict>
+            <key>name</key>
+            <string>Glass bottle</string>
+            <key>class</key>
+            <integer>2</integer>
+            <key>img</key>
+            <string>blp.png</string>
+        </dict>
+        <key>12</key>
+        <dict>
+            <key>name</key>
+            <string>Crab shell</string>
+            <key>class</key>
+            <integer>1</integer>
+            <key>img</key>
+            <string>pxk.png</string>
+        </dict>
+        <key>13</key>
+        <dict>
+            <key>name</key>
+            <string>Pesticide bottle</string>
+            <key>class</key>
+            <integer>3</integer>
+            <key>img</key>
+            <string>scj.png</string>
+        </dict>
+        <key>14</key>
+        <dict>
+            <key>name</key>
+            <string>Watermelon rind</string>
+            <key>class</key>
+            <integer>1</integer>
+            <key>img</key>
+            <string>xgp.png</string>
+        </dict>
+        <key>15</key>
+        <dict>
+            <key>name</key>
+            <string>Ring-pull can</string>
+            <key>class</key>
+            <integer>2</integer>
+            <key>img</key>
+            <string>ylg.png</string>
+        </dict>
+        <key>16</key>
+                <dict>
+                    <key>name</key>
+                    <string>Correction fluid</string>
+                    <key>class</key>
+                    <integer>3</integer>
+                    <key>img</key>
+                    <string>xzy.png</string>
+                </dict>
+        <key>17</key>
+                <dict>
+                <key>name</key>
+                <string>Paper cup</string>
+                <key>class</key>
+                <integer>4</integer>
+                <key>img</key>
+                <string>fzb.png</string>
+                </dict>
+        <key>18</key>
+                <dict>
+                <key>name</key>
+                <string>Milk box</string>
+                <key>class</key>
+                <integer>2</integer>
+                <key>img</key>
+                <string>nnh.png</string>
+                </dict>
+        <key>19</key>
+                <dict>
+                <key>name</key>
+                <string>Pencil</string>
+                <key>class</key>
+                <integer>4</integer>
+                <key>img</key>
+                <string>qbt.png</string>
+                </dict>
+    </dict>
+    <key>nc</key>
+    <dict>
+        <key>1</key>
+        <dict>
+            <key>name</key>
+            <string>Leftover food</string>
+            <key>class</key>
+            <integer>6</integer>
+            <key>img</key>
+            <string>sf.png</string>
+        </dict>
+        <key>2</key>
+        <dict>
+            <key>name</key>
+            <string>Fast food boxes</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>ch.png</string>
+        </dict>
+        <key>3</key>
+        <dict>
+            <key>name</key>
+            <string>Plastic bottle</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>ylp.png</string>
+        </dict>
+        <key>4</key>
+        <dict>
+            <key>name</key>
+            <string>Waste batteries</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>fdc.png</string>
+        </dict>
+        <key>5</key>
+        <dict>
+            <key>name</key>
+            <string>Cigarette end</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>yt.png</string>
+        </dict>
+        <key>6</key>
+        <dict>
+            <key>name</key>
+            <string>Newspaper</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>fbz.png</string>
+        </dict>
+        <key>7</key>
+        <dict>
+            <key>name</key>
+            <string>Lamp tube</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>fdg.png</string>
+        </dict>
+        <key>8</key>
+        <dict>
+            <key>name</key>
+            <string>Tissue</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>fzj.png</string>
+        </dict>
+        <key>9</key>
+        <dict>
+            <key>name</key>
+            <string>Plastic bag</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>sld.png</string>
+        </dict>
+        <key>10</key>
+        <dict>
+            <key>name</key>
+            <string>Tree leaf</string>
+            <key>class</key>
+            <integer>6</integer>
+            <key>img</key>
+            <string>ksy.png</string>
+        </dict>
+        <key>11</key>
+        <dict>
+            <key>name</key>
+            <string>Glass bottle</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>blp.png</string>
+        </dict>
+        <key>12</key>
+        <dict>
+            <key>name</key>
+            <string>Crab shell</string>
+            <key>class</key>
+            <integer>6</integer>
+            <key>img</key>
+            <string>pxk.png</string>
+        </dict>
+        <key>13</key>
+        <dict>
+            <key>name</key>
+            <string>Pesticide bottle</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>scj.png</string>
+        </dict>
+        <key>14</key>
+        <dict>
+            <key>name</key>
+            <string>Watermelon rind</string>
+            <key>class</key>
+            <integer>6</integer>
+            <key>img</key>
+            <string>xgp.png</string>
+        </dict>
+        <key>15</key>
+        <dict>
+            <key>name</key>
+            <string>Ring-pull can</string>
+            <key>class</key>
+            <integer>5</integer>
+            <key>img</key>
+            <string>ylg.png</string>
+        </dict>
+        <key>16</key>
+             <dict>
+             <key>name</key>
+             <string>Correction fluid</string>
+             <key>class</key>
+             <integer>5</integer>
+             <key>img</key>
+             <string>xzy.png</string>
+             </dict>
+        <key>17</key>
+             <dict>
+             <key>name</key>
+             <string>Paper cup</string>
+             <key>class</key>
+             <integer>5</integer>
+             <key>img</key>
+             <string>fzb.png</string>
+             </dict>
+        <key>18</key>
+                <dict>
+                <key>name</key>
+                <string>Milk box</string>
+                <key>class</key>
+                <integer>5</integer>
+                <key>img</key>
+                <string>nnh.png</string>
+                </dict>
+        <key>19</key>
+                <dict>
+                <key>name</key>
+                <string>Pencil</string>
+                <key>class</key>
+                <integer>5</integer>
+                <key>img</key>
+                <string>qbt.png</string>
+                </dict>
+    </dict>
+</dict>
+</plist> 

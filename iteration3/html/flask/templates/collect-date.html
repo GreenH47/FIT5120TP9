@@ -1,0 +1,156 @@
+<head>
+    <meta charset="utf-8">
+    <title>Display navigation directions</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/geolib"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map_container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #map {
+            width: 800px;
+            height: 800px;
+        }
+
+        #markerList {
+            margin-left: 20px;
+            /* Adjust the margin as per your requirement */
+        }
+    </style>
+</head>
+<h1>Mapbox Directions API</h1>
+<a href="https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-directions/">Tutorial</a>
+
+<input type="text" id="addressInput" placeholder="Enter your address" value="6B Brockhoff Dr, Burwood VIC 3125">
+
+<button onclick="searchAddress()">Submit</button>
+
+<div id="collect_result">
+    <div id="collect_date"></div>
+</div>
+
+<body>
+<script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
+<link rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
+      type="text/css">
+<div id="map_container">
+
+    <div id="map"></div>
+    <div id="markerList"></div>
+</div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZW5oIiwiYSI6ImNsOTZ4cXVqaDAzYTAzbnBkOHZrNGhscTYifQ.5CyI_nX9gcLhuYfYpgWC9w';
+    navigator.geolocation.getCurrentPosition(success, error);
+    //import * as geolib from 'geolib';
+    const markers = []; // Array to store all markers
+    // Store markers and their waste_type information
+    // Store the unique waste_type values in an array
+    var uniqueWasteTypes = [];
+
+    // Store the markers and markerList items in separate arrays
+    var markerItems = [];
+
+
+    // check user input address and display on map
+    function searchAddress() {
+        const address = document.getElementById('addressInput').value;
+        const geocodingUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+                address
+                )}.json?access_token=${mapboxgl.accessToken}`;
+
+        fetch(geocodingUrl)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.features.length > 0) {
+                        // Get the coordinates of the first result
+                        const [longitude, latitude] = data.features[0].center;
+
+                        const map = new mapboxgl.Map({
+                            container: 'map',
+                            style: 'mapbox://styles/mapbox/streets-v12',
+                            center: [longitude, latitude],
+                            zoom: 10
+                        });
+
+                        new mapboxgl.Marker({
+                            color: "red",
+                            draggable: true
+                        }).setLngLat([longitude, latitude]).addTo(map);
+
+                        map.addControl(
+                                new MapboxDirections({
+                                    accessToken: mapboxgl.accessToken
+                                }),
+                                'top-left'
+                        );
+
+                        // Extract other information from the response
+                        const suburb = data.features[0].context.find(item => item.id.startsWith("locality")).text;
+                        const region = data.features[0].context.find(item => item.id.startsWith("region")).text;
+                        const street = data.features[0].text;
+                        const currentDate = new Date().toISOString().split('T')[0];
+                        //const currentDate = "2023-10-30";
+                        const formattedResult = {
+                            longitude,
+                            latitude,
+                            suburb,
+                            current_date: currentDate,
+                            region,
+                            street
+                        };
+
+                        //console.log(formattedResult);
+                        const jsonFormattedResult = JSON.stringify(formattedResult);
+                        console.log(jsonFormattedResult);
+                        // forwards geocoding to check next collection day
+                        check_collect_Day(jsonFormattedResult);
+
+                    } else {
+                        console.log('No results found for the entered address.');
+                    }
+                })
+                .catch(error => {
+                    console.log('An error occurred while processing the address:', error);
+                });
+    }
+
+    // check next collection day
+    function check_collect_Day(result) {
+        var startTime = performance.now();
+        fetch('/api/rest/collect-date', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(result)
+        })
+                .then(response => response.json())
+                .then(data => {
+
+                    var endTime = performance.now();
+                    var responseTime = endTime - startTime;
+                    console.log("collect Response Time:", responseTime, "ms")
+
+                    console.log(data);
+                    const collectDateElement = document.getElementById('collect_date');
+                    collectDateElement.textContent = JSON.stringify(data);
+                })
+                .catch(error => console.error('Error:', error));
+    }
+
+
+</script>
