@@ -45,12 +45,14 @@ def index():
 def bin_collection_day():
     return render_template('bin-collection-day.html')
 
-@app.route('/quiz-game.html')
-def quiz_game():
-    return render_template('quiz-game.html')
+
 @app.route('/collect-date.html')
 def collect_date():
     return render_template('collect-date.html')
+
+@app.route('/copyrights-disclaimers.html')
+def copyrights():
+    return render_template('copyrights-disclaimers.html')
 
 
 @app.route('/index.html')
@@ -92,7 +94,9 @@ def plastic_bottle():
 def plastic_bottle_coin_storage():
     return render_template('plastic-bottle-coin-storage.html')
 
-
+@app.route('/quiz-game.html')
+def quiz_game():
+    return render_template('quiz-game.html')
 @app.route('/sort-your-trash.html')
 def sort_your_trash():
     return render_template('sort-your-trash.html')
