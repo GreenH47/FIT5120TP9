@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="da24f117-3369-4336-aa05-a751ce7369b7" name="wx" url="http://wx.zjjy.com/tmpdir/">
+        <fileTransfer host="60.190.188.139" port="21" password="dfdedfcfdfc7dfdadf9bdf98df99df9edf9fdf9c" username="temp">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
