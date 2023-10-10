@@ -3,9 +3,10 @@ from flask import Flask, render_template, request, Response
 from api_lambda_py.know_your_area import lambda_handler as know_your_area_lambda_handler
 from api_lambda_py.sort_your_trash import lambda_handler as sort_your_trash_lambda_handler
 from api_lambda_py.calendar_db import check_schedule as collect_date_lambda_handler
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-
+cors = CORS(app)
 '''
 Page routing 
   _____                   _____             _   _             
@@ -18,21 +19,22 @@ Page routing
              |___/                                      |___/ 
 
 '''
-
+#if __name__ == '__main__':
+      #app.run(host='0.0.0.0', port=5500)
 
 # Set up basic authentication
-@app.before_request
-def require_basic_auth():
-    auth = request.authorization
+# @app.before_request
+# def require_basic_auth():
+#     auth = request.authorization
 
-    # Verify username and password
-    username = 'guest'
-    password = 'MRzYpG7yonPO8'
+#     # Verify username and password
+#     username = 'guest'
+#     password = 'MRzYpG7yonPO8'
 
-    if not auth or auth.username != username or auth.password != password:
-        return Response(
-            'Unauthorized', 401, {'WWW-Authenticate': 'Basic realm="Login Required"'}
-        )
+#     if not auth or auth.username != username or auth.password != password:
+#         return Response(
+#             'Unauthorized', 401, {'WWW-Authenticate': 'Basic realm="Login Required"'}
+#         )
 
 
 @app.route('/')
@@ -110,6 +112,7 @@ Api routing
 
 
 @app.route('/api/rest/collect-date', methods=['POST'])
+@cross_origin()
 def collect_date_api():
     # data = request.get_json()
     # format request into json
@@ -118,7 +121,11 @@ def collect_date_api():
     response = collect_date_lambda_handler(data)
     return response
 
-
+@app.route('/hello', methods=['GET'])
+def hello():
+    jsonResp = {'jack': 4098, 'sape': 4139}
+    print(jsonResp)
+    return jsonResp
 
 @app.route('/api/rest/know-your-area', methods=['POST'])
 def know_your_area_api():
