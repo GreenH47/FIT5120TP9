@@ -24,6 +24,7 @@ class TestApiCode(TestCase):
     def test_sort_your_trash_lambda_handler_200(self):
         event = {'postcode': '3352'}
         result = sort_your_trash_lambda_handler(event, None)
+        print(result)
         self.assertEqual(result['statusCode'], 200)
 
     def test_sort_your_trash_lambda_handler_400(self):
@@ -59,6 +60,7 @@ class TestApiCode(TestCase):
             "street": "Ardenne Close"
         }
         result = collect_date_lambda_handler(json.dumps(json_input))
+        print(result)
         #result = collect_date_lambda_handler(json_input)
         self.assertEqual(result['statusCode'], 200)
 

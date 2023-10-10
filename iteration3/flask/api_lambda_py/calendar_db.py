@@ -122,21 +122,46 @@ def check_schedule(json_input):
                 date.fromisoformat(green_next) + pd.DateOffset(
             weeks=int(weeks) + 1) * green_frequency_multiplier).strftime('%Y-%m-%d')
 
+    # check the day of week
+    next_green_day_of_week = datetime.strptime(next_green_date, '%Y-%m-%d').strftime('%A')
+    next_recycle_day_of_week = datetime.strptime(next_recycle_date, '%Y-%m-%d').strftime('%A')
+    next_landfill_day_of_week = datetime.strptime(next_landfill_date, '%Y-%m-%d').strftime('%A')
+
     response = {
         'current_date': current_date,
         'landfill_frequency': landfill_frequency,
         'next_landfill_date': next_landfill_date,
+        'landfill_day_of_week': next_landfill_day_of_week,
         'recycle_frequency': recycle_frequency,
         'next_recycle_date': next_recycle_date,
+        'recycle_day_of_week': next_recycle_day_of_week,
         'green_frequency': green_frequency,
-        'next_green_date': next_green_date
+        'next_green_date': next_green_date,
+        'green_day_of_week': next_green_day_of_week
     }
+
 
     return {
         'statusCode': 200,
         'body': response
     }
-
+'''
+{
+   "statusCode":200,
+   "body":{
+      "current_date":"2023-10-20",
+      "landfill_frequency":"fortnightly",
+      "next_landfill_date":"2023-10-30",
+      "landfill_day_of_week":"Monday",
+      "recycle_frequency":"fortnightly",
+      "next_recycle_date":"2023-10-23",
+      "recycle_day_of_week":"Monday",
+      "green_frequency":"weekly",
+      "next_green_date":"2023-10-23",
+      "green_day_of_week":"Monday"
+   }
+}
+'''
 
 # def user_input():
 #     # Example JSON input for testing
