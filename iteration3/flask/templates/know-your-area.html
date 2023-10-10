@@ -285,7 +285,7 @@
 <script>
   const wasteTypes = ["total_garbage_collect", "total_recycle_actual", "organic_collect"];
   function drawChart1(apiResponseData){
-    d3.json('data.js').then(data => {
+    d3.json('/static/js/data.js').then(data => {
 
       const processedData = apiResponseData.body;
       //console.log(processedData);
@@ -421,7 +421,7 @@
 
 <script>
   function drawChart2(apiResponseData){
-    d3.json('data.js').then(data => {
+    d3.json('/static/js/data.js').then(data => {
       const processedData = apiResponseData.body;
       const firstCouncil = processedData[0].council_name;
       drawChart(firstCouncil);
@@ -535,7 +535,7 @@
 
 <script>
 function drawChart3(apiResponseData){
-  d3.json('data.js').then(data => {
+  d3.json('/static/js/data.js').then(data => {
       const processedData = apiResponseData.body;
       const councils = Array.from(new Set(processedData.map(d => d.council_name)));
 

@@ -181,363 +181,373 @@
         crossorigin="anonymous"></script>
     <script src="/static/js/webflow.js" type="text/javascript"></script>
 
-    <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZW5oIiwiYSI6ImNsOTZ4cXVqaDAzYTAzbnBkOHZrNGhscTYifQ.5CyI_nX9gcLhuYfYpgWC9w';
-        navigator.geolocation.getCurrentPosition(success, error);
-        //import * as geolib from 'geolib';
-        const markers = []; // Array to store all markers
-        // Store markers and their waste_type information
-        // Store the unique waste_type values in an array
-        var uniqueWasteTypes = [];
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZW5oIiwiYSI6ImNsOTZ4cXVqaDAzYTAzbnBkOHZrNGhscTYifQ.5CyI_nX9gcLhuYfYpgWC9w';
+    navigator.geolocation.getCurrentPosition(success, error);
+    //import * as geolib from 'geolib';
+    const markers = []; // Array to store all markers
+    // Store markers and their waste_type information
+    // Store the unique waste_type values in an array
+    var uniqueWasteTypes = [];
 
-        // Store the markers and markerList items in separate arrays
-        var markerItems = [];
-
-
-        function fetchData() {
-            return fetch('resource/bin.json')
-                .then(response => response.json())
-                .then(data => data);
-        }
+    // Store the markers and markerList items in separate arrays
+    var markerItems = [];
 
 
-
-        function success(position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
-
-            const map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v12',
-                center: [longitude, latitude],
-                zoom: 10
-            });
-
-            new mapboxgl.Marker({
-                color: "red",
-                draggable: true
-            }).setLngLat([longitude, latitude]).addTo(map);
-
-            map.addControl(
-                new MapboxDirections({
-                    accessToken: mapboxgl.accessToken
-                }),
-                'top-left'
-            );
-
-            // Read the points from the JSON file
-            fetchData()
-                .then(data => {
+    function fetchData() {
+        return fetch('/static/resource/bin.json')
+            .then(response => response.json())
+            .then(data => data);
+    }
 
 
-                    const markerList = document.getElementById('markerList');
-                    // Clear the existing marker list
-                    markerList.innerHTML = '';
+    function success(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
 
-                    // Add markers for each point within 10 km of the user's location
-                    data.forEach(point => {
-                        const distance = geolib.getDistance(
-                            { latitude: latitude, longitude: longitude },
-                            { latitude: point.latitude, longitude: point.longtitude }
-                        );
-                        const isWithinRange = distance <= 10000; // 10 km in meters
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [longitude, latitude],
+            zoom: 10
+        });
 
-                        if (isWithinRange) {
-                            var marker = new mapboxgl.Marker()
-                                .setLngLat([point.longtitude, point.latitude])
-                                .addTo(map);
+        new mapboxgl.Marker({
+            color: "red",
+            draggable: true
+        }).setLngLat([longitude, latitude]).addTo(map);
 
-                            //markers.push(marker); // Add marker to the array
+        map.addControl(
+            new MapboxDirections({
+                accessToken: mapboxgl.accessToken
+            }),
+            'top-left'
+        );
 
-                            // Add the marker info to the list as a hyperlink
-                            const markerInfo = document.createElement('li');
-                            const markerLink = document.createElement('a');
-                            markerLink.href = '#';
-                            markerLink.textContent = `${point.recycle_centre}- ${point.waste_type}`;
+        // Read the points from the JSON file
+        fetchData()
+            .then(data => {
 
-                            // Add waste_type value to uniqueWasteTypes if it doesn't exist
-                            if (!uniqueWasteTypes.includes(point.waste_type)) {
-                                uniqueWasteTypes.push(point.waste_type);
-                            }
 
-                            markerLink.addEventListener('click', () => {
-                                markers.forEach(m => {
-                                    if (m._element) m._element.style.backgroundColor = 'initial'; 
-                                });
+                const markerList = document.getElementById('markerList');
+                // Clear the existing marker list
+                markerList.innerHTML = '';
 
-                                // Fly to the clicked marker
-                                map.flyTo({ center: [point.longtitude, point.latitude], zoom: 15 });
+                // Add markers for each point within 10 km of the user's location
+                data.forEach(point => {
+                    const distance = geolib.getDistance(
+                        {latitude: latitude, longitude: longitude},
+                        {latitude: point.latitude, longitude: point.longtitude}
+                    );
+                    const isWithinRange = distance <= 10000; // 10 km in meters
+
+                    if (isWithinRange) {
+                        var marker = new mapboxgl.Marker()
+                            .setLngLat([point.longtitude, point.latitude])
+                            .addTo(map);
+
+                        //markers.push(marker); // Add marker to the array
+
+                        // Add the marker info to the list as a hyperlink
+                        const markerInfo = document.createElement('li');
+                        const markerLink = document.createElement('a');
+                        markerLink.href = '#';
+                        markerLink.textContent = `${point.recycle_centre}- ${point.waste_type}`;
+
+                        // Add waste_type value to uniqueWasteTypes if it doesn't exist
+                        if (!uniqueWasteTypes.includes(point.waste_type)) {
+                            uniqueWasteTypes.push(point.waste_type);
+                        }
+
+                        markerLink.addEventListener('click', () => {
+                            markers.forEach(m => {
+                                if (m._element) m._element.style.backgroundColor = 'initial';
                             });
 
-                            markerInfo.appendChild(markerLink);
-                            markerList.appendChild(markerInfo);
-                            // Add marker and markerList item to their respective arrays
-                            markers.push(marker);
-                            markerItems.push(markerInfo);
-                        }
-                    });
-
-                    generateFilterOptions();
-
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-        }
-
-
-        function error(error) {
-            var longitude = 144.9631;
-            var latitude = -37.8136;
-            console.log(error.message);
-
-            const map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v12',
-                center: [longitude, latitude],
-                zoom: 13
-            });
-
-            new mapboxgl.Marker({
-                color: "red",
-                draggable: true
-            }).setLngLat([longitude, latitude]).addTo(map);
-
-            map.addControl(
-                new MapboxDirections({
-                    accessToken: mapboxgl.accessToken
-                }),
-                'top-left'
-            );
-
-            // Read the points from the JSON file
-            fetchData()
-                .then(data => {
-
-
-                    const markerList = document.getElementById('markerList');
-                    // Clear the existing marker list
-                    markerList.innerHTML = '';
-
-                    // Add markers for each point within 10 km of the user's location
-                    data.forEach(point => {
-                        const distance = geolib.getDistance(
-                            { latitude: latitude, longitude: longitude },
-                            { latitude: point.latitude, longitude: point.longtitude }
-                        );
-                        const isWithinRange = distance <= 10000; // 10 km in meters
-
-                        if (isWithinRange) {
-                            var marker = new mapboxgl.Marker()
-                                .setLngLat([point.longtitude, point.latitude])
-                                .addTo(map);
-
-                            //markers.push(marker); // Add marker to the array
-
-                            // Add the marker info to the list as a hyperlink
-                            const markerInfo = document.createElement('li');
-                            const markerLink = document.createElement('a');
-                            markerLink.href = '#';
-                            markerLink.textContent = `${point.recycle_centre}`;
-
-                            markerLink.addEventListener('click', () => {
-                                markers.forEach(m => {
-                                    if (m._element) m._element.style.backgroundColor = 'initial'; 
-                                });
-
-                                // Fly to the clicked marker
-                                map.flyTo({ center: [point.longtitude, point.latitude], zoom: 15 });
-                            });
-
-                            markerInfo.appendChild(markerLink);
-                            markerList.appendChild(markerInfo);
-                        }
-                    });
-
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-
-
-        }
-
-
-        // user input address box and search
-        function searchAddress() {
-            const address = document.getElementById('addressInput').value;
-            const geocodingUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
-                address
-            )}.json?access_token=${mapboxgl.accessToken}`;
-
-            fetch(geocodingUrl)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.features.length > 0) {
-                        // Get the coordinates of the first result
-                        const [longitude, latitude] = data.features[0].center;
-
-                        const map = new mapboxgl.Map({
-                            container: 'map',
-                            style: 'mapbox://styles/mapbox/streets-v12',
-                            center: [longitude, latitude],
-                            zoom: 13
+                            // Fly to the clicked marker
+                            map.flyTo({center: [point.longtitude, point.latitude], zoom: 15});
                         });
 
-
-
-                        man_success(latitude, longitude)
-
-                    } else {
-                        console.log('No results found for the entered address.');
+                        markerInfo.appendChild(markerLink);
+                        markerList.appendChild(markerInfo);
+                        // Add marker and markerList item to their respective arrays
+                        markers.push(marker);
+                        markerItems.push(markerInfo);
                     }
-                })
-                .catch(error => {
-                    console.log('An error occurred while processing the address:', error);
                 });
-        }
 
-        // user input address and geneate map markers
-        function man_success(latitude, longitude) {
+                generateFilterOptions();
 
-
-            const map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v12',
-                center: [longitude, latitude],
-                zoom: 10
+            })
+            .catch(error => {
+                console.log(error);
             });
-
-            new mapboxgl.Marker({
-                color: "red",
-                draggable: true
-            }).setLngLat([longitude, latitude]).addTo(map);
-
-            map.addControl(
-                new MapboxDirections({
-                    accessToken: mapboxgl.accessToken
-                }),
-                'top-left'
-            );
-
-            // Read the points from the JSON file
-            fetchData()
-                .then(data => {
+    }
 
 
-                    const markerList = document.getElementById('markerList');
-                    // Clear the existing marker list
-                    markerList.innerHTML = '';
+    function error(error) {
+        var longitude = 144.9631;
+        var latitude = -37.8136;
+        console.log(error.message);
 
-                    // Add markers for each point within 10 km of the user's location
-                    data.forEach(point => {
-                        const distance = geolib.getDistance(
-                            { latitude: latitude, longitude: longitude },
-                            { latitude: point.latitude, longitude: point.longtitude }
-                        );
-                        const isWithinRange = distance <= 10000; // 10 km in meters
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [longitude, latitude],
+            zoom: 13
+        });
 
-                        if (isWithinRange) {
-                            var marker = new mapboxgl.Marker()
-                                .setLngLat([point.longtitude, point.latitude])
-                                .addTo(map);
+        new mapboxgl.Marker({
+            color: "red",
+            draggable: true
+        }).setLngLat([longitude, latitude]).addTo(map);
 
-                            //markers.push(marker); // Add marker to the array
+        map.addControl(
+            new MapboxDirections({
+                accessToken: mapboxgl.accessToken
+            }),
+            'top-left'
+        );
 
-                            // Add the marker info to the list as a hyperlink
-                            const markerInfo = document.createElement('li');
-                            const markerLink = document.createElement('a');
-                            markerLink.href = '#';
-                            markerLink.textContent = `${point.recycle_centre}- ${point.waste_type}`;
+        // Read the points from the JSON file
+        fetchData()
+            .then(data => {
 
-                            // Add waste_type value to uniqueWasteTypes if it doesn't exist
-                            if (!uniqueWasteTypes.includes(point.waste_type)) {
-                                uniqueWasteTypes.push(point.waste_type);
-                            }
 
-                            markerLink.addEventListener('click', () => {
-                                markers.forEach(m => {
-                                    if (m._element) m._element.style.backgroundColor = 'initial'; 
-                                });
+                const markerList = document.getElementById('markerList');
+                // Clear the existing marker list
+                markerList.innerHTML = '';
 
-                                // Fly to the clicked marker
-                                map.flyTo({ center: [point.longtitude, point.latitude], zoom: 15 });
+                // Add markers for each point within 10 km of the user's location
+                data.forEach(point => {
+                    const distance = geolib.getDistance(
+                        {latitude: latitude, longitude: longitude},
+                        {latitude: point.latitude, longitude: point.longtitude}
+                    );
+                    const isWithinRange = distance <= 10000; // 10 km in meters
+
+                    if (isWithinRange) {
+                        var marker = new mapboxgl.Marker()
+                            .setLngLat([point.longtitude, point.latitude])
+                            .addTo(map);
+
+                        //markers.push(marker); // Add marker to the array
+
+                        // Add the marker info to the list as a hyperlink
+                        const markerInfo = document.createElement('li');
+                        const markerLink = document.createElement('a');
+                        markerLink.href = '#';
+                        markerLink.textContent = `${point.recycle_centre}`;
+
+                        markerLink.addEventListener('click', () => {
+                            markers.forEach(m => {
+                                if (m._element) m._element.style.backgroundColor = 'initial';
                             });
 
-                            markerInfo.appendChild(markerLink);
-                            markerList.appendChild(markerInfo);
-                            // Add marker and markerList item to their respective arrays
-                            markers.push(marker);
-                            markerItems.push(markerInfo);
-                        }
-                    });
+                            // Fly to the clicked marker
+                            map.flyTo({center: [point.longtitude, point.latitude], zoom: 15});
+                        });
 
-                    generateFilterOptions();
-
-                })
-                .catch(error => {
-                    console.log(error);
+                        markerInfo.appendChild(markerLink);
+                        markerList.appendChild(markerInfo);
+                    }
                 });
 
-
-        }
-
-
-
-        // clear all markers
-        function clearMarkers() {
-            // Clear any existing markers on the map
-            for (const marker of markers) {
-                marker.remove();
-            }
-            markers = [];
-        }
-
-        document.getElementById("filterSelect").addEventListener("change", handleSelectChange);
-
-        function handleSelectChange() {
-            var selectedValue = this.value;
-            filterMarkerList(selectedValue);
-        }
-
-        // Dynamically generate option elements for waste_type filter
-        function generateFilterOptions() {
-            var selectElement = document.getElementById("filterSelect");
-
-            // 清除已存在的选项，避免重复添加
-            while (selectElement.children.length > 1) {
-                selectElement.removeChild(selectElement.lastChild);
-            }
-
-            uniqueWasteTypes.forEach((wasteType) => {
-                var option = document.createElement("option");
-                option.value = wasteType;
-                option.textContent = wasteType;
-                selectElement.appendChild(option);
+            })
+            .catch(error => {
+                console.log(error);
             });
+
+
+    }
+
+
+    // user input address box and search
+    function searchAddress() {
+        const address = document.getElementById('addressInput').value;
+        const geocodingUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+            address
+        )}.json?access_token=${mapboxgl.accessToken}`;
+
+        fetch(geocodingUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                if (data.features.length > 0) {
+                    // Get the coordinates of the first result
+                    const [longitude, latitude] = data.features[0].center;
+
+                    const map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/mapbox/streets-v12',
+                        center: [longitude, latitude],
+                        zoom: 13
+                    });
+
+                    // Extract other information from the response
+                    const suburb = data.features[0].context.find(item => item.id.startsWith("locality")).text;
+                    const region = data.features[0].context.find(item => item.id.startsWith("region")).text;
+                    const street = data.features[0].text;
+
+                    const formattedResult = {
+                        longitude,
+                        latitude,
+                        suburb,
+                        region,
+                        street
+                    };
+
+                    console.log(formattedResult);
+                    man_success(latitude, longitude)
+
+                } else {
+                    console.log('No results found for the entered address.');
+                }
+            })
+            .catch(error => {
+                console.log('An error occurred while processing the address:', error);
+            });
+    }
+
+    // user input address and geneate map markers
+    function man_success(latitude, longitude) {
+
+
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [longitude, latitude],
+            zoom: 10
+        });
+
+        new mapboxgl.Marker({
+            color: "red",
+            draggable: true
+        }).setLngLat([longitude, latitude]).addTo(map);
+
+        map.addControl(
+            new MapboxDirections({
+                accessToken: mapboxgl.accessToken
+            }),
+            'top-left'
+        );
+
+        // Read the points from the JSON file
+        fetchData()
+            .then(data => {
+
+
+                const markerList = document.getElementById('markerList');
+                // Clear the existing marker list
+                markerList.innerHTML = '';
+
+                // Add markers for each point within 10 km of the user's location
+                data.forEach(point => {
+                    const distance = geolib.getDistance(
+                        {latitude: latitude, longitude: longitude},
+                        {latitude: point.latitude, longitude: point.longtitude}
+                    );
+                    const isWithinRange = distance <= 10000; // 10 km in meters
+
+                    if (isWithinRange) {
+                        var marker = new mapboxgl.Marker()
+                            .setLngLat([point.longtitude, point.latitude])
+                            .addTo(map);
+
+                        //markers.push(marker); // Add marker to the array
+
+                        // Add the marker info to the list as a hyperlink
+                        const markerInfo = document.createElement('li');
+                        const markerLink = document.createElement('a');
+                        markerLink.href = '#';
+                        markerLink.textContent = `${point.recycle_centre}- ${point.waste_type}`;
+
+                        // Add waste_type value to uniqueWasteTypes if it doesn't exist
+                        if (!uniqueWasteTypes.includes(point.waste_type)) {
+                            uniqueWasteTypes.push(point.waste_type);
+                        }
+
+                        markerLink.addEventListener('click', () => {
+                            markers.forEach(m => {
+                                if (m._element) m._element.style.backgroundColor = 'initial';
+                            });
+
+                            // Fly to the clicked marker
+                            map.flyTo({center: [point.longtitude, point.latitude], zoom: 15});
+                        });
+
+                        markerInfo.appendChild(markerLink);
+                        markerList.appendChild(markerInfo);
+                        // Add marker and markerList item to their respective arrays
+                        markers.push(marker);
+                        markerItems.push(markerInfo);
+                    }
+                });
+
+                generateFilterOptions();
+
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
+
+    }
+
+
+    // clear all markers
+    function clearMarkers() {
+        // Clear any existing markers on the map
+        for (const marker of markers) {
+            marker.remove();
+        }
+        markers = [];
+    }
+
+    document.getElementById("filterSelect").addEventListener("change", handleSelectChange);
+
+    function handleSelectChange() {
+        var selectedValue = this.value;
+        filterMarkerList(selectedValue);
+    }
+
+    // Dynamically generate option elements for waste_type filter
+    function generateFilterOptions() {
+        var selectElement = document.getElementById("filterSelect");
+
+        // 清除已存在的选项，避免重复添加
+        while (selectElement.children.length > 1) {
+            selectElement.removeChild(selectElement.lastChild);
         }
 
-        // Filter the markerList and markers based on the selected waste_type
-        function filterMarkerList(selectedValue) {
-            console.log(markerItems);
-            console.log(markerItems.length);
-            //markers.remove();
-            for (var i = 0; i < markerItems.length; i++) {
-                var markerLink = markerItems[i].getElementsByTagName("a")[0];
-                var wasteType = markerLink.textContent.split("-")[1].trim();
+        uniqueWasteTypes.forEach((wasteType) => {
+            var option = document.createElement("option");
+            option.value = wasteType;
+            option.textContent = wasteType;
+            selectElement.appendChild(option);
+        });
+    }
 
-                if (selectedValue === "" || wasteType === selectedValue) {
-                    markerItems[i].style.display = "block";
-                    //markers[i].addTo(map);
-                } else {
-                    markerItems[i].style.display = "none";
-                    //markers[i].remove();
-                }
+    // Filter the markerList and markers based on the selected waste_type
+    function filterMarkerList(selectedValue) {
+        console.log(markerItems);
+        console.log(markerItems.length);
+        //markers.remove();
+        for (var i = 0; i < markerItems.length; i++) {
+            var markerLink = markerItems[i].getElementsByTagName("a")[0];
+            var wasteType = markerLink.textContent.split("-")[1].trim();
+
+            if (selectedValue === "" || wasteType === selectedValue) {
+                markerItems[i].style.display = "block";
+                //markers[i].addTo(map);
+            } else {
+                markerItems[i].style.display = "none";
+                //markers[i].remove();
             }
         }
+    }
 
-    </script>
-
+</script>
 
 </body>
 

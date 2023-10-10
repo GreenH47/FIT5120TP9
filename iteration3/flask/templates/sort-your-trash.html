@@ -205,7 +205,7 @@
     crossorigin="anonymous"></script>
   <script src="/static/js/webflow.js" type="text/javascript"></script>
 
-  <script>
+<script>
     // Load the postcode options from postcode.json
     var postcodeOptions;
     var greenBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/green.jpg";
@@ -216,223 +216,231 @@
     var noSign = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/no.jpg";
 
     // Fetch the postcode.json file and store the data in postcodeOptions variable
-    fetch('resource/postcode.json')
-      .then(response => response.json())
-      .then(data => postcodeOptions = data)
-      .catch(error => console.log('Error fetching postcode options:', error));
+    fetch('/static/resource/postcode.json')
+            .then(response => response.json())
+            .then(data => postcodeOptions = data)
+            .catch(error => console.log('Error fetching postcode options:', error));
 
     // Event listener for input changes
     document.getElementById('postcodeInput').addEventListener('input', function (event) {
-      var input = event.target.value.trim();
-      var postcodeList = document.getElementById('postcodeList');
-      var optionsList = '';
+        var input = event.target.value.trim();
+        var postcodeList = document.getElementById('postcodeList');
+        var optionsList = '';
 
-      if (input === '') {
-        postcodeList.innerHTML = '';
-        return;
-      }
+        if (input === '') {
+            postcodeList.innerHTML = '';
+            return;
+        }
 
-      // Filter the postcode options based on the input
-      var filteredOptions = postcodeOptions.filter(function (option) {
-        return option.postcode.toString().startsWith(input);
-      });
-
-      if (filteredOptions.length > 0) {
-        filteredOptions.forEach(function (option) {
-          optionsList += '<div class="postcode-option" data-postcode="' + option.postcode + '">' + option.postcode + ' ' + option.council_name + '</div>';
+        // Filter the postcode options based on the input
+        var filteredOptions = postcodeOptions.filter(function (option) {
+            return option.postcode.toString().startsWith(input);
         });
-      } else {
-        optionsList = '<div class="no-options">No options found</div>';
-      }
 
-      postcodeList.innerHTML = optionsList;
+        if (filteredOptions.length > 0) {
+            filteredOptions.forEach(function (option) {
+                optionsList += '<div class="postcode-option" data-postcode="' + option.postcode + '">' + option.postcode + ' ' + option.council_name + '</div>';
+            });
+        } else {
+            optionsList = '<div class="no-options">No options found</div>';
+        }
+
+        postcodeList.innerHTML = optionsList;
     });
 
     // Event listener for selecting a postcode option
     document.getElementById('postcodeList').addEventListener('click', function (event) {
-      var selectedOption = event.target;
-      var postcodeInput = document.getElementById('postcodeInput');
+        var selectedOption = event.target;
+        var postcodeInput = document.getElementById('postcodeInput');
 
-      if (selectedOption.classList.contains('postcode-option')) {
-        var selectedPostcode = selectedOption.dataset.postcode;
-        postcodeInput.value = selectedPostcode;
-        document.getElementById('postcodeList').innerHTML = '';
-      }
+        if (selectedOption.classList.contains('postcode-option')) {
+            var selectedPostcode = selectedOption.dataset.postcode;
+            postcodeInput.value = selectedPostcode;
+            document.getElementById('postcodeList').innerHTML = '';
+        }
     });
 
     function sendRequest() {
-      var postcode = document.getElementById("postcodeInput").value;
+        var postcode = document.getElementById("postcodeInput").value;
 
-      var jsonRequest = {
-        "postcode": postcode
-      };
+        var jsonRequest = {
+            "postcode": postcode
+        };
 
-      fetch("https://p7fldwksi8.execute-api.us-east-1.amazonaws.com/deploy", {
-        method: "POST",
-        body: JSON.stringify(jsonRequest),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-        .then(function (response) {
-          return response.json();
+        //var url = "https://p7fldwksi8.execute-api.us-east-1.amazonaws.com/deploy";
+        var url = "/api/rest/sort-your-trash"
+
+        var startTime = performance.now();
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify(jsonRequest),
+            headers: {
+                "Content-Type": "application/json"
+            }
         })
-        .then(function (data) {
-          // clear response container
-          var responseContainer = document.getElementById("response");
-          var errorContainer = document.getElementById("error");
-          var landfillContainer = document.getElementById("landfillContainer");
-          var recycleContainer = document.getElementById("recycleContainer");
-          var greenContainer = document.getElementById("greenContainer");
-          var councilInfo = document.getElementById("council_info");
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    var endTime = performance.now();
+                    var responseTime = endTime - startTime;
+                    console.log("Response Time:", responseTime, "ms")
+                    console.log(data)
+                    // clear response container
+                    var responseContainer = document.getElementById("response");
+                    var errorContainer = document.getElementById("error");
+                    var landfillContainer = document.getElementById("landfillContainer");
+                    var recycleContainer = document.getElementById("recycleContainer");
+                    var greenContainer = document.getElementById("greenContainer");
+                    var councilInfo = document.getElementById("council_info");
 
 
-          if (data.statusCode == 200) {
-            responseContainer.style.display = "block";
-            landfillContainer.style.display = "block";
-            recycleContainer.style.display = "block";
-            greenContainer.style.display = "block";
-            processResponse(data);
-          } else {
-            responseContainer.style.display = "none";
-            errorContainer.style.display = "block";
-            showErrorTooltip();
-          }
-        })
-        .catch(function (error) {
-          console.error("Error:", error);
-        });
+                    if (data.statusCode == 200) {
+                        responseContainer.style.display = "block";
+                        landfillContainer.style.display = "block";
+                        recycleContainer.style.display = "block";
+                        greenContainer.style.display = "block";
+                        processResponse(data);
+                    } else {
+                        responseContainer.style.display = "none";
+                        errorContainer.style.display = "block";
+                        showErrorTooltip();
+                    }
+                })
+                .catch(function (error) {
+                    console.error("Error:", error);
+                });
     }
 
 
     function processResponse(data) {
-      var councilInfoContainer = document.getElementById("council_info");
-      councilInfoContainer.innerHTML = "<h2>" + data.body.council_name + "</h2>";
+        var councilInfoContainer = document.getElementById("council_info");
+        councilInfoContainer.innerHTML = "<h2>" + data.body.council_name + "</h2>";
 
-      // Separate containers for landfill, recycle, and green
-      var landfillContainer = document.getElementById("landfillContainer");
-      var recycleContainer = document.getElementById("recycleContainer");
-      var greenContainer = document.getElementById("greenContainer");
+        // Separate containers for landfill, recycle, and green
+        var landfillContainer = document.getElementById("landfillContainer");
+        var recycleContainer = document.getElementById("recycleContainer");
+        var greenContainer = document.getElementById("greenContainer");
 
-      // Generate table for landfill policies
-      landfillContainer.innerHTML = generatePolicyTable({
-        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.landfill_yes,
-        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.landfill_no
-      });
+        // Generate table for landfill policies
+        landfillContainer.innerHTML = generatePolicyTable({
+            "<img src='/static/images/yes.jpg' width='100' height='100'>": data.body.policy.landfill_yes,
+            "<img src='/static/images/no.jpg' width='100' height='100'>": data.body.policy.landfill_no
+        });
 
-      // Generate table for recycle policies
-      recycleContainer.innerHTML = generatePolicyTable({
-        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.recycle_yes,
-        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.recycle_no
-      });
+        // Generate table for recycle policies
+        recycleContainer.innerHTML = generatePolicyTable({
+            "<img src='/static/images/yes.jpg' width='100' height='100'>": data.body.policy.recycle_yes,
+            "<img src='/static/images/no.jpg' width='100' height='100'>": data.body.policy.recycle_no
+        });
 
-      // Generate table for green policies
-      greenContainer.innerHTML = generatePolicyTable({
-        "<img src='images/yes.jpg' width='100' height='100'>": data.body.policy.green_yes,
-        "<img src='images/no.jpg' width='100' height='100'>": data.body.policy.green_no
-      });
+        // Generate table for green policies
+        greenContainer.innerHTML = generatePolicyTable({
+            "<img src='/static/images/yes.jpg' width='100' height='100'>": data.body.policy.green_yes,
+            "<img src='/static/images/no.jpg' width='100' height='100'>": data.body.policy.green_no
+        });
 
-      function generatePolicyTable(policyData) {
-          let table = "<table>";
+        function generatePolicyTable(policyData) {
+            let table = "<table>";
 
-          let isFirstRow = true;
-          for (let key in policyData) {
-              if (policyData[key]) {  
-                  if (!isFirstRow) {
-                      table += "<tr><td colspan='2' style='padding-bottom: 10px;'></td></tr>";
-                  }
-                  
-                  table += "<tr>";
-                  table += "<td>" + key + "</td>";
-                  table += "<td>" + policyData[key] + "</td>";
-                  table += "</tr>";
-                  
-                  isFirstRow = false;
-              }
-          }
+            let isFirstRow = true;
+            for (let key in policyData) {
+                if (policyData[key]) {
+                    if (!isFirstRow) {
+                        table += "<tr><td colspan='2' style='padding-bottom: 10px;'></td></tr>";
+                    }
 
-          table += "</table>";
-          return table;
-      }
+                    table += "<tr>";
+                    table += "<td>" + key + "</td>";
+                    table += "<td>" + policyData[key] + "</td>";
+                    table += "</tr>";
 
+                    isFirstRow = false;
+                }
+            }
 
-      // Populate waste types (no change from your original code)
-      var wasteTypesContainer = document.getElementById("wasteTypeContainer");
-      var wasteTypes = data.body.waste;
-      var categorizedWasteTypes = {};
-
-      for (var i = 0; i < wasteTypes.length; i++) {
-        var firstChar = wasteTypes[i].waste_type.charAt(0).toUpperCase();
-        if (!categorizedWasteTypes[firstChar]) {
-          categorizedWasteTypes[firstChar] = [];
+            table += "</table>";
+            return table;
         }
-        categorizedWasteTypes[firstChar].push(wasteTypes[i]);
-      }
 
-      var wasteTypeList = "";
 
-      for (var key in categorizedWasteTypes) {
-        wasteTypeList += `<div class='waste-type-group'>
+        // Populate waste types (no change from your original code)
+        var wasteTypesContainer = document.getElementById("wasteTypeContainer");
+        var wasteTypes = data.body.waste;
+        var categorizedWasteTypes = {};
+
+        for (var i = 0; i < wasteTypes.length; i++) {
+            var firstChar = wasteTypes[i].waste_type.charAt(0).toUpperCase();
+            if (!categorizedWasteTypes[firstChar]) {
+                categorizedWasteTypes[firstChar] = [];
+            }
+            categorizedWasteTypes[firstChar].push(wasteTypes[i]);
+        }
+
+        var wasteTypeList = "";
+
+        for (var key in categorizedWasteTypes) {
+            wasteTypeList += `<div class='waste-type-group'>
                                 <div class="directory">${key}</div>
                                 <div id="group-${key}">`;
-        for (var i = 0; i < categorizedWasteTypes[key].length; i++) {
-          wasteTypeList += "<p class='waste-type' onclick='showPopup(\"" + categorizedWasteTypes[key][i].waste_type + "\", \"" + categorizedWasteTypes[key][i].waste_policy + "\")'>" + categorizedWasteTypes[key][i].waste_type + "</p>";
+            for (var i = 0; i < categorizedWasteTypes[key].length; i++) {
+                wasteTypeList += "<p class='waste-type' onclick='showPopup(\"" + categorizedWasteTypes[key][i].waste_type + "\", \"" + categorizedWasteTypes[key][i].waste_policy + "\")'>" + categorizedWasteTypes[key][i].waste_type + "</p>";
+            }
+            wasteTypeList += "</div></div>";
         }
-        wasteTypeList += "</div></div>";
-      }
 
-      wasteTypesContainer.innerHTML = wasteTypeList;
+        wasteTypesContainer.innerHTML = wasteTypeList;
 
     }
 
 
     function toggleVisibility(key) {
-      var groupElement = document.getElementById("group-" + key);
-      if (groupElement.style.display === "none") {
-        groupElement.style.display = "block";
-      } else {
-        groupElement.style.display = "none";
-      }
+        var groupElement = document.getElementById("group-" + key);
+        if (groupElement.style.display === "none") {
+            groupElement.style.display = "block";
+        } else {
+            groupElement.style.display = "none";
+        }
     }
 
 
     function showPopup(wasteType, wastePolicy) {
 
-      var popupContainer = document.getElementById("popupContainer");
-      popupContainer.style.display = "block";
-      popupContainer.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
+        var popupContainer = document.getElementById("popupContainer");
+        popupContainer.style.display = "block";
+        popupContainer.innerHTML = "<h3>" + wasteType + "</h3><p>" + wastePolicy + "</p>";
 
-      setTimeout(function () {
-        popupContainer.style.display = "none";
-      }, 2000);
+        setTimeout(function () {
+            popupContainer.style.display = "none";
+        }, 2000);
     }
 
 
     function filterWasteTypes() {
-      var filterInput = document.getElementById("filterInput").value.toUpperCase();
-      var wasteTypes = document.getElementsByClassName("waste-type");
+        var filterInput = document.getElementById("filterInput").value.toUpperCase();
+        var wasteTypes = document.getElementsByClassName("waste-type");
 
-      for (var i = 0; i < wasteTypes.length; i++) {
-        var wasteType = wasteTypes[i].innerHTML.toUpperCase();
+        for (var i = 0; i < wasteTypes.length; i++) {
+            var wasteType = wasteTypes[i].innerHTML.toUpperCase();
 
-        if (wasteType.includes(filterInput)) {
-          wasteTypes[i].style.display = "block";
-        } else {
-          wasteTypes[i].style.display = "none";
+            if (wasteType.includes(filterInput)) {
+                wasteTypes[i].style.display = "block";
+            } else {
+                wasteTypes[i].style.display = "none";
+            }
         }
-      }
     }
 
     function showErrorTooltip() {
-      var errorTooltip = document.getElementById('error');
-      errorTooltip.style.display = 'block';
+        var errorTooltip = document.getElementById('error');
+        errorTooltip.style.display = 'block';
 
-      // Set a timer to hide the tooltip after 2 seconds (2000 milliseconds)
-      setTimeout(function() {
-        errorTooltip.style.display = 'none';
-      }, 2000);
+        // Set a timer to hide the tooltip after 2 seconds (2000 milliseconds)
+        setTimeout(function () {
+            errorTooltip.style.display = 'none';
+        }, 2000);
     }
-    
+
 
     var submitBtn = document.getElementById("submitBtn");
     submitBtn.addEventListener("click", sendRequest);
@@ -440,7 +448,7 @@
     var filterInput = document.getElementById("filterInput");
     filterInput.addEventListener("keyup", filterWasteTypes);
 
-  </script>
+</script>
 </body>
 
 </html>

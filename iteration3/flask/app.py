@@ -23,18 +23,18 @@ Page routing
       #app.run(host='0.0.0.0', port=5500)
 
 # Set up basic authentication
-# @app.before_request
-# def require_basic_auth():
-#     auth = request.authorization
+@app.before_request
+def require_basic_auth():
+    auth = request.authorization
 
-#     # Verify username and password
-#     username = 'guest'
-#     password = 'MRzYpG7yonPO8'
+    # Verify username and password
+    username = 'guest'
+    password = 'MRzYpG7yonPO8'
 
-#     if not auth or auth.username != username or auth.password != password:
-#         return Response(
-#             'Unauthorized', 401, {'WWW-Authenticate': 'Basic realm="Login Required"'}
-#         )
+    if not auth or auth.username != username or auth.password != password:
+        return Response(
+            'Unauthorized', 401, {'WWW-Authenticate': 'Basic realm="Login Required"'}
+        )
 
 
 @app.route('/')

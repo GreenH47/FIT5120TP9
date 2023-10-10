@@ -38,8 +38,8 @@
         //engineDir:'../cocos2d/',
         SingleEngineFile:'/static/lib/Cocos2d-html5-v2.2.3.min.js',
         appFiles:[
-            'src/resource.js',
-            'src/myApp.js',
+            '/static/src/resource.js',
+            '/static/src/myApp.js',
             //'src/jweixin-1.2.0.js'//add your own files in order here
         ]
     };
