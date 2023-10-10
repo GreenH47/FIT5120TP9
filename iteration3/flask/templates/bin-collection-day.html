@@ -245,6 +245,9 @@
                     let nextLandfillDate = data.body.next_landfill_date;
                     let recycleFrequency = data.body.recycle_frequency;
                     let nextRecycleDate = data.body.next_recycle_date;
+                    let landfillDay = data.body.landfill_day_of_week;
+                    let greenDay = data.body.green_day_of_week;
+                    let recycleDay = data.body.recycle_day_of_week;
 
 
                     document.getElementById("green_date").textContent = nextGreenDate;
@@ -253,6 +256,9 @@
                     document.getElementById("landfill_date").textContent = nextLandfillDate;
                     document.getElementById("recycle_frequency").textContent = recycleFrequency;
                     document.getElementById("recycle_date").textContent = nextRecycleDate;
+                    document.getElementById("landfill_day_of_week").textContent = landfillDay;
+                    document.getElementById("green_day_of_week").textContent = greenDay;
+                    document.getElementById("recycle_day_of_week").textContent = recycleDay;
 
                     console.log(data);
                     const collectDateElement = document.getElementById('collect_date');
