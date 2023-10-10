@@ -41,7 +41,13 @@ Page routing
 def index():
     return render_template('index.html')
 
+@app.route('/bin-collection-day.html')
+def bin_collection_day():
+    return render_template('bin-collection-day.html')
 
+@app.route('/quiz-game.html')
+def quiz_game():
+    return render_template('quiz-game.html')
 @app.route('/collect-date.html')
 def collect_date():
     return render_template('collect-date.html')
