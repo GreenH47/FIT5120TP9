@@ -87,7 +87,7 @@
       <div class="columns-18 w-row">
         <div class="column-36 w-col w-col-6"><img src="/static/images/IMG_0158.png" loading="lazy" sizes="150px" srcset="/static/images/IMG_0158-p-500.png 500w, images/IMG_0158-p-800.png 800w, images/IMG_0158-p-1080.png 1080w, images/IMG_0158.png 1227w" alt="" class="image-20"></div>
         <div class="column-33 w-col w-col-6">
-          <div class="text-block-35">Next Collection date: <span id="green_date"></span><br>‍<br><strong class="bold-text-13">Food (green)</strong> bins are collected <strong><span id="green_frequency"></span></strong></div>
+          <div class="text-block-35">Next Collection date: <span id="green_date"></span>&nbsp;<span id="green_day_of_week"></span><br>‍<br><strong class="bold-text-13">Food (green)</strong> bins are collected <strong><span id="green_frequency"></span></strong></div>
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@
       <div class="columns-17 w-row">
         <div class="column-37 w-col w-col-6"><img src="/static/images/IMG_0179.png" loading="lazy" sizes="150px" srcset="/static/images/IMG_0179-p-500.png 500w, images/IMG_0179-p-800.png 800w, images/IMG_0179-p-1080.png 1080w, images/IMG_0179.png 1138w" alt="" class="image-21"></div>
         <div class="column-34 w-col w-col-6">
-          <div class="text-block-35">Next Collection date: <span id="landfill_date"></span><br>‍<br><strong class="bold-text-1">Landfill (red)</strong> bins are collected <strong><span id="landfill_frequency"></span></strong></div>
+          <div class="text-block-35">Next Collection date: <span id="landfill_date"></span>&nbsp;<span id="landfill_day_of_week"></span><br>‍<br><strong class="bold-text-1">Landfill (red)</strong> bins are collected <strong><span id="landfill_frequency"></span></strong></div>
         </div>
       </div>
     </div>
@@ -103,7 +103,7 @@
       <div class="w-row">
         <div class="column-38 w-col w-col-6"><img src="/static/images/IMG_0180.png" loading="lazy" sizes="150px" srcset="/static/images/IMG_0180-p-500.png 500w, images/IMG_0180-p-800.png 800w, images/IMG_0180-p-1080.png 1080w, images/IMG_0180.png 1145w" alt="" class="image-22"></div>
         <div class="column-35 w-col w-col-6">
-          <div class="text-block-36">Next Collection date: <span id="recycle_date"></span><br>‍<br><strong class="bold-text-16">Recycling (yellow)</strong> bins are collected <strong><span id="recycle_frequency"></span></strong></div>
+          <div class="text-block-36">Next Collection date: <span id="recycle_date"></span>&nbsp;<span id="recycle_day_of_week"></span><br>‍<br><strong class="bold-text-16">Recycling (yellow)</strong> bins are collected <strong><span id="recycle_frequency"></span></strong></div>
         </div>
       </div>
     </div>
@@ -237,7 +237,8 @@
 
                     var endTime = performance.now();
                     var responseTime = endTime - startTime;
-                    console.log("collect Response Time:", responseTime, "ms")
+                    console.log("collect Response Time:", responseTime, "ms");
+                    
 
                     let greenFrequency = data.body.green_frequency;
                     let nextGreenDate = data.body.next_green_date;
@@ -245,9 +246,9 @@
                     let nextLandfillDate = data.body.next_landfill_date;
                     let recycleFrequency = data.body.recycle_frequency;
                     let nextRecycleDate = data.body.next_recycle_date;
-                    // let landfillDay = data.body.next_landfill_day_of_week;
-                    // let greenDay = data.body.next_green_day_of_week;
-                    // let recycleDay = data.body.next_recycle_day_of_week;
+                    let landfillDay = data.body.landfill_day_of_week;
+                    let greenDay = data.body.green_day_of_week;
+                    let recycleDay = data.body.recycle_day_of_week;
 
 
                     document.getElementById("green_date").textContent = nextGreenDate;
@@ -256,9 +257,9 @@
                     document.getElementById("landfill_date").textContent = nextLandfillDate;
                     document.getElementById("recycle_frequency").textContent = recycleFrequency;
                     document.getElementById("recycle_date").textContent = nextRecycleDate;
-                    // document.getElementById("landfill_day_of_week").textContent = landfillDay;
-                    // document.getElementById("green_day_of_week").textContent = greenDay;
-                    // document.getElementById("recycle_day_of_week").textContent = recycleDay;
+                    document.getElementById("landfill_day_of_week").textContent = landfillDay;
+                    document.getElementById("green_day_of_week").textContent = greenDay;
+                    document.getElementById("recycle_day_of_week").textContent = recycleDay;
 
                     console.log(data);
                     const collectDateElement = document.getElementById('collect_date');
