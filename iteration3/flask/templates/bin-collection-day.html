@@ -62,7 +62,7 @@
       </div>
     </div>
     <div class="div-block-12"></div>
-    <p>Address: </p>
+    <p>Please input your Address: </p>
     <input type="text" id="addressInput" placeholder="Enter your address" value="6B Brockhoff Dr, Burwood VIC 3125" class="styled-input">
     <button onclick="searchAddress()" class="search-button">Search</button>
     
@@ -110,6 +110,9 @@
 
     <div id="error" class="tooltip" style="display: none;" >
       <p>Address not found, please try again.</p>
+    </div>
+    <div id="notfound" class="tooltip" style="display: none;" >
+      <p>Address information not recorded.</p>
     </div>
   </section>
   <div class="div-block-38"></div>
@@ -238,6 +241,11 @@
                     var endTime = performance.now();
                     var responseTime = endTime - startTime;
                     console.log("collect Response Time:", responseTime, "ms");
+
+                    if (data.error || !data.body || !data.body.next_green_date) {
+                        throw new Error('Address not found or incomplete data');
+                        showErrorTooltip();
+                    }
                     
 
                     let greenFrequency = data.body.green_frequency;
@@ -268,12 +276,27 @@
                     document.querySelector(".div-block-36").classList.remove("hidden");
                     document.querySelector(".div-block-37").classList.remove("hidden");
                 })
-                .catch(error => console.error('Error:', error));
+                .catch(error => {
+                    console.log('An error occurred while processing the address:', error);
+                    showNotTooltip()
+                });
+                
     }
 
 
     function showErrorTooltip() {
       var errorTooltip = document.getElementById('error');
+      errorTooltip.style.display = 'block';
+
+      // Set a timer to hide the tooltip after 2 seconds (2000 milliseconds)
+      setTimeout(function() {
+        errorTooltip.style.display = 'none';
+      }, 2000);
+    }
+
+
+    function showNotTooltip() {
+      var errorTooltip = document.getElementById('notfound');
       errorTooltip.style.display = 'block';
 
       // Set a timer to hide the tooltip after 2 seconds (2000 milliseconds)

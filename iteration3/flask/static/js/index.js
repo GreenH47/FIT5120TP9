@@ -1,10 +1,10 @@
 function Ship(ctx){
-	gameMonitor.im.loadImage(['../static/images/player.png']);
-	this.width = 80;
-	this.height = 80;
+	gameMonitor.im.loadImage(['../static/images/human.png']);
+	this.width = 50;
+	this.height = 100;
 	this.left = gameMonitor.w/2 - this.width/2;
 	this.top = gameMonitor.h - 2*this.height;
-	this.player = gameMonitor.im.createImage('../static/images/player.png');
+	this.player = gameMonitor.im.createImage('../static/images/human.png');
 
 	this.paint = function(){
 		ctx.drawImage(this.player, this.left, this.top, this.width, this.height);
@@ -146,7 +146,7 @@ var gameMonitor = {
 	w : 320,
 	h : 568,
 	bgWidth : 320,
-	bgHeight : 1126,
+	bgHeight : 1000,
 	time : 0,
 	timmer : null,
 	bgSpeed : 2,
@@ -171,7 +171,7 @@ var gameMonitor = {
 		bg.onload = function(){
           	ctx.drawImage(bg, 0, 0, _this.bgWidth, _this.bgHeight);          	
 		}
-		bg.src = '../static/images/bg.jpg';
+		bg.src = '../static/images/background-1.png';
 
 		_this.initListener(ctx);
 
