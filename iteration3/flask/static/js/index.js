@@ -1,10 +1,10 @@
 function Ship(ctx){
-	gameMonitor.im.loadImage(['../static/images/human.png']);
+	gameMonitor.im.loadImage(['../static/images/player.png']);
 	this.width = 50;
 	this.height = 100;
 	this.left = gameMonitor.w/2 - this.width/2;
 	this.top = gameMonitor.h - 2*this.height;
-	this.player = gameMonitor.im.createImage('../static/images/human.png');
+	this.player = gameMonitor.im.createImage('../static/images/player.png');
 
 	this.paint = function(){
 		ctx.drawImage(this.player, this.left, this.top, this.width, this.height);
@@ -344,7 +344,7 @@ var gameMonitor = {
 			user = 99;
 		}
 		$('#fenghao').removeClass('geili yinhen').addClass('geili');
-		$('#scorecontent').html('您在<span id="stime" class="lighttext">2378</span>秒内抢到了<span id="sscore" class="lighttext">21341</span>个月饼<br>超过了<span id="suser" class="lighttext">31%</span>的用户！');
+		$('#scorecontent').html('You collected <span id="sscore" class="lighttext">21341</span> garbage in <span id="stime" class="lighttext">2378</span> seconds<br>surpassing <span id="suser" class="lighttext">31%</span> of the users! ');
 		$('#stime').text(time);
 		$('#sscore').text(score);
 		$('#suser').text(user+'%');

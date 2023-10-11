@@ -5294,7 +5294,7 @@ div.hearthot {
 	}
 }
 #guidePanel {
-	background: url(../images/logo-no-background.png) center 50% no-repeat;
+	background: url(../images/startbg.png) center 50% no-repeat;
 	background-size: 150px 100px;
 	height: 100%;
 	left: 0;
@@ -5337,19 +5337,13 @@ div.hearthot {
 
 #resultPanel .replay {
 	background: url(../images/replay.png) 0 0 no-repeat;
-	height: 36px;
-	line-height: 36px;
-	left: 695px;
+	left: 708px;
 	overflow: hidden;
 	position: absolute;
-	top: 11px;
-	width: 86px;
-	z-index: 10;
-	color: #E44324;
-	text-align: right;
-	padding-right: 6px;
-	font-weight: 700;
-	font-size: 12px;
+	top: 250px;
+  background-size: 100px 40px;
+  width: 100px;
+  height: 40px;
 }
 #resultPanel .panel,#scoreBoard .score-result {
 	display: none;
@@ -5376,9 +5370,12 @@ div.hearthot {
 }
 .geili{
 	background: url(../images/geili.png) center no-repeat;
+	background-size: contain;
 }
+
 .yinhen{
 	background: url(../images/yinhen.png) center no-repeat;
+  background-size: contain;
 }
 .textc{
 	text-align: center;
