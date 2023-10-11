@@ -65,7 +65,7 @@ function Ship(ctx){
 				var l3 = Math.sqrt(l1*l1 + l2*l2);
 				if(l3<=this.height/2 + f.height/2){
 					foodlist[f.id] = null;
-					if(f.type==0){
+					if(f.type==0 || f.type==3){
 						gameMonitor.stop();
 						$('#gameoverPanel').show();
 
@@ -100,7 +100,26 @@ function Food(type, left, id){
 	this.speed = 0.04 * Math.pow(1.2, Math.floor(gameMonitor.time/this.speedUpTime));
 	this.loop = 0;
 
-	var p = this.type == 0 ? '../static/images/nonrecyclable1.png' : '../static/images/recyclable1.png';
+	// var p = this.type == 0 ? '../static/images/nonrecyclable1.png' : '../static/images/recyclable1.png';
+	switch (this.type) {
+        case 0: 
+            p = '../static/images/nonrecyclable1.png';
+            break;
+        case 1: 
+            p = '../static/images/recyclable1.png';
+            break;
+        case 2: 
+            p = '../static/images/recyclable2.png';
+            break;
+        case 3: 
+            p = '../static/images/nonrecyclable2.png';
+            break;
+		case 4: 
+            p = '../static/images/recyclable3.png';
+            break;
+        default: 
+            p = '../static/images/nonrecyclable1.png';
+    }
 	this.pic = gameMonitor.im.createImage(p);
 }
 Food.prototype.paint = function(ctx){
@@ -205,51 +224,6 @@ var gameMonitor = {
 			gameMonitor.run(ctx);
 		});
 
-		body.on(gameMonitor.eventType.start, '.share', function(){
-			$('.weixin-share').show().on(gameMonitor.eventType.start, function(){
-				$(this).hide();
-			});
-		});
-
-		WeixinApi.ready(function(Api) {   
-            // 微信分享的数据
-            //分享给好友的数据
-            var wxData = {
-                "appId": "", 
-                "imgUrl" : "../static/images/icon.png",
-                "link" : "http://dev.360.cn/html/zhuanti/yutu.html",
-                "desc" : "进击的玉兔",
-                "title" : "“玩玉兔 抢月饼”"
-            };
-
-            //朋友圈数据
-            var wxDataPyq ={
-            	"appId": "",
-                "imgUrl" : "../static/images/icon.png",
-                "link" : "http://dev.360.cn/html/zhuanti/yutu.html",
-                "desc" : "“玩玉兔 抢月饼”",
-                "title" : "进击的玉兔"
-            }
-
-            // 分享的回调
-            var wxCallbacks = {
-                // 分享操作开始之前
-                ready : function() {},
-                cancel : function(resp) {},
-                fail : function(resp) {},
-                confirm : function(resp) {},
-                all : function(resp) {
-                    //location.href=location.href
-                }
-            };
-
-            // 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
-            Api.shareToFriend(wxData, wxCallbacks);
-            // 点击分享到朋友圈，会执行下面这个代码
-            Api.shareToTimeline(wxDataPyq, wxCallbacks);
-            // 点击分享到腾讯微博，会执行下面这个代码
-            Api.shareToWeibo(wxData, wxCallbacks);
-        });
 
 	},
 	rollBg : function(ctx){
@@ -301,7 +275,7 @@ var gameMonitor = {
 		var random = Math.random();
 		if(random*genRate>genRate-1){
 			var left = Math.random()*(this.w - 50);
-			var type = Math.floor(left)%2 == 0 ? 0 : 1;
+			var type = Math.floor(Math.random() * 5);
 			var id = this.foodList.length;
 			var f = new Food(type, left, id);
 			this.foodList.push(f);
