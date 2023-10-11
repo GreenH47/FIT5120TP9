@@ -100,7 +100,7 @@ function Food(type, left, id){
 	this.speed = 0.04 * Math.pow(1.2, Math.floor(gameMonitor.time/this.speedUpTime));
 	this.loop = 0;
 
-	var p = this.type == 0 ? '../static/images/food1.png' : '../static/images/food2.png';
+	var p = this.type == 0 ? '../static/images/nonrecyclable1.png' : '../static/images/recyclable1.png';
 	this.pic = gameMonitor.im.createImage(p);
 }
 Food.prototype.paint = function(ctx){
