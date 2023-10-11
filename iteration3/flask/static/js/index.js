@@ -297,7 +297,7 @@ var gameMonitor = {
 		
 	},
 	genorateFood : function(){
-		var genRate = 50; //产生月饼的频率
+		var genRate = 50;
 		var random = Math.random();
 		if(random*genRate>genRate-1){
 			var left = Math.random()*(this.w - 50);
@@ -320,8 +320,7 @@ var gameMonitor = {
 		var score = this.score;
 		var user = 1;
 		if(score==0){
-			$('#scorecontent').html('真遗憾，您竟然<span class="lighttext">一个</span>月饼都没有抢到！');
-			$('.btn1').text('大侠请重新来过').removeClass('share').addClass('playagain');
+			$('#scorecontent').html('It\'s a pity, you didn\'t collect <br />' + '<span class="lighttext">any</span> garbage!');
 			$('#fenghao').removeClass('geili yinhen').addClass('yinhen');
 			return;
 		}
@@ -348,7 +347,6 @@ var gameMonitor = {
 		$('#stime').text(time);
 		$('#sscore').text(score);
 		$('#suser').text(user+'%');
-		$('.btn1').text('请小伙伴吃月饼').removeClass('playagain').addClass('share');
 	},
 	isMobile : function(){
 		var sUserAgent= navigator.userAgent.toLowerCase(),
