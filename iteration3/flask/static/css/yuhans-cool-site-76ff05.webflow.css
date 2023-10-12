@@ -2752,6 +2752,7 @@ figcaption {
 .text-block-2 {
   z-index: 12;
   color: var(--white);
+  margin-bottom: 0;
   font-family: Inconsolata, monospace;
   font-size: 60px;
   position: absolute;
@@ -2814,8 +2815,10 @@ figcaption {
   color: var(--white);
   text-align: center;
   word-break: normal;
+  margin-bottom: 0;
+  padding-bottom: 0;
   font-family: Varela Round, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   line-height: 40px;
   position: absolute;
@@ -3253,7 +3256,7 @@ figcaption {
 
 .bold-text-12 {
   font-family: Varela Round, sans-serif;
-  font-size: 50px;
+  font-size: 45px;
   font-style: normal;
 }
 
@@ -3730,6 +3733,59 @@ figcaption {
 
 .image-23 {
   border-radius: 20px;
+}
+
+.image-24 {
+  width: 200px;
+}
+
+.columns-19 {
+  height: 568px;
+  color: var(--black);
+  background-color: #6e6a6a;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.column-39 {
+  height: 568px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-left: 0;
+  display: flex;
+}
+
+.column-40 {
+  height: 568px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.column-41 {
+  height: 568px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 0;
+  display: flex;
+}
+
+.html-embed-3 {
+  width: auto;
+  height: auto;
+}
+
+.image-25, .image-26 {
+  height: auto;
+}
+
+.text-block-37, .text-block-38, .text-block-39, .bold-text-17, .bold-text-18, .bold-text-19, .bold-text-18-copy {
+  font-size: 20px;
+}
+
+.div-block-39 {
+  margin-bottom: 180px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -4907,6 +4963,7 @@ figcaption {
 
 
 
+
 /* Container for the search form */
 .search-container {
   display: flex;
@@ -5336,14 +5393,14 @@ div.hearthot {
 }
 
 #resultPanel .replay {
-	background: url(../images/replay.png) 0 0 no-repeat;
-	left: 708px;
-	overflow: hidden;
+	background: url(../images/replay.png) center 50% no-repeat;
+	background-size: 100px 60px;
+	height: 100%;
+	left: 0;
 	position: absolute;
-	top: 250px;
-  background-size: 100px 40px;
-  width: 100px;
-  height: 40px;
+	top: 0;
+	width: 100%;
+	z-index: 10000
 }
 #resultPanel .panel,#scoreBoard .score-result {
 	display: none;
@@ -5408,4 +5465,13 @@ div.hearthot {
   transform: translate(-50%, -50%);
 }
 
+.image-container {
+  display: flex;
+}
+
+.combined-image {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 

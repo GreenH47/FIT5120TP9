@@ -294,7 +294,7 @@ var gameMonitor = {
 		var score = this.score;
 		var user = 1;
 		if(score==0){
-			$('#scorecontent').html('It\'s a pity, you didn\'t collect <br />' + '<span class="lighttext">any</span> garbage!');
+			$('#scorecontent').html('You didn\'t collect  <br />' + '<span class="lighttext">any</span> recyclable garbage!');
 			$('#fenghao').removeClass('geili yinhen').addClass('yinhen');
 			return;
 		}
