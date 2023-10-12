@@ -58,6 +58,11 @@ jobs:
               sudo docker rm "$CURRENT_CONTAINER"
             fi
 
+            # Remove unused Docker images
+            sudo docker image prune --all --force
+
+
+
             # Pull the updated Docker image
             sudo docker pull greenh47/wasteisland:it3
 
