@@ -1,7 +1,7 @@
 function Ship(ctx){
 	gameMonitor.im.loadImage(['../static/images/player.png']);
-	this.width = 50;
-	this.height = 100;
+	this.width = 70;
+	this.height = 80;
 	this.left = gameMonitor.w/2 - this.width/2;
 	this.top = gameMonitor.h - 2*this.height;
 	this.player = gameMonitor.im.createImage('../static/images/player.png');
@@ -190,7 +190,7 @@ var gameMonitor = {
 		bg.onload = function(){
           	ctx.drawImage(bg, 0, 0, _this.bgWidth, _this.bgHeight);          	
 		}
-		bg.src = '../static/images/background-1.png';
+		bg.src = '../static/images/bg.png';
 
 		_this.initListener(ctx);
 
