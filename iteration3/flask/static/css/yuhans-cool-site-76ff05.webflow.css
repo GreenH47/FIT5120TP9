@@ -5351,8 +5351,8 @@ div.hearthot {
 	}
 }
 #guidePanel {
-	background: url(../images/startbg.png) center 50% no-repeat;
-	background-size: 150px 100px;
+	background: url(../images/startbg1.png) center 50% no-repeat;
+	background-size: 320px 568px;
 	height: 100%;
 	left: 0;
 	position: absolute;
