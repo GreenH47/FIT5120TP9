@@ -63,7 +63,7 @@ def lambda_handler(event, context):
         WHERE p.council_name = c.council_name
         AND c.postcode = %s
         """
-
+        postcode = 3352
         policy_params = (postcode,)
         cursor.execute(policy_query, policy_params)
         policy_rows = cursor.fetchall()
