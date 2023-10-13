@@ -1,0 +1,902 @@
+[
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3012
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3020
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3021
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3022
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3023
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3026
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3033
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3036
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3037
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3038
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3042
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3043
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3045
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3047
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3048
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3049
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3058
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3059
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3060
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3061
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3062
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3063
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3064
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3070
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3071
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3072
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3073
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3078
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3079
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3081
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3083
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3084
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3085
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3087
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3088
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3093
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3094
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3095
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3105
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3106
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3107
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3108
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3109
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3111
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3113
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3114
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3115
+  },
+  {
+    "council_name": "Whitehorse City Council",
+    "postcode": 3128
+  },
+  {
+    "council_name": "Whitehorse City Council",
+    "postcode": 3129
+  },
+  {
+    "council_name": "Whitehorse City Council",
+    "postcode": 3130
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3131
+  },
+  {
+    "council_name": "Whitehorse City Council",
+    "postcode": 3132
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3134
+  },
+  {
+    "council_name": "Whitehorse City Council",
+    "postcode": 3151
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3152
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3153
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3154
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3155
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3156
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3159
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3177
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3178
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3179
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3180
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3186
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3187
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3188
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3190
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3191
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3192
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3193
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3198
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3199
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3200
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3201
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3271
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3272
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3293
+  },
+  {
+    "council_name": "Ballarat City Council",
+    "postcode": 3350
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3351
+  },
+  {
+    "council_name": "Ballarat City Council",
+    "postcode": 3352
+  },
+  {
+    "council_name": "Ballarat City Council",
+    "postcode": 3355
+  },
+  {
+    "council_name": "Ballarat City Council",
+    "postcode": 3356
+  },
+  {
+    "council_name": "Ballarat City Council",
+    "postcode": 3357
+  },
+  {
+    "council_name": "Ballarat City Council",
+    "postcode": 3358
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3361
+  },
+  {
+    "council_name": "Ballarat City Council",
+    "postcode": 3363
+  },
+  {
+    "council_name": "Ballarat City Council",
+    "postcode": 3364
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3370
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3371
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3373
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3374
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3375
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3377
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3378
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3379
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3381
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3427
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3428
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3429
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3430
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3464
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3465
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3469
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3472
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3475
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3523
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3551
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3557
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3558
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3559
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3561
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3562
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3563
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3564
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3565
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3566
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3572
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3573
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3608
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3610
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3612
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3614
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3616
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3617
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3618
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3620
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3621
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3622
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3623
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3624
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3629
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3630
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3631
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3633
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3634
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3646
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3647
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3669
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3670
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3672
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3673
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3675
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3691
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3697
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3698
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3699
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3701
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3707
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3723
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3725
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3726
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3737
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3738
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3739
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3740
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3741
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3744
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3781
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3782
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3783
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3787
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3802
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3803
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3804
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3805
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3806
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3807
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3808
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3809
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3810
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3812
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3813
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3814
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3815
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3816
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3818
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3820
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3821
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3822
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3823
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3824
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3825
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3831
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3832
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3833
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3835
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3862
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3864
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3865
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3871
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3875
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3878
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3880
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3882
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3885
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3886
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3887
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3888
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3889
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3890
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3891
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3892
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3893
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3895
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3896
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3898
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3900
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3902
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3903
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3904
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3909
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3910
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3911
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3912
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3950
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3953
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3975
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3976
+  },
+  {
+    "council_name": "Casey City Council",
+    "postcode": 3977
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3978
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3980
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3981
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3987
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3988
+  }
+]
