@@ -106,7 +106,7 @@
     </div>
     <div class="w-col w-col-4">
       <div class="w-form">
-        <input type="text" id="postcodeInput" name="postcode" placeholder="Enter postcode" class="w-input"
+        <input type="number" id="postcodeInput" name="postcode" placeholder="Enter postcode" class="w-input"
           maxlength="256">
       </div>
       <div id="postcodeList" class="postcode-list"></div> <!-- Display the postcode options here -->
@@ -208,12 +208,12 @@
 <script>
     // Load the postcode options from postcode.json
     var postcodeOptions;
-    var greenBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/green.jpg";
-    var garbageBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/garbage.jpg";
-    var houseBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/house.jpg";
-    var recycleBin = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/recycle.jpg";
-    var yesSign = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/yes.jpg";
-    var noSign = "https://s3.amazonaws.com/iteration1.fit5120-tp9-23-s2.online/bin/no.jpg";
+    var greenBin = "/static/images/green.jpg";
+    var garbageBin = "/static/images/garbage.jpg";
+    var houseBin = "/static/images/house.jpg";
+    var recycleBin = "/static/images/recycle.jpg";
+    var yesSign = "/static/images/yes.jpg";
+    var noSign = "/static/images/no.jpg";
 
     // Fetch the postcode.json file and store the data in postcodeOptions variable
     fetch('/static/resource/postcode.json')
@@ -239,7 +239,7 @@
 
         if (filteredOptions.length > 0) {
             filteredOptions.forEach(function (option) {
-                optionsList += '<div class="postcode-option" data-postcode="' + option.postcode + '">' + option.postcode + ' ' + option.council_name + '</div>';
+                optionsList += '<div class="postcode-option" data-postcode="' + option.postcode + '">' + option.postcode + ' ' + option.locality_name + '</div>';
             });
         } else {
             optionsList = '<div class="no-options">No options found</div>';

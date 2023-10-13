@@ -1,78 +1,1127 @@
 [
   {
-    "council_name": "Ballarat City Council",
-    "postcode": 3358
+    "council_name": "Alpine Shire Council",
+    "postcode": 3691,
+    "locality_name": "Coral Bank"
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3697,
+    "locality_name": "Tawonga"
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3698,
+    "locality_name": "Tawonga South"
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3699,
+    "locality_name": "Bogong"
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3737,
+    "locality_name": "Abbeyard"
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3738,
+    "locality_name": "Ovens"
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3739,
+    "locality_name": "Eurobin"
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3740,
+    "locality_name": "Buckland"
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3741,
+    "locality_name": "Bright"
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3744,
+    "locality_name": "Wandiligong"
+  },
+  {
+    "council_name": "Alpine Shire Council",
+    "postcode": 3898,
+    "locality_name": "Dinner Plain"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3271,
+    "locality_name": "Pura Pura"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3272,
+    "locality_name": "Woorndoo"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3293,
+    "locality_name": "Glenthompson"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3351,
+    "locality_name": "Lake Bolac"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3361,
+    "locality_name": "Carranballac"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3373,
+    "locality_name": "Stoneleigh"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3374,
+    "locality_name": "Great Western"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3375,
+    "locality_name": "Ballyrogan"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3377,
+    "locality_name": "Ararat"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3378,
+    "locality_name": "Tatyoon"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3379,
+    "locality_name": "Bornes Hill"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3381,
+    "locality_name": "Black Range"
+  },
+  {
+    "council_name": "Ararat Rural City Council",
+    "postcode": 3469,
+    "locality_name": "Elmhurst"
   },
   {
     "council_name": "Ballarat City Council",
-    "postcode": 3355
+    "postcode": 3350,
+    "locality_name": "Alfredton"
   },
   {
     "council_name": "Ballarat City Council",
-    "postcode": 3356
+    "postcode": 3352,
+    "locality_name": "Addington"
   },
   {
     "council_name": "Ballarat City Council",
-    "postcode": 3363
+    "postcode": 3355,
+    "locality_name": "Lake Gardens"
   },
   {
     "council_name": "Ballarat City Council",
-    "postcode": 3357
+    "postcode": 3356,
+    "locality_name": "Delacombe"
   },
   {
     "council_name": "Ballarat City Council",
-    "postcode": 3364
+    "postcode": 3357,
+    "locality_name": "Buninyong"
   },
   {
     "council_name": "Ballarat City Council",
-    "postcode": 3350
+    "postcode": 3358,
+    "locality_name": "Winter Valley"
   },
   {
     "council_name": "Ballarat City Council",
-    "postcode": 3352
+    "postcode": 3363,
+    "locality_name": "Creswick"
+  },
+  {
+    "council_name": "Ballarat City Council",
+    "postcode": 3364,
+    "locality_name": "Ascot"
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3079,
+    "locality_name": "Ivanhoe"
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3081,
+    "locality_name": "Bellfield"
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3083,
+    "locality_name": "Bundoora"
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3084,
+    "locality_name": "Eaglemont"
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3085,
+    "locality_name": "Macleod"
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3087,
+    "locality_name": "Watsonia"
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3088,
+    "locality_name": "Briar Hill"
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3093,
+    "locality_name": "Lower Plenty"
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3094,
+    "locality_name": "Montmorency"
+  },
+  {
+    "council_name": "Banyule City Council",
+    "postcode": 3095,
+    "locality_name": "Eltham"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3816,
+    "locality_name": "Labertouche"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3818,
+    "locality_name": "Athlone"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3820,
+    "locality_name": "Bona Vista"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3821,
+    "locality_name": "Brandy Creek"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3822,
+    "locality_name": "Cloverlea"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3823,
+    "locality_name": "Allambee"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3824,
+    "locality_name": "Childers"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3825,
+    "locality_name": "Aberfeldy"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3831,
+    "locality_name": "Neerim"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3832,
+    "locality_name": "Nayook"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3833,
+    "locality_name": "Icy Creek"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3835,
+    "locality_name": "Thorpdale"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3871,
+    "locality_name": "Allambee Reserve"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3950,
+    "locality_name": "Strzelecki"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3953,
+    "locality_name": "Trida"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3981,
+    "locality_name": "Heath Hill"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3987,
+    "locality_name": "Nyora"
+  },
+  {
+    "council_name": "Baw Baw Shire Council",
+    "postcode": 3988,
+    "locality_name": "Mountain View"
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3186,
+    "locality_name": "Brighton"
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3187,
+    "locality_name": "Brighton East"
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3188,
+    "locality_name": "Hampton"
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3190,
+    "locality_name": "Highett"
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3191,
+    "locality_name": "Hampton"
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3192,
+    "locality_name": "Cheltenham"
+  },
+  {
+    "council_name": "Bayside City Council",
+    "postcode": 3193,
+    "locality_name": "Beaumaris"
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3670,
+    "locality_name": "Baddaginnie"
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3672,
+    "locality_name": "Benalla"
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3673,
+    "locality_name": "Broken Creek"
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3675,
+    "locality_name": "Boweya"
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3723,
+    "locality_name": "Archerton"
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3725,
+    "locality_name": "Boxwood"
+  },
+  {
+    "council_name": "Benalla Rural City Council",
+    "postcode": 3726,
+    "locality_name": "Bungeet"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3012,
+    "locality_name": "Brooklyn"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3020,
+    "locality_name": "Albion"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3021,
+    "locality_name": "Albanvale"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3022,
+    "locality_name": "Ardeer"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3023,
+    "locality_name": "Cairnlea"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3026,
+    "locality_name": "Derrimut"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3033,
+    "locality_name": "Keilor East"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3036,
+    "locality_name": "Keilor"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3037,
+    "locality_name": "Delahey"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3038,
+    "locality_name": "Keilor Downs"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3042,
+    "locality_name": "Keilor Park"
+  },
+  {
+    "council_name": "Brimbank City Council",
+    "postcode": 3043,
+    "locality_name": "Tullamarine"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3523,
+    "locality_name": "Redcastle"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3551,
+    "locality_name": "Cornella"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3557,
+    "locality_name": "Muskerry"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3558,
+    "locality_name": "Burnewang"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3559,
+    "locality_name": "Burramboot"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3561,
+    "locality_name": "Ballendella"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3562,
+    "locality_name": "Torrumbarry"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3563,
+    "locality_name": "Lockington"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3564,
+    "locality_name": "Bamawm Extension"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3565,
+    "locality_name": "Kotta"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3566,
+    "locality_name": "Gunbower"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3572,
+    "locality_name": "Milloo"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3573,
+    "locality_name": "Mitiamo"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3612,
+    "locality_name": "Moora"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3620,
+    "locality_name": "Kyabram"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3621,
+    "locality_name": "Kyvalley"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3622,
+    "locality_name": "Koyuga"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3623,
+    "locality_name": "Carag Carag"
+  },
+  {
+    "council_name": "Campaspe Shire Council",
+    "postcode": 3624,
+    "locality_name": "Girgarre"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3159,
+    "locality_name": "Menzies Creek"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3781,
+    "locality_name": "Cockatoo"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3782,
+    "locality_name": "Avonsleigh"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3783,
+    "locality_name": "Gembrook"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3807,
+    "locality_name": "Beaconsfield"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3808,
+    "locality_name": "Beaconsfield Upper"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3809,
+    "locality_name": "Officer"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3810,
+    "locality_name": "Pakenham"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3812,
+    "locality_name": "Maryknoll"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3813,
+    "locality_name": "Tynong"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3814,
+    "locality_name": "Cora Lynn"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3815,
+    "locality_name": "Bunyip"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3978,
+    "locality_name": "Cardinia"
+  },
+  {
+    "council_name": "Cardinia Shire Council",
+    "postcode": 3980,
+    "locality_name": "Tooradin"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3912
+    "postcode": 3156,
+    "locality_name": "Lysterfield South"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3804
+    "postcode": 3177,
+    "locality_name": "Doveton"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3805
+    "postcode": 3802,
+    "locality_name": "Endeavour Hills"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3156
+    "postcode": 3803,
+    "locality_name": "Hallam"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3975
+    "postcode": 3804,
+    "locality_name": "Narre Warren North"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3976
+    "postcode": 3805,
+    "locality_name": "Narre Warren"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3803
+    "postcode": 3806,
+    "locality_name": "Berwick"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3802
+    "postcode": 3912,
+    "locality_name": "Pearcedale"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3177
+    "postcode": 3975,
+    "locality_name": "Lynbrook"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3977
+    "postcode": 3976,
+    "locality_name": "Hampton Park"
   },
   {
     "council_name": "Casey City Council",
-    "postcode": 3806
+    "postcode": 3977,
+    "locality_name": "Botanic Ridge"
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3370,
+    "locality_name": "Glengower"
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3371,
+    "locality_name": "Amherst"
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3464,
+    "locality_name": "Carisbrook"
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3465,
+    "locality_name": "Adelaide Lead"
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3472,
+    "locality_name": "Bet Bet"
+  },
+  {
+    "council_name": "Central Goldfields Shire Council",
+    "postcode": 3475,
+    "locality_name": "Archdale"
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3058,
+    "locality_name": "Coburg"
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3070,
+    "locality_name": "Northcote"
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3071,
+    "locality_name": "Thornbury"
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3072,
+    "locality_name": "Preston"
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3073,
+    "locality_name": "Reservoir"
+  },
+  {
+    "council_name": "Darebin City Council",
+    "postcode": 3078,
+    "locality_name": "Alphington"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3701,
+    "locality_name": "Dartmouth"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3707,
+    "locality_name": "Nariel Valley"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3862,
+    "locality_name": "Cobbannah"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3864,
+    "locality_name": "Fernbank"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3865,
+    "locality_name": "Lindenow"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3875,
+    "locality_name": "Bairnsdale"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3878,
+    "locality_name": "Eagle Point"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3880,
+    "locality_name": "Boole Poole"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3882,
+    "locality_name": "Nicholson"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3885,
+    "locality_name": "Bruthen"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3886,
+    "locality_name": "Newmerella"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3887,
+    "locality_name": "Lake Tyers"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3888,
+    "locality_name": "Bendoc"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3889,
+    "locality_name": "Bellbird Creek"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3890,
+    "locality_name": "Buldah"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3891,
+    "locality_name": "Genoa"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3892,
+    "locality_name": "Mallacoota"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3893,
+    "locality_name": "Tambo Crossing"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3895,
+    "locality_name": "Doctors Flat"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3896,
+    "locality_name": "Bindi"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3900,
+    "locality_name": "Benambra"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3902,
+    "locality_name": "Bumberrah"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3903,
+    "locality_name": "Swan Reach"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3904,
+    "locality_name": "Metung"
+  },
+  {
+    "council_name": "East Gippsland Shire Council",
+    "postcode": 3909,
+    "locality_name": "Kalimna"
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3198,
+    "locality_name": "Seaford"
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3199,
+    "locality_name": "Frankston"
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3200,
+    "locality_name": "Frankston North"
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3201,
+    "locality_name": "Carrum Downs"
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3910,
+    "locality_name": "Langwarrin"
+  },
+  {
+    "council_name": "Frankston City Council",
+    "postcode": 3911,
+    "locality_name": "Langwarrin South"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3608,
+    "locality_name": "Goulburn Weir"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3610,
+    "locality_name": "Dhurringile"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3614,
+    "locality_name": "Toolamba"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3616,
+    "locality_name": "Cooma"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3617,
+    "locality_name": "Byrneside"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3618,
+    "locality_name": "Merrigum"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3629,
+    "locality_name": "Ardmona"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3630,
+    "locality_name": "Caniambo"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3631,
+    "locality_name": "Arcadia"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3633,
+    "locality_name": "Congupna"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3634,
+    "locality_name": "Bunbartha"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3646,
+    "locality_name": "Dookie"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3647,
+    "locality_name": "Dookie College"
+  },
+  {
+    "council_name": "Greater Shepparton City Council",
+    "postcode": 3669,
+    "locality_name": "Gowangardie"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3045,
+    "locality_name": "Melbourne Airport"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3047,
+    "locality_name": "Broadmeadows"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3048,
+    "locality_name": "Coolaroo"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3049,
+    "locality_name": "Attwood"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3059,
+    "locality_name": "Greenvale"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3060,
+    "locality_name": "Fawkner"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3061,
+    "locality_name": "Campbellfield"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3062,
+    "locality_name": "Somerton"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3063,
+    "locality_name": "Oaklands Junction"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3064,
+    "locality_name": "Craigieburn"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3427,
+    "locality_name": "Diggers Rest"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3428,
+    "locality_name": "Bulla"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3429,
+    "locality_name": "Sunbury"
+  },
+  {
+    "council_name": "Hume City Council",
+    "postcode": 3430,
+    "locality_name": "Clarkefield"
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3152,
+    "locality_name": "Wantirna"
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3153,
+    "locality_name": "Bayswater"
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3154,
+    "locality_name": "The Basin"
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3155,
+    "locality_name": "Boronia"
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3178,
+    "locality_name": "Rowville"
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3179,
+    "locality_name": "Scoresby"
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3180,
+    "locality_name": "Knoxfield"
+  },
+  {
+    "council_name": "Knox City Council",
+    "postcode": 3787,
+    "locality_name": "Sassafras"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3105,
+    "locality_name": "Bulleen"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3106,
+    "locality_name": "Templestowe"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3107,
+    "locality_name": "Templestowe Lower"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3108,
+    "locality_name": "Doncaster"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3109,
+    "locality_name": "Doncaster East"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3111,
+    "locality_name": "Donvale"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3113,
+    "locality_name": "Warrandyte"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3114,
+    "locality_name": "Park Orchards"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3115,
+    "locality_name": "Wonga Park"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3131,
+    "locality_name": "Nunawading"
+  },
+  {
+    "council_name": "Manningham City Council",
+    "postcode": 3134,
+    "locality_name": "Ringwood North"
+  },
+  {
+    "council_name": "Whitehorse City Council",
+    "postcode": 3128,
+    "locality_name": "Box Hill"
+  },
+  {
+    "council_name": "Whitehorse City Council",
+    "postcode": 3129,
+    "locality_name": "Box Hill North"
+  },
+  {
+    "council_name": "Whitehorse City Council",
+    "postcode": 3130,
+    "locality_name": "Blackburn"
+  },
+  {
+    "council_name": "Whitehorse City Council",
+    "postcode": 3132,
+    "locality_name": "Mitcham"
+  },
+  {
+    "council_name": "Whitehorse City Council",
+    "postcode": 3151,
+    "locality_name": "Burwood East"
   }
 ]
