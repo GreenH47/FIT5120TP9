@@ -60,7 +60,7 @@ class TestApiCode(TestCase):
             "street": "Ardenne Close"
         }
         result = collect_date_lambda_handler(json.dumps(json_input))
-        print(result)
+        # print(result)
         #result = collect_date_lambda_handler(json_input)
         self.assertEqual(result['statusCode'], 200)
 
