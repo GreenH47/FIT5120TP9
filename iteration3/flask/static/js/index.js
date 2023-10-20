@@ -173,7 +173,7 @@ var gameMonitor = {
 	score : 0,
 	im : new ImageMonitor(),
 	foodList : [],
-	bgDistance : 0,//背景位置
+	bgDistance : 0,
 	eventType : {
 		start : 'touchstart',
 		move : 'touchmove',
@@ -184,7 +184,7 @@ var gameMonitor = {
 		var canvas = document.getElementById('stage');
 		var ctx = canvas.getContext('2d');
 
-		//绘制背景
+
 		var bg = new Image();
 		_this.bg = bg;
 		bg.onload = function(){
@@ -239,15 +239,15 @@ var gameMonitor = {
 		ctx.clearRect(0, 0, _this.bgWidth, _this.bgHeight);
 		_this.rollBg(ctx);
 
-		//绘制飞船
+
 		_this.ship.paint();
 		_this.ship.eat(_this.foodList);
 
 
-		//产生月饼
+
 		_this.genorateFood();
 
-		//绘制月饼
+
 		for(i=_this.foodList.length-1; i>=0; i--){
 			var f = _this.foodList[i];
 			if(f){
