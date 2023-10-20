@@ -13,7 +13,7 @@ class FlaskAppTests(unittest.TestCase):
         json_input = {
             "longitude": 144.962974,
             "latitude": -37.810294,
-            "current_date": "2023-10-20",
+            "current_date": "2023-10-30",
             "suburb": "Burwood",
             "region": "Victoria",
             "street": "Ardenne Close"
@@ -24,4 +24,5 @@ class FlaskAppTests(unittest.TestCase):
         response = self.app.post('/api/rest/collect-date',
                                  headers=self.headers,
                                  json=request)
+        print(str(response.data))
         self.assertEqual(response.status_code, 200)
